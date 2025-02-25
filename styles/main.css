@@ -1,0 +1,487 @@
+body {
+    font-family: Poppins, Calibri, sans-serif;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 15px;
+}
+
+h6, footer p {
+    font-size: 10px;
+}
+
+p {
+    font-size: 20px;
+}
+
+header h1{
+    padding-top: 70px;
+}
+
+header h1, header h2, header h3, header h4, header h5, header h6, header p, .contactForm, .centeredItems, .temporarilyCentered {
+    text-align: center;
+}
+
+header {
+    padding-bottom: 20px; /*used for all pages*/
+}
+
+main {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+nav {
+    background-color: darkgreen;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    top: 0;
+    /* text-align: center; */
+}
+
+#navigationCenter {
+    text-align: center;
+    text-anchor: start;
+}
+
+.logos {
+    width: 500px;
+}
+
+.logos:hover {
+    width: 700px;
+    animation-name: growBig;
+animation-duration: 0.5s;
+animation-direction: normal;
+}
+
+.newGamesList, section figure {
+    text-align: center;
+}
+
+#cart {
+    max-width: 50px;
+    position: fixed;
+    top: 0;
+    left: 100;
+    right: 0;
+    z-index: 99;
+    padding-top: 7px;
+}
+
+.dropdownButton {
+    display: none;
+}
+
+.input_padding {
+    padding-left: 15px;
+}
+
+nav .dropdown .dropdown-content #navigationCenter a {
+    color: white;
+}
+
+
+nav .dropdown .dropdown-content #navigationCenter a:hover {
+    color: greenyellow;
+}
+
+nav .dropdown .dropdown-content #navigationCenter a, nav .input_padding {
+    padding-left: 20px;
+}
+
+nav .button_padding {
+    padding-left: 10px;
+}
+
+input, button, textarea {
+    font-family: Poppins, Calibri, sans-serif;
+    font-size: 15px;
+}
+
+.contactForm textarea, .contactForm #email, .contactForm #subject, .figurine_section textarea {
+    width: 400px;
+}
+
+.contactForm textarea, .figurine_section textarea {
+    height: 200px;
+}
+
+nav input {
+    max-width: 191px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+section search {
+    text-align: center;
+}
+
+section search #searchbar {
+    width: 50%;
+}
+
+section search .breaktags {
+    display: none;
+}
+
+footer {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.hiddenTags {
+    display: none; /*users cannot see this; only computers*/
+}
+
+.contactForm .form_padding {
+    padding-bottom: 20px;
+}
+
+.moreSpace {
+    padding-bottom: 300px;
+}
+
+.lessSpace {
+    padding-bottom: 201px;
+}
+
+.videoGameList {
+    align-self: center;
+    align-content: center;
+}
+
+figure {
+    display: inline-block;
+}
+
+.videoGameList figure img {
+    max-width: 300px;
+}
+
+.videoGameList figure img:hover {
+    max-width: 350px;
+}
+
+.videoGameList figure {
+    text-align: center;
+}
+
+.figurine_section {
+    text-align: center; /* centers all items*/
+}
+
+.color {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+}
+
+.color img {
+    width: 50px;
+    height: 50px;
+    visibility: hidden; /*will be toggled*/
+}
+
+#blue {
+    background-color: blue;
+}
+
+#red {
+    background-color: green; 
+}
+
+#purple {
+    background-color: purple;
+}
+
+#blue:hover {
+    background-color: rgb(0, 38, 255);
+}
+
+#red:hover {
+    background-color: greenyellow;
+}
+
+#purple:hover {
+    background-color: rgb(117, 0, 128);
+}
+
+.upload_button {
+    color: buttontext;
+    background-color: buttonface;
+    border: 1px solid #767676;
+    width: 61.86px;
+    height: 26.46px;
+    padding: 0px 1px 1px 1px;
+    padding-right: 1px;
+    padding-bottom: 3px;
+}
+
+.upload_button:hover {
+    background-color: #E5E5E5; /*this is basically a pretend button*/
+}
+
+.invisibleHeaders {
+    display: none;
+}
+
+.insertPadding {
+    padding-bottom: 20px;
+}
+
+figure figcaption {
+    color: black;
+}
+
+@keyframes growBig {
+    from {
+        width: 500px;
+    }
+    to {
+        width: 700px;
+    }
+}
+
+@media only screen and (max-width: 1634px) {
+    section search #searchbar {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 1268px) {
+    .temporarilyCentered {
+        text-align: initial;
+    }
+}
+
+
+@media only screen and (max-width: 1229px) {
+    section search #searchbar {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    nav {
+        position: absolute;
+    }
+
+    #cart {
+        position: absolute;
+    }
+}
+
+@media only screen and (max-width: 894px) {
+    section search #searchbar {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 824px) {
+    #navigationCenter {
+        text-align: center;
+        text-anchor: start;
+    }
+
+    .dropdownButton {
+        background-color: darkgreen;
+        color: lightgrey;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        font-size: 4.0em;
+        display: initial;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: darkgreen;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: greenyellow;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: darkgreen;
+    }
+
+    header h1 {
+        padding-top: 170px;
+    }
+
+    #cart {
+        padding-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 627px) {
+    section search #searchbar {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 678px) {
+    .logos {
+        width: 300px;
+    }
+
+    @keyframes growBig {
+        from {
+            width: 300px;
+        }
+        to {
+            width: 500px;
+        }
+    }
+
+    .logos:hover {
+        width: 500px;
+        animation-name: growBig;
+animation-duration: 0.5s;
+animation-direction: normal;
+    }
+}
+
+@media only screen and (max-width: 499px) {
+    .contactForm textarea, .contactForm #email, .contactForm #subject, .videoGameList textarea {
+        width: 350px;
+    }
+    
+    .contactForm textarea, .videoGameList textarea {
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    main {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    section search #searchbar {
+        width: 90%;
+    }
+
+    section search .breaktags {
+        display: initial;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .contactForm textarea, .contactForm #email, .contactForm #subject, .videoGameList textarea {
+        width: 300px;
+    }
+    
+    .contactForm textarea, .videoGameList textarea {
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width: 417px) {
+    .logos {
+        width: 200px;
+    }
+
+    @keyframes growBig {
+        from {
+            width: 200px;
+        }
+        to {
+            width: 400px;
+        }
+    }
+
+    .logos:hover {
+        width: 400px;
+        animation-name: growBig;
+animation-duration: 0.5s;
+animation-direction: normal;
+    }
+}
+
+@media only screen and (max-width: 366px) {
+    .contactForm textarea, .contactForm #email, .contactForm #subject, .videoGameList textarea {
+        width: 250px;
+    }
+    
+    .contactForm textarea, .videoGameList textarea {
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width: 343px) {
+    .logos {
+        width: 150px;
+    }
+
+    @keyframes growBig {
+        from {
+            width: 150px;
+        }
+        to {
+            width: 350px;
+        }
+    }
+
+    .logos:hover {
+        width: 350px;
+        animation-name: growBig;
+animation-duration: 0.5s;
+animation-direction: normal;
+    }
+}
+
+@media only screen and (max-width: 308px) {
+    .contactForm textarea, .contactForm #email, .contactForm #subject, .videoGameList textarea {
+        width: 200px;
+    }
+    
+    .contactForm textarea, .videoGameList textarea {
+        height: 200px;
+    }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Welcome to Easey2Play, where faith-based video games come to life!">
+        <meta name="author" content="Azariah Easey, krdrabbits.com, easeystrings.com, americanfreedomtrain2026.us, www.bazinesdachurch.com">
+        <meta name="viewport" content="width=device-width">
+        <title>Contact Us</title>        
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body>
+    <header>
+        <nav>
+                <div class="dropdown">
+                    <button class="dropdownButton" id="controlHidingScheme1">
+                        =
+                    </button>
+                    <div class="dropdown-content">
+                        <div id="navigationCenter">
+                            <a href="index.html">Home</a>
+                            <a href="about.html">About Us</a>
+                            <a href="contact-us.html">Contact Us</a>
+                            <a href="games.html">Games</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>                <h1>Contact Us</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2 class="hiddenTags">Main Information</h2>
+            <p style="text-align: center;">Fill out the form below to contact us.</p>
+        </section>
+        <section>
+            <h2 class="hiddenTags">The Form</h2>
+            <form action="https://formsubmit.io/send/534c2b9a-1707-4329-8a1b-949b7da86ea8" method="POST" class="contactForm">
+                <input name="_redirect" type="hidden" id="name" value="message-sent.html">
+                <input type="text" name="email" id="email" placeholder="Email"><br><div class="form_padding"></div>
+                <input type="text" name="subject" id="subject" placeholder="Subject"><br><div class="form_padding"></div>
+                <textarea name="message" id="message" placeholder="Enter Message Here"></textarea><br><div class="form_padding"></div>
+                <input type="submit" value="Send" name="Send">
+            </form>
+            <p><b><u>NOTE</u>:</b> The message collection API that I am currently using to receive emails keeps throwing errors. If you see a weird error pop up, don't worry&mdash;I still received it! - <i>A. E.</i></p>
+        </section>
+        <div class="lessSpace"></div>
+    </main>
+    
+    <footer>
+    <p>&copy; 2025 Azariah M Easey. All rights reserved.</p>
+</footer>
+    <script>
+        var searchbar = $('minisearchbar');
+
+        function $(id) {
+            return document.getElementById(id);
+        }
+    </script>
+    <script>
+        var message=  $('message');
+        var amountOfSpace = 201;
+        var currentScrollHeight = message.scrollHeight;
+
+        message.oninput = function() {
+            if(message.scrollHeight >= 208 && message.scrollHeight !== currentScrollHeight) {
+                message.style.height = "";
+                message.style.height = message.scrollHeight + "px";
+                currentScrollHeight = message.scrollHeight;
+                amountOfSpace -= 10;
+                console.log(amountOfSpace);
+                if(currentScrollHeight < 452) {
+                    adjustCopyrightInformation();
+                }
+            }
+        }
+
+        function adjustCopyrightInformation() {
+            document.querySelector('.lessSpace').style.paddingBottom = amountOfSpace + "px";
+        }
+    </script>
+        
+    </body>
+</html>
