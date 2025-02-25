@@ -3,7 +3,7 @@ function $(id) {
 }
 
 function requestFullScreen(element) {
-    var requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullScreen;
+    var requestMethod = element.requestFullScreen || element.requestFullscreen || element.webkitRequestFullScreen || element.webkitRequestFullscreen || element.mozRequestFullScreen || element.mozRequestFullscreen || element.msRequestFullScreen;
     
     if (requestMethod) {
         requestMethod.call(element);
