@@ -1,0 +1,86 @@
+body {
+    font-family: Calibri, sans-serif;
+    background-color: green;
+}
+
+/* body {
+    text-align: center;
+} */
+
+.instructions h2 {
+    font-size: 30px;
+}
+
+.instructions p, .instructions table, .instructions ol, .instructions ul {
+    font-size: 20px;
+}
+
+a {
+    color: blue;
+}
+
+a:hover {
+    color: pink;
+}
+
+.center_item {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.score_items, h1, h2, h3, h4, h5, h6, p, tbody, tr, th, td, ol, li {
+    color: white;
+}
+
+.advice_message {
+    color: white;
+    background-color: black;
+    height: 100%;
+}
+
+.alert_information {
+    display: none;
+    text-align: inherit;
+}
+
+#fullScreenButton {
+    color: white;
+    font-family: JoystixMonospace;
+}
+
+#fullScreenButton:hover {
+    color: blue;
+}
+
+tr, td, th {
+    text-align: center;
+}
+
+td, th {
+    padding: 25px 50px 25px 50px;
+}
+
+table, th, td {
+    border: 5px solid white;
+    border-collapse: collapse;
+}
+
+@media (orientation: portrait) {
+    .center_item {
+        display: none;
+    }
+
+    .alert_information {
+        display: initial;
+    }
+}
+
+@media (orientation: landscape) {
+    .center_item {
+        display: initial;
+    }
+
+    .alert_information {
+        display: none;
+    }
+}
