@@ -64,6 +64,14 @@ nav {
     text-anchor: start;
 }
 
+.figures {
+    width: 300px;
+}
+
+.exhibit {
+    text-align: center;
+}
+
 .logos {
     width: 500px;
 }
@@ -444,6 +452,12 @@ animation-direction: normal;
     }
 }
 
+@media only screen and (max-width: 415px) {
+    .figures {
+        width: 200px;
+    }
+}
+
 @media only screen and (max-width: 366px) {
     .contactForm textarea, .contactForm #email, .contactForm #subject, .videoGameList textarea {
         width: 250px;
@@ -473,6 +487,12 @@ animation-direction: normal;
         animation-name: growBig;
 animation-duration: 0.5s;
 animation-direction: normal;
+    }
+}
+
+@media only screen and (max-width: 314px) {
+    .figures {
+        width: 100px;
     }
 }
 
