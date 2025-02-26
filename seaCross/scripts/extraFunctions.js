@@ -7,7 +7,7 @@ function requestFullScreen(element) {
     
     if (requestMethod) {
         requestMethod.call(element);
-    } else if (typeof window.ActiveXObject !== "undefined" || typeof window.ActiveXObject !== undefined) { 
+    } else if (typeof window.ActiveXObject !== "undefined") { 
         var wscript = new ActiveXObject("WScript.Shell");
         if (wscript !== null) {
             wscript.SendKeys("{F11}");
