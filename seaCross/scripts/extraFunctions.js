@@ -29,6 +29,13 @@ function checkDeviceType() {
     if(navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|Opera Mini|Opera Mobi|IEMobile|Maemo Browser|Doris|NetFront|SymbianOS|uZardWeb/i)) {
         mobileVersion = true;
     }
+    if(navigator.userAgent.match(/iPhone/)) {
+        document.querySelector('body').innerHTML = `<p>Hello, player!</p>
+        <p>Unfortunately, Fullscreen API does not have support on iPhones. If you are an Apple user, you might be best using an iPad or a Macbook to play the game.</p>
+        <p>We are sorry for the inconvenience. We hope to have an iPhone friendly version of this video game sometime in the future.</p>
+        <p>Sincerely,</p>
+        <p>The Sea Cross Team</p>`;
+    }
 }
 
 function playSound(buffer, source) {
