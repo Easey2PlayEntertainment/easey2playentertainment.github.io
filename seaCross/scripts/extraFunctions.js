@@ -611,6 +611,11 @@ function checkQuestionNumber() {
 }
 
 function updateAll() {
+    if(muteMusicCheckbox.checked) {
+        volumeController.gain.value = 0;
+    } else {
+        volumeController.gain.value = 0.5;
+    }
     if(score < 0) {
         score = 0;
     }

@@ -11,7 +11,7 @@ body {
     font-size: 30px;
 }
 
-.instructions p, .instructions table, .instructions ol, .instructions ul {
+.instructions p, .instructions table, .instructions ol, .instructions ul, .checkboxDiv {
     font-size: 20px;
 }
 
@@ -28,7 +28,7 @@ a:hover {
     padding-top: 50px;
 }
 
-.score_items, h1, h2, h3, h4, h5, h6, p, tbody, tr, th, td, ol, li {
+.score_items, h1, h2, h3, h4, h5, h6, p, tbody, tr, th, td, ol, li, .checkboxDiv {
     color: white;
 }
 

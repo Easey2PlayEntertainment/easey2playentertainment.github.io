@@ -49,6 +49,7 @@
 	</div>
 
 	<p><a href="javascript:requestFullScreen(canvas)" id="fullScreenButton">Full Screen</a></p>
+	<div class="checkboxDiv"><input type="checkbox" id="muteMusic">Mute background music</div>
 	<br><br>
 	<div class="instructions">
 		<h2 class="perishable"><u>Controls for Desktop</u></h2>
@@ -490,6 +491,8 @@
 			canvasContext = canvas.getContext('2d');
 
 			context = new AudioContext();
+
+			muteMusicCheckbox = $('muteMusic');
 
 			checkDeviceType();
 
