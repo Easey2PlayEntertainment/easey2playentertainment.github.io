@@ -584,7 +584,7 @@ function manageFullscreenFX() {
         for(var i=0;i<paragraphs.length;i++){
             paragraphs[i].style.visibility = 'hidden';
         }
-        document.querySelector('img').style.visibility = 'hidden';
+        document.querySelector('img').style.visibility = document.querySelector('.checkboxDiv').style.visibility = 'hidden';
     } else { // set everything back to default
         fullScreenButton.style.display = "initial";
         body.style.backgroundColor = 'green';
@@ -594,7 +594,7 @@ function manageFullscreenFX() {
         for(var i=0;i<paragraphs.length;i++){
             paragraphs[i].style.visibility = 'visible';
         }
-        document.querySelector('img').style.visibility = 'visible';
+        document.querySelector('img').style.visibility = document.querySelector('.checkboxDiv').style.visibility = 'visible';
     }
 }
 
