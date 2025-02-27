@@ -751,5 +751,5 @@ var removeQuadrupleSpace = false;
 
 var decisionMade = false;
 
-var backgroundMusicMuted = false;
+var muteDuringQuestions = false;
 var muteMusicCheckbox;

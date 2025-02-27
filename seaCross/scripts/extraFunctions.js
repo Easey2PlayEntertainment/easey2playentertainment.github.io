@@ -611,6 +611,11 @@ function checkQuestionNumber() {
 }
 
 function updateAll() {
+    if(muteMusicCheckbox.checked) {
+        muteDuringQuestions = true;
+    } else {
+        muteDuringQuestions = false;
+    }
     if(score < 0) {
         score = 0;
     }
@@ -679,7 +684,7 @@ function updateAll() {
     }
 
     if(questionBrought) {
-        volumeController.gain.value = 0.2; // makes the background music softer...
+        volumeController.gain.value = muteDuringQuestions ? 0 : 0.2; // makes the background music softer...
     }
 
     if(powerupRun && powerupName !== "darkness") {
