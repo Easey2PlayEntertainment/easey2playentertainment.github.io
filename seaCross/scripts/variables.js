@@ -750,3 +750,6 @@ var perishableItems;
 var removeQuadrupleSpace = false;
 
 var decisionMade = false;
+
+var backgroundMusicMuted = false;
+var muteMusicCheckbox;

@@ -611,6 +611,17 @@ function checkQuestionNumber() {
 }
 
 function updateAll() {
+    if(muteMusicCheckbox.checked) {
+        backgroundMusicMuted = true;
+        volumeController.gain.value = 0;
+    } else if(backgroundMusicMuted && !muteMusicCheckbox.checked) {
+        backgroundMusicMuted = false;
+        if(powerupRun) {
+            volumeController.gain.value = 0;
+        } else if(!questionBrought) {
+            volumeController.gain.value = 0.5;
+        }
+    }
     if(score < 0) {
         score = 0;
     }
@@ -678,7 +689,7 @@ function updateAll() {
         powerupName = powerups[powerupNumber]; 
     }
 
-    if(questionBrought) {
+    if(questionBrought && !backgroundMusicMuted) {
         volumeController.gain.value = 0.2; // makes the background music softer...
     }
 

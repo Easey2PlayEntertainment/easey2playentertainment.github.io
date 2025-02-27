@@ -49,6 +49,7 @@
 	</div>
 
 	<p><a href="javascript:requestFullScreen(canvas)" id="fullScreenButton">Full Screen</a></p>
+	<div class="checkboxDiv"><input type="checkbox" id="muteMusic"></div>
 	<br><br>
 	<div class="instructions">
 		<h2 class="perishable"><u>Controls for Desktop</u></h2>
@@ -486,6 +487,8 @@
 		window.onload = function() {
 			canvas = $('cnvs');
 			canvasContext = canvas.getContext('2d');
+
+			muteMusicCheckbox = $('muteMusic');
 
 			context = new AudioContext();
 
