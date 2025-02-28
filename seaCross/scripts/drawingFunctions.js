@@ -660,10 +660,10 @@ async function drawAll() {
                 colorRect(C_BUTTON_POSITION, 520, 100, 50, 'green');
                 colorRect(D_BUTTON_POSITION, 520, 100, 50, 'green');
     
-                printText(175, 554, 28, 'white', 'select');
-                printText(295, 554, 28, 'white', 'delete');
-                printText(415, 554, 28, 'white', 'up');
-                printText(535, 554, 28, 'white', 'down');
+                printText(173, 554, 26, 'white', 'select');
+                printText(293, 554, 26, 'white', 'delete');
+                printText(443, 554, 26, 'white', 'up');
+                printText(546, 554, 26, 'white', 'down');
             }
         }
     }
