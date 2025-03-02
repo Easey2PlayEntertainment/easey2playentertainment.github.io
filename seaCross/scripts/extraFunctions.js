@@ -611,6 +611,7 @@ function checkQuestionNumber() {
 }
 
 function updateAll() {
+    $('bonusShellThumbnail').src = bonusShellFrames[bonusShellFrameId].src;
     if(muteMusicCheckbox.checked) {
         muteDuringQuestions = true;
     } else {
