@@ -47,6 +47,11 @@ main {
     padding-right: 20px;
 }
 
+.name2Hide {
+    user-select: none;
+    color: white;
+}
+
 nav {
     background-color: darkgreen;
     padding-top: 20px;
