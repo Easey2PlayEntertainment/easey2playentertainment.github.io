@@ -28,8 +28,32 @@ a:hover {
     padding-top: 50px;
 }
 
+.centered_table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.defy_center {
+    text-align: initial;
+}
+
 .score_items, h1, h2, h3, h4, h5, h6, p, tbody, tr, th, td, ol, li, .checkboxDiv {
     color: white;
+}
+
+.centered_heading {
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+p, h2 {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+ol {
+    padding-left: 70px;
 }
 
 .advice_message {
@@ -65,6 +89,11 @@ table, th, td {
     border-collapse: collapse;
 }
 
+.no_padding {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 @media (orientation: portrait) {
     .center_item {
         display: none;
@@ -82,5 +111,41 @@ table, th, td {
 
     .alert_information {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    p, h2 {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    ol {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    p, h2 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    ol {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+}
+
+@media only screen and (max-width: 533px) {
+    p, h2 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    ol {
+        padding-left: 17px;
+        padding-right: 17px;
     }
 }
