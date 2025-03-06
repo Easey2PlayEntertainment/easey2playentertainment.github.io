@@ -47,7 +47,7 @@ a:hover {
     padding-right: 0px;
 }
 
-p, h2 {
+p, h2, #crabThumbnail {
     padding-left: 50px;
     padding-right: 50px;
 }
@@ -115,7 +115,7 @@ table, th, td {
 }
 
 @media only screen and (max-width: 1000px) {
-    p, h2 {
+    p, h2, #crabThumbnail {
         padding-left: 25px;
         padding-right: 25px;
     }
@@ -127,7 +127,7 @@ table, th, td {
 }
 
 @media only screen and (max-width: 600px) {
-    p, h2 {
+    p, h2, #crabThumbnail {
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -139,7 +139,7 @@ table, th, td {
 }
 
 @media only screen and (max-width: 533px) {
-    p, h2 {
+    p, h2, #crabThumbnail {
         padding-left: 0px;
         padding-right: 0px;
     }
