@@ -5,7 +5,7 @@ async function loadQuestions() { // loads all questions; prevents delay
 }
 
 function updateQuestionsInBackground() {
-    console.log('questions stay the same')
+    shuffleQuestions(); // continue shuffling questions each time round ends
 }
 
 function shuffleQuestions() {
