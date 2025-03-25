@@ -10,7 +10,7 @@ function updateQuestionsInBackground() {
 
 function shuffleQuestions() {
     for(var i=0;i<allQuestions.length;i++) {
-        shuffle(allQuestions[i]); // all questions are shuffled randomly in each level
+        allQuestions[i] = shuffle(allQuestions[i]); // all questions are shuffled randomly in each level
     }
 }
 
