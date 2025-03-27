@@ -497,7 +497,7 @@
 			checkDeviceType();
 
 			url = new URLSearchParams(window.location.search);
-			arcadeMode = +url.get('arcadeMode') === 1 ? true : false;
+			arcadeMode = url.get('arcadeMode') === '1' ? true : false;
 
 			perishableItems = document.getElementsByClassName('perishable');
 
