@@ -496,6 +496,9 @@
 
 			checkDeviceType();
 
+			url = new URLSearchParams(window.location.search);
+			arcadeMode = +url.get('arcadeMode') === 1 ? true : false;
+
 			perishableItems = document.getElementsByClassName('perishable');
 
 			lastHighScore = +localStorage.getItem('highScore'); // must have something to compare to

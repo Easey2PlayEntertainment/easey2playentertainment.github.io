@@ -753,3 +753,5 @@ var decisionMade = false;
 
 var muteDuringQuestions = false;
 var muteMusicCheckbox;
+
+var url;
