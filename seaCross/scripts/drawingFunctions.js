@@ -719,7 +719,7 @@ async function drawAll() {
     if(!start && confirmed && mosesImagesLoaded && allIsraeliteImagesLoaded && allEgyptianImagesLoaded && !loading) {
         screenBlacked = false; 
         colorRect(0, 0, canvas.width, canvas.height, '#141414');
-        printText(canvas.width / 3.51, canvas.height / 2 , 28, 'white', (mobileVersion ? 'tap here to continue' : (!arcadeMode ? 'press space to start' : 'press button to start'))); // on arcade machines, it will read 'insert coin to start'
+        printText((canvas.width / 3.51) - (arcadeMode ? 2 : 0), canvas.height / 2 , 28, 'white', (mobileVersion ? 'tap here to continue' : (!arcadeMode ? 'press space to start' : 'press button to start'))); // on arcade machines, it will read 'insert coin to start'
         canvasContext.drawImage(mosesImages[mosesImageId], canvas.width / 2 + 50, canvas.height / 2 + 50 , 35, 35);
         canvasContext.drawImage(israelites[2].images[israelites[2].imageId], canvas.width / 2, canvas.height / 2 + 50 , 35, 35);
         canvasContext.drawImage(egyptians[0].images[egyptians[0].imageId], canvas.width / 2 - 50, canvas.height / 2 + 50 , 35, 35);
