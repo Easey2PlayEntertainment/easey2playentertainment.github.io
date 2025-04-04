@@ -1352,6 +1352,7 @@ function keyDown(e) {
         if(!fullScreen) {
             requestFullScreen(canvas);
         }
+        timesPlayed++;
         loading = true;
         questionNumber = 0;
         testCounter = 0; // reset to prevent bugs 

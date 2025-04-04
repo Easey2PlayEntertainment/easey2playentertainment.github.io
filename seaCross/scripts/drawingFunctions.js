@@ -724,6 +724,7 @@ async function drawAll() {
         canvasContext.drawImage(israelites[2].images[israelites[2].imageId], canvas.width / 2, canvas.height / 2 + 50 , 35, 35);
         canvasContext.drawImage(egyptians[0].images[egyptians[0].imageId], canvas.width / 2 - 50, canvas.height / 2 + 50 , 35, 35);
         canvasContext.drawImage(israelites[0].images[israelites[0].imageId], canvas.width / 2 - 100, canvas.height / 2 + 50 , 35, 35);
+        arcadeMode ? printText(265, 500, 28, 'white', 'times played: ' + timesPlayed) : false;
         printText(20, 30, 28, 'white', 'score');
         printText(20, 60, 28, 'white', zeroedScore(score));
         printText(canvas.width - 193, 30, 28, 'white', 'high score');

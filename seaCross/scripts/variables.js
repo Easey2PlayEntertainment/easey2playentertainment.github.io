@@ -755,3 +755,5 @@ var muteDuringQuestions = false;
 var muteMusicCheckbox;
 
 var url;
+
+var timesPlayed = 0;
