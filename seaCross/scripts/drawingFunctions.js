@@ -99,7 +99,6 @@ colorRect(pauseResumeX + 15, pauseResumeY + 5, 5, 20, 'white');
 async function drawAll() {
     var spaces = 0;
     var timesPlayedSpaces = 0;
-    var timesPlayedString = 'times played: ' + timesPlayed;
     var highScoreAsArray = highScore.toString().split('');
     var powerup;
     var powerupThumbnail;
@@ -112,7 +111,14 @@ async function drawAll() {
         highScoreAsArray.pop();
     }
     spaces = 17.3 * highScoreAsArray.length;
-    timesPlayedSpaces = 17.3 * timesPlayedString.length;
+
+    if(timesPlayed > 1000) {
+        timesPlayedSpaces = 17.3 * 3;
+    } else if(timesPlayed > 100) {
+        timesPlayedSpaces = 17.3 * 2;
+    } else if(timesPlayed > 10) {
+        timesPlayedSpaces = 17.3;
+    }
 
     if(allFishLoaded && 
         crabImage1Loaded && crabImage2Loaded && crabImage3Loaded && pinkShellLoaded && blueShellLoaded && bonusShellFrame1Loaded && bonusShellFrame2Loaded && allIsraeliteImagesLoaded && allEgyptianImagesLoaded && allPowerupsLoaded && mosesImagesLoaded && allQuestionsLoaded && rebootsLoaded && backgroundScoreLoaded && frequency >= numberOfCases && !confirmed) {
@@ -727,7 +733,7 @@ async function drawAll() {
         canvasContext.drawImage(israelites[2].images[israelites[2].imageId], canvas.width / 2, canvas.height / 2 + 50 , 35, 35);
         canvasContext.drawImage(egyptians[0].images[egyptians[0].imageId], canvas.width / 2 - 50, canvas.height / 2 + 50 , 35, 35);
         canvasContext.drawImage(israelites[0].images[israelites[0].imageId], canvas.width / 2 - 100, canvas.height / 2 + 50 , 35, 35);
-        arcadeMode ? printText(265 - timesPlayedSpaces, 500, 28, 'white', timesPlayedString) : false;
+        arcadeMode ? printText(265 - timesPlayedSpaces, 500, 28, 'white', 'times played: ' + timesPlayed) : false;
         printText(20, 30, 28, 'white', 'score');
         printText(20, 60, 28, 'white', zeroedScore(score));
         printText(canvas.width - 193, 30, 28, 'white', 'high score');
