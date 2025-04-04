@@ -113,11 +113,11 @@ async function drawAll() {
     spaces = 17.3 * highScoreAsArray.length;
 
     if(timesPlayed >= 1000) {
-        timesPlayedSpaces = 17.3 * 3;
+        timesPlayedSpaces = 10 * 3;
     } else if(timesPlayed >= 100) {
-        timesPlayedSpaces = 17.3 * 2;
+        timesPlayedSpaces = 10 * 2;
     } else if(timesPlayed >= 10) {
-        timesPlayedSpaces = 17.3;
+        timesPlayedSpaces = 10;
     }
 
     if(allFishLoaded && 
