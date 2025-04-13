@@ -757,3 +757,6 @@ var muteMusicCheckbox;
 var url;
 
 var timesPlayed = 0;
+
+var buttonFlashBlue = false;
+var playButton;

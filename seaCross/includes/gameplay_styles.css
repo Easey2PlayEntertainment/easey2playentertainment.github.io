@@ -7,6 +7,21 @@ body {
     text-align: center;
 } */
 
+#playButton {
+    font-family: JoystixMonospace;
+    font-size: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: blue;
+    color: red;
+    display: none;
+}
+
+#playButton:hover {
+    background-color: red;
+    color: blue;
+}
+
 .instructions h2 {
     font-size: 30px;
 }
@@ -95,11 +110,15 @@ table, th, td {
 }
 
 @media (orientation: portrait) {
-    .center_item {
+    .center_item, .no_padding {
         display: none;
     }
 
     .alert_information {
+        display: initial;
+    }
+
+    #playButton {
         display: initial;
     }
 }

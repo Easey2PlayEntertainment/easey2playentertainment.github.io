@@ -49,7 +49,8 @@
 		<p>This game works best in landscape mode. Turn your device over for the best experience.</p>
 	</div>
 
-	<p class="no_padding"><a href="javascript:requestFullScreen(canvas)" id="fullScreenButton">Full Screen</a></p>
+	<p class="no_padding"><a href="javascript:requestFullScreen(canvas);" id="fullScreenButton">Full Screen</a></p>
+	<button id="playButton" onclick="javascript:requestFullScreen(canvas);">Play</button>
 	<div class="checkboxDiv"><input type="checkbox" id="muteMusic">Mute music when question brought</div>
 	<br><br>
 	<div class="instructions">
@@ -495,6 +496,8 @@
 			context = new AudioContext();
 
 			checkDeviceType();
+
+			playButton = $('playButton');
 
 			url = new URLSearchParams(window.location.search);
 			arcadeMode = url.get('arcadeMode') === '1' ? true : false;

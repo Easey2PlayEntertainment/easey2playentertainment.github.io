@@ -541,6 +541,16 @@ function generateNewShells() {
 }
 
 function trackTime() {
+    buttonFlashBlue = !buttonFlashBlue;
+    
+    if(buttonFlashBlue) {
+        playButton.style.backgroundColor = 'blue';
+        playButton.style.color = 'red';
+    } else {
+        playButton.style.backgroundColor = 'red';
+        playButton.style.color = 'blue';
+    }
+
     if(start && !questionBrought && !paused && move && !win && !lowerLives) {
         timer += 1;
         fishDirectionTimer++;
