@@ -606,7 +606,7 @@ function manageFullscreenFX() {
             paragraphs[i].style.visibility = 'visible';
         }
         document.querySelector('img').style.visibility = document.querySelector('.checkboxDiv').style.visibility = 'visible';
-        if(!start) {
+        if(start) {
             playButton.innerHTML = "full screen";
         } else {
             playButton.innerHTML = "Play";
