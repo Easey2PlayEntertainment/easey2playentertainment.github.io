@@ -626,6 +626,14 @@ function checkQuestionNumber() {
     referenceHolderQuestion = "";
 }
 
+function controlChoiceManagement() {
+    if($('rightControls').checked) {
+        upArrowX = downArrowX = pauseResumeX;
+    } else {
+        upArrowX = downArrowX = 50;
+    }
+}
+
 function updateAll() {
     $('bonusShellThumbnail').src = bonusShellFrames[bonusShellFrameId].src;
     if(muteMusicCheckbox.checked) {
@@ -717,6 +725,7 @@ function updateAll() {
         manageBackgroundMusic();
     }
     if(start && !paused && move && !lowerLives && previousLevel === level) {
+        controlChoiceManagement();
         checkIfEnd();
         if(countdownNumber >= 800) {
             livesDisplayManipulateNumber = 1;
