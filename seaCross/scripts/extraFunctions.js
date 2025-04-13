@@ -595,6 +595,7 @@ function manageFullscreenFX() {
             paragraphs[i].style.visibility = 'hidden';
         }
         document.querySelector('img').style.visibility = document.querySelector('.checkboxDiv').style.visibility = 'hidden';
+        playButton.innerHTML = "rotate screen";
     } else { // set everything back to default
         fullScreenButton.style.display = "initial";
         body.style.backgroundColor = 'green';
@@ -605,6 +606,11 @@ function manageFullscreenFX() {
             paragraphs[i].style.visibility = 'visible';
         }
         document.querySelector('img').style.visibility = document.querySelector('.checkboxDiv').style.visibility = 'visible';
+        if(!start) {
+            playButton.innerHTML = "full screen";
+        } else {
+            playButton.innerHTML = "Play";
+        }
     }
 }
 
