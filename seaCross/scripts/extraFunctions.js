@@ -725,8 +725,10 @@ function updateAll() {
     if(countdownNumber >= 600 || readyCounter === 199 && livesManipulated) {
         manageBackgroundMusic();
     }
-    if(start && !paused && move && !lowerLives && previousLevel === level) {
+    if(start) {
         controlChoiceManagement();
+    }
+    if(start && !paused && move && !lowerLives && previousLevel === level) {
         checkIfEnd();
         if(countdownNumber >= 800) {
             livesDisplayManipulateNumber = 1;
