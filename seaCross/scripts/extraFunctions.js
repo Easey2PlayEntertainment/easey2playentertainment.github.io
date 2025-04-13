@@ -28,6 +28,7 @@ function findDimensions() {
 function checkDeviceType() {
     if(navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|Opera Mini|Opera Mobi|IEMobile|Maemo Browser|Doris|NetFront|SymbianOS|uZardWeb/i)) {
         mobileVersion = true;
+        document.querySelector('.controlChoices').style.display = 'initial';
     }
     if(navigator.userAgent.match(/iPhone/)) {
         document.querySelector('body').innerHTML = `<p>Hello, player!</p>
