@@ -629,7 +629,7 @@ function checkQuestionNumber() {
 
 function controlChoiceManagement() {
     if($('rightControls').checked) {
-        upArrowX = downArrowX = pauseResumeX;
+        upArrowX = downArrowX = pauseResumeX + 80;
     } else {
         upArrowX = downArrowX = 50;
     }
