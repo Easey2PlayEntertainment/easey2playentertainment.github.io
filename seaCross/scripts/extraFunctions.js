@@ -1389,6 +1389,8 @@ function keyDown(e) {
         previousLevel = level;
         previousHighScores = undefined; // make sure there is nothing else to work on
         gameOverScriptRun = false; // make sure that it is false; should prevent bugs from happening
+        lastHighScore = +localStorage.getItem('highScore');
+        highScore = +localStorage.getItem('highScore'); // ensures that the score does not empty out again
         bringLevelQuestions();
      } else if(e.code === "Space" && start) {
          //testMove();
