@@ -1,4 +1,4 @@
-ufunction colorRect(a,b,c,d,e) {
+function colorRect(a,b,c,d,e) {
     canvasContext.fillStyle = e;
     canvasContext.fillRect(a,b,c,d);
 }
@@ -391,7 +391,7 @@ async function drawAll() {
         lastValue = lastValue === -1 ? 0 : -1;
         questionNumber = lastValue;
         questionNumber = -1;
-        nextQuestionNumber = 0; // just to see if bug gets fixed...test tomorrow morning
+        nextQuestionNumber = 0;
         a = b = c = d = false;
         questionType = undefined;
         choicePositionNumber = choicePositionCursorNumber = 0;
