@@ -15,6 +15,10 @@ body {
     width: 400px;
 }
 
+.logo_container img {
+    width: 200px;
+}
+
 #playButton {
     font-family: JoystixMonospace;
     font-size: 30px;

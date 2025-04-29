@@ -34,7 +34,7 @@ header h1{
     padding-top: 70px;
 }
 
-header h1, header h2, header h3, header h4, header h5, header h6, header p, .contactForm, .centeredItems, .temporarilyCentered {
+header h1, header h2, header h3, header h4, header h5, header h6, header p, .contactForm, .centeredItems, .temporarilyCentered, .logo_container {
     text-align: center;
 }
 
@@ -269,6 +269,10 @@ figure figcaption {
     color: black;
 }
 
+#officialLogo {
+    width: 600px;
+}
+
 @keyframes growBig {
     from {
         width: 500px;
@@ -372,6 +376,12 @@ figure figcaption {
     }
 }
 
+@media only screen and (max-width: 799px) {
+    #officialLogo {
+        width: 500px;
+    }
+}
+
 @media only screen and (max-width: 627px) {
     section search #searchbar {
         width: 70%;
@@ -400,6 +410,12 @@ animation-direction: normal;
     }
 }
 
+@media only screen and (max-width: 637px) {
+    #officialLogo {
+        width: 400px;
+    }
+}
+
 @media only screen and (max-width: 499px) {
     .contactForm textarea, .contactForm #email, .contactForm #subject, .videoGameList textarea {
         width: 350px;
@@ -407,6 +423,10 @@ animation-direction: normal;
     
     .contactForm textarea, .videoGameList textarea {
         height: 200px;
+    }
+
+    #officialLogo {
+        width: 350px;
     }
 }
 
@@ -463,6 +483,12 @@ animation-direction: normal;
     }
 }
 
+@media only screen and (max-width: 399px) {
+    #officialLogo {
+        width: 300px;
+    }
+}
+
 @media only screen and (max-width: 366px) {
     .contactForm textarea, .contactForm #email, .contactForm #subject, .videoGameList textarea {
         width: 250px;
@@ -492,6 +518,10 @@ animation-direction: normal;
         animation-name: growBig;
 animation-duration: 0.5s;
 animation-direction: normal;
+    }
+
+    #officialLogo {
+        width: 200px;
     }
 }
 
