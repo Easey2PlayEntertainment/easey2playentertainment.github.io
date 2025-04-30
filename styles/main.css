@@ -47,6 +47,11 @@ main {
     padding-right: 20px;
 }
 
+section {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
 .name2Hide {
     user-select: none;
     color: white;
@@ -146,6 +151,10 @@ nav input {
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+section h2 {
+    text-align: center;
 }
 
 section search {
@@ -311,6 +320,13 @@ figure figcaption {
     }
 }
 
+@media only screen and (max-width: 999px) {
+    section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
 @media only screen and (max-width: 894px) {
     section search #searchbar {
         width: 80%;
@@ -382,6 +398,13 @@ figure figcaption {
     }
 }
 
+@media only screen and (max-width: 699px) {
+    section {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
 @media only screen and (max-width: 627px) {
     section search #searchbar {
         width: 70%;
@@ -427,6 +450,11 @@ animation-direction: normal;
 
     #officialLogo {
         width: 350px;
+    }
+
+    section {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
