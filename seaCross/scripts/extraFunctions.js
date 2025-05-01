@@ -491,6 +491,7 @@ function dealWithCrabs() {
 function frameChange() {
 if(!questionBrought && !paused && !lowerLives && !questionGraded && previousLevel === level) {
     bonusShellFrameId = bonusShellFrameId === 0 ? 1 : 0;
+    currentCrabImage = currentCrabImage === crabWalkPositions[1] ? crabWalkPositions[2] : crabWalkPositions[1];
     for(var i=0;i<crabs.length;i++) {
             crabs[i].frame = crabs[i].frame === crabWalkPositions[1] ? crabWalkPositions[2] : crabWalkPositions[1];
     }
@@ -502,6 +503,11 @@ function characterPostureChange() {
         mosesImageId++;
         if(mosesImageId === mosesImages.length) {
             mosesImageId = 0; // back to the beginning
+        }
+
+        demoEgyptianFrameId++; // for the opening before starting
+        if(demoEgyptianFrameId === demoEgyptianImages.length) {
+            demoEgyptianFrameId = 0;
         }
 
         for(var i=0;i<israelites.length;i++) {
@@ -635,7 +641,47 @@ function controlChoiceManagement() {
     }
 }
 
+function moveDemoAssets() {
+    demoCrab1Position = resetDemoAssetPosition(demoCrab1Position, false);
+    demoCrab2Position = resetDemoAssetPosition(demoCrab2Position, false);
+    demoCrab3Position = resetDemoAssetPosition(demoCrab3Position, false);
+    demoCrab4Position = resetDemoAssetPosition(demoCrab4Position, false);
+
+    demoMosesPosition = resetDemoAssetPosition(demoMosesPosition, true);
+    demoIsraelite1Position = resetDemoAssetPosition(demoIsraelite1Position, true);
+    demoIsraelite2Position = resetDemoAssetPosition(demoIsraelite2Position, true);
+    demoIsraelite3Position = resetDemoAssetPosition(demoIsraelite3Position, true);
+
+    demoEgyptian1Position = resetDemoAssetPosition(demoEgyptian1Position, false);
+    demoEgyptian2Position = resetDemoAssetPosition(demoEgyptian2Position, false);
+    demoEgyptian3Position = resetDemoAssetPosition(demoEgyptian3Position, false);
+    demoEgyptian4Position = resetDemoAssetPosition(demoEgyptian4Position, false);
+
+    demoFish1Position = resetDemoAssetPosition(demoFish1Position, true);
+    demoFish2Position = resetDemoAssetPosition(demoFish2Position, true);
+    demoFish3Position = resetDemoAssetPosition(demoFish3Position, true);
+    demoFish4Position = resetDemoAssetPosition(demoFish4Position, true);
+}
+
+function resetDemoAssetPosition(demoAssetPosition, goodSide) {
+    if(goodSide) {
+        demoAssetPosition += 3;
+        if(demoAssetPosition > 799) {
+            demoAssetPosition = -49;
+        }
+    } else {
+        demoAssetPosition -= 3;
+        if(demoAssetPosition < -49) {
+            demoAssetPosition = 800;
+        }
+    }
+    return demoAssetPosition;
+}
+
 function updateAll() {
+    if(!start && arcadeMode) {
+        moveDemoAssets();
+    }
     $('bonusShellThumbnail').src = bonusShellFrames[bonusShellFrameId].src;
     if(muteMusicCheckbox.checked) {
         muteDuringQuestions = true;
@@ -1434,6 +1480,10 @@ function keyUp(e) {
 }
 
 function textCursor() {
+    chameleonID++;
+    if(chameleonID === chameleon.length) {
+        chameleonID = 0;
+    }
     if(questionBrought || questionGraded || paused) {
         cursor = true;
         return;

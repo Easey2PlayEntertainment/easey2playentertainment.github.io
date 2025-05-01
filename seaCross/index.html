@@ -524,6 +524,11 @@
 				localStorage.setItem('highScore', 0); // just in case there are still problems
 			}
 
+			demoMosesPosition = canvas.width / 2 + 50;
+			demoIsraelite1Position = canvas.width / 2;
+			demoIsraelite2Position = canvas.width / 2 - 50;
+			demoIsraelite3Position = canvas.width / 2 - 100;
+
 			orangeFishImages[0].onload = function() {
 				orangeFishLoaded1 = true;
 			}
@@ -661,6 +666,25 @@
 			mosesDeadImages[0].src = mosesDeadImages[2].src = 'images/moses_dead.png';
 			mosesDeadImages[1].src = 'images/moses_walk_1_dead.png';
 			mosesDeadImages[3].src = 'images/moses_walk_2_dead.png';
+
+			// download demonstration assets
+			currentCrabImage = crabWalkPositions[1];
+
+			demoEgyptianImages[0].onload = function() {
+				demoEgyptianImage1Loaded = true;
+			}
+			demoEgyptianImages[1].onload = function() {
+				demoEgyptianImage2Loaded = true;
+			}
+			demoEgyptianImages[2].onload = function() {
+				demoEgyptianImage3Loaded = true;
+			}
+			demoEgyptianImages[3].onload = function() {
+				demoEgyptianImage4Loaded = true;
+			}
+			demoEgyptianImages[0].src = demoEgyptianImages[2].src = "images/egyptian1-Copy.png";
+			demoEgyptianImages[1].src = "images/egyptian1_walk_1-Copy.png";
+			demoEgyptianImages[3].src = "images/egyptian1_walk_2-Copy.png";
 
 			loadQuestions(); // do that first
 

@@ -728,6 +728,25 @@ async function drawAll() {
 
     if(!start && confirmed && mosesImagesLoaded && allIsraeliteImagesLoaded && allEgyptianImagesLoaded && !loading) {
         screenBlacked = false; 
+        if(arcadeMode) {
+            printText(245, canvas.height / 2, 50, chameleon[chameleonID], 'come play!'); // just to see how that looks
+    canvasContext.drawImage(mosesImages[mosesImageId], demoMosesPosition, canvas.height / 2 + 50 , 35, 35);
+    canvasContext.drawImage(israelites[2].images[israelites[2].imageId], demoIsraelite1Position, canvas.height / 2 + 50 , 35, 35); // CONTINUE HERE
+    canvasContext.drawImage(israelites[3].images[israelites[3].imageId], demoIsraelite2Position, canvas.height / 2 + 50 , 35, 35);
+    canvasContext.drawImage(israelites[0].images[israelites[0].imageId], demoIsraelite3Position, canvas.height / 2 + 50 , 35, 35);
+    canvasContext.drawImage(currentCrabImage, demoCrab1Position, 450, 50, 50);
+    canvasContext.drawImage(currentCrabImage, demoCrab2Position, 450, 50, 50);
+    canvasContext.drawImage(currentCrabImage, demoCrab3Position, 450, 50, 50); // keep working on it
+    canvasContext.drawImage(currentCrabImage, demoCrab4Position, 450, 50, 50);
+    canvasContext.drawImage(demoEgyptianImages[demoEgyptianFrameId], demoEgyptian1Position, 170, 35, 35);
+    canvasContext.drawImage(demoEgyptianImages[demoEgyptianFrameId], demoEgyptian2Position, 170, 35, 35);
+    canvasContext.drawImage(demoEgyptianImages[demoEgyptianFrameId], demoEgyptian3Position, 170, 35, 35);
+    canvasContext.drawImage(demoEgyptianImages[demoEgyptianFrameId], demoEgyptian4Position, 170, 35, 35);
+    canvasContext.drawImage(orangeFishImages[1], demoFish1Position, 70, 50, 50);
+    canvasContext.drawImage(purpleFishImages[1], demoFish2Position, 70, 50, 50);
+    canvasContext.drawImage(greenFishImages[1], demoFish3Position, 70, 50, 50);
+    canvasContext.drawImage(redFishImages[1], demoFish4Position, 70, 50, 50);
+        } else {
         colorRect(0, 0, canvas.width, canvas.height, '#141414');
         printText((canvas.width / 3.51) - (arcadeMode ? 7 : 0), canvas.height / 2 , 28, 'white', (mobileVersion ? 'tap here to continue' : (!arcadeMode ? 'press space to start' : 'press button to start'))); // on arcade machines, it will read 'insert coin to start'
         canvasContext.drawImage(mosesImages[mosesImageId], canvas.width / 2 + 50, canvas.height / 2 + 50 , 35, 35);
@@ -739,5 +758,6 @@ async function drawAll() {
         printText(20, 60, 28, 'white', zeroedScore(score));
         printText(canvas.width - 193, 30, 28, 'white', 'high score');
         printText(canvas.width - 106 - spaces, 60, 28, 'white', zeroedScore(highScore));
+        }
     }
 }

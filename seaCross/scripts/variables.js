@@ -67,10 +67,30 @@ var orangeFishLoaded1 = false,
 
 var allFishLoaded = false;
 
+var demoFish1Position = 600,
+    demoFish2Position = 540,
+    demoFish3Position = 480,
+    demoFish4Position = 420;
+
+var demoMosesPosition,
+    demoIsraelite1Position,
+    demoIsraelite2Position,
+    demoIsraelite3Position;
+
+var demoCrab1Position = 20,
+    demoCrab2Position = 80,
+    demoCrab3Position = 140,
+    demoCrab4Position = 200;
+
 var crabWalkPositions = [document.createElement('img'), document.createElement('img'), document.createElement('img')];
 var crabImage1Loaded = false,
     crabImage2Loaded = false,
     crabImage3Loaded = false;
+
+var currentCrabImage;
+
+var chameleon = ['red', 'lightblue', 'green', 'yellow'];
+var chameleonID = 0;
 
 var crabs = [];
 var crabOutput = 1;
@@ -452,6 +472,20 @@ positionSettled: true,
 images: [document.createElement('img'), document.createElement('img'),document.createElement('img'),document.createElement('img')],
 imageId: Math.round(Math.random())
 }];
+
+var demoEgyptian1Position = 20 + 270,
+    demoEgyptian2Position = 70 + 270,
+    demoEgyptian3Position = 120 + 270,
+    demoEgyptian4Position = 170 + 270;
+
+    // var demoCrab1Position = 20,
+    // demoCrab2Position = 80,
+    // demoCrab3Position = 140,
+    // demoCrab4Position = 200;
+
+var demoEgyptianImages = [document.createElement('img'), document.createElement('img'),document.createElement('img'),document.createElement('img')];
+var demoEgyptianFrameId = 0;
+var demoEgyptianImage1Loaded = demoEgyptianImage2Loaded = demoEgyptianImage3Loaded = demoEgyptianImage4Loaded = false;
 
 var israelitesReboot = [];
 var egyptiansReboot = [];
