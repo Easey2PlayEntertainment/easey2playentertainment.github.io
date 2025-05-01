@@ -747,6 +747,11 @@ async function drawAll() {
     canvasContext.drawImage(purpleFishImages[1], demoFish2Position, 70, 50, 50);
     canvasContext.drawImage(greenFishImages[1], demoFish3Position, 70, 50, 50);
     canvasContext.drawImage(redFishImages[1], demoFish4Position, 70, 50, 50);
+    printText(265 - timesPlayedSpaces, 530, 28, 'white', 'times played: ' + timesPlayed);
+        printText(20, 30, 28, 'white', 'score');
+        printText(20, 60, 28, 'white', zeroedScore(score));
+        printText(canvas.width - 193, 30, 28, 'white', 'high score');
+        printText(canvas.width - 106 - spaces, 60, 28, 'white', zeroedScore(highScore));
         } else {
         colorRect(0, 0, canvas.width, canvas.height, '#141414');
         printText((canvas.width / 3.51) - (arcadeMode ? 7 : 0), canvas.height / 2 , 28, 'white', (mobileVersion ? 'tap here to continue' : (!arcadeMode ? 'press space to start' : 'press button to start'))); // on arcade machines, it will read 'insert coin to start'
