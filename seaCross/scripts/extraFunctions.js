@@ -665,12 +665,12 @@ function moveDemoAssets() {
 
 function resetDemoAssetPosition(demoAssetPosition, goodSide) {
     if(goodSide) {
-        demoAssetPosition += 3;
+        demoAssetPosition += 1;
         if(demoAssetPosition > 799) {
             demoAssetPosition = -49;
         }
     } else {
-        demoAssetPosition -= 3;
+        demoAssetPosition -= 1;
         if(demoAssetPosition < -49) {
             demoAssetPosition = 800;
         }
@@ -1480,15 +1480,18 @@ function keyUp(e) {
 }
 
 function textCursor() {
-    chameleonID++;
-    if(chameleonID === chameleon.length) {
-        chameleonID = 0;
-    }
     if(questionBrought || questionGraded || paused) {
         cursor = true;
         return;
     }
     cursor = !cursor; // oscillates between 0 and 1
+}
+
+function chameleonFlashControl() {
+    chameleonID++;
+    if(chameleonID === chameleon.length) {
+        chameleonID = 0;
+    }
 }
 
 function sleep(ms) {

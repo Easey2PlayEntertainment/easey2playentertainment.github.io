@@ -730,7 +730,7 @@ async function drawAll() {
         screenBlacked = false; 
         if(arcadeMode) {
             colorRect(0, 0, canvas.width, canvas.height, 'black');
-            printText(245, canvas.height / 2, 50, chameleon[chameleonID], 'come play!'); // just to see how that looks
+            printText(210, canvas.height / 2, 60, chameleon[chameleonID], 'come play!'); 
     canvasContext.drawImage(mosesImages[mosesImageId], demoMosesPosition, canvas.height / 2 + 50 , 35, 35);
     canvasContext.drawImage(israelites[2].images[israelites[2].imageId], demoIsraelite1Position, canvas.height / 2 + 50 , 35, 35); // CONTINUE HERE
     canvasContext.drawImage(israelites[3].images[israelites[3].imageId], demoIsraelite2Position, canvas.height / 2 + 50 , 35, 35);
