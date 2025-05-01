@@ -727,9 +727,9 @@ async function drawAll() {
     }
 
     if(!start && confirmed && mosesImagesLoaded && allIsraeliteImagesLoaded && allEgyptianImagesLoaded && !loading) {
-        screenBlacked = false; 
+        screenBlacked = false;
+        colorRect(0, 0, canvas.width, canvas.height, '#141414'); 
         if(arcadeMode) {
-            colorRect(0, 0, canvas.width, canvas.height, 'black');
             printText(210, canvas.height / 2, 60, chameleon[chameleonID], 'come play!'); 
     canvasContext.drawImage(mosesImages[mosesImageId], demoMosesPosition, canvas.height / 2 + 50 , 35, 35);
     canvasContext.drawImage(israelites[2].images[israelites[2].imageId], demoIsraelite1Position, canvas.height / 2 + 50 , 35, 35); // CONTINUE HERE
@@ -748,7 +748,6 @@ async function drawAll() {
     canvasContext.drawImage(greenFishImages[1], demoFish3Position, 70, 50, 50);
     canvasContext.drawImage(redFishImages[1], demoFish4Position, 70, 50, 50);
         } else {
-        colorRect(0, 0, canvas.width, canvas.height, '#141414');
         printText((canvas.width / 3.51) - (arcadeMode ? 7 : 0), canvas.height / 2 , 28, 'white', (mobileVersion ? 'tap here to continue' : (!arcadeMode ? 'press space to start' : 'press button to start'))); // on arcade machines, it will read 'insert coin to start'
         canvasContext.drawImage(mosesImages[mosesImageId], canvas.width / 2 + 50, canvas.height / 2 + 50 , 35, 35);
         canvasContext.drawImage(israelites[2].images[israelites[2].imageId], canvas.width / 2, canvas.height / 2 + 50 , 35, 35);
