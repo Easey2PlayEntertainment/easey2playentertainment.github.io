@@ -545,7 +545,7 @@ async function drawAll() {
         }
 
         if(question === '') {
-            if(question === "match") {
+            if(questionType === "match") {
                 question = "Match the items that relate to each other.";
             } else {
                 question = "Number the events in the correct order.";
