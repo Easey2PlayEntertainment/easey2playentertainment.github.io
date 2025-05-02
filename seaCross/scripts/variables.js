@@ -77,6 +77,10 @@ var demoMosesPosition,
     demoIsraelite2Position,
     demoIsraelite3Position;
 
+    var demoIsraelite3Images = [document.createElement('img'), document.createElement('img'),document.createElement('img'),document.createElement('img')];
+    var demoIsraelite3FrameId = 0;
+    var demoIsraelite3Image1Loaded = demoIsraelite3Image2Loaded = demoIsraelite3Image3Loaded = demoIsraelite3Image4Loaded = false;
+
 var demoCrab1Position = 20,
     demoCrab2Position = 80,
     demoCrab3Position = 140,

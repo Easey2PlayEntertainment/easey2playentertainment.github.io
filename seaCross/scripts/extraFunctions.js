@@ -510,6 +510,11 @@ function characterPostureChange() {
             demoEgyptianFrameId = 0;
         }
 
+        demoIsraelite3FrameId++;
+        if(demoIsraelite3FrameId === demoIsraelite3Images.length) {
+            demoIsraelite3FrameId = 0;
+        }
+
         for(var i=0;i<israelites.length;i++) {
             israelites[i].imageId++;
             if(israelites[i].imageId === israelites[i].images.length) {

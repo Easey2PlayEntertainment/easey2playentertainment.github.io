@@ -686,6 +686,22 @@
 			demoEgyptianImages[1].src = "images/egyptian1_walk_1-Copy.png";
 			demoEgyptianImages[3].src = "images/egyptian1_walk_2-Copy.png";
 
+			demoIsraelite3Images[0].onload = function() {
+				demoIsraelite3Image1Loaded = true;
+			}
+			demoIsraelite3Images[1].onload = function() {
+				demoIsraelite3Image2Loaded = true;
+			}
+			demoIsraelite3Images[2].onload = function() {
+				demoIsraelite3Image3Loaded = true;
+			}
+			demoIsraelite3Images[3].onload = function() {
+				demoIsraelite3Image4Loaded = true;
+			}
+			demoIsraelite3Images[0].src = demoIsraelite3Images[2].src = "images/israelite1-Copy.png";
+			demoIsraelite3Images[1].src = "images/israelite1_walk_1-Copy.png";
+			demoIsraelite3Images[3].src = "images/israelite1_walk_2-Copy.png";
+
 			loadQuestions(); // do that first
 
 			loadIsraelitesAndEgyptians();

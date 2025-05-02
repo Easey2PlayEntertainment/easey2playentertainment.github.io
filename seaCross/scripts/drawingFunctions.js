@@ -124,7 +124,7 @@ async function drawAll() {
         crabImage1Loaded && crabImage2Loaded && crabImage3Loaded && pinkShellLoaded && blueShellLoaded && bonusShellFrame1Loaded && bonusShellFrame2Loaded && allIsraeliteImagesLoaded && allEgyptianImagesLoaded && allPowerupsLoaded && mosesImagesLoaded && allQuestionsLoaded && rebootsLoaded && backgroundScoreLoaded && frequency >= numberOfCases && !confirmed) {
         loading = false;
         confirmed = true;
-    } else if(!allFishLoaded || !crabImage1Loaded || !crabImage2Loaded || !crabImage3Loaded || !blueShellLoaded || !pinkShellLoaded || !bonusShellFrame1Loaded || !bonusShellFrame2Loaded || !allIsraeliteImagesLoaded || !allEgyptianImagesLoaded || !allPowerupsLoaded || !mosesImagesLoaded || !allQuestionsLoaded || !backgroundScoreLoaded || !rebootsLoaded || !demoEgyptianImage1Loaded || !demoEgyptianImage2Loaded || !demoEgyptianImage3Loaded || !demoEgyptianImage4Loaded || (frequency < numberOfCases && numberOfCases > 100)) {
+    } else if(!allFishLoaded || !crabImage1Loaded || !crabImage2Loaded || !crabImage3Loaded || !blueShellLoaded || !pinkShellLoaded || !bonusShellFrame1Loaded || !bonusShellFrame2Loaded || !allIsraeliteImagesLoaded || !allEgyptianImagesLoaded || !allPowerupsLoaded || !mosesImagesLoaded || !allQuestionsLoaded || !backgroundScoreLoaded || !rebootsLoaded || !demoEgyptianImage1Loaded || !demoEgyptianImage2Loaded || !demoEgyptianImage3Loaded || !demoEgyptianImage4Loaded || !demoIsraelite3Image1Loaded || !demoIsraelite3Image2Loaded ||!demoIsraelite3Image3Loaded ||!demoIsraelite3Image4Loaded || (frequency < numberOfCases && numberOfCases > 100)) {
         colorRect(0, 0, canvas.width, canvas.height, 'black');
         printText(canvas.width / 2.35, canvas.height / 2.5, 28, 'white', "loading"); // it will be hardwired in there
         colorRect(canvas.width / 4, 400, progressFinalWidth, 30, '#141414');
@@ -734,7 +734,7 @@ async function drawAll() {
     canvasContext.drawImage(mosesImages[mosesImageId], demoMosesPosition, canvas.height / 2 + 50 , 35, 35);
     canvasContext.drawImage(israelites[2].images[israelites[2].imageId], demoIsraelite1Position, canvas.height / 2 + 50 , 35, 35); // CONTINUE HERE
     canvasContext.drawImage(israelites[3].images[israelites[3].imageId], demoIsraelite2Position, canvas.height / 2 + 50 , 35, 35);
-    canvasContext.drawImage(israelites[0].images[israelites[0].imageId], demoIsraelite3Position, canvas.height / 2 + 50 , 35, 35);
+    canvasContext.drawImage(demoIsraelite3Images[demoIsraelite3FrameId], demoIsraelite3Position, canvas.height / 2 + 50 , 35, 35);
     canvasContext.drawImage(currentCrabImage, demoCrab1Position, 450, 50, 50);
     canvasContext.drawImage(currentCrabImage, demoCrab2Position, 450, 50, 50);
     canvasContext.drawImage(currentCrabImage, demoCrab3Position, 450, 50, 50); // keep working on it
