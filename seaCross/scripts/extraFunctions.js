@@ -586,10 +586,10 @@ function trackTime() {
 }
 
 function blinkEyes() {
-    counter = manageBlinkRate(mosesBlinkNow, mosesBlinkCounter, 7);
+    manageBlinkRate(mosesBlinkNow, mosesBlinkCounter, 7);
 
     for(var i=0;i<israeliteBlinks.length;i++) {
-        israeliteBlinks[i].counter = manageBlinkRate(israeliteBlinks[i].blinkNow, israeliteBlinks[i].counter, 7); // see if all characters blink in sync
+        manageBlinkRate(israeliteBlinks[i].blinkNow, israeliteBlinks[i].counter, 7); // see if all characters blink in sync
     }
 }
 
@@ -600,7 +600,7 @@ function manageBlinkRate(blinkNow, counter, trigger) {
         blinkNow = true;
     } else if(counter === trigger + 1) {
         blinkNow = false;
-        return 0;
+        counter = 0;
     }
 }
 
