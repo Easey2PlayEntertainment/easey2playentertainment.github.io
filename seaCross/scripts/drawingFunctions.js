@@ -774,19 +774,19 @@ async function drawAll() {
     }
 
     if(egyptianBlinks[0].blinkNow) {
-        canvasContext.drawImage(egyptianBlinkImage, demoEgyptian1Position, 170, 35, 35);
+        canvasContext.drawImage(egyptianBlinkImageLeft, demoEgyptian1Position, 170, 35, 35);
     }
 
     if(egyptianBlinks[1].blinkNow) {
-        canvasContext.drawImage(egyptianBlinkImage, demoEgyptian2Position, 170, 35, 35);
+        canvasContext.drawImage(egyptianBlinkImageLeft, demoEgyptian2Position, 170, 35, 35);
     }
 
     if(egyptianBlinks[2].blinkNow) {
-        canvasContext.drawImage(egyptianBlinkImage, demoEgyptian3Position, 170, 35, 35);
+        canvasContext.drawImage(egyptianBlinkImageLeft, demoEgyptian3Position, 170, 35, 35);
     }
 
     if(egyptianBlinks[3].blinkNow) {
-        canvasContext.drawImage(egyptianBlinkImage, demoEgyptian4Position, 170, 35, 35);
+        canvasContext.drawImage(egyptianBlinkImageLeft, demoEgyptian4Position, 170, 35, 35);
     }
 
     printText(265 - timesPlayedSpaces, 530, 28, 'white', 'times played: ' + timesPlayed);

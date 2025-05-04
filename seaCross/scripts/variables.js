@@ -236,6 +236,9 @@ var readyToGenerate = false;
 var egyptianBlinkImage = document.createElement('img');
 var egyptianBlinkImageLoaded = false;
 
+var egyptianBlinkImageLeft = document.createElement('img');
+var egyptianBlinkImageLeftLoaded = false;
+
 var egyptianBlinks = [
     {
         blinkNow: false,

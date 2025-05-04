@@ -752,6 +752,11 @@
 			}
 			egyptianBlinkImage.src = "images/egyptian1_blink.png";
 
+			egyptianBlinkImageLeft.onload = function() {
+				egyptianBlinkImageLeftLoaded = true;
+			}
+			egyptianBlinkImageLeft.src = "images/egyptian1_blink_left.png";
+
 			loadQuestions(); // do that first
 
 			loadIsraelitesAndEgyptians();

@@ -725,7 +725,7 @@ function checkBlinkImagesStatus() {
             allIsraeliteBlinksLoaded = false;
         }
     }
-    if(allIsraeliteBlinksLoaded && egyptianBlinkImageLoaded && mosesEyeBlinkImageLoaded) {
+    if(allIsraeliteBlinksLoaded && egyptianBlinkImageLoaded && egyptianBlinkImageLeftLoaded && mosesEyeBlinkImageLoaded) {
         allBlinksLoaded = true;
     }
 }
