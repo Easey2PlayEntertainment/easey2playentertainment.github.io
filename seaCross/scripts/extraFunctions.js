@@ -594,7 +594,7 @@ function blinkEyes() {
 }
 
 function manageBlinkRate(blinkNow, counter, trigger) {
-    blinkNow++;
+    counter++;
 
     if(counter === trigger) {
         blinkNow = true;
