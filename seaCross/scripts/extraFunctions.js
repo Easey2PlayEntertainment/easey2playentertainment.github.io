@@ -585,11 +585,16 @@ function trackTime() {
     }
 }
 
-function blinkEyes() {
-    manageBlinkRate(mosesBlinkNow, mosesBlinkCounter, 7);
+function blinkEyes() { 
+    var blinkData = manageBlinkRate(mosesBlinkNow, mosesBlinkCounter, 7);
+
+    mosesBlinkCounter = blinkData.counterValue;
+    mosesBlinkNow = blinkData.blinkNowValue;
 
     for(var i=0;i<israeliteBlinks.length;i++) {
-        manageBlinkRate(israeliteBlinks[i].blinkNow, israeliteBlinks[i].counter, 7); // see if all characters blink in sync
+        blinkData = manageBlinkRate(israeliteBlinks[i].blinkNow, israeliteBlinks[i].counter, 7); // see if all characters blink in sync
+        israeliteBlinks[i].counter = blinkData.counterValue;
+        israeliteBlinks[i].blinkNow = blinkData.blinkNowValue;
     }
 }
 
@@ -601,6 +606,11 @@ function manageBlinkRate(blinkNow, counter, trigger) {
     } else if(counter === trigger + 1) {
         blinkNow = false;
         counter = 0;
+    }
+
+    return {
+        blinkNowValue: blinkNow,
+        counterValue: counter
     }
 }
 
