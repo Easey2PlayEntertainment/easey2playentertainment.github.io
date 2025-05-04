@@ -702,6 +702,11 @@
 			demoIsraelite3Images[1].src = "images/israelite1_walk_1-Copy.png";
 			demoIsraelite3Images[3].src = "images/israelite1_walk_2-Copy.png";
 
+			mosesEyeBlinkImage.onload = function() {
+				mosesEyeBlinkImageLoaded = true;
+			}
+			mosesEyeBlinkImage.src = "images/moses_blink.png";
+
 			loadQuestions(); // do that first
 
 			loadIsraelitesAndEgyptians();
@@ -745,6 +750,7 @@
 			setInterval(moveFlies, 1); // gotta do it somehow
 			setInterval(textCursor, 500);
 			setInterval(chameleonFlashControl, 1100);
+			setInterval(blinkEyes, 300);
 
 			window.addEventListener('keydown', keyDown);
 			window.addEventListener('keyup', keyUp);

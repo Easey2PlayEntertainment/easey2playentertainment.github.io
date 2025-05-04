@@ -160,6 +160,12 @@ var mosesImageDead1Loaded = false,
     mosesImageDead4Loaded = false;
 var mosesImageId = 0; // start on the first stance, bro!
 
+var mosesEyeBlinkImage = document.createElement('img');
+var mosesEyeBlinkImageLoaded = false;
+
+var mosesBlinkNow = false;
+var mosesBlinkCounter = 0;
+
 var gameOver = false;
 var crossedOver = false;
 

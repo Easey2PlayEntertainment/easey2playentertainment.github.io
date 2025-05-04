@@ -282,7 +282,7 @@ async function drawAll() {
 
     if(!clearCharacters && !crossedOver && !gameOver) {
         if(!runOnce) {
-            canvasContext.drawImage(mosesImages[mosesImageId], mosesX, mosesY, 35, 35);
+            canvasContext.drawImage((mosesBlinkNow ? mosesEyeBlinkImage : mosesImages[mosesImageId]), mosesX, mosesY, 35, 35);
         } else if(runOnce && testCounter < 1 && !gameOver) { // if testCounter < 1, then we are in the gameOver script
             canvasContext.drawImage(mosesDeadImages[mosesImageId], mosesX, mosesY, 35, 35);
         }

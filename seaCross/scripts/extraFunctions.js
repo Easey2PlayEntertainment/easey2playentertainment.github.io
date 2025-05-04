@@ -585,6 +585,17 @@ function trackTime() {
     }
 }
 
+function blinkEyes() {
+    mosesBlinkCounter++;
+
+    if(mosesBlinkCounter === 7) {
+        mosesBlinkNow = true;
+    } else if(mosesBlinkCounter === 8) {
+        mosesBlinkNow = false;
+        mosesBlinkCounter = 0;
+    }
+}
+
 function makeCopy(originalArray) {
     var newArray;
     try {
