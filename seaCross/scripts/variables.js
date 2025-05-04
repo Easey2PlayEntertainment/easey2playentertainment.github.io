@@ -233,6 +233,69 @@ var move = true;
 var checkQuestionLoading = false;
 var readyToGenerate = false;
 
+var israeliteBlinks = [
+    {
+        image: document.createElement('img'),
+        loaded: false,
+        blinkNow: false,
+        counter: 0
+    },
+    {
+        image: document.createElement('img'),
+        loaded: false,
+        blinkNow: false,
+        counter: 0
+    },
+    {
+        image: document.createElement('img'),
+        loaded: false,
+        blinkNow: false,
+        counter: 0
+    },
+    {
+        image: document.createElement('img'),
+        loaded: false,
+        blinkNow: false,
+        counter: 0
+    },
+    {
+        image: document.createElement('img'),
+        loaded: false,
+        blinkNow: false,
+        counter: 0
+    },
+    {
+        image: document.createElement('img'),
+        loaded: false,
+        blinkNow: false,
+        counter: 0
+    },
+    {
+        image: document.createElement('img'),
+        loaded: false,
+        blinkNow: false,
+        counter: 0
+    },
+    {
+        image: document.createElement('img'),
+        loaded: false,
+        blinkNow: false,
+        counter: 0
+    },
+    {
+        image: document.createElement('img'),
+        loaded: false,
+        blinkNow: false,
+        counter: 0
+    },
+    {
+        image: document.createElement('img'),
+        loaded: false,
+        blinkNow: false,
+        counter: 0
+    }
+]
+
 var israelites = [
     {
         x: 320 - 610 + 260 - 20 - 30,

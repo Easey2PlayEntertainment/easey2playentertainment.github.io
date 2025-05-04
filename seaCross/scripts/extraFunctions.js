@@ -594,6 +594,16 @@ function blinkEyes() {
         mosesBlinkNow = false;
         mosesBlinkCounter = 0;
     }
+
+    for(var i=0;i<israeliteBlinks.length;i++) {
+        israeliteBlinks[i].counter++;
+        if(israeliteBlinks[i].counter === 7) {
+            israeliteBlinks[i].blinkNow = true;
+        } else if(israeliteBlinks[i].counter === 8) {
+            israeliteBlinks[i].blinkNow = false;
+            israeliteBlinks[i].counter = 0;
+        }
+    }
 }
 
 function makeCopy(originalArray) {
