@@ -586,23 +586,21 @@ function trackTime() {
 }
 
 function blinkEyes() {
-    mosesBlinkCounter++;
-
-    if(mosesBlinkCounter === 7) {
-        mosesBlinkNow = true;
-    } else if(mosesBlinkCounter === 8) {
-        mosesBlinkNow = false;
-        mosesBlinkCounter = 0;
-    }
+    counter = manageBlinkRate(mosesBlinkNow, mosesBlinkCounter, 7);
 
     for(var i=0;i<israeliteBlinks.length;i++) {
-        israeliteBlinks[i].counter++;
-        if(israeliteBlinks[i].counter === 7) {
-            israeliteBlinks[i].blinkNow = true;
-        } else if(israeliteBlinks[i].counter === 8) {
-            israeliteBlinks[i].blinkNow = false;
-            israeliteBlinks[i].counter = 0;
-        }
+        israeliteBlinks[i].counter = manageBlinkRate(israeliteBlinks[i].blinkNow, israeliteBlinks[i].counter, 7); // see if all characters blink in sync
+    }
+}
+
+function manageBlinkRate(blinkNow, counter, trigger) {
+    blinkNow++;
+
+    if(counter === trigger) {
+        blinkNow = true;
+    } else if(counter === trigger + 1) {
+        blinkNow = false;
+        return 0;
     }
 }
 
