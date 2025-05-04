@@ -55,6 +55,9 @@ function drawEgyptians() {
             var finalWidth = (width * FINAL_HEIGHT) / height;
 
             canvasContext.drawImage(image, egyptians[i].x, egyptians[i].y, finalWidth, FINAL_HEIGHT);
+            if(egyptianBlinks[i].blinkNow) {
+                canvasContext.drawImage(egyptianBlinkImage, egyptians[i].x, egyptians[i].y, finalWidth, FINAL_HEIGHT);
+            }
             continue;
         }
         colorRect(egyptians[i].x, egyptians[i].y, 20, 20, 'grey'); // must be done since one powerup is total darkness
@@ -127,7 +130,7 @@ async function drawAll() {
         crabImage1Loaded && crabImage2Loaded && crabImage3Loaded && pinkShellLoaded && blueShellLoaded && bonusShellFrame1Loaded && bonusShellFrame2Loaded && allIsraeliteImagesLoaded && allEgyptianImagesLoaded && allPowerupsLoaded && mosesImagesLoaded && allQuestionsLoaded && rebootsLoaded && backgroundScoreLoaded && frequency >= numberOfCases && !confirmed) {
         loading = false;
         confirmed = true;
-    } else if(!allFishLoaded || !crabImage1Loaded || !crabImage2Loaded || !crabImage3Loaded || !blueShellLoaded || !pinkShellLoaded || !bonusShellFrame1Loaded || !bonusShellFrame2Loaded || !allIsraeliteImagesLoaded || !allEgyptianImagesLoaded || !allPowerupsLoaded || !mosesImagesLoaded || !allQuestionsLoaded || !backgroundScoreLoaded || !rebootsLoaded || !demoEgyptianImage1Loaded || !demoEgyptianImage2Loaded || !demoEgyptianImage3Loaded || !demoEgyptianImage4Loaded || !demoIsraelite3Image1Loaded || !demoIsraelite3Image2Loaded ||!demoIsraelite3Image3Loaded ||!demoIsraelite3Image4Loaded || (frequency < numberOfCases && numberOfCases > 100)) {
+    } else if(!allFishLoaded || !crabImage1Loaded || !crabImage2Loaded || !crabImage3Loaded || !blueShellLoaded || !pinkShellLoaded || !bonusShellFrame1Loaded || !bonusShellFrame2Loaded || !allIsraeliteImagesLoaded || !allEgyptianImagesLoaded || !allPowerupsLoaded || !mosesImagesLoaded || !allQuestionsLoaded || !backgroundScoreLoaded || !rebootsLoaded || !demoEgyptianImage1Loaded || !demoEgyptianImage2Loaded || !demoEgyptianImage3Loaded || !demoEgyptianImage4Loaded || !demoIsraelite3Image1Loaded || !demoIsraelite3Image2Loaded ||!demoIsraelite3Image3Loaded ||!demoIsraelite3Image4Loaded || !allBlinksLoaded || (frequency < numberOfCases && numberOfCases > 100)) {
         colorRect(0, 0, canvas.width, canvas.height, 'black');
         printText(canvas.width / 2.35, canvas.height / 2.5, 28, 'white', "loading"); // it will be hardwired in there
         colorRect(canvas.width / 4, 400, progressFinalWidth, 30, '#141414');
@@ -765,6 +768,21 @@ async function drawAll() {
         canvasContext.drawImage(israelites[2].images[israelites[2].imageId], canvas.width / 2, canvas.height / 2 + 50 , 35, 35);
         canvasContext.drawImage(egyptians[0].images[egyptians[0].imageId], canvas.width / 2 - 50, canvas.height / 2 + 50 , 35, 35);
         canvasContext.drawImage(israelites[0].images[israelites[0].imageId], canvas.width / 2 - 100, canvas.height / 2 + 50 , 35, 35);
+
+        // Now for eye-blink logic
+        if(mosesBlinkNow) {
+            canvasContext.drawImage(mosesEyeBlinkImage, canvas.width / 2 + 50, canvas.height / 2 + 50 , 35, 35);
+        }
+
+        if(israeliteBlinks[2].blinkNow) {
+            canvasContext.drawImage(israeliteBlinks[2].image, canvas.width / 2, canvas.height / 2 + 50 , 35, 35);
+        }
+
+        if(israeliteBlinks[0].blinkNow) {
+            canvasContext.drawImage(israeliteBlinks[0].image, canvas.width / 2 - 100, canvas.height / 2 + 50 , 35, 35);
+        }
+        // End of eye-blink logic
+
         arcadeMode ? printText(265 - timesPlayedSpaces, 500, 28, 'white', 'times played: ' + timesPlayed) : false;
         printText(20, 30, 28, 'white', 'score');
         printText(20, 60, 28, 'white', zeroedScore(score));

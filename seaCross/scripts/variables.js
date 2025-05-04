@@ -233,6 +233,77 @@ var move = true;
 var checkQuestionLoading = false;
 var readyToGenerate = false;
 
+var egyptianBlinkImage = document.createElement('img');
+var egyptianBlinkImageLoaded = false;
+
+var egyptianBlinks = [
+    {
+        blinkNow: false,
+        counter: 0,
+        trigger: 7
+    },
+    {
+        blinkNow: false,
+        counter: 0,
+        trigger: 7
+    },
+    {
+        blinkNow: false,
+        counter: 0,
+        trigger: 7
+    },
+    {
+        blinkNow: false,
+        counter: 0,
+        trigger: 7
+    },
+    {
+        blinkNow: false,
+        counter: 0,
+        trigger: 7
+    },
+    {
+        blinkNow: false,
+        counter: 0,
+        trigger: 7
+    },
+    {
+        blinkNow: false,
+        counter: 0,
+        trigger: 7
+    },
+    {
+        blinkNow: false,
+        counter: 0,
+        trigger: 7
+    },
+    {
+        blinkNow: false,
+        counter: 0,
+        trigger: 7
+    },
+    {
+        blinkNow: false,
+        counter: 0,
+        trigger: 7
+    },
+    {
+        blinkNow: false,
+        counter: 0,
+        trigger: 7
+    },
+    {
+        blinkNow: false,
+        counter: 0,
+        trigger: 7
+    },
+    {
+        blinkNow: false,
+        counter: 0,
+        trigger: 7
+    }
+];
+
 var israeliteBlinks = [
     {
         image: document.createElement('img'),
@@ -304,7 +375,7 @@ var israeliteBlinks = [
         counter: 3,
         trigger: 9
     }
-]
+];
 
 var israelites = [
     {
@@ -877,3 +948,5 @@ var timesPlayed = 0;
 
 var buttonFlashBlue = false;
 var playButton;
+
+var allBlinksLoaded = false;

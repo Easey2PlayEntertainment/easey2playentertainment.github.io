@@ -596,6 +596,12 @@ function blinkEyes() {
         israeliteBlinks[i].counter = blinkData.counterValue;
         israeliteBlinks[i].blinkNow = blinkData.blinkNowValue;
     }
+
+    for(i=0;i<egyptianBlinks.length;i++) {
+        blinkData = manageBlinkRate(egyptianBlinks[i].blinkNow, egyptianBlinks[i].counter, egyptianBlinks[i].trigger);
+        egyptianBlinks[i].counter = blinkData.counterValue;
+        egyptianBlinks[i].blinkNow = blinkData.blinkNowValue;
+    }
 }
 
 function manageBlinkRate(blinkNow, counter, trigger) {
@@ -712,7 +718,20 @@ function resetDemoAssetPosition(demoAssetPosition, goodSide) {
     return demoAssetPosition;
 }
 
+function checkBlinkImagesStatus() {
+    var allIsraeliteBlinksLoaded = true;
+    for(var i=0;i<israeliteBlinks.length;i++) {
+        if(!israeliteBlinks[i].loaded) {
+            allIsraeliteBlinksLoaded = false;
+        }
+    }
+    if(allIsraeliteBlinksLoaded && egyptianBlinkImageLoaded && mosesEyeBlinkImageLoaded) {
+        allBlinksLoaded = true;
+    }
+}
+
 function updateAll() {
+    checkBlinkImagesStatus();
     if(!start && arcadeMode) {
         moveDemoAssets();
     }

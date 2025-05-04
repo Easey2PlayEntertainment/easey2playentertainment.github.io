@@ -747,6 +747,11 @@
 			israeliteBlinks[8].image.src = "images/israelite9_blink.png";
 			israeliteBlinks[9].image.src = "images/israelite10_blink.png";
 
+			egyptianBlinkImage.onload = function() {
+				egyptianBlinkImageLoaded = true;
+			}
+			egyptianBlinkImage.src = "images/egyptian1_blink.png";
+
 			loadQuestions(); // do that first
 
 			loadIsraelitesAndEgyptians();
