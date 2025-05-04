@@ -238,61 +238,71 @@ var israeliteBlinks = [
         image: document.createElement('img'),
         loaded: false,
         blinkNow: false,
-        counter: 0
+        counter: 6,
+        trigger: 7
     },
     {
         image: document.createElement('img'),
         loaded: false,
         blinkNow: false,
-        counter: 0
+        counter: 0,
+        trigger: 9 
     },
     {
         image: document.createElement('img'),
         loaded: false,
         blinkNow: false,
-        counter: 0
+        counter: 0,
+        trigger: 5
     },
     {
         image: document.createElement('img'),
         loaded: false,
         blinkNow: false,
-        counter: 0
+        counter: 0,
+        trigger: 12
     },
     {
         image: document.createElement('img'),
         loaded: false,
         blinkNow: false,
-        counter: 0
+        counter: 0,
+        trigger: 10
     },
     {
         image: document.createElement('img'),
         loaded: false,
         blinkNow: false,
-        counter: 0
+        counter: 0,
+        trigger: 5
     },
     {
         image: document.createElement('img'),
         loaded: false,
         blinkNow: false,
-        counter: 0
+        counter: 0,
+        trigger: 8
     },
     {
         image: document.createElement('img'),
         loaded: false,
         blinkNow: false,
-        counter: 0
+        counter: 7,
+        trigger: 12
     },
     {
         image: document.createElement('img'),
         loaded: false,
         blinkNow: false,
-        counter: 0
+        counter: 5,
+        trigger: 10
     },
     {
         image: document.createElement('img'),
         loaded: false,
         blinkNow: false,
-        counter: 0
+        counter: 3,
+        trigger: 9
     }
 ]
 

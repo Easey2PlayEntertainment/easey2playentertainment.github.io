@@ -592,7 +592,7 @@ function blinkEyes() {
     mosesBlinkNow = blinkData.blinkNowValue;
 
     for(var i=0;i<israeliteBlinks.length;i++) {
-        blinkData = manageBlinkRate(israeliteBlinks[i].blinkNow, israeliteBlinks[i].counter, 7); // see if all characters blink in sync
+        blinkData = manageBlinkRate(israeliteBlinks[i].blinkNow, israeliteBlinks[i].counter, israeliteBlinks[i].trigger); // see if all characters blink in sync
         israeliteBlinks[i].counter = blinkData.counterValue;
         israeliteBlinks[i].blinkNow = blinkData.blinkNowValue;
     }
