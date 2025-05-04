@@ -247,63 +247,63 @@ var egyptianBlinks = [
     },
     {
         blinkNow: false,
-        counter: 0,
+        counter: 4,
         trigger: 7
     },
     {
         blinkNow: false,
-        counter: 0,
-        trigger: 7
+        counter: 5,
+        trigger: 10
     },
     {
         blinkNow: false,
         counter: 0,
-        trigger: 7
+        trigger: 10
+    },
+    {
+        blinkNow: false,
+        counter: 4,
+        trigger: 8
     },
     {
         blinkNow: false,
         counter: 0,
-        trigger: 7
+        trigger: 8
+    },
+    {
+        blinkNow: false,
+        counter: 7,
+        trigger: 14
     },
     {
         blinkNow: false,
         counter: 0,
-        trigger: 7
+        trigger: 14
     },
     {
         blinkNow: false,
         counter: 0,
+        trigger: 5
+    },
+    {
+        blinkNow: false,
+        counter: 3,
+        trigger: 5
+    },
+    {
+        blinkNow: false,
+        counter: 1,
         trigger: 7
     },
     {
         blinkNow: false,
-        counter: 0,
-        trigger: 7
+        counter: 2,
+        trigger: 8
     },
     {
         blinkNow: false,
-        counter: 0,
-        trigger: 7
-    },
-    {
-        blinkNow: false,
-        counter: 0,
-        trigger: 7
-    },
-    {
-        blinkNow: false,
-        counter: 0,
-        trigger: 7
-    },
-    {
-        blinkNow: false,
-        counter: 0,
-        trigger: 7
-    },
-    {
-        blinkNow: false,
-        counter: 0,
-        trigger: 7
+        counter: 3,
+        trigger: 9
     }
 ];
 
