@@ -747,6 +747,7 @@ function checkBlinkImagesStatus() {
 }
 
 function updateAll() {
+    $('pixel').innerHTML = "googlePixelDevice = " + (googlePixelDevice ? 'true' : 'false');
     checkBlinkImagesStatus();
     if(!start && arcadeMode) {
         moveDemoAssets();
