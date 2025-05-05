@@ -26,9 +26,25 @@ function findDimensions() {
 }
 
 function checkDeviceType() {
+    var phoneDataInformation;
     if(navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|Opera Mini|Opera Mobi|IEMobile|Maemo Browser|Doris|NetFront|SymbianOS|uZardWeb/i)) {
         mobileVersion = true;
         document.querySelector('.controlChoices').style.display = 'initial';
+
+        if('userAgentData' in navigator) {
+            navigator.userAgentData.getHighEntropyValues(["model", "platform"]).then(ua => {
+                phoneDataInformation = {
+                    model: ua.model,
+                    platform: ua.platform
+                };
+            });
+        }
+
+        if(phoneDataInformation !== undefined) {
+            if(phoneDataInformation.model === "Pixel 9 Pro" || phoneDataInformation.model.match(/Pixel/i)) {
+                googlePixelDevice = true;
+            }
+        }
     }
     if(navigator.userAgent.match(/iPhone/)) {
         document.querySelector('body').innerHTML = `<p>Hello, player!</p>
