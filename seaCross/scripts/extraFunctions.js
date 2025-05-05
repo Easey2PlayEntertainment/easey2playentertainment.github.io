@@ -33,17 +33,13 @@ function checkDeviceType() {
 
         if('userAgentData' in navigator) {
             navigator.userAgentData.getHighEntropyValues(["model", "platform"]).then(ua => {
-                phoneDataInformation = {
-                    model: ua.model,
-                    platform: ua.platform
-                };
+                if(ua.model === "Pixel 9 Pro" || ua.model.match(/Pixel/i)) {
+                    alert('google pixel detected');
+                    googlePixelDevice = true;
+                } else {
+                    alert('no google pixel...yer fine!')
+                }
             });
-        }
-
-        if(phoneDataInformation !== undefined) {
-            if(phoneDataInformation.model === "Pixel 9 Pro" || phoneDataInformation.model.match(/Pixel/i)) {
-                googlePixelDevice = true;
-            }
         }
     }
     if(navigator.userAgent.match(/iPhone/)) {
