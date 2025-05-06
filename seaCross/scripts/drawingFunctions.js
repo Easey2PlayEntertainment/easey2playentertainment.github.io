@@ -467,16 +467,17 @@ async function drawAll() {
             } else {
                 readyFinished = true;
                 countdownNumber = 600;
+                if(stillReady) {
+                    await sleep(2000);
+                    stillReady = false;
+                }
             }
             
             readyCounter = 0; // ready to start over
         }
     } else if(readyShow) {
         printText(canvas.width / 2.285, canvas.height / 2, 28, 'black', 'ready!');
-        await sleep((googlePixelDevice && stillReady ? 4000 : 2000));
-        if(stillReady) {
-            stillReady = false;
-        }
+        await sleep(2000);
         readyShow = false; // should play the music then...
     }
     if(loading || start && !screenBlacked) {
