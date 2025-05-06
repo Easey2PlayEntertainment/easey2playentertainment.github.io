@@ -467,13 +467,13 @@ async function drawAll() {
             } else {
                 readyFinished = true;
                 countdownNumber = 600;
+                if(stillReady && googlePixelDevice) {
+                    await sleep(5000);
+                    stillReady = false;
+                }
             }
             
             readyCounter = 0; // ready to start over
-        }
-        if(stillReady && readyFinished && googlePixelDevice) {
-            await sleep(5000);
-            stillReady = false;
         }
     } else if(readyShow) {
         printText(canvas.width / 2.285, canvas.height / 2, 28, 'black', 'ready!');
