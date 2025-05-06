@@ -34,10 +34,7 @@ function checkDeviceType() {
         if('userAgentData' in navigator) {
             navigator.userAgentData.getHighEntropyValues(["model", "platform"]).then(ua => {
                 if(ua.model === "Pixel 9 Pro" || ua.model.match(/Pixel/i)) {
-                    alert('google pixel detected');
                     googlePixelDevice = true;
-                } else {
-                    alert('no google pixel...yer fine!')
                 }
             });
         }
@@ -743,7 +740,6 @@ function checkBlinkImagesStatus() {
 }
 
 function updateAll() {
-    $('pixel').innerHTML = "googlePixelDevice = " + (googlePixelDevice ? 'true' : 'false');
     checkBlinkImagesStatus();
     if(!start && arcadeMode) {
         moveDemoAssets();
