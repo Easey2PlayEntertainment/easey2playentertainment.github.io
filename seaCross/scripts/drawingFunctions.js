@@ -467,10 +467,6 @@ async function drawAll() {
             } else {
                 readyFinished = true;
                 countdownNumber = 600;
-                if(stillReady) {
-                    await sleep(5000);
-                    stillReady = false;
-                }
             }
             
             readyCounter = 0; // ready to start over
@@ -479,6 +475,10 @@ async function drawAll() {
         printText(canvas.width / 2.285, canvas.height / 2, 28, 'black', 'ready!');
         await sleep(2000);
         readyShow = false; // should play the music then...
+    }
+    if(stillReady) {
+        await sleep(5000);
+        stillReady = false;
     }
     if(loading || start && !screenBlacked) {
         var waitTime;
