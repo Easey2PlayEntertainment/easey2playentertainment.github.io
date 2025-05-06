@@ -49,7 +49,14 @@ function checkDeviceType() {
 }
 
 function playSound(buffer, source) {
-    if(source === "backgroundScoreSource") {
+    if(source === "startupThemeSource") {
+        startupThemeSource = context.createBufferSource();
+        startupThemeSource.buffer = buffer;
+        startupThemeSource.loop = false;
+        startupThemeSource.connect(context.destination);
+        startupThemeSource.start();
+        return;
+    } else if(source === "backgroundScoreSource") {
         backgroundScoreSource = context.createBufferSource();
         backgroundScoreSource.buffer = buffer;
         backgroundScoreSource.loop = true; // loop forever

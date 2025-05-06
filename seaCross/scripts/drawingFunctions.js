@@ -391,8 +391,6 @@ async function drawAll() {
 
         referenceHolderQuestion = "";
 
-        stillReady = true;
-
         annoyingPowerupPosition = [];
         annoyingPowerupPositionNumber = 0;
         annoyingPowerupPositionCleaned = false;
@@ -450,7 +448,7 @@ async function drawAll() {
     }
     if(countdownNumber < 600 && start && !(readyFinished && livesManipulated) && screenBlacked) {  // should run twice
         if(!startupThemePlayed) {
-            playSound(startupThemeBuffer);
+            playSound(startupThemeBuffer, "startupThemeSource");
             startupThemePlayed = true;
         }
         printText(canvas.width / 2.285, canvas.height / 2, 28, 'black', 'ready!');
@@ -467,9 +465,8 @@ async function drawAll() {
             } else {
                 readyFinished = true;
                 countdownNumber = 600;
-                if(stillReady && googlePixelDevice) {
-                    await sleep(5000);
-                    stillReady = false;
+                if(googlePixelDevice) {
+                    startupThemeSource.stop();
                 }
             }
             

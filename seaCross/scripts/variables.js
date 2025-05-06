@@ -955,4 +955,3 @@ var playButton;
 var allBlinksLoaded = false;
 
 var googlePixelDevice = false;
-var stillReady = true;
