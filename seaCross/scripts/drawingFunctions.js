@@ -113,8 +113,6 @@ async function drawAll() {
     var announcementMessage;
     var waitTime = 2000; // default
 
-    var second200CountValue = (googlePixelDevice ? 2000 : 200);
-
     for(var i=0;i<5;i++) {
         highScoreAsArray.pop();
     }
@@ -393,6 +391,8 @@ async function drawAll() {
 
         referenceHolderQuestion = "";
 
+        stillReady = true;
+
         annoyingPowerupPosition = [];
         annoyingPowerupPositionNumber = 0;
         annoyingPowerupPositionCleaned = false;
@@ -456,11 +456,11 @@ async function drawAll() {
         printText(canvas.width / 2.285, canvas.height / 2, 28, 'black', 'ready!');
         questionNumber = 0;
         readyCounter++;
-        await sleep(second200CountValue);
-        if(readyCounter < second200CountValue) {
+        await sleep(200);
+        if(readyCounter < 200) {
             return;
         }
-        if(readyCounter >= second200CountValue) {
+        if(readyCounter >= 200) {
             if(!readyFinished && !livesManipulated) {
                 livesDisplayManipulateNumber = 1;
                 livesManipulated = true;
@@ -473,7 +473,10 @@ async function drawAll() {
         }
     } else if(readyShow) {
         printText(canvas.width / 2.285, canvas.height / 2, 28, 'black', 'ready!');
-        await sleep(2000);
+        await sleep((googlePixelDevice && stillReady ? 4000 : 2000));
+        if(stillReady) {
+            stillReady = false;
+        }
         readyShow = false; // should play the music then...
     }
     if(loading || start && !screenBlacked) {
