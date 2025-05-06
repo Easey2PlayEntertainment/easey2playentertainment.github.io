@@ -468,7 +468,7 @@ async function drawAll() {
                 readyFinished = true;
                 countdownNumber = 600;
                 if(stillReady) {
-                    await sleep(2000);
+                    await sleep(5000);
                     stillReady = false;
                 }
             }
