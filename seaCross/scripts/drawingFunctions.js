@@ -113,6 +113,8 @@ async function drawAll() {
     var announcementMessage;
     var waitTime = 2000; // default
 
+    var second200CountValue = (googlePixelDevice ? 2000 : 200);
+
     for(var i=0;i<5;i++) {
         highScoreAsArray.pop();
     }
@@ -454,11 +456,11 @@ async function drawAll() {
         printText(canvas.width / 2.285, canvas.height / 2, 28, 'black', 'ready!');
         questionNumber = 0;
         readyCounter++;
-        await sleep(200);
-        if(readyCounter < 200) {
+        await sleep(second200CountValue);
+        if(readyCounter < second200CountValue) {
             return;
         }
-        if(readyCounter >= 200) {
+        if(readyCounter >= second200CountValue) {
             if(!readyFinished && !livesManipulated) {
                 livesDisplayManipulateNumber = 1;
                 livesManipulated = true;
