@@ -27,14 +27,14 @@ async function moveAll() {
         }
 
         if(allFishLoaded && crabImage1Loaded && crabImage2Loaded && crabImage3Loaded && pinkShellLoaded && blueShellLoaded && bonusShellFrame1Loaded && bonusShellFrame2Loaded && allIsraeliteImagesLoaded && allEgyptianImagesLoaded && allPowerupsLoaded && !runOnce) {
-            fish1.xPosition += (googlePixelDevice ? 0.1 : 1.5) * fish1.directionPointer; // work on this section later
-            fish2.xPosition += (googlePixelDevice ? 0.1 : 1.5) * fish2.directionPointer;
-            fish3.xPosition += (googlePixelDevice ? 0.1 : 1.5) * fish3.directionPointer;
-            fish4.xPosition += (googlePixelDevice ? 0.1 : 1.5) * fish4.directionPointer;
-            fish5.xPosition += (googlePixelDevice ? 0.1 : 1.5) * fish5.directionPointer;
-            fish6.xPosition += (googlePixelDevice ? 0.1 : 1.5) * fish6.directionPointer;
-            fish7.xPosition += (googlePixelDevice ? 0.1 : 1.5) * fish7.directionPointer;
-            fish8.xPosition += (googlePixelDevice ? 0.1 : 1.5) * fish8.directionPointer;
+            fish1.xPosition += (googlePixelDevice ? 0.5 : 1.5) * fish1.directionPointer; // work on this section later
+            fish2.xPosition += (googlePixelDevice ? 0.5 : 1.5) * fish2.directionPointer;
+            fish3.xPosition += (googlePixelDevice ? 0.5 : 1.5) * fish3.directionPointer;
+            fish4.xPosition += (googlePixelDevice ? 0.5 : 1.5) * fish4.directionPointer;
+            fish5.xPosition += (googlePixelDevice ? 0.5 : 1.5) * fish5.directionPointer;
+            fish6.xPosition += (googlePixelDevice ? 0.5 : 1.5) * fish6.directionPointer;
+            fish7.xPosition += (googlePixelDevice ? 0.5 : 1.5) * fish7.directionPointer;
+            fish8.xPosition += (googlePixelDevice ? 0.5 : 1.5) * fish8.directionPointer;
 
             if(powerupName === 'flies') {
                 for(var i=0;i<annoyingPowerupPosition.length;i++) {
