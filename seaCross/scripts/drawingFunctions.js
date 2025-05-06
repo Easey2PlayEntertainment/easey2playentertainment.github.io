@@ -476,7 +476,7 @@ async function drawAll() {
         await sleep(2000);
         readyShow = false; // should play the music then...
     }
-    if(stillReady) {
+    if(stillReady && start) {
         await sleep(5000);
         stillReady = false;
     }
