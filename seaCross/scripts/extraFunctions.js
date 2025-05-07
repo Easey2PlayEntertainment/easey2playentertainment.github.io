@@ -751,6 +751,7 @@ function updateAll() {
         googlePixelDevice = true; // slow the video game down
     } else {
         googlePixelDevice = false;
+        checkDeviceType();
     }
     checkBlinkImagesStatus();
     if(!start && arcadeMode) {
