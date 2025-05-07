@@ -747,6 +747,11 @@ function checkBlinkImagesStatus() {
 }
 
 function updateAll() {
+    if($('slowDown').checked) {
+        googlePixelDevice = true; // slow the video game down
+    } else {
+        googlePixelDevice = false;
+    }
     checkBlinkImagesStatus();
     if(!start && arcadeMode) {
         moveDemoAssets();
