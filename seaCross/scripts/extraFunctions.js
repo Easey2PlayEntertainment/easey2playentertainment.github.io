@@ -35,6 +35,8 @@ function checkDeviceType() {
             navigator.userAgentData.getHighEntropyValues(["model", "platform"]).then(ua => {
                 if(ua.model === "Pixel 9 Pro" || ua.model.match(/Pixel/i)) {
                     googlePixelDevice = true;
+                } else {
+                    googlePixelDevice = false;
                 }
             });
         }
@@ -750,7 +752,6 @@ function updateAll() {
     if($('slowDown').checked) {
         googlePixelDevice = true; // slow the video game down
     } else {
-        googlePixelDevice = false;
         checkDeviceType();
     }
     checkBlinkImagesStatus();
