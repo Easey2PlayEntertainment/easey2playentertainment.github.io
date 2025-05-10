@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Welcome to the world of Easey2Play Entertainment&trade;, where faith-based video games come to life!">
+        <meta name="author" content="Azariah Easey, krdrabbits.com, easeystrings.com, americanfreedomtrain2026.us, www.bazinesdachurch.com">
+        <meta name="viewport" content="width=device-width">
+        <title>Page Not Found</title>        
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="icon" type="image/x-icon" href="seaCross/images/moses.png">
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XGR59XBC7"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-9XGR59XBC7');
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="dropdown">
+                    <button class="dropdownButton" id="controlHidingScheme1">
+                        =
+                    </button>
+                    <div class="dropdown-content">
+                        <div id="navigationCenter">
+                            <a href="index.html">Home</a>
+                            <a href="about.html">About Us</a>
+                            <a href="contact-us.html">Contact Us</a>
+                            <a href="games.html">Games</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>            <h1>Page Not Found</h1>
+        </header>
+
+        <main>
+            <section class="newGamesList">
+                <h2 class="invisibleHeaders">Page Not Found</h2>
+                <p>We could not find the page you were looking for. We are sorry for the inconvenience.</p>
+            </section>
+            <section style="text-align: center;">
+                <canvas id="cnvs" width="400" height="400"></canvas>
+            </section>
+        </main>
+
+        <footer>
+    <p>&copy; 2025 Azariah M Easey. All rights reserved.</p>
+        </footer>       
+        
+        <script>
+            var canvas, canvasContext;
+
+            var up = down = left = right = false;
+
+            var plantX, plantY;
+
+            var growWorm = false;
+
+            var wormPositions = [
+            {
+                    x: 90,
+                    y: 20
+                },
+                {
+                    x: 70,
+                    y: 20
+                },
+                {
+                    x: 50,
+                    y: 20
+                },
+                {
+                    x: 30,
+                    y: 20
+                }
+            ];
+
+            window.onload = function() {
+                canvas = document.getElementById('cnvs');
+                canvasContext = canvas.getContext('2d');
+
+                plantX = 150
+                plantY = 200;
+
+                colorRect(0,0,canvas.width,canvas.height,'white');
+
+                document.addEventListener('keydown', keyDown);
+                document.addEventListener('keyup', keyUp);
+
+                setInterval(updateAll, 80);
+            }
+
+            function keyDown(e) {
+                //(e.code);
+                if(e.code === "ArrowUp") {
+                    up = true;
+                    down = left = right = false;
+                } else if(e.code === "ArrowDown") {
+                    down = true;
+                    up = left = right = false;
+                } else if(e.code === "ArrowLeft") {
+                    left = true;
+                    right = up = down = false;
+                } else {
+                    right = true;
+                    left = up = down = false;
+                }
+            }
+
+            function keyUp(e) {
+                //(e.code);
+            }
+
+            function colorRect(p,a,i,n,t) {
+                canvasContext.fillStyle = t;
+                canvasContext.fillRect(p,a,i,n);
+            }
+
+            function updateAll() {
+                moveAll();
+                drawAll();
+            }
+
+            function moveAll() {
+                var lastPosition = JSON.parse(JSON.stringify(wormPositions))[0];
+
+                var tailPosition = JSON.parse(JSON.stringify(wormPositions))[wormPositions.length - 1];
+
+                //(lastPosition);
+
+                if(up || down || left || right) {
+                    if(right) {
+                        wormPositions[0].x += 20;
+                    } else if(left) {
+                        wormPositions[0].x -= 20;
+                    } else if(up) {
+                        wormPositions[0].y -= 20;
+                    } else if(down) {
+                        wormPositions[0].y += 20;
+                    }
+
+                    //(lastPosition);
+                    var wormPositionsClone = wormPositions.slice();
+                    wormPositionsClone.push(null);
+                    //(wormPositionsClone);
+
+                    for(var i=wormPositionsClone.length - 1;i>1;i--) {
+                        wormPositionsClone[i] = wormPositionsClone[i-1];
+                        //(wormPositionsClone[i]);
+                    }
+                    //(wormPositionsClone);
+                    wormPositionsClone[1] = lastPosition;
+                    //(lastPosition);
+                    wormPositionsClone.pop();
+                    wormPositions = wormPositionsClone.slice();
+                    //(wormPositions);
+                    if(growWorm) {
+                        wormPositions.push(tailPosition);
+                        growWorm = false;
+                    }
+                }
+
+if(wormPositions[0].x > canvas.width) {
+				wormPositions[0].x = -20;
+			} else if(wormPositions[0].x < -20) {
+				wormPositions[0].x = canvas.width;
+			} else if(wormPositions[0].y > canvas.height) {
+				wormPositions[0].y = -20;
+			} else if(wormPositions[0].y < -20) {
+				wormPositions[0].y = canvas.height;
+			}
+
+                if(plantX === wormPositions[0].x && plantY === wormPositions[0].y ||
+                    Math.abs(plantX - wormPositions[0].x) <=15 && Math.abs(plantY - wormPositions[0].y) <= 15
+                ) {
+                    plantX = Math.round(Math.random() * canvas.width / 2);
+                    plantY = Math.round(Math.random() * canvas.height / 2);
+                    growWorm = true;
+                }
+
+		for(var i=1;i<wormPositions.length;i++) {
+			if(wormPositions[0] === wormPositions[i] ||
+				Math.abs(wormPositions[0].x - wormPositions[i].x) < 5 &&
+				Math.abs(wormPositions[0].y - wormPositions[i].y) < 5) {
+				wormPositions = [
+            {
+                    x: 90,
+                    y: 20
+                },
+                {
+                    x: 70,
+                    y: 20
+                },
+                {
+                    x: 50,
+                    y: 20
+                },
+                {
+                    x: 30,
+                    y: 20
+                }
+            ];
+				up = down = left = right = false;
+				plantX = 150
+                plantY = 200;
+
+			}
+		}
+                
+            }
+
+            function drawAll() {
+                colorRect(0,0,canvas.width,canvas.height,'#fcbe03');
+
+                for(var i=0;i<wormPositions.length;i++) {
+                    colorRect(wormPositions[i].x, wormPositions[i].y, 20, 20, 'red');
+                }
+
+                colorRect(plantX, plantY, 20, 20, 'green');
+            }
+        </script>
+    </body>
+</html>
