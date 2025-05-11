@@ -46,6 +46,11 @@
             </section>
             <section style="text-align: center;">
                 <canvas id="cnvs" width="400" height="400"></canvas>
+                <div class="mobileControls">
+                    <button id="upButton" onclick="keyDown({code: 'ArrowUp'});">UP</button><br><br>
+                    <button id="leftButton" onclick="keyDown({code: 'ArrowLeft'});">LEFT</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="rightButton" onclick="keyDown({code: 'ArrowRight'});">RIGHT</button><br><br>
+                    <button id="downButton" onclick="keyDown({code: 'ArrowDown'});">DOWN</button>
+                </div>
             </section>
         </main>
 
@@ -98,16 +103,19 @@
 
             function keyDown(e) {
                 //(e.code);
-                if(e.code === "ArrowUp") {
+                if(e.code === "ArrowUp" && !down) {
                     up = true;
                     down = left = right = false;
-                } else if(e.code === "ArrowDown") {
+                } else if(e.code === "ArrowDown" && !up) {
                     down = true;
                     up = left = right = false;
-                } else if(e.code === "ArrowLeft") {
+                } else if(e.code === "ArrowLeft" && !right) {
                     left = true;
                     right = up = down = false;
-                } else {
+                } else if(e.code === "ArrowRight" && !left) {
+                    right = true;
+                    left = up = down = false;
+                } else if (!left && !right && !up && !down) {
                     right = true;
                     left = up = down = false;
                 }
@@ -166,14 +174,14 @@
                     }
                 }
 
-if(wormPositions[0].x > canvas.width) {
-				wormPositions[0].x = -20;
-			} else if(wormPositions[0].x < -20) {
-				wormPositions[0].x = canvas.width;
-			} else if(wormPositions[0].y > canvas.height) {
-				wormPositions[0].y = -20;
-			} else if(wormPositions[0].y < -20) {
-				wormPositions[0].y = canvas.height;
+if(wormPositions[0].x >= canvas.width) {
+				wormPositions[0].x = 0;
+			} else if(wormPositions[0].x <= -20) {
+				wormPositions[0].x = canvas.width - 20;
+			} else if(wormPositions[0].y >= canvas.height) {
+				wormPositions[0].y = 0;
+			} else if(wormPositions[0].y <= -20) {
+				wormPositions[0].y = canvas.height - 20;
 			}
 
                 if(plantX === wormPositions[0].x && plantY === wormPositions[0].y ||
@@ -216,13 +224,13 @@ if(wormPositions[0].x > canvas.width) {
             }
 
             function drawAll() {
-                colorRect(0,0,canvas.width,canvas.height,'#fcbe03');
+                colorRect(0,0,canvas.width,canvas.height,'black');
 
                 for(var i=0;i<wormPositions.length;i++) {
-                    colorRect(wormPositions[i].x, wormPositions[i].y, 20, 20, 'red');
+                    colorRect(wormPositions[i].x, wormPositions[i].y, 20, 20, 'green');
                 }
 
-                colorRect(plantX, plantY, 20, 20, 'green');
+                colorRect(plantX, plantY, 20, 20, 'red');
             }
         </script>
     </body>
