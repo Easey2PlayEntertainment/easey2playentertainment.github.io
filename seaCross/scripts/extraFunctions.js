@@ -1528,7 +1528,7 @@ function keyDown(e) {
         }
     } else if(e.key === "0" || e.key === "F11") { // if F11 is pressed, go fullscreen on the canvas 
         requestFullScreen(canvas);
-    } else if(e.key === "p" || e.key === "Pause" || e.key === "MediaPlayPause") { // so that people can just use media buttons to pause
+    } else if((e.key === "p" || e.key === "Pause" || e.key === "MediaPlayPause") && start) { // so that people can just use media buttons to pause
         paused = !paused;
     } else if(e.key === "ArrowUp") {
         up = true;
