@@ -112,6 +112,24 @@ function checkAnswersAndScore() {
         }
     }
 
+    if(!answerCorrect) {
+        var alreadyFilled = false;
+        for(var i=0;i<incorrectAnswersDataCollector.length;i++) {
+            if(incorrectAnswersDataCollector.question === allQuestions[level][lastQuestionNumber]) {
+                incorrectAnswersDataCollector.frequency++;
+                alreadyFilled = true;
+                break;
+            }
+        }
+        if(alreadyFilled) {
+            incorrectAnswersDataCollector.push({
+                question: allQuestions[level][lastQuestionNumber],
+                answer: answer,
+                frequency: 1
+            });
+        }
+    }
+
     volumeController.gain.value = 0;
 
     if(answerCorrect) {
