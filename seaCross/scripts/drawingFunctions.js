@@ -369,7 +369,7 @@ async function drawAll() {
         israelites = makeCopy(israelitesReboot); // just to see if it makes hard copies or not
         egyptians = makeCopy(egyptiansReboot);
 
-        localStorage.setItem('incorrectAnswersDataStatistics', incorrectAnswersDataCollector); // just to update things as they go...
+        arcadeMode ? localStorage.setItem('incorrectAnswersDataStatistics', incorrectAnswersDataCollector) : false; // just to update things as they go...
         
         egyptiansMove = false;
         egyptianStepCount = 0;

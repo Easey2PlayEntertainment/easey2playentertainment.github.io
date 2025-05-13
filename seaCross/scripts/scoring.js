@@ -112,7 +112,7 @@ function checkAnswersAndScore() {
         }
     }
 
-    if(!answerCorrect) {
+    if(!answerCorrect && arcadeMode) { // only run on arcade machines
         var alreadyFilled = false;
         for(var i=0;i<incorrectAnswersDataCollector.length;i++) {
             if(incorrectAnswersDataCollector.question === allQuestions[level][lastQuestionNumber]) {
