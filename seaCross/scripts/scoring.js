@@ -121,7 +121,7 @@ function checkAnswersAndScore() {
                 break;
             }
         }
-        if(alreadyFilled) {
+        if(!alreadyFilled) {
             incorrectAnswersDataCollector.push({
                 question: allQuestions[level][questionNumber],
                 answer: answer,
