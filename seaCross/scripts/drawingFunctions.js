@@ -447,6 +447,7 @@ async function drawAll() {
         return;
     }
     if(countdownNumber < 600 && start && !(readyFinished && livesManipulated) && screenBlacked) {  // should run twice
+        paused = false;
         if(!startupThemePlayed) {
             playSound(startupThemeBuffer, "startupThemeSource");
             startupThemePlayed = true;
