@@ -115,8 +115,8 @@ function checkAnswersAndScore() {
     if(!answerCorrect && arcadeMode) { // only run on arcade machines
         var alreadyFilled = false;
         for(var i=0;i<incorrectAnswersDataCollector.length;i++) {
-            if(incorrectAnswersDataCollector.question === allQuestions[level][questionNumber].question) {
-                incorrectAnswersDataCollector.frequency++;
+            if(incorrectAnswersDataCollector[i].question === allQuestions[level][questionNumber].question) {
+                incorrectAnswersDataCollector[i].frequency++;
                 alreadyFilled = true;
                 break;
             }
