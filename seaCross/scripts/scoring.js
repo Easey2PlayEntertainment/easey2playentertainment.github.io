@@ -115,7 +115,7 @@ function checkAnswersAndScore() {
     if(!answerCorrect && arcadeMode) { // only run on arcade machines
         var alreadyFilled = false;
         for(var i=0;i<incorrectAnswersDataCollector.length;i++) {
-            if(incorrectAnswersDataCollector.question === allQuestions[level][lastQuestionNumber]) {
+            if(incorrectAnswersDataCollector.question === allQuestions[level][questionNumber]) {
                 incorrectAnswersDataCollector.frequency++;
                 alreadyFilled = true;
                 break;
@@ -123,7 +123,7 @@ function checkAnswersAndScore() {
         }
         if(alreadyFilled) {
             incorrectAnswersDataCollector.push({
-                question: allQuestions[level][lastQuestionNumber],
+                question: allQuestions[level][questionNumber],
                 answer: answer,
                 frequency: 1
             });
