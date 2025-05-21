@@ -866,7 +866,7 @@ var sendingResults = false;
 
 var progressFinalWidth = 400,
     frequency = 0,
-    numberOfCases = 146;
+    numberOfCases = 150;
 
 var removeBreak = false;
 

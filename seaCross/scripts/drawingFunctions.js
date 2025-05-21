@@ -127,7 +127,7 @@ async function drawAll() {
     }
 
     if(allFishLoaded && 
-        crabImage1Loaded && crabImage2Loaded && crabImage3Loaded && pinkShellLoaded && blueShellLoaded && bonusShellFrame1Loaded && bonusShellFrame2Loaded && allIsraeliteImagesLoaded && allEgyptianImagesLoaded && allPowerupsLoaded && mosesImagesLoaded && allQuestionsLoaded && rebootsLoaded && backgroundScoreLoaded && frequency >= numberOfCases && !confirmed) {
+        crabImage1Loaded && crabImage2Loaded && crabImage3Loaded && pinkShellLoaded && blueShellLoaded && bonusShellFrame1Loaded && bonusShellFrame2Loaded && allIsraeliteImagesLoaded && allEgyptianImagesLoaded && allPowerupsLoaded && mosesImagesLoaded && allQuestionsLoaded && rebootsLoaded && demoEgyptianImage1Loaded && demoEgyptianImage2Loaded && demoEgyptianImage3Loaded && demoEgyptianImage4Loaded && backgroundScoreLoaded && demoIsraelite3Image1Loaded && demoIsraelite3Image2Loaded && demoIsraelite3Image3Loaded && demoIsraelite3Image4Loaded && allBlinksLoaded && frequency >= numberOfCases && !confirmed) {
         loading = false;
         confirmed = true;
     } else if(!allFishLoaded || !crabImage1Loaded || !crabImage2Loaded || !crabImage3Loaded || !blueShellLoaded || !pinkShellLoaded || !bonusShellFrame1Loaded || !bonusShellFrame2Loaded || !allIsraeliteImagesLoaded || !allEgyptianImagesLoaded || !allPowerupsLoaded || !mosesImagesLoaded || !allQuestionsLoaded || !backgroundScoreLoaded || !rebootsLoaded || !demoEgyptianImage1Loaded || !demoEgyptianImage2Loaded || !demoEgyptianImage3Loaded || !demoEgyptianImage4Loaded || !demoIsraelite3Image1Loaded || !demoIsraelite3Image2Loaded ||!demoIsraelite3Image3Loaded ||!demoIsraelite3Image4Loaded || !allBlinksLoaded || (frequency < numberOfCases && numberOfCases > 100)) {
