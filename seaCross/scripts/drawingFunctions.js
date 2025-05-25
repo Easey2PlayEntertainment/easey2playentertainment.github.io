@@ -715,9 +715,8 @@ async function drawAll() {
             printText(130, 60 + difference, 22, 'white', statement);
         } else if (lastQuestionTypeUsed === "number") {
             if(statement.indexOf('[INCREASE_SQUARE_HEIGHT]') !== -1) {
-		    lineCounter = printText(90, 40 + difference, 22, 'white', statement);
+		    lineCounter = printText(90, 40 + difference, 22, 'white', statement, lineCounter);
                 squareHeightIncrement = (10 * lineCounter) / 19;
-		    console.log(squareHeightIncrement, lineCounter);
             }
             colorRect(75, 75, 650, 450 + squareHeightIncrement, 'brown'); // let's try it
             printText(90, 40 + difference, 22, 'white', statement);
