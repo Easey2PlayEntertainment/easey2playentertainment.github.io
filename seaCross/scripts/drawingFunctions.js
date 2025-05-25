@@ -3,7 +3,7 @@ function colorRect(a,b,c,d,e) {
     canvasContext.fillRect(a,b,c,d);
 }
 
-function printText(x, y, size, color, text) {
+function printText(x, y, size, color, text, lineCounter = null) {
     size = size / 1.35;
     canvasContext.font = size.toString() + "px JoystixMonospace"; // the new font, but a bit blurry
     canvasContext.fillStyle = color;
@@ -12,6 +12,9 @@ function printText(x, y, size, color, text) {
         canvasContext.fillText(text, x, y);
     } else if(text.length > 1) {
         if(Math.round(size) === 16) {
+		if(lineCounter !== null) {
+			lineCounter += 2;
+		}
             var extraY = 0;
             for(var i=0;i<text.length;i++) {
                 text[i] = text[i].indexOf('[INCREASE_SQUARE_HEIGHT]') !== -1 ? text[i].replaceAll('[INCREASE_SQUARE_HEIGHT]', '') : text[i];
@@ -20,6 +23,9 @@ function printText(x, y, size, color, text) {
             }
         }
     }
+	if(lineCounter !== null) {
+		return lineCounter;
+	}
 }
 
 function drawIsraelites() {
@@ -112,6 +118,8 @@ async function drawAll() {
     var powerupDimensions;
     var announcementMessage;
     var waitTime = 2000; // default
+
+	var lineCounter = 0;
 
     for(var i=0;i<5;i++) {
         highScoreAsArray.pop();
@@ -707,7 +715,8 @@ async function drawAll() {
             printText(130, 60 + difference, 22, 'white', statement);
         } else if (lastQuestionTypeUsed === "number") {
             if(statement.indexOf('[INCREASE_SQUARE_HEIGHT]') !== -1) {
-                squareHeightIncrement = 10;
+		    lineCounter = printText(90, 40 + difference, 22, 'white', statement);
+                squareHeightIncrement = (10 * lineCounter) / 19;
             }
             colorRect(75, 75, 650, 450 + squareHeightIncrement, 'brown'); // let's try it
             printText(90, 40 + difference, 22, 'white', statement);
