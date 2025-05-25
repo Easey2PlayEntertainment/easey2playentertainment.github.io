@@ -3,7 +3,7 @@ function colorRect(a,b,c,d,e) {
     canvasContext.fillRect(a,b,c,d);
 }
 
-function printText(x, y, size, color, text, lineCounter = null) {
+function printText(x, y, size, color, text, lineCounter) {
     size = size / 1.35;
     canvasContext.font = size.toString() + "px JoystixMonospace"; // the new font, but a bit blurry
     canvasContext.fillStyle = color;
@@ -12,7 +12,7 @@ function printText(x, y, size, color, text, lineCounter = null) {
         canvasContext.fillText(text, x, y);
     } else if(text.length > 1) {
         if(Math.round(size) === 16) {
-		if(lineCounter !== null) {
+		if(lineCounter !== undefined) {
 			lineCounter += 2;
 		}
             var extraY = 0;
@@ -23,7 +23,7 @@ function printText(x, y, size, color, text, lineCounter = null) {
             }
         }
     }
-	if(lineCounter !== null) {
+	if(lineCounter !== undefined) {
 		return lineCounter;
 	}
 }
