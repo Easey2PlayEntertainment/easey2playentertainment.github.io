@@ -39,6 +39,9 @@ var pauseResumeX = 680, pauseResumeY = 500;
 
 var screenWidth, screenHeight;
 
+var wigImage = document.createElement('img');
+var wigImageLoaded = false;
+
 var orangeFishImages  = [document.createElement('img'),document.createElement('img')],
     purpleFishImages  = [document.createElement('img'),document.createElement('img')],
     greenFishImages   = [document.createElement('img'),document.createElement('img')],
