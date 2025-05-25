@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -117,7 +116,7 @@
 		<p>If the Egyptians get too close to the current rear Israelite, a powerup will be activated, and you will be given the chance to use it to prohibit the Egyptians from getting any closer.</p>
 		<p>If an Egyptian captures an Israelite, the Israelite is removed from the board, and you lose 20 points. If you get five questions correct in a streak, you will be able to release the Israelite that was captured and regain your 20 points.</p>
 		<p>If an Egyptian reaches Moses or Moses runs into a crab, he loses a chance (represented by one of the Moses figures), and you are taken back to the entrance of the Red Sea before you continue. Lose all of your chances, and the game is over.</p>
-		<p>If you get ten answers correct, you will get another chance.</p>
+		<p>If you get ten answers correct in a streak, you will get another chance.</p>
 		<p>There are ten levels in the whole game. If you finish all of them and have yet to answer some incorrect questions, you will be brought to our bonus level where you can finish things off. After there are no 
 			more incorrect questions remaining, you will successfully cross the Red Sea and the Egyptians will perish beneath its waves.</p> 
 
@@ -757,6 +756,11 @@
 				egyptianBlinkImageLeftLoaded = true;
 			}
 			egyptianBlinkImageLeft.src = "images/egyptian1_blink_left.png";
+
+			wigImage.onload = function() {
+				wigImageLoaded = true;
+			}
+			wigImage.src = 'images/wig.png'; // for israelite with black hair to wear
 
 			loadQuestions(); // do that first
 
