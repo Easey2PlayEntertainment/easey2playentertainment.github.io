@@ -528,6 +528,11 @@ function characterPostureChange() {
             demoEgyptianFrameId = 0;
         }
 
+        demoIsraelite2FrameId++;
+        if(demoIsraelite2FrameId === demoIsraelite2Images.length) {
+            demoIsraelite2FrameId = 0;
+        }
+
         demoIsraelite3FrameId++;
         if(demoIsraelite3FrameId === demoIsraelite3Images.length) {
             demoIsraelite3FrameId = 0;
