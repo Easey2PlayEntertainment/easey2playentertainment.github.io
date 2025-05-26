@@ -81,7 +81,7 @@ var demoMosesPosition,
     demoIsraelite3Position;
 
     var demoIsraelite2Images = [document.createElement('img'), document.createElement('img'),document.createElement('img'),document.createElement('img')];
-    var demoIsraelite2Images = 0;
+    var demoIsraelite2FrameId = 0;
     var demoIsraelite2Image1Loaded = demoIsraelite2Image2Loaded = demoIsraelite2Image3Loaded = demoIsraelite2Image4Loaded = false;
 
     var demoIsraelite3Images = [document.createElement('img'), document.createElement('img'),document.createElement('img'),document.createElement('img')];
