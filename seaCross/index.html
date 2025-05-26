@@ -702,6 +702,22 @@
 			demoIsraelite3Images[1].src = "images/israelite1_walk_1-Copy.png";
 			demoIsraelite3Images[3].src = "images/israelite1_walk_2-Copy.png";
 
+			demoIsraelite2Images[0].onload = function() {
+				demoIsraelite2Image1Loaded = true;
+			}
+			demoIsraelite2Images[1].onload = function() {
+				demoIsraelite2Image2Loaded = true;
+			}
+			demoIsraelite2Images[2].onload = function() {
+				demoIsraelite2Image3Loaded = true;
+			}
+			demoIsraelite2Images[3].onload = function() {
+				demoIsraelite2Image4Loaded = true;
+			}
+			demoIsraelite2Images[0].src = demoIsraelite2Images[2].src = "images/israelite1-Copy.png";
+			demoIsraelite2Images[1].src = "images/israelite1_walk_1-Copy.png";
+			demoIsraelite2Images[3].src = "images/israelite1_walk_2-Copy.png";
+
 			mosesEyeBlinkImage.onload = function() {
 				mosesEyeBlinkImageLoaded = true;
 			}
