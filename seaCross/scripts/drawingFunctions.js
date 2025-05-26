@@ -757,8 +757,7 @@ async function drawAll() {
             printText(210, canvas.height / 2, 60, chameleon[chameleonID], 'come play!'); 
     canvasContext.drawImage(mosesImages[mosesImageId], demoMosesPosition, canvas.height / 2 + 50 , 35, 35);
     canvasContext.drawImage(israelites[2].images[israelites[2].imageId], demoIsraelite1Position, canvas.height / 2 + 50 , 35, 35); // CONTINUE HERE
-    canvasContext.drawImage(israelites[3].images[israelites[3].imageId], demoIsraelite2Position, canvas.height / 2 + 50 , 35, 35);
-		canvasContext.drawImage(wigImage, demoIsraelite2Position, canvas.height / 2 + 50 , 35, 35);
+    canvasContext.drawImage(demoIsraelite2Images[demoIsraelite2FrameId], demoIsraelite2Position, canvas.height / 2 + 50 , 35, 35);
     canvasContext.drawImage(demoIsraelite3Images[demoIsraelite3FrameId], demoIsraelite3Position, canvas.height / 2 + 50 , 35, 35);
     canvasContext.drawImage(currentCrabImage, demoCrab1Position, 450, 50, 50);
     canvasContext.drawImage(currentCrabImage, demoCrab2Position, 450, 50, 50);
