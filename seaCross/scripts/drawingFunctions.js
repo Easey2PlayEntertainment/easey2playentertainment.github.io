@@ -41,9 +41,13 @@ function drawIsraelites() {
                 var finalWidth = (width * FINAL_HEIGHT) / height;
 
                 canvasContext.drawImage(image, israelites[i].x, israelites[i].y, finalWidth, FINAL_HEIGHT); // should show israelites
-                if(israeliteBlinks[i].blinkNow && (israeliteBlinks[i].image.src !== undefined || israeliteBlinks[i].image.src !== null || israeliteBlinks[i].image.src !== '')) {
-                    canvasContext.drawImage(israeliteBlinks[i].image, israelites[i].x, israelites[i].y, finalWidth, FINAL_HEIGHT); // draw the blink
-                }
+		try {
+	                if(israeliteBlinks[i].blinkNow && (israeliteBlinks[i].image.src !== undefined || israeliteBlinks[i].image.src !== null || israeliteBlinks[i].image.src !== '')) {
+	                    canvasContext.drawImage(israeliteBlinks[i].image, israelites[i].x, israelites[i].y, finalWidth, FINAL_HEIGHT); // draw the blink
+	                }
+		} catch(e) {
+			console.log('skipped the blink to prevent bugs from continuing'); // will come up with something more advanced later
+		}
                 continue;
             }
                 colorRect(israelites[i].x, israelites[i].y, 20, 20, 'brown');
