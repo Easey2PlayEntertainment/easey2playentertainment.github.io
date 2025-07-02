@@ -42,11 +42,11 @@ function checkDeviceType() {
         }
     }
     if(navigator.userAgent.match(/iPhone/)) {
-        document.querySelector('body').innerHTML = `<p>Hello, player!</p>
-        <p>Unfortunately, Fullscreen API does not have support on iPhones. If you are an Apple user, it might be best to use an iPad or a Macbook to play the game.</p>
-        <p>We are sorry for the inconvenience. We hope to have an iPhone friendly version of this video game sometime in the future.</p>
-        <p>Sincerely,</p>
-        <p>The Sea Cross Team</p>`;
+        //document.querySelector('body').innerHTML = `<p>Hello, player!</p>
+        //<p>Unfortunately, Fullscreen API does not have support on iPhones. If you are an Apple user, it might be best to use an iPad or a Macbook to play the game.</p>
+        //<p>We are sorry for the inconvenience. We hope to have an iPhone friendly version of this video game sometime in the future.</p>
+        //<p>Sincerely,</p>
+        //<p>The Sea Cross Team</p>`;
     }
 }
 
