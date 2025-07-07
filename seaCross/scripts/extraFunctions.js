@@ -3,7 +3,8 @@ function $(id) {
 }
 
 function requestFullScreen(element) {
-    var requestMethod = element.requestFullScreen || element.requestFullscreen || element.webkitRequestFullScreen || element.webkitRequestFullscreen || element.mozRequestFullScreen || element.mozRequestFullscreen || element.msRequestFullScreen;
+    try {
+        var requestMethod = element.requestFullScreen || element.requestFullscreen || element.webkitRequestFullScreen || element.webkitRequestFullscreen || element.mozRequestFullScreen || element.mozRequestFullscreen || element.msRequestFullScreen;
     
     if (requestMethod) {
         requestMethod.call(element);
@@ -15,6 +16,14 @@ function requestFullScreen(element) {
     }
     fullScreen = true;
     findDimensions();
+    } catch (e) {
+        document.querySelector('body').innerHTML = `<p>Hello, player!</p>
+        <p>It seems as if you are using an iPhone that does not have the Fullscreen API enabled. To play on an iPhone, enable the Fullscreen API and restart your phone. After your phone has rebooted, you can start playing.</p>
+        <p>We are sorry for the inconvenience. We hope Apple does its part to make a permanent fix to this problem.</p>
+        <p>Sincerely,</p>
+        <p>The Sea Cross Team</p>`;
+    }
+    
 }
 
 function findDimensions() {
