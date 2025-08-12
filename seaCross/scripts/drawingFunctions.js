@@ -731,9 +731,8 @@ async function drawAll() {
         if(powerupArriveInterrupted) {
             powerupArriveInterrupted = false;
         }
-		console.log('waiting still'); // to see whether the function is being repeated or not
+		timer = 0; // resets timer each time sleep is run
         await sleep(timeToPause);
-		timer = 0; // should reset the timer now
         if(!decisionMade) {
             decisionMade = true;
             showPowerup = true;
