@@ -731,6 +731,7 @@ async function drawAll() {
         if(powerupArriveInterrupted) {
             powerupArriveInterrupted = false;
         }
+		console.log('waiting still');
         await sleep(timeToPause);
 		timer = 0; // should reset the timer now
         if(!decisionMade) {
