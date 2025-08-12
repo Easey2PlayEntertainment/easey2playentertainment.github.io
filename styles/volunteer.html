@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Have any questions, thoughts, or concerns? You can contact Easey2Play Entertainment&trade; on this page!">
+        <meta name="author" content="Azariah Easey, krdrabbits.com, easeystrings.com, americanfreedomtrain2026.us, www.bazinesdachurch.com">
+        <meta name="viewport" content="width=device-width">
+        <title>Contact Us</title>        
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="icon" type="image/x-icon" href="seaCross/images/moses.png">
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XGR59XBC7"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-9XGR59XBC7');
+        </script>
+    </head>
+    <body>
+    <header>
+        <nav>
+                <div class="dropdown">
+                    <button class="dropdownButton" id="controlHidingScheme1">
+                        =
+                    </button>
+                    <div class="dropdown-content">
+                        <div id="navigationCenter">
+                            <a href="index.html">Home</a>
+                            <a href="about.html">About Us</a>
+                            <a href="contact-us.html">Contact Us</a>
+                            <a href="games.html">Games</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>                <h1>Volunteer Form</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2 class="hiddenTags">Main Information</h2>
+			<p>We are always interested in those who are interested in helping us develop our products! Please fill out the form below so that we can pinpoint if you will be 
+			able to help us or not.</p>
+        </section>
+        <section>
+            <h2 class="hiddenTags">The Form</h2>
+            <form action="https://formsubmit.io/send/534c2b9a-1707-4329-8a1b-949b7da86ea8" method="POST" class="contactForm">
+                <!--<input name="_redirect" type="hidden" id="name" value="message-sent.html">-->
+				<input type="text" name="firstName" id="firstName" placeholder="First Name"><br><div class="form_padding"></div>
+				<input type="text" name="middleName" id="middleName" placeholder="Middle Name"><br><div class="form_padding"></div>
+				<input type="text" name="lastName" id="lastName" placeholder="Last Name"><br><div class="form_padding"></div>
+                <input type="text" name="email" id="email" placeholder="Email"><br><div class="form_padding"></div>
+                <label for="role">Choose role:</label>
+				<select id="role" name="role">
+					<option value="">---</option>
+					<option value="Designer">Designer</option>
+					<option value="Developer">Developer</option>
+					<option value="Artist">Artist</option>
+					<option value="Music Composer">Music Composer</option>
+					<option value="Social Media Manager">Social Media Manager</option>
+				</select>
+				<section>
+					<h2 id="jobTitle"></h2>
+					<p id="jobExplanation"></p>
+				</section>
+				<br><div class="form_padding"></div>
+                <textarea name="message" id="message" placeholder="Enter Message Here"></textarea><br><div class="form_padding"></div>
+                <input type="submit" value="Send" name="Send">
+            </form>
+            <p><b><u>NOTE</u>:</b> The message collection API that I am currently using to receive emails keeps throwing errors. If you see a weird error pop up, don't worry&mdash;I still received your message! - <i>A. E.</i></p>
+        </section>
+        <div class="lessSpace"></div>
+    </main>
+    
+    <footer>
+			<a href="https://www.facebook.com/profile.php?id=61579036868521&__cft__[0]=AZUFPFBo57z9fP20FWmGlRRlMvvGhq2gjLZP6368GMCOIO9u3Ul3A_L5VZHjKCpl0wGcq2QNp9-791WYE1fnUZaMdEaEJBtD9VM1H1puphO0qumLrOzV0vRNXPdFbFIika2XifjjlJd1Ss-lGIN-5WSgPz3RiQOcdRPfzCFqNh7-A9xcdkVSNAoxLe23pVZFNanAsMsG0EL0M-JcBX_0R8yR&__tn__=-UC%2CP-R" target="_blank"><img src="images/facebook_logo.png" width="30"></a>
+    <p>&copy; 2025 Azariah M Easey. All rights reserved.</p>
+</footer>
+    <script>
+        var searchbar = $('minisearchbar');
+
+        function $(id) {
+            return document.getElementById(id);
+        }
+    </script>
+    <script>
+        var message=  $('message');
+        var amountOfSpace = 201;
+        var currentScrollHeight = message.scrollHeight;
+		
+		var jobTitle = $('jobTitle');
+		var jobExplanation = $('jobExplanation');
+		var role = $('role');
+		
+		role.oninput = function() {
+			showExplanation();
+		}
+
+        message.oninput = function() {
+            if(message.scrollHeight >= 208 && message.scrollHeight !== currentScrollHeight) {
+                message.style.height = "";
+                message.style.height = message.scrollHeight + "px";
+                currentScrollHeight = message.scrollHeight;
+                amountOfSpace -= 10;
+                console.log(amountOfSpace);
+                if(currentScrollHeight < 452) {
+                    adjustCopyrightInformation();
+                }
+            }
+        }
+
+        function adjustCopyrightInformation() {
+            document.querySelector('.lessSpace').style.paddingBottom = amountOfSpace + "px";
+        }
+		
+		function showExplanation() {
+			if(role.value === '') {
+				jobTitle.innerHTML = null;
+				jobExplanation.innerHTML = null;
+			} else {
+				jobTitle.innerHTML = role.value;
+				if(role.value === "Designer") {
+					jobExplanation.innerHTML = "At Easey2Play Entertainment, video game designers create the foundation for each new video game we build. From coming up with \
+					creative mechanics to the sound effects used, these creative invisionaries will be the big dreamers of the team, designing fun digital experiences for future \
+					generations to enjoy.";
+				} else if(role.value === "Developer") {
+					jobExplanation.innerHTML = "At Easey2Play Entertainment, we currently are looking for those who have proficiency in HTML, CSS, and JavaScript, since those are the languages \
+					used to develop our web-based games. We hope to have roles involving more programming languages in the future. These technical gurus are the ones who will \
+					help bring the designer's ideas to life by writing, debugging, and editing code.";
+				} else if(role.value === "Artist") {
+					jobExplanation.innerHTML = "These invisionaries help create the characters and figures used in each video game that we build. You will help the video game designer \
+					with bringing their ideas to life in the art you create.";
+				}
+			}
+		}
+    </script>
+        
+    </body>
+</html>

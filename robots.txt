@@ -3,5 +3,6 @@ User-agent: *
 Disallow: /seaCross/images/
 Disallow: /seaCross/audio/
 Disallow: /images/logo/
+Disallow: /styles/
 
 Sitemap: https://easey2playentertainment.github.io/sitemap.xml
