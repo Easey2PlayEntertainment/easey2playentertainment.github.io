@@ -732,6 +732,7 @@ async function drawAll() {
             powerupArriveInterrupted = false;
         }
         await sleep(timeToPause);
+		timer = 0; // should reset the timer
         if(!decisionMade) {
             decisionMade = true;
             showPowerup = true;
