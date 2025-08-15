@@ -225,6 +225,8 @@
 	<script src="scripts/variables.js"></script>
 
 	<script>
+	
+		var birthdayMode = false;
 				
 		var itemsToLoad = [];
 			itemsToLoad.push('orangeFishLoaded1'); // all for orangeFish listed below
@@ -526,6 +528,7 @@
 
 			url = new URLSearchParams(window.location.search);
 			arcadeMode = url.get('arcadeMode') === '1' || url.get('arcademode') === '1' ? true : false;
+			birthdayMode = url.get('birthdaymode') === '1' ? true : false; // temporary
 
 			perishableItems = document.getElementsByClassName('perishable');
 
@@ -631,12 +634,12 @@
 			shellColors[0].onload = function() {
 				pinkShellLoaded = true;
 			}
-			shellColors[0].src = 'images/pink_shell.png';
+			shellColors[0].src = !birthdayMode ? 'images/pink_shell.png' : 'images/pink_balloon_shell.png';
 
 			shellColors[1].onload = function() {
 				blueShellLoaded = true;
 			}
-			shellColors[1].src = 'images/blue_shell.png';
+			shellColors[1].src = !birthdayMode ? 'images/blue_shell.png' : 'images/blue_balloon_shell.png';
 
 			bonusShellFrames[0].onload = function() {
 				bonusShellFrame1Loaded = true;
@@ -644,8 +647,8 @@
 			bonusShellFrames[1].onload = function() {
 				bonusShellFrame2Loaded = true;
 			}
-			bonusShellFrames[0].src = 'images/blue_shell.png';
-			bonusShellFrames[1].src = 'images/pink_shell.png';
+			bonusShellFrames[0].src = !birthdayMode ? 'images/blue_shell.png' : 'images/blue_balloon_shell.png';
+			bonusShellFrames[1].src = !birthdayMode ? 'images/pink_shell.png' : 'images/pink_balloon_shell.png';
 
 			mosesImages[0].onload = function() {
 				mosesImage1Loaded = true;
