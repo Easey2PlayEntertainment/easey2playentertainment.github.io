@@ -466,7 +466,7 @@ async function drawAll() {
             playSound(startupThemeBuffer, "startupThemeSource");
             startupThemePlayed = true;
         }
-        printText((!birthdayMode ? canvas.width / 2.285 : 250), canvas.height / 2, 28, 'black', (!birthdayMode ? 'ready!' : 'you can do it, mama!'));
+        printText((!birthdayMode ? canvas.width / 2.285 : 250), canvas.height / 2, 28, 'black', (!birthdayMode ? 'ready!' : 'let\'s go, birthday mom!'));
         questionNumber = 0;
         readyCounter++;
         await sleep(200);
@@ -488,7 +488,7 @@ async function drawAll() {
             readyCounter = 0; // ready to start over
         }
     } else if(readyShow) {
-        printText((!birthdayMode ? canvas.width / 2.285 : 250), canvas.height / 2, 28, 'black', (!birthdayMode ? 'ready!' : 'let\'s go, birthday mom!'));
+		printText((!birthdayMode ? canvas.width / 2.285 : 200), canvas.height / 2, 28, 'black', (!birthdayMode ? 'ready!' : 'you can do it, mama!'));
         await sleep(2000);
         readyShow = false; // should play the music then...
     }
@@ -759,7 +759,7 @@ async function drawAll() {
         screenBlacked = false; 
         if(arcadeMode || birthdayMode) {
             colorRect(0, 0, canvas.width, canvas.height, 'black');
-            !birthdayMode ? printText(210, canvas.height / 2, 60, chameleon[chameleonID], 'come play!') : printText(150, canvas.height / 2, 60, chameleon[chameleonID], 'HAPPY BIRTHDAY, MAMI!'); 
+            !birthdayMode ? printText(210, canvas.height / 2, 60, chameleon[chameleonID], 'come play!') : printText(50, canvas.height / 2, 60, chameleon[chameleonID], 'HAPPY BIRTHDAY, MAMI!'); 
     canvasContext.drawImage(mosesImages[mosesImageId], demoMosesPosition, canvas.height / 2 + 50 , 35, 35);
     canvasContext.drawImage(israelites[2].images[israelites[2].imageId], demoIsraelite1Position, canvas.height / 2 + 50 , 35, 35); // CONTINUE HERE
     canvasContext.drawImage(demoIsraelite2Images[demoIsraelite2FrameId], demoIsraelite2Position, canvas.height / 2 + 50 , 35, 35);

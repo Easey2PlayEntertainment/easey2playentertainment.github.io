@@ -769,7 +769,7 @@ function updateAll() {
         checkDeviceType();
     }
     checkBlinkImagesStatus();
-    if(!start && arcadeMode) {
+    if(!start && (arcadeMode || birthdayMode)) {
         moveDemoAssets();
     }
     $('bonusShellThumbnail').src = bonusShellFrames[bonusShellFrameId].src;
