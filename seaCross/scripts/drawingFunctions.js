@@ -488,7 +488,7 @@ async function drawAll() {
             readyCounter = 0; // ready to start over
         }
     } else if(readyShow) {
-		printText((!birthdayMode ? canvas.width / 2.285 : 200), canvas.height / 2, 28, 'black', (!birthdayMode ? 'ready!' : 'you can do it, mama!'));
+		printText((!birthdayMode ? canvas.width / 2.285 : 250), canvas.height / 2, 28, 'black', (!birthdayMode ? 'ready!' : 'you can do it, mama!'));
         await sleep(2000);
         readyShow = false; // should play the music then...
     }

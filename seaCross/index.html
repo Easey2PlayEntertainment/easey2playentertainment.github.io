@@ -647,8 +647,8 @@
 			bonusShellFrames[1].onload = function() {
 				bonusShellFrame2Loaded = true;
 			}
-			bonusShellFrames[0].src = !birthdayMode ? 'images/blue_shell.png' : 'images/blue_balloon_shell.png';
-			bonusShellFrames[1].src = !birthdayMode ? 'images/pink_shell.png' : 'images/pink_balloon_shell.png';
+			bonusShellFrames[0].src = !birthdayMode ? 'images/blue_shell.png' : 'images/seacross_birthday_cake.png';
+			bonusShellFrames[1].src = !birthdayMode ? 'images/pink_shell.png' : 'images/seacross_birthday_cake.png';
 
 			mosesImages[0].onload = function() {
 				mosesImage1Loaded = true;
@@ -889,6 +889,12 @@
 			loading = false;
 
 			checkIfMosesLoaded();
+			
+			if(birthdayMode) {
+				for(var i=0;i<9;i++) {
+					allQuestions.pop(); // leaves only level one questions
+				}
+			}
 		}
 
 		function loadVideoGameSound(url, bufferCollector) {
