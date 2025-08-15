@@ -88,6 +88,7 @@
         var message=  $('message');
         var amountOfSpace = 201;
         var currentScrollHeight = message.scrollHeight;
+		var form = document.querySelector('form');
 
         message.oninput = function() {
             if(message.scrollHeight >= 208 && message.scrollHeight !== currentScrollHeight) {
@@ -105,6 +106,18 @@
         function adjustCopyrightInformation() {
             document.querySelector('.lessSpace').style.paddingBottom = amountOfSpace + "px";
         }
+		
+		form.addEventListener('submit', (event) => {
+			event.preventDefault();
+			fetch(form.action, {
+			method: 'post',
+			body: new FormData(form)
+		}).then((res) => {
+			if(!res.ok && response.status !== 500) {
+				throw new Error('HTTP Error!');
+			}
+			windows.location.href = "";
+		})
     </script>
         
     </body>
