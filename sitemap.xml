@@ -3,29 +3,29 @@
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 xmlns:xhtml="http://www.w3.org/1999/xhtml" 
 xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.w3.org/1999/xhtml http://www.w3.org/2002/08/xhtml/xhtml1-strict.xsd">
-<!--https://easey2playentertainment.github.io/index.html--> <!--This is more for the computer to know.--> 
+<!--https://easey2playentertainment.com/index.html--> <!--This is more for the computer to know.--> 
 <url>
-<loc>https://easey2playentertainment.github.io/index.html</loc> 
+<loc>https://easey2playentertainment.com/index.html</loc> 
 <lastmod>2025-08-12</lastmod>
 </url> 
-<!--https://easey2playentertainment.github.io/contact-us.html--> <!--Helps program know where to write code.--> 
+<!--https://easey2playentertainment.com/contact-us.html--> <!--Helps program know where to write code.--> 
 <url>
-<loc>https://easey2playentertainment.github.io/contact-us.html</loc>
+<loc>https://easey2playentertainment.com/contact-us.html</loc>
 <lastmod>2025-08-15</lastmod> 
 </url> 
-<!--https://easey2playentertainment.github.io/about.html--> 
+<!--https://easey2playentertainment.com/about.html--> 
 <url>		 
-<loc>https://easey2playentertainment.github.io/about.html</loc> 
+<loc>https://easey2playentertainment.com/about.html</loc> 
 <lastmod>2025-08-12</lastmod> 
 </url> 
-<!--https://easey2playentertainment.github.io/games.html--> 
+<!--https://easey2playentertainment.com/games.html--> 
 <url>		 
-<loc>https://easey2playentertainment.github.io/games.html</loc> 
+<loc>https://easey2playentertainment.com/games.html</loc> 
 <lastmod>2025-08-12</lastmod> 
 </url> 
-<!--https://easey2playentertainment.github.io/seaCross/index.html--> 
+<!--https://easey2playentertainment.com/seaCross/index.html--> 
 <url>
-<loc>https://easey2playentertainment.github.io/seaCross/index.html</loc>
+<loc>https://easey2playentertainment.com/seaCross/index.html</loc>
 <lastmod>2025-08-12</lastmod>  
 </url>
 </urlset>
