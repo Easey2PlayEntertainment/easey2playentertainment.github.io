@@ -3,16 +3,7 @@ async function loadQuestions() { // loads all questions; prevents delay
     var fileList = ['uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve', 'dies'];
 	allQuestions = [null];
 	for(var i=0;i<fileList.length;i++) {
-		await fetch('https://easey2playentertainment.com/cruzaCruza/preguntas/nivel_' + fileList[i] + '.txt')
-		.then(function(response) {
-			if(!response.ok) {
-				throw new Error(`HTTP error, status = ${response.status}`);
-			}
-			return response.text();
-		})
-		.then(function(text){
-			allQuestions.push(JSON.parse(text));
-		});
+		allQuestions.push(JSON.parse($(fileList[i]).innerHTML));
 	}
 	
 	shuffleQuestions();
