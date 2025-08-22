@@ -321,7 +321,7 @@ async function drawAll() {
         if(crossedOver) {
             printText(110, canvas.height / 2, 28, 'black', 'you made it across! congratulations!');
         } else if(gameOver) {
-            printText(canvas.width / 2.54, canvas.height / 2, 28, 'black', 'game over!');
+            printText(canvas.width / 2.54, canvas.height / 2, 28, 'black', 'juego terminado');
         }
         if(testCounter > 1) {
             return;
@@ -466,7 +466,7 @@ async function drawAll() {
             playSound(startupThemeBuffer, "startupThemeSource");
             startupThemePlayed = true;
         }
-        printText((!birthdayMode ? canvas.width / 2.285 : 200), canvas.height / 2, 28, 'black', (!birthdayMode ? 'ready!' : 'let\'s go, birthday mom!'));
+        printText((!birthdayMode ? canvas.width / 2.285 : 200), canvas.height / 2, 28, 'black', (!birthdayMode ? '¡listo!' : 'let\'s go, birthday mom!'));
         questionNumber = 0;
         readyCounter++;
         await sleep(200);
@@ -488,7 +488,7 @@ async function drawAll() {
             readyCounter = 0; // ready to start over
         }
     } else if(readyShow) {
-		printText((!birthdayMode ? canvas.width / 2.285 : 240), canvas.height / 2, 28, 'black', (!birthdayMode ? 'ready!' : 'you can do it, mama!'));
+		printText((!birthdayMode ? canvas.width / 2.285 : 240), canvas.height / 2, 28, 'black', (!birthdayMode ? '¡listo!' : 'you can do it, mama!'));
         await sleep(2000);
         readyShow = false; // should play the music then...
     }
