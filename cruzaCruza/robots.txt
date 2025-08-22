@@ -1,0 +1,6 @@
+# Don't view video game sprites or audio
+User-agent: *
+Disallow: /images/
+Disallow: /audio/
+
+Sitemap: https://easey2playentertainment.github.io/sitemap.xml

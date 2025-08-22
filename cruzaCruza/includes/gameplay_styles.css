@@ -1,0 +1,182 @@
+body {
+    font-family: Calibri, sans-serif;
+    background-color: green;
+}
+
+/* body {
+    text-align: center;
+} */
+
+.controlChoices {
+    display: none;
+}
+
+.controlImages {
+    width: 400px;
+}
+
+.logo_container img {
+    width: 200px;
+}
+
+#playButton {
+    font-family: JoystixMonospace;
+    font-size: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: blue;
+    color: red;
+    display: none;
+}
+
+#playButton:hover {
+    background-color: red;
+    color: blue;
+}
+
+.instructions h2 {
+    font-size: 30px;
+}
+
+.instructions p, .instructions table, .instructions ol, .instructions ul, .checkboxDiv {
+    font-size: 20px;
+}
+
+a {
+    color: blue;
+}
+
+a:hover {
+    color: pink;
+}
+
+.center_item {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.centered_table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.defy_center {
+    text-align: initial;
+}
+
+.score_items, h1, h2, h3, h4, h5, h6, p, tbody, tr, th, td, ol, li, .checkboxDiv {
+    color: white;
+}
+
+.centered_heading {
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+p, h2, #crabThumbnail, .logo_container img {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+ol {
+    padding-left: 70px;
+}
+
+.advice_message {
+    color: white;
+    background-color: black;
+    height: 100%;
+}
+
+.alert_information {
+    display: none;
+    text-align: inherit;
+}
+
+#fullScreenButton {
+    color: white;
+    font-family: JoystixMonospace;
+}
+
+#fullScreenButton:hover {
+    color: blue;
+}
+
+tr, td, th {
+    text-align: center;
+}
+
+td, th {
+    padding: 25px 50px 25px 50px;
+}
+
+table, th, td {
+    border: 5px solid white;
+    border-collapse: collapse;
+}
+
+.no_padding {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+@media (orientation: portrait) {
+    .center_item, .no_padding {
+        display: none;
+    }
+
+    .alert_information {
+        display: initial;
+    }
+
+    #playButton {
+        display: initial;
+    }
+}
+
+@media (orientation: landscape) {
+    .center_item {
+        display: initial;
+    }
+
+    .alert_information {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    p, h2, #crabThumbnail {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    ol {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    p, h2, #crabThumbnail {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    ol {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+}
+
+@media only screen and (max-width: 533px) {
+    p, h2, #crabThumbnail {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    ol {
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+}

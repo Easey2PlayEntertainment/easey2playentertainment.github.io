@@ -1,0 +1,100 @@
+[
+  {
+    "question_type": "TF",
+    "question": "Moisés construyó un becerro de oro para que los[BREAK]israelitas lo adoraran.",
+    "potential_answers": "",
+    "actual_answer": "0",
+    "actual_answer_explanation": "Aarón fue quien construyó un[BREAK]becerro de oro para que los israelitas lo[BREAK]adoraran."
+  },
+  {
+    "question_type": "TF",
+    "question": "Los israelitas cantaron alabanzas a Dios[BREAK]después de cruzar el Mar Rojo y ser[BREAK]salvados de los egipcios.",
+    "potential_answers": "",
+    "actual_answer": "1",
+    "actual_answer_explanation": "Los israelitas sí cantaron alabanzas[BREAK]después de cruzar el Mar Rojo.[BREAK][BREAK]Ver Éxodo 15."
+  },
+  {
+    "question_type": "TF",
+    "question": "Moisés subió al Monte Sinaí para[BREAK]recibir los diez mandamientos tres[BREAK]veces.",
+    "potential_answers": "",
+    "actual_answer": "0",
+    "actual_answer_explanation": "Moisés solo subió para recibir los[BREAK]diez mandamientos dos veces.[BREAK][BREAK]Ver Éxodo 24 y 34."
+  },
+  {
+    "question_type": "TF",
+    "question": "Moisés aceptó de inmediato la tarea que[BREAK]Dios le encomendó.",
+    "potential_answers": "",
+    "actual_answer": "0",
+    "actual_answer_explanation": "Antes de que Moisés aceptara la tarea que[BREAK]le fue encomendada, puso excusas."
+  },
+  {
+    "question_type": "TF",
+    "question": "Dios hizo brotar agua de una roca[BREAK]en Horeb.",
+    "potential_answers": "",
+    "actual_answer": "1",
+    "actual_answer_explanation": "Moisés golpeó la roca en Horeb, pero[BREAK]Dios hizo que el agua fluyera.[BREAK][BREAK]Ver Éxodo 17:1-7."
+  },
+  {
+    "question_type": "TF",
+    "question": "Cuando Moisés descansó sus brazos[BREAK]durante la batalla contra los amalecitas,[BREAK]el ejército israelita siguió ganando.",
+    "potential_answers": "",
+    "actual_answer": "0",
+    "actual_answer_explanation": "Cuando Moisés descansó sus brazos[BREAK]durante la batalla contra los amalecitas,[BREAK]el ejército israelita comenzó a perder."
+  },
+  {
+    "question_type": "TF",
+    "question": "Los israelitas vagaron por el[BREAK]desierto durante 40 años antes de[BREAK]entrar a la tierra prometida.",
+    "potential_answers": "",
+    "actual_answer": "1",
+    "actual_answer_explanation": "Ver Números 14:34."
+  },
+  {
+    "question_type": "TF",
+    "question": "Aarón fue el primer sumo sacerdote[BREAK]de Israel.",
+    "potential_answers": "",
+    "actual_answer": "1",
+    "actual_answer_explanation": "Ver Éxodo 28:1-43."
+  },
+  {
+    "question_type": "TF",
+    "question": "Los israelitas cruzaron el río[BREAK]Jordán en tierra seca para entrar[BREAK]a la tierra prometida.",
+    "potential_answers": "",
+    "actual_answer": "1",
+    "actual_answer_explanation": "Esto ocurrió bajo el liderazgo[BREAK]de Josué.[BREAK][BREAK]Ver Josué 3."
+  },
+  {
+    "question_type": "TF",
+    "question": "Los muros de Jericó cayeron después[BREAK]de que los israelitas marcharan[BREAK]alrededor de ellos una vez.",
+    "potential_answers": "",
+    "actual_answer": "0",
+    "actual_answer_explanation": "Marcharon alrededor de la ciudad[BREAK]durante siete días, y en el séptimo[BREAK]día, marcharon alrededor siete veces[BREAK]antes de que los muros cayeran."
+  },
+  {
+    "question_type": "TF",
+    "question": "Josué fue uno de los doce espías[BREAK]enviados para explorar la tierra[BREAK]de Canaán.",
+    "potential_answers": "",
+    "actual_answer": "1",
+    "actual_answer_explanation": "Ver Números 13:1-16."
+  },
+  {
+    "question_type": "TF",
+    "question": "El maná que Dios proporcionó a[BREAK]los israelitas dejó de aparecer[BREAK]una vez que entraron a la tierra[BREAK]prometida.",
+    "potential_answers": "",
+    "actual_answer": "1",
+    "actual_answer_explanation": "Ver Josué 5:12."
+  },
+{
+    "question_type": "TF",
+    "question": "Moisés llevó a los israelitas a la[BREAK]tierra prometida.",
+    "potential_answers": "",
+    "actual_answer": "0",
+    "actual_answer_explanation": "Josué llevó a los israelitas a la[BREAK]tierra prometida después de la[BREAK]muerte de Moisés."
+  },
+  {
+    "question_type": "TF",
+    "question": "Los israelitas construyeron un[BREAK]tabernáculo como la morada portátil[BREAK]de Dios.",
+    "potential_answers": "",
+    "actual_answer": "1",
+    "actual_answer_explanation": "Las referencias iniciales están en[BREAK]Éxodo."
+  }
+]

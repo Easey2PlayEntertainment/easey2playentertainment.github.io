@@ -1,0 +1,100 @@
+[
+  {
+    "question_type": "number",
+    "question": "Ordena estos mandamientos correctamente.",
+    "potential_answers": "",
+    "actual_answer": "No te inclinarás ante ídolos,No tomarás el nombre de Dios en vano,Recuerda el día de reposo para santificarlo,No matarás,No cometerás adulterio,No robarás,No mentirás,No codiciarás",
+    "actual_answer_sans_coord": "1. No te inclinarás ante ídolos[BREAK][BREAK]2. No tomarás el nombre de Dios en vano[BREAK][BREAK]3. Recuerda el día de reposo para santificarlo[BREAK][BREAK]4. No matarás[BREAK][BREAK]5. No cometerás adulterio[BREAK][BREAK]6. No robarás[BREAK][BREAK]7. No mentirás[BREAK][BREAK]8. No codiciarás"
+  },
+  {
+    "question_type": "number",
+    "question": "Ordena estas plagas correctamente.",
+    "potential_answers": "",
+    "actual_answer": "El Nilo se convierte en sangre,Ranas,Piojos,Moscas,Mueren los ganados egipcios,Úlceras,Granizo,Langostas",
+    "actual_answer_sans_coord": "1. El Nilo se convierte en sangre[BREAK][BREAK]2. Ranas[BREAK][BREAK]3. Piojos[BREAK][BREAK]4. Moscas[BREAK][BREAK]5. Mueren los ganados egipcios[BREAK][BREAK]6. Úlceras[BREAK][BREAK]7. Granizo[BREAK][BREAK]8. Langostas"
+  },
+  {
+    "question_type": "number",
+    "question": "Ordena estos eventos correctamente.",
+    "potential_answers": "",
+    "actual_answer": "Las aguas de Mará se vuelven dulces,Codornices llegaron por primera vez al anochecer,Maná cayó del cielo,Jetro aconseja a Moisés sobre liderazgo,Los Diez Mandamientos fueron proclamados,Los Diez Mandamientos fueron entregados,Aarón levantó un becerro de oro,Aarón y sus hijos fueron consagrados",
+    "actual_answer_sans_coord": "1. Las aguas de Mará se vuelven dulces[BREAK][BREAK]2. Codornices llegaron por primera vez al anochecer[BREAK][BREAK]3. Maná cayó del cielo[BREAK][BREAK]4. Jetro aconseja a Moisés sobre liderazgo[BREAK][BREAK]5. Los Diez Mandamientos fueron proclamados[BREAK][BREAK]6. Los Diez Mandamientos fueron entregados[BREAK][BREAK]7. Aarón levantó un becerro de oro[BREAK][BREAK]8. Aarón y sus hijos fueron consagrados"
+  },
+  {
+    "question_type": "number",
+    "question": "Ordena estos eventos correctamente.",
+    "potential_answers": "",
+    "actual_answer": "El decreto de ejecutar a los bebés varones fue proclamado,Moisés nació,Moisés fue encontrado por la hija del faraón,Moisés mata a un egipcio,Moisés defiende a las hijas de Jetro,Moisés se casa con Séfora,Moisés ve la zarza ardiente,El bastón de Moisés se convierte en una serpiente",
+    "actual_answer_sans_coord": "1. El decreto de ejecutar a los bebés varones fue proclamado[BREAK][BREAK]2. Moisés nació[BREAK][BREAK]3. Moisés fue encontrado por la hija del faraón[BREAK][BREAK]4. Moisés mata a un egipcio[BREAK][BREAK]5. Moisés defiende a las hijas de Jetro[BREAK][BREAK]6. Moisés se casa con Séfora[BREAK][BREAK]7. Moisés ve la zarza ardiente[BREAK][BREAK]8. El bastón de Moisés se convierte en una serpiente"
+  },
+  {
+    "question_type": "number",
+    "question": "Ordena estas instrucciones de la Pascua correctamente.",
+    "potential_answers": "",
+    "actual_answer": "Tomar un cordero sin defecto,matarlo al anochecer,poner la sangre del cordero en el dintel,asar el cordero,comerlo junto con pan sin levadura y hierbas amargas,quemar los restos del cordero,comer con cinturón en la cintura y sandalias en los pies,no salir de casa hasta la mañana",
+    "actual_answer_sans_coord": "1. Tomar un cordero sin defecto[BREAK][BREAK]2. Matarlo al anochecer[BREAK][BREAK]3. Poner la sangre del cordero en el dintel[BREAK][BREAK]4. Asar el cordero[BREAK][BREAK]5. Comerlo junto con pan sin levadura y hierbas amargas[BREAK][BREAK]6. Quemar los restos del cordero[BREAK][BREAK]7. Comer con cinturón en la cintura y sandalias en los pies[BREAK][BREAK]8. No salir de casa hasta la mañana"
+  },
+  {
+    "question_type": "number",
+    "question": "Ordena estos eventos correctamente.",
+    "potential_answers": "",
+    "actual_answer": "Moisés muele el becerro de oro hasta hacerlo polvo,los adoradores rebeldes son asesinados,Moisés habla con Dios en el tabernáculo de reunión,los Diez Mandamientos son escritos nuevamente en nuevas tablas de piedra,Bezaleel es llamado como artesano principal,los hijos de Israel son instruidos para dejar de traer ofrendas,Bezaleel construye el Arca del Pacto,la fuente de bronce es construida",
+    "actual_answer_sans_coord": "1. Moisés muele el becerro de oro hasta hacerlo polvo[BREAK][BREAK]2. Los adoradores rebeldes son asesinados[BREAK][BREAK]3. Moisés habla con Dios en el tabernáculo de reunión[BREAK][BREAK]4. Los Diez Mandamientos son escritos nuevamente en nuevas tablas de piedra[BREAK][BREAK]5. Bezaleel es llamado como artesano principal[BREAK][BREAK]6. Los hijos de Israel son instruidos para dejar de traer ofrendas[BREAK][BREAK]7. Bezaleel construye el Arca del Pacto[BREAK][BREAK]8. La fuente de bronce es construida"
+  },
+{
+    "question_type": "number",
+    "question": "Ordena estos eventos correctamente.",
+    "potential_answers": "",
+    "actual_answer": "Los espías fueron enviados a la tierra de Canaán,Se dio un informe negativo al regresar,Josué y Caleb intentaron animar al pueblo,Los israelitas fueron desterrados al desierto por 40 años,Un hombre fue condenado a muerte por trabajar en el día de reposo,Coré y sus hombres se rebelaron contra Moisés y Aarón,Coré y sus hombres fueron tragados por la tierra,4700 personas murieron debido a una plaga",
+    "actual_answer_sans_coord": "1. Los espías fueron enviados a la tierra de Canaán[BREAK][BREAK]2. Se dio un informe negativo al regresar[BREAK][BREAK]3. Josué y Caleb intentaron animar al pueblo[BREAK][BREAK]4. Los israelitas fueron desterrados al desierto por 40 años[BREAK][BREAK]5. Un hombre fue condenado a muerte por trabajar en el día de reposo[BREAK][BREAK]6. Coré y sus hombres se rebelaron contra Moisés y Aarón[BREAK][BREAK]7. Coré y sus hombres fueron tragados por la tierra[BREAK][BREAK]8. 4700 personas murieron debido a una plaga"
+  },
+  {
+    "question_type": "number",
+    "question": "Ordena estos eventos correctamente.",
+    "potential_answers": "",
+    "actual_answer": "Séfora salva la vida de Moisés al circuncidar a su hijo,Moisés se reúne con Aarón,Moisés regresa a Egipto,Moisés y Aarón confrontan al faraón,El faraón aumenta la carga de trabajo de los israelitas,Dios promete la liberación,Dios envía las diez plagas,El faraón deja ir a los israelitas",
+    "actual_answer_sans_coord": "1. Séfora salva la vida de Moisés al circuncidar a su hijo[BREAK][BREAK]2. Moisés se reúne con Aarón[BREAK][BREAK]3. Moisés regresa a Egipto[BREAK][BREAK]4. Moisés y Aarón confrontan al faraón[BREAK][BREAK]5. El faraón aumenta la carga de trabajo de los israelitas[BREAK][BREAK]6. Dios promete la liberación[BREAK][BREAK]7. Dios envía las diez plagas[BREAK][BREAK]8. El faraón deja ir a los israelitas"
+  },
+  {
+    "question_type": "number",
+    "question": "Ordena estos eventos correctamente.",
+    "potential_answers": "",
+    "actual_answer": "El arca del testimonio es construida,La mesa de los panes es construida,El candelabro de oro es construido,El altar de incienso es construido,El aceite de la unción y el incienso son preparados por el perfumista,El altar del holocausto es construido,Las vestiduras sacerdotales son tejidas,El tabernáculo es erigido",
+    "actual_answer_sans_coord": "1. El arca del testimonio es construida[BREAK][BREAK]2. La mesa de los panes es construida[BREAK][BREAK]3. El candelabro de oro es construido[BREAK][BREAK]4. El altar de incienso es construido[BREAK][BREAK]5. El aceite de la unción y el incienso son preparados por el perfumista[BREAK][BREAK]6. El altar del holocausto es construido[BREAK][BREAK]7. Las vestiduras sacerdotales son tejidas[BREAK][BREAK]8. El tabernáculo es erigido"
+  },
+{
+    "question_type": "number",
+    "question": "Ordena estos eventos correctamente.",
+    "potential_answers": "",
+    "actual_answer": "La multitud mixta se queja del maná,Dios dice que enviará codornices durante un mes entero,Setenta ancianos reciben el Espíritu Santo,Eldad y Medad comienzan a profetizar,Dios envía codornices por segunda vez,Las personas que codiciaron las codornices mueren por comer en exceso,Aarón y Miriam hablan contra Moisés,Dios castiga a Miriam con lepra",
+    "actual_answer_sans_coord": "1. La multitud mixta se queja del maná[BREAK][BREAK]2. Dios dice que enviará codornices durante un mes entero[BREAK][BREAK]3. Setenta ancianos reciben el Espíritu Santo[BREAK][BREAK]4. Eldad y Medad comienzan a profetizar[BREAK][BREAK]5. Dios envía codornices por segunda vez[BREAK][BREAK]6. Las personas que codiciaron las codornices mueren por comer en exceso[BREAK][BREAK]7. Aarón y Miriam hablan contra Moisés[BREAK][BREAK]8. Dios castiga a Miriam con lepra"
+  },
+  {
+    "question_type": "number",
+    "question": "Ordena estos eventos correctamente.",
+    "potential_answers": "",
+    "actual_answer": "Los israelitas derrotan a los cananeos en Horma,Los israelitas se quejan contra Dios nuevamente,Dios provoca una plaga de serpientes dentro del campamento,Moisés construye una serpiente de bronce,Israel derrota al rey Sehón y su ejército,Israel derrota al rey Og y su ejército,Moisés envía espías a Jazer,Israel toma las aldeas de Jazer",
+    "actual_answer_sans_coord": "1. Los israelitas derrotan a los cananeos en Horma[BREAK][BREAK]2. Los israelitas se quejan contra Dios nuevamente[BREAK][BREAK]3. Dios provoca una plaga de serpientes dentro del campamento[BREAK][BREAK]4. Moisés construye una serpiente de bronce[BREAK][BREAK]5. Israel derrota al rey Sehón y su ejército[BREAK][BREAK]6. Israel derrota al rey Og y su ejército[BREAK][BREAK]7. Moisés envía espías a Jazer[BREAK][BREAK]8. Israel toma las aldeas de Jazer"
+  },
+  {
+    "question_type": "number",
+    "question": "Ordena estos eventos correctamente.",
+    "potential_answers": "",
+    "actual_answer": "Balac envía a Balaam para maldecir a los hijos de Israel,El ángel del Señor obstruye el camino por el que va Balaam,Balaam obedece la orden del ángel,Balaam fracasa al intentar maldecir a Israel frente a Balac,Balaam da una profecía sobre el futuro de Moab,Israel cae en la idolatría,Un hombre y una mujer madianita son asesinados por su pecado,Dios ordena a Moisés que realice un segundo censo del pueblo",
+    "actual_answer_sans_coord": "1. Balac envía a Balaam para maldecir a los hijos de Israel[BREAK][BREAK]2. El ángel del Señor obstruye el camino por el que va Balaam[BREAK][BREAK]3. Balaam obedece la orden del ángel[BREAK][BREAK]4. Balaam fracasa al intentar maldecir a Israel frente a Balac[BREAK][BREAK]5. Balaam da una profecía sobre el futuro de Moab[BREAK][BREAK]6. Israel cae en la idolatría[BREAK][BREAK]7. Un hombre y una mujer madianita son asesinados por su pecado[BREAK][BREAK]8. Dios ordena a Moisés que realice un segundo censo del pueblo"
+  },
+{
+    "question_type": "number",
+    "question": "Ordena estos eventos correctamente.",
+    "potential_answers": "",
+    "actual_answer": "Dios le dice a Moisés dónde morirá,Moisés inaugura a Josué como el próximo líder de Israel,Los israelitas derrotan a los madianitas,Moisés da instrucciones sobre los cautivos,Dios le dice a Moisés que divida el botín,Se eligen las tribus que se asentarán al este del Jordán,Dios instruye a Israel sobre la conquista de Canaán,Dios elige líderes para dividir la tierra",
+    "actual_answer_sans_coord": "1. Dios le dice a Moisés dónde morirá[BREAK][BREAK]2. Moisés inaugura a Josué como el próximo líder de Israel[BREAK][BREAK]3. Los israelitas derrotan a los madianitas[BREAK][BREAK]4. Moisés da instrucciones sobre los cautivos[BREAK][BREAK]5. Dios le dice a Moisés que divida el botín[BREAK][BREAK]6. Se eligen las tribus que se asentarán al este del Jordán[BREAK][BREAK]7. Dios instruye a Israel sobre la conquista de Canaán[BREAK][BREAK]8. Dios elige líderes para dividir la tierra"
+  },
+  {
+    "question_type": "number",
+    "question": "Coloca estos extractos del cántico de Moisés en el orden correcto (Éxodo 15).",
+    "potential_answers": "",
+    "actual_answer": "Cantaré al Señor,El Señor es un guerrero,Enviaste tu ira,La tierra los tragó,Con tu misericordia guiaste,La gente escuchará y tendrá miedo,Temor y pavor caerán sobre ellos,Quedarán inmóviles como piedra",
+    "actual_answer_sans_coord": "1. Cantaré al Señor[BREAK][BREAK]2. El Señor es un guerrero[BREAK][BREAK]3. Enviaste tu ira[BREAK][BREAK]4. La tierra los tragó[BREAK][BREAK]5. Con tu misericordia guiaste[BREAK][BREAK]6. La gente escuchará y tendrá miedo[BREAK][BREAK]7. Temor y pavor caerán sobre ellos[BREAK][BREAK]8. Quedarán inmóviles como piedra"
+  }
+]
