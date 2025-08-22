@@ -46,7 +46,7 @@ async function loadQuestions() { // loads all questions; prevents delay
   },
   {
     "question_type": "multiple",
-    "question": "¿Cuál fue la última plaga que convenció al faraón de dejar ir a los israelitas?",
+    "question": "¿Cuál fue la última plaga que [BREAK]convenció al faraón de dejar ir a[BREAK]los israelitas?",
     "potential_answers": "langostas,oscuridad,muerte de los primogénitos,granizo",
     "actual_answer": "muerte de los primogénitos"
   },
