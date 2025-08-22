@@ -403,7 +403,7 @@ async function loadQuestions() { // loads all questions; prevents delay
 	]
 	`);
 	
-	shuffleQuestions();
+	//shuffleQuestions();
     allQuestionsLoaded = true;
 }
 
