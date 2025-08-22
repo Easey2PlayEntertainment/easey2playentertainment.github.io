@@ -4,43 +4,43 @@ async function loadQuestions() { // loads all questions; prevents delay
 	[
   {
     "question_type": "multiple",
-    "question": "¿Qué hizo la madre de Moisés para salvarlo del decreto del faraón?",
-    "potential_answers": "lo escondió en una canasta entre los juncos del río Nilo,lo envió a vivir con familiares en Madián,mudó a su familia lejos de Egipto,lo dejó al cuidado de una familia egipcia adinerada",
-    "actual_answer": "lo escondió en una canasta entre los juncos del río Nilo"
+    "question": "¿Qué hizo la madre de Moisés para [BREAK]salvarlo del decreto del faraón?", 
+    "potential_answers": "lo escondió en una canasta entre[BREAK]los juncos del río Nilo,lo envió a vivir con familiares[BREAK]en Madián,mudó a su familia lejos de Egipto,lo dejó al cuidado de una familia[BREAK]egipcia adinerada",
+    "actual_answer": "lo escondió en una canasta entre[BREAK]los juncos del río Nilo"
   },
   {
     "question_type": "multiple",
-    "question": "¿Quién encontró a Moisés en el río Nilo?",
+    "question": "¿Quién encontró a Moisés en el río[BREAK]Nilo?",
     "potential_answers": "un pescador,la hija del faraón,un grupo de pastores,un soldado egipcio",
     "actual_answer": "la hija del faraón"
   },
   {
     "question_type": "multiple",
-    "question": "¿Qué señal mostró Dios a Moisés en la zarza ardiente?",
-    "potential_answers": "a. convirtió la vara de Moisés en una serpiente,b. convirtió la mano de Moisés en lepra,c. a y b,d. ninguna de las anteriores",
+    "question": "¿Qué señal mostró Dios a Moisés en[BREAK]la zarza ardiente?",
+    "potential_answers": "a. convirtió la vara de Moisés en[BREAK]una serpiente,b. convirtió la mano de Moisés en[BREAK]lepra,c. a y b,d. ninguna de las anteriores",
     "actual_answer": "c. a y b"
   },
   {
     "question_type": "multiple",
-    "question": "¿Cuál era el nombre del hermano de Moisés, quien también desempeñó un papel importante en el Éxodo?",
+    "question": "¿Cuál era el nombre del hermano de [BREAK]Moisés, quien también desempeñó un [BREAK]papel importante en el Éxodo?",
     "potential_answers": "Aarón,Josué,Caleb,Jetro",
     "actual_answer": "Aarón"
   },
   {
     "question_type": "multiple",
-    "question": "¿Cuántas plagas envió Dios sobre Egipto?",
+    "question": "¿Cuántas plagas envió Dios sobre[BREAK]Egipto?",
     "potential_answers": "7,10,12,15",
     "actual_answer": "10"
   },
   {
     "question_type": "multiple",
-    "question": "¿Cuál fue la primera plaga en Egipto?",
-    "potential_answers": "serpientes en la corte del faraón,rana por toda Egipto,las aguas convirtiéndose en sangre,oscuridad sobre la tierra",
-    "actual_answer": "las aguas convirtiéndose en sangre"
+    "question": "¿Cuál fue la primera plaga en[BREAK]Egipto?",
+    "potential_answers": "serpientes en la corte del faraón,rana por toda Egipto,las aguas convirtiéndose en[BREAK]sangre,oscuridad sobre la tierra",
+    "actual_answer": "las aguas convirtiéndose en[BREAK]sangre"
   },
   {
     "question_type": "multiple",
-    "question": "¿Cuál fue la tercera plaga en Egipto?",
+    "question": "¿Cuál fue la tercera plaga en[BREAK]Egipto?",
     "potential_answers": "moscas,rana,piojos,granizo",
     "actual_answer": "piojos"
   },
@@ -52,31 +52,31 @@ async function loadQuestions() { // loads all questions; prevents delay
   },
   {
     "question_type": "multiple",
-    "question": "¿Qué pusieron los israelitas en los postes de sus puertas para protegerse de la última plaga?",
+    "question": '¿Qué pusieron los israelitas en los[BREAK]postes de sus puertas para [BREAK]protegerse de la última plaga?',
     "potential_answers": "una cruz,una estrella,sangre de cordero,ajo",
     "actual_answer": "sangre de cordero"
   },
   {
     "question_type": "multiple",
-    "question": "¿Qué mar partió Dios para ayudar a los israelitas a escapar de los egipcios?",
+    "question": "Qué mar partió Dios para ayudar a [BREAK]los israelitas a escapar de los[BREAK]egipcios?",
     "potential_answers": "el mar Muerto,el mar Rojo,el mar Mediterráneo,el mar de Galilea",
     "actual_answer": "el mar Rojo"
   },
   {
     "question_type": "multiple",
-    "question": "¿En qué montaña recibió Moisés los Diez Mandamientos?",
+    "question": "¿En qué montaña recibió Moisés los[BREAK]Diez Mandamientos?",
     "potential_answers": "monte Ararat,monte Sinaí,monte Sión,monte Moriah",
     "actual_answer": "monte Sinaí"
   },
   {
     "question_type": "multiple",
-    "question": "¿Cuál era el nombre de la madre de Moisés?",
+    "question": "¿Cuál era el nombre de la madre de[BREAK]Moisés?",
     "potential_answers": "Miriam,Séfora,Jocabed,Débora",
     "actual_answer": "Jocabed"
   },
   {
     "question_type": "multiple",
-    "question": "¿Cuál era el nombre del suegro de Moisés?",
+    "question": "¿Cuál era el nombre del suegro de[BREAK]Moisés?",
     "potential_answers": "a. Madián,b. Jetro,c. Reuel,d. b y c",
     "actual_answer": "d. b y c"
   },
