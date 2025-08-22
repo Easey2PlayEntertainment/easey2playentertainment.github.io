@@ -52,7 +52,7 @@ async function loadQuestions() { // loads all questions; prevents delay
   },
   {
     "question_type": "multiple",
-    "question": '¿Qué pusieron los israelitas en los[BREAK]postes de sus puertas para [BREAK]protegerse de la última plaga?',
+    "question": "¿Qué pusieron los israelitas en los[BREAK]postes de sus puertas para [BREAK]protegerse de la última plaga?",
     "potential_answers": "una cruz,una estrella,sangre de cordero,ajo",
     "actual_answer": "sangre de cordero"
   },
