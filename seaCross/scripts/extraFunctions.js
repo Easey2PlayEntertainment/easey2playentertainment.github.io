@@ -263,7 +263,8 @@ function touchStart(e) {
         var pauseButtonWidth;
         var arrowWidth;
 		
-		if((e.touches[0].clientX > 220 || e.touches[0].clientY > 390) && !questionBrought) {
+		if((e.touches[0].clientX > 220 || e.touches[0].clientY > 390) && !questionBrought && start) {
+			console.log('skip');
 			return;
 		}
 
@@ -347,7 +348,7 @@ function touchStart(e) {
             }
         }
     }
-    return false;
+    //return false;
 }
 
 function checkTouchPosition(BUTTON_POSITION, x, buttonWidth) {
