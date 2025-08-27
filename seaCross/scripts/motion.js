@@ -222,15 +222,15 @@ async function moveAll() {
         var mosesMoveResults;
         if(!lowerLives && !runOnce) {
             if(up && mosesY > 220) {
-                mosesY -= /* googlePixelDevice ? 1.3 : */ 3;
+                mosesY -=  googlePixelDevice ? 1.3 : 3;
             } else if(down && mosesY < 360) {
-                mosesY += /* googlePixelDevice ? 1.3 :  */3;
+                mosesY += googlePixelDevice ? 1.3 : 3;
             }
         }
 
         if(win && mosesX > 850 && seaYPosition !== seaHeight) {
-            seaHeight += /* googlePixelDevice ? 1.3 : */ 3;
-            seaYPosition -= /* googlePixelDevice ? 1.3 :  */3;
+            seaHeight += googlePixelDevice ? 1.3 : 3;
+            seaYPosition -= googlePixelDevice ? 1.3 : 3;
         }
 
         if(israelites.length > 0) {
