@@ -262,6 +262,10 @@ function touchStart(e) {
         var buttonWidth;
         var pauseButtonWidth;
         var arrowWidth;
+		
+		if((e.touches[0].clientX > 220 || e.touches[0].clientY > 390) && !questionBrought) {
+			return;
+		}
 
         if(!fullScreen) {
             scaledHeight = canvas.height;
