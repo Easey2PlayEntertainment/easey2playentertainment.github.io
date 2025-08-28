@@ -345,7 +345,9 @@ function touchStart(e) {
                 keyDown({key: 'ArrowDown', code: 'ArrowDown', mobileClick: true});
 				document.querySelector('textarea').value += `(${e.touches[0].clientX}, ${e.touches[0].clientY}) ArrowDown
 `;
-            }
+            } else {
+				document.querySelector('textarea').value += `(${e.touches[0].clientX}, ${e.touches[0].clientY})`; // just show touch coordinates
+			}
         }
     }
     //return false;
