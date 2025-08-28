@@ -339,11 +339,11 @@ function touchStart(e) {
                 keyDown({key: 'p', code: 'KeyP', mobileClick: true}); // should activate pause button??????
 				document.querySelector('textarea').value += `(${e.touches[0].clientX}, ${e.touches[0].clientY}) PauseButton
 `;
-            } else if(checkTouchPosition(upArrowScaledPosition - 25, offsetX, arrowWidth) && offsetY >= upArrowYLowerPosition && offsetY <= upArrowYHigherPosition) {
+            } else if(e.touches[0].clientY < 210 || checkTouchPosition(upArrowScaledPosition - 25, offsetX, arrowWidth) && offsetY >= upArrowYLowerPosition && offsetY <= upArrowYHigherPosition) {
                 keyDown({key: 'ArrowUp', code: 'ArrowUp', mobileClick: true}); // triggering buttons
 				document.querySelector('textarea').value += `(${e.touches[0].clientX}, ${e.touches[0].clientY}) ArrowUp
 `;
-            } else if(checkTouchPosition(downArrowScaledPosition - 25, offsetX, arrowWidth) && offsetY >= downArrowYLowerPosition && offsetY <= downArrowYHigherPosition) {
+            } else if(e.touches[0].clientY > 210 || checkTouchPosition(downArrowScaledPosition - 25, offsetX, arrowWidth) && offsetY >= downArrowYLowerPosition && offsetY <= downArrowYHigherPosition) {
                 keyDown({key: 'ArrowDown', code: 'ArrowDown', mobileClick: true});
 				document.querySelector('textarea').value += `(${e.touches[0].clientX}, ${e.touches[0].clientY}) ArrowDown
 `;
