@@ -265,10 +265,10 @@ function touchStart(e) {
 		
 		document.querySelector('textarea').value += `(${e.touches[0].clientX}, ${e.touches[0].clientY})`; // just show touch coordinates
 		
-		if((e.touches[0].clientX > 220 || e.touches[0].clientY > 390) && !questionBrought && start) {
+		/*if((e.touches[0].clientX > 220 || e.touches[0].clientY > 390) && !questionBrought && start) {
 			console.log('skip');
 			return;
-		}
+		}*/
 
         if(!fullScreen) {
             scaledHeight = canvas.height;
