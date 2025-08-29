@@ -5,7 +5,7 @@ function testMove() {
 }
 
 async function moveAll() {
-	var speedIncrementFloat = 0.3;
+	var speedIncrementFloat = 0.2;
     var fish1Position = fish1.xPosition,
         fish2Position = fish2.xPosition,
         fish3Position = fish3.xPosition,
