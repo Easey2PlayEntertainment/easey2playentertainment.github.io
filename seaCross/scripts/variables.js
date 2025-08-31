@@ -965,4 +965,4 @@ var googlePixelDevice = false;
 
 var incorrectAnswersDataCollector = [];
 
-var slowDown = false;
+var deviceTypeChecked = false;

@@ -5,6 +5,7 @@ function testMove() {
 }
 
 async function moveAll() {
+	var slowDown = $('slowDown').checked ? true : false;
 	var speedIncrementFloat = 0.2;
     var fish1Position = fish1.xPosition,
         fish2Position = fish2.xPosition,

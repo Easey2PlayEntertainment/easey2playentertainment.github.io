@@ -57,6 +57,7 @@ function checkDeviceType() {
         //<p>Sincerely,</p>
         //<p>The Sea Cross Team</p>`;
     }
+	deviceTypeChecked = true;
 }
 
 function playSound(buffer, source) {
@@ -784,10 +785,7 @@ function checkBlinkImagesStatus() {
 }
 
 function updateAll() {
-    if($('slowDown').checked) {
-        slowDown = true; // slow the video game down
-    } else {
-		slowDown = false;
+    if(!$('slowDown').checked && !deviceTypeChecked) {
         checkDeviceType();
     }
     checkBlinkImagesStatus();
