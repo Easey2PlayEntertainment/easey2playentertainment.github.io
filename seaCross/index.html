@@ -63,7 +63,8 @@
 	<p class="no_padding"><a href="javascript:requestFullScreen(canvas);" id="fullScreenButton">Full Screen</a></p>
 	<button id="playButton" onclick="javascript:requestFullScreen(canvas);">Play</button>
 	<div class="checkboxDiv"><input type="checkbox" id="muteMusic">Mute music during questions<br><br>
-	<input type="checkbox" id="slowDown">Slow down video game</div>
+	<input type="checkbox" id="slowDown">Slow down video game<br><br>
+	<input type="range" id="speed" min="0" max="10"></div>
 	<br><br>
 	<div class="controlChoices perishable">
 		<input type="radio" id="leftControls" name="type_of_controls" value="Left Controls" checked="true">
@@ -519,6 +520,8 @@
 		window.onload = function() {
 			canvas = $('cnvs');
 			canvasContext = canvas.getContext('2d');
+			
+			speedRate = $('speed');
 
 			muteMusicCheckbox = $('muteMusic');
 

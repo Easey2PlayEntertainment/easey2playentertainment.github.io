@@ -787,7 +787,9 @@ function checkBlinkImagesStatus() {
 function updateAll() {
     if(!$('slowDown').checked && !deviceTypeChecked) {
         checkDeviceType();
-    }
+    } else if($('slowDown').checked) {
+		speedRate.style.display = 'initial';
+	}
     checkBlinkImagesStatus();
     if(!start && (arcadeMode || birthdayMode)) {
         moveDemoAssets();

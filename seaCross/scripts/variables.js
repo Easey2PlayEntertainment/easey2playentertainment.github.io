@@ -966,3 +966,5 @@ var googlePixelDevice = false;
 var incorrectAnswersDataCollector = [];
 
 var deviceTypeChecked = false;
+
+var speedRate;
