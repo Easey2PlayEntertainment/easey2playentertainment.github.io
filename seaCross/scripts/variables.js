@@ -964,3 +964,5 @@ var allBlinksLoaded = false;
 var googlePixelDevice = false;
 
 var incorrectAnswersDataCollector = [];
+
+var slowDown = false;

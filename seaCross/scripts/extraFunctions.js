@@ -785,8 +785,9 @@ function checkBlinkImagesStatus() {
 
 function updateAll() {
     if($('slowDown').checked) {
-        googlePixelDevice = true; // slow the video game down
+        slowDown = true; // slow the video game down
     } else {
+		slowDown = false;
         checkDeviceType();
     }
     checkBlinkImagesStatus();
