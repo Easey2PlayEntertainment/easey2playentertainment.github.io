@@ -320,34 +320,20 @@ function touchStart(e) {
                 if(offsetY >= scaledYLowerPosition && offsetY <= scaledYHigherPosition) { // converted so that any question can work, no matter what kind of question we are dealing with; the same code is used
                     if(checkTouchPosition(aButtonScaledPosition, offsetX, buttonWidth)) {
                         keyDown({key: 'a', code: 'KeyA', mobileClick: true});
-						document.querySelector('textarea').value += `(${e.touches[0].clientX}, ${e.touches[0].clientY}) KeyA
-`;
                     } else if(checkTouchPosition(bButtonScaledPosition, offsetX, buttonWidth)) {
                         keyDown({key: 'b', code: 'KeyB', mobileClick: true}); // both A and B buttons work in both question types
-						document.querySelector('textarea').value += `(${e.touches[0].clientX}, ${e.touches[0].clientY}) KeyB
-`;
                     } else if(checkTouchPosition(cButtonScaledPosition, offsetX, buttonWidth)) {
                         questionType === "match" || questionType === "number" ? keyDown({key: 'ArrowUp', code: 'ArrowUp', mobileClick: true}) : keyDown({key: 'c', code: 'KeyC', mobileClick: true});
-						document.querySelector('textarea').value += `(${e.touches[0].clientX}, ${e.touches[0].clientY}) KeyC
-`;
                     } else if(checkTouchPosition(dButtonScaledPosition, offsetX, buttonWidth)) {
                         questionType === "match" || questionType === "number" ? keyDown({key: 'ArrowDown', code: 'ArrowDown', mobileClick: true}) : keyDown({key: 'd', code: 'KeyD', mobileClick: true});
-						document.querySelector('textarea').value += `(${e.touches[0].clientX}, ${e.touches[0].clientY}) KeyD
-`;
                     }
                 }
             } else if(checkTouchPosition(pauseButtonScaledPosition, offsetX, pauseButtonWidth) && offsetY >= pauseResumeYLowerPosition && offsetY <= pauseResumeYHigherPosition && !questionBrought) {// WORK HERE NEXT...PAUSE BUTTON DOES NOT WORK QUITE YET
                 keyDown({key: 'p', code: 'KeyP', mobileClick: true}); // should activate pause button??????
-				document.querySelector('textarea').value += `(${e.touches[0].clientX}, ${e.touches[0].clientY}) PauseButton
-`;
             } else if(e.touches[0].clientY < 210 || checkTouchPosition(upArrowScaledPosition - 25, offsetX, arrowWidth) && offsetY >= upArrowYLowerPosition && offsetY <= upArrowYHigherPosition) {
                 keyDown({key: 'ArrowUp', code: 'ArrowUp', mobileClick: true}); // triggering buttons
-				document.querySelector('textarea').value += `(${e.touches[0].clientX}, ${e.touches[0].clientY}) ArrowUp
-`;
             } else if(e.touches[0].clientY > 210 || checkTouchPosition(downArrowScaledPosition - 25, offsetX, arrowWidth) && offsetY >= downArrowYLowerPosition && offsetY <= downArrowYHigherPosition) {
                 keyDown({key: 'ArrowDown', code: 'ArrowDown', mobileClick: true});
-				document.querySelector('textarea').value += `(${e.touches[0].clientX}, ${e.touches[0].clientY}) ArrowDown
-`;
 			}
         }
     }
