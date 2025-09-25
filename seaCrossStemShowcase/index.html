@@ -797,6 +797,11 @@
 				wigImageLoaded = true;
 			}
 			wigImage.src = 'images/wig.png'; // for israelite with black hair to wear
+			
+			qrCodeImage.onload = function() {
+				qrCodeImageLoaded = true;
+			}
+			qrCodeImage.src = "images/promotional_qr_code.png";
 
 			loadQuestions(); // do that first
 

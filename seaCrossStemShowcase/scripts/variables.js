@@ -968,3 +968,6 @@ var incorrectAnswersDataCollector = [];
 var deviceTypeChecked = false;
 
 var speedRate;
+
+var qrCodeImage = document.createElement('img');
+var qrCodeImageLoaded = false;
