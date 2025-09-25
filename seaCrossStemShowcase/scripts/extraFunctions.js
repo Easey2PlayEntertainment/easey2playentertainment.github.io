@@ -775,7 +775,7 @@ function updateAll() {
 		speedRate.style.display = 'initial';
 	}
     checkBlinkImagesStatus();
-    if(!start && (arcadeMode || birthdayMode)) {
+    if(!start) {
         moveDemoAssets();
     }
     $('bonusShellThumbnail').src = bonusShellFrames[bonusShellFrameId].src;
