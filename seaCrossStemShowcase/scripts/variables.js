@@ -971,3 +971,6 @@ var speedRate;
 
 var qrCodeImage = document.createElement('img');
 var qrCodeImageLoaded = false;
+
+var financeQrCodeImage = document.createElement('img');
+var financeQrCodeImageLoaded = false;

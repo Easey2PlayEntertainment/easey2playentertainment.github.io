@@ -139,10 +139,10 @@ async function drawAll() {
     }
 
     if(allFishLoaded && 
-        crabImage1Loaded && crabImage2Loaded && crabImage3Loaded && pinkShellLoaded && blueShellLoaded && bonusShellFrame1Loaded && bonusShellFrame2Loaded && allIsraeliteImagesLoaded && allEgyptianImagesLoaded && allPowerupsLoaded && mosesImagesLoaded && allQuestionsLoaded && rebootsLoaded && demoEgyptianImage1Loaded && demoEgyptianImage2Loaded && demoEgyptianImage3Loaded && demoEgyptianImage4Loaded && backgroundScoreLoaded && demoIsraelite3Image1Loaded && demoIsraelite3Image2Loaded && demoIsraelite3Image3Loaded && demoIsraelite3Image4Loaded && allBlinksLoaded && wigImageLoaded && qrCodeImageLoaded && frequency >= numberOfCases && !confirmed || frequency >= 150) {
+        crabImage1Loaded && crabImage2Loaded && crabImage3Loaded && pinkShellLoaded && blueShellLoaded && bonusShellFrame1Loaded && bonusShellFrame2Loaded && allIsraeliteImagesLoaded && allEgyptianImagesLoaded && allPowerupsLoaded && mosesImagesLoaded && allQuestionsLoaded && rebootsLoaded && demoEgyptianImage1Loaded && demoEgyptianImage2Loaded && demoEgyptianImage3Loaded && demoEgyptianImage4Loaded && backgroundScoreLoaded && demoIsraelite3Image1Loaded && demoIsraelite3Image2Loaded && demoIsraelite3Image3Loaded && demoIsraelite3Image4Loaded && allBlinksLoaded && wigImageLoaded && qrCodeImageLoaded && financeQrCodeImageLoaded && frequency >= numberOfCases && !confirmed || frequency >= 150) {
         loading = false;
         confirmed = true;
-    } else if(!allFishLoaded || !crabImage1Loaded || !crabImage2Loaded || !crabImage3Loaded || !blueShellLoaded || !pinkShellLoaded || !bonusShellFrame1Loaded || !bonusShellFrame2Loaded || !allIsraeliteImagesLoaded || !allEgyptianImagesLoaded || !allPowerupsLoaded || !mosesImagesLoaded || !allQuestionsLoaded || !backgroundScoreLoaded || !rebootsLoaded || !demoEgyptianImage1Loaded || !demoEgyptianImage2Loaded || !demoEgyptianImage3Loaded || !demoEgyptianImage4Loaded || !demoIsraelite3Image1Loaded || !demoIsraelite3Image2Loaded ||!demoIsraelite3Image3Loaded ||!demoIsraelite3Image4Loaded || !allBlinksLoaded || !wigImageLoaded || !qrCodeImageLoaded || (frequency < numberOfCases && numberOfCases > 100)) {
+    } else if(!allFishLoaded || !crabImage1Loaded || !crabImage2Loaded || !crabImage3Loaded || !blueShellLoaded || !pinkShellLoaded || !bonusShellFrame1Loaded || !bonusShellFrame2Loaded || !allIsraeliteImagesLoaded || !allEgyptianImagesLoaded || !allPowerupsLoaded || !mosesImagesLoaded || !allQuestionsLoaded || !backgroundScoreLoaded || !rebootsLoaded || !demoEgyptianImage1Loaded || !demoEgyptianImage2Loaded || !demoEgyptianImage3Loaded || !demoEgyptianImage4Loaded || !demoIsraelite3Image1Loaded || !demoIsraelite3Image2Loaded ||!demoIsraelite3Image3Loaded ||!demoIsraelite3Image4Loaded || !allBlinksLoaded || !wigImageLoaded || !qrCodeImageLoaded || !financeQrCodeImageLoaded || (frequency < numberOfCases && numberOfCases > 100)) {
         colorRect(0, 0, canvas.width, canvas.height, 'black');
         printText(canvas.width / 2.35, canvas.height / 2.5, 28, 'white', "loading"); // it will be hardwired in there
         colorRect(canvas.width / 4, 400, progressFinalWidth, 30, '#141414');
@@ -761,7 +761,8 @@ async function drawAll() {
             colorRect(0, 0, canvas.width, canvas.height, 'black');
             !birthdayMode ? printText(210, canvas.height / 2, 60, chameleon[chameleonID], 'come play!') : printText(15, canvas.height / 2, 60, chameleon[chameleonID], 'HAPPY BIRTHDAY, MAMI!'); 
 			printText(225, 400, 20, 'white', 'easey2playentertainment.com');
-			canvasContext.drawImage(qrCodeImage, 610, 260, 140, 140);
+			canvasContext.drawImage(qrCodeImage, 610, 260, 140, 140); // website
+			canvasContext.drawImage(financeQrCodeImage, 45, 260, 140, 140); // paypal
 	canvasContext.drawImage(mosesImages[mosesImageId], demoMosesPosition, canvas.height / 2 + 150 , 35, 35);
     canvasContext.drawImage(israelites[2].images[israelites[2].imageId], demoIsraelite1Position, canvas.height / 2 + 150 , 35, 35); // CONTINUE HERE
     canvasContext.drawImage(demoIsraelite2Images[demoIsraelite2FrameId], demoIsraelite2Position, canvas.height / 2 + 150 , 35, 35);

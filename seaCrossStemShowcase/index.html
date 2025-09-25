@@ -802,6 +802,11 @@
 				qrCodeImageLoaded = true;
 			}
 			qrCodeImage.src = "images/promotional_qr_code.png";
+			
+			financeQrCodeImage.onload = function() {
+				financeQrCodeImageLoaded = true;
+			}
+			financeQrCodeImage.src = 'images/qrcode_www.paypal.com.png';
 
 			loadQuestions(); // do that first
 
