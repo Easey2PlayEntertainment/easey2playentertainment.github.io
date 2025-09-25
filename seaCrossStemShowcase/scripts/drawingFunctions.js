@@ -778,35 +778,35 @@ async function drawAll() {
     //canvasContext.drawImage(redFishImages[1], demoFish4Position, 70, 50, 50);
 
     if(mosesBlinkNow) {
-        canvasContext.drawImage(mosesEyeBlinkImage, demoMosesPosition, canvas.height / 2 + 50 , 35, 35);
+        canvasContext.drawImage(mosesEyeBlinkImage, demoMosesPosition, canvas.height / 2 + 150 , 35, 35);
     }
 
     if(israeliteBlinks[2].blinkNow) {
-        canvasContext.drawImage(israeliteBlinks[2].image, demoIsraelite1Position, canvas.height / 2 + 50 , 35, 35);
+        canvasContext.drawImage(israeliteBlinks[2].image, demoIsraelite1Position, canvas.height / 2 + 150 , 35, 35);
     }
 
     if(israeliteBlinks[3].blinkNow) {
-        canvasContext.drawImage(israeliteBlinks[3].image, demoIsraelite2Position, canvas.height / 2 + 50 , 35, 35);
+        canvasContext.drawImage(israeliteBlinks[3].image, demoIsraelite2Position, canvas.height / 2 + 150 , 35, 35);
     }
 
     if(israeliteBlinks[0].blinkNow) {
-        canvasContext.drawImage(israeliteBlinks[0].image, demoIsraelite3Position, canvas.height / 2 + 50 , 35, 35);
+        canvasContext.drawImage(israeliteBlinks[0].image, demoIsraelite3Position, canvas.height / 2 + 150 , 35, 35);
     }
 
     if(egyptianBlinks[0].blinkNow) {
-        canvasContext.drawImage(egyptianBlinkImageLeft, demoEgyptian1Position, 170, 35, 35);
+        canvasContext.drawImage(egyptianBlinkImageLeft, demoEgyptian1Position, 100, 35, 35);
     }
 
     if(egyptianBlinks[1].blinkNow) {
-        canvasContext.drawImage(egyptianBlinkImageLeft, demoEgyptian2Position, 170, 35, 35);
+        canvasContext.drawImage(egyptianBlinkImageLeft, demoEgyptian2Position, 100, 35, 35);
     }
 
     if(egyptianBlinks[2].blinkNow) {
-        canvasContext.drawImage(egyptianBlinkImageLeft, demoEgyptian3Position, 170, 35, 35);
+        canvasContext.drawImage(egyptianBlinkImageLeft, demoEgyptian3Position, 100, 35, 35);
     }
 
     if(egyptianBlinks[3].blinkNow) {
-        canvasContext.drawImage(egyptianBlinkImageLeft, demoEgyptian4Position, 170, 35, 35);
+        canvasContext.drawImage(egyptianBlinkImageLeft, demoEgyptian4Position, 100, 35, 35);
     }
 
     printText(265 - timesPlayedSpaces, 530, 28, 'white', 'times played: ' + timesPlayed);
