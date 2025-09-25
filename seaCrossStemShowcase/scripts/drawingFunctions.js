@@ -775,10 +775,10 @@ async function drawAll() {
     canvasContext.drawImage(demoEgyptianImages[demoEgyptianFrameId], demoEgyptian2Position, 100, 35, 35);
     canvasContext.drawImage(demoEgyptianImages[demoEgyptianFrameId], demoEgyptian3Position, 100, 35, 35);
     canvasContext.drawImage(demoEgyptianImages[demoEgyptianFrameId], demoEgyptian4Position, 100, 35, 35);
-    //canvasContext.drawImage(orangeFishImages[1], demoFish1Position, 70, 50, 50);
-    //canvasContext.drawImage(purpleFishImages[1], demoFish2Position, 70, 50, 50);
-    //canvasContext.drawImage(greenFishImages[1], demoFish3Position, 70, 50, 50);
-    //canvasContext.drawImage(redFishImages[1], demoFish4Position, 70, 50, 50);
+    canvasContext.drawImage(orangeFishImages[1], demoFish1Position, 160, 50, 50);
+    canvasContext.drawImage(purpleFishImages[1], demoFish2Position, 160, 50, 50);
+    canvasContext.drawImage(greenFishImages[1], demoFish3Position, 160, 50, 50);
+    canvasContext.drawImage(redFishImages[1], demoFish4Position, 160, 50, 50);
 
     if(mosesBlinkNow) {
         canvasContext.drawImage(mosesEyeBlinkImage, demoMosesPosition, canvas.height / 2 + 150 , 35, 35);
