@@ -757,7 +757,7 @@ async function drawAll() {
 
     if(!start && confirmed && mosesImagesLoaded && allIsraeliteImagesLoaded && allEgyptianImagesLoaded && !loading) {
         screenBlacked = false; 
-        if(arcadeMode || birthdayMode) {
+        if(true) {
             colorRect(0, 0, canvas.width, canvas.height, 'black');
             !birthdayMode ? printText(210, canvas.height / 2, 60, chameleon[chameleonID], 'come play!') : printText(15, canvas.height / 2, 60, chameleon[chameleonID], 'HAPPY BIRTHDAY, MAMI!'); 
     canvasContext.drawImage(mosesImages[mosesImageId], demoMosesPosition, canvas.height / 2 + 50 , 35, 35);
