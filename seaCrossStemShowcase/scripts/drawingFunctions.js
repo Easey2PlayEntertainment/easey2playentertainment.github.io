@@ -760,7 +760,7 @@ async function drawAll() {
         if(true) {
             colorRect(0, 0, canvas.width, canvas.height, 'black');
             !birthdayMode ? printText(210, canvas.height / 2, 60, chameleon[chameleonID], 'come play!') : printText(15, canvas.height / 2, 60, chameleon[chameleonID], 'HAPPY BIRTHDAY, MAMI!'); 
-			printText(190, 400, 30, 'white', 'easey2playentertainment.com');
+			printText(160, 400, 30, 'white', 'easey2playentertainment.com');
 	canvasContext.drawImage(mosesImages[mosesImageId], demoMosesPosition, canvas.height / 2 + 150 , 35, 35);
     canvasContext.drawImage(israelites[2].images[israelites[2].imageId], demoIsraelite1Position, canvas.height / 2 + 150 , 35, 35); // CONTINUE HERE
     canvasContext.drawImage(demoIsraelite2Images[demoIsraelite2FrameId], demoIsraelite2Position, canvas.height / 2 + 150 , 35, 35);
