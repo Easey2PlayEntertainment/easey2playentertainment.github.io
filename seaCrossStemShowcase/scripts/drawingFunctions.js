@@ -764,18 +764,18 @@ async function drawAll() {
     canvasContext.drawImage(israelites[2].images[israelites[2].imageId], demoIsraelite1Position, canvas.height / 2 + 50 , 35, 35); // CONTINUE HERE
     canvasContext.drawImage(demoIsraelite2Images[demoIsraelite2FrameId], demoIsraelite2Position, canvas.height / 2 + 50 , 35, 35);
     canvasContext.drawImage(demoIsraelite3Images[demoIsraelite3FrameId], demoIsraelite3Position, canvas.height / 2 + 50 , 35, 35);
-    canvasContext.drawImage(currentCrabImage, demoCrab1Position, 450, 50, 50);
-    canvasContext.drawImage(currentCrabImage, demoCrab2Position, 450, 50, 50);
-    canvasContext.drawImage(currentCrabImage, demoCrab3Position, 450, 50, 50); // keep working on it
-    canvasContext.drawImage(currentCrabImage, demoCrab4Position, 450, 50, 50);
+    //canvasContext.drawImage(currentCrabImage, demoCrab1Position, 450, 50, 50);
+    //canvasContext.drawImage(currentCrabImage, demoCrab2Position, 450, 50, 50);
+    //canvasContext.drawImage(currentCrabImage, demoCrab3Position, 450, 50, 50); // keep working on it
+    //canvasContext.drawImage(currentCrabImage, demoCrab4Position, 450, 50, 50);
     canvasContext.drawImage(demoEgyptianImages[demoEgyptianFrameId], demoEgyptian1Position, 170, 35, 35);
     canvasContext.drawImage(demoEgyptianImages[demoEgyptianFrameId], demoEgyptian2Position, 170, 35, 35);
     canvasContext.drawImage(demoEgyptianImages[demoEgyptianFrameId], demoEgyptian3Position, 170, 35, 35);
     canvasContext.drawImage(demoEgyptianImages[demoEgyptianFrameId], demoEgyptian4Position, 170, 35, 35);
-    canvasContext.drawImage(orangeFishImages[1], demoFish1Position, 70, 50, 50);
-    canvasContext.drawImage(purpleFishImages[1], demoFish2Position, 70, 50, 50);
-    canvasContext.drawImage(greenFishImages[1], demoFish3Position, 70, 50, 50);
-    canvasContext.drawImage(redFishImages[1], demoFish4Position, 70, 50, 50);
+    //canvasContext.drawImage(orangeFishImages[1], demoFish1Position, 70, 50, 50);
+    //canvasContext.drawImage(purpleFishImages[1], demoFish2Position, 70, 50, 50);
+    //canvasContext.drawImage(greenFishImages[1], demoFish3Position, 70, 50, 50);
+    //canvasContext.drawImage(redFishImages[1], demoFish4Position, 70, 50, 50);
 
     if(mosesBlinkNow) {
         canvasContext.drawImage(mosesEyeBlinkImage, demoMosesPosition, canvas.height / 2 + 50 , 35, 35);
