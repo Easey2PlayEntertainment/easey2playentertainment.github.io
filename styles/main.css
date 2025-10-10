@@ -425,7 +425,7 @@ figure figcaption {
             width: 300px;
         }
         to {
-            width: 400px;
+            width: 320px;
         }
     }
 
@@ -497,7 +497,7 @@ animation-direction: normal;
             width: 200px;
         }
         to {
-            width: 300px;
+            width: 220px;
         }
     }
 
@@ -541,7 +541,7 @@ animation-direction: normal;
             width: 150px;
         }
         to {
-            width: 250px;
+            width: 170px;
         }
     }
 
