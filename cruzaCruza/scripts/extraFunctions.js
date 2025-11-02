@@ -674,7 +674,7 @@ function manageFullscreenFX() {
             paragraphs[i].style.visibility = 'hidden';
         }
         document.querySelector('img').style.visibility = document.querySelector('.checkboxDiv').style.visibility = 'hidden';
-        playButton.innerHTML = "rotate screen";
+        playButton.innerHTML = "girar la pantalla";
     } else { // set everything back to default
         fullScreenButton.style.display = "initial";
         body.style.backgroundColor = 'green';
@@ -686,9 +686,9 @@ function manageFullscreenFX() {
         }
         document.querySelector('img').style.visibility = document.querySelector('.checkboxDiv').style.visibility = 'visible';
         if(start) {
-            playButton.innerHTML = "full screen";
+            playButton.innerHTML = "Pantalla completa";
         } else {
-            playButton.innerHTML = "Play";
+            playButton.innerHTML = "Juega";
         }
     }
 }
