@@ -707,7 +707,7 @@ async function drawAll() {
 
     if(questionGraded) {
         showPowerup = false;
-        var statement = answerCorrect ? "¡excelente!" : "¡Incorrecto! La respuesta correcta es[BREAK]" + correctAnswerValue; // assuming the answer is still intact
+        var statement = answerCorrect ? "¡excelente!" : "¡Incorrecto! La respuesta correcta: [BREAK]" + correctAnswerValue; // assuming the answer is still intact
         var timeToPause = answerCorrect ? 1000 : (lastQuestionTypeUsed === "match" || lastQuestionTypeUsed === "number" ? 10000 : 5000); // the difference in time is to help the player learn from his/her mistakes
         var squareHeightIncrement = 0;
 
