@@ -123,8 +123,8 @@ async function loadQuestions() { // loads all questions; prevents delay
     "question_type": "number",
     "question": "Ordena estos eventos correctamente.",
     "potential_answers": "",
-    "actual_answer": "Las aguas de Mará se vuelven dulces,Codornices llegaron por primera vez al anochecer,Maná cayó del cielo,Jetro aconseja a Moisés sobre liderazgo,Los Diez Mandamientos fueron proclamados,Los Diez Mandamientos fueron entregados,Aarón levantó un becerro de oro,Aarón y sus hijos fueron consagrados",
-    "actual_answer_sans_coord": "1. Las aguas de Mará se vuelven dulces[BREAK][BREAK]2. Codornices llegaron por primera vez al anochecer[BREAK][BREAK]3. Maná cayó del cielo[BREAK][BREAK]4. Jetro aconseja a Moisés sobre liderazgo[BREAK][BREAK]5. Los Diez Mandamientos fueron proclamados[BREAK][BREAK]6. Los Diez Mandamientos fueron entregados[BREAK][BREAK]7. Aarón levantó un becerro de oro[BREAK][BREAK]8. Aarón y sus hijos fueron consagrados"
+    "actual_answer": "Las aguas de Mará se vuelven dulces,Codornices llegaron por primera vez al[BREAK]anochecer,Maná cayó del cielo,Jetro aconseja a Moisés sobre liderazgo,Los Diez Mandamientos fueron proclamados,Los Diez Mandamientos fueron entregados,Aarón levantó un becerro de oro,Aarón y sus hijos fueron consagrados",
+    "actual_answer_sans_coord": "1. Las aguas de Mará se vuelven dulces[BREAK][BREAK]2. Codornices llegaron por primera vez al[BREAK]anochecer[BREAK][BREAK]3. Maná cayó del cielo[BREAK][BREAK]4. Jetro aconseja a Moisés sobre liderazgo[BREAK][BREAK]5. Los Diez Mandamientos fueron proclamados[BREAK][BREAK]6. Los Diez Mandamientos fueron entregados[BREAK][BREAK]7. Aarón levantó un becerro de oro[BREAK][BREAK]8. Aarón y sus hijos fueron consagrados"
   },
   {
     "question_type": "number",
