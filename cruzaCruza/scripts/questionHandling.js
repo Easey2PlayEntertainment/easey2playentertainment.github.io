@@ -130,29 +130,29 @@ async function loadQuestions() { // loads all questions; prevents delay
     "question_type": "number",
     "question": "Ordena estos eventos correctamente.",
     "potential_answers": "",
-    "actual_answer": "El decreto de ejecutar a los bebés varones fue proclamado,Moisés nació,Moisés fue encontrado por la hija del faraón,Moisés mata a un egipcio,Moisés defiende a las hijas de Jetro,Moisés se casa con Séfora,Moisés ve la zarza ardiente,El bastón de Moisés se convierte en una serpiente",
-    "actual_answer_sans_coord": "1. El decreto de ejecutar a los bebés varones fue proclamado[BREAK][BREAK]2. Moisés nació[BREAK][BREAK]3. Moisés fue encontrado por la hija del faraón[BREAK][BREAK]4. Moisés mata a un egipcio[BREAK][BREAK]5. Moisés defiende a las hijas de Jetro[BREAK][BREAK]6. Moisés se casa con Séfora[BREAK][BREAK]7. Moisés ve la zarza ardiente[BREAK][BREAK]8. El bastón de Moisés se convierte en una serpiente"
+    "actual_answer": "El decreto de ejecutar a los bebés varones[BREAK]fue proclamado,Moisés nació,Moisés fue encontrado por la hija del[BREAK]faraón,Moisés mata a un egipcio,Moisés defiende a las hijas de Jetro,Moisés se casa con Séfora,Moisés ve la zarza ardiente,El bastón de Moisés se convierte en una[BREAK]serpiente",
+    "actual_answer_sans_coord": "1. El decreto de ejecutar a los bebés varones[BREAK]fue proclamado[BREAK][BREAK]2. Moisés nació[BREAK][BREAK]3. Moisés fue encontrado por la hija del[BREAK]faraón[BREAK][BREAK]4. Moisés mata a un egipcio[BREAK][BREAK]5. Moisés defiende a las hijas de Jetro[BREAK][BREAK]6. Moisés se casa con Séfora[BREAK][BREAK]7. Moisés ve la zarza ardiente[BREAK][BREAK]8. El bastón de Moisés se convierte en una[BREAK]serpiente"
   },
   {
     "question_type": "number",
-    "question": "Ordena estas instrucciones de la Pascua correctamente.",
+    "question": "Ordena estas instrucciones de la Pascua[BREAK]correctamente.",
     "potential_answers": "",
-    "actual_answer": "Tomar un cordero sin defecto,matarlo al anochecer,poner la sangre del cordero en el dintel,asar el cordero,comerlo junto con pan sin levadura y hierbas amargas,quemar los restos del cordero,comer con cinturón en la cintura y sandalias en los pies,no salir de casa hasta la mañana",
-    "actual_answer_sans_coord": "1. Tomar un cordero sin defecto[BREAK][BREAK]2. Matarlo al anochecer[BREAK][BREAK]3. Poner la sangre del cordero en el dintel[BREAK][BREAK]4. Asar el cordero[BREAK][BREAK]5. Comerlo junto con pan sin levadura y hierbas amargas[BREAK][BREAK]6. Quemar los restos del cordero[BREAK][BREAK]7. Comer con cinturón en la cintura y sandalias en los pies[BREAK][BREAK]8. No salir de casa hasta la mañana"
+    "actual_answer": "Tomar un cordero sin defecto,matarlo al anochecer,poner la sangre del cordero en el dintel,asar el cordero,comerlo junto con pan sin levadura y[BREAK]hierbas amargas,quemar los restos del cordero,comer con cinturón en la cintura y[BREAK]sandalias en los pies,no salir de casa hasta la mañana",
+    "actual_answer_sans_coord": "1. Tomar un cordero sin defecto[BREAK][BREAK]2. Matarlo al anochecer[BREAK][BREAK]3. Poner la sangre del cordero en el dintel[BREAK][BREAK]4. Asar el cordero[BREAK][BREAK]5. Comerlo junto con pan sin levadura y[BREAK]hierbas amargas[BREAK][BREAK]6. Quemar los restos del cordero[BREAK][BREAK]7. Comer con cinturón en la cintura y[BREAK]sandalias en los pies[BREAK][BREAK]8. No salir de casa hasta la mañana"
   },
   {
     "question_type": "number",
     "question": "Ordena estos eventos correctamente.",
     "potential_answers": "",
-    "actual_answer": "Moisés muele el becerro de oro hasta hacerlo polvo,los adoradores rebeldes son asesinados,Moisés habla con Dios en el tabernáculo de reunión,los Diez Mandamientos son escritos nuevamente en nuevas tablas de piedra,Bezaleel es llamado como artesano principal,los hijos de Israel son instruidos para dejar de traer ofrendas,Bezaleel construye el Arca del Pacto,la fuente de bronce es construida",
-    "actual_answer_sans_coord": "1. Moisés muele el becerro de oro hasta hacerlo polvo[BREAK][BREAK]2. Los adoradores rebeldes son asesinados[BREAK][BREAK]3. Moisés habla con Dios en el tabernáculo de reunión[BREAK][BREAK]4. Los Diez Mandamientos son escritos nuevamente en nuevas tablas de piedra[BREAK][BREAK]5. Bezaleel es llamado como artesano principal[BREAK][BREAK]6. Los hijos de Israel son instruidos para dejar de traer ofrendas[BREAK][BREAK]7. Bezaleel construye el Arca del Pacto[BREAK][BREAK]8. La fuente de bronce es construida"
+    "actual_answer": "Moisés muele el becerro de oro hasta[BREAK]hacerlo polvo,los adoradores rebeldes son asesinados,Moisés habla con Dios en el tabernáculo de[BREAK]reunión,los Diez Mandamientos son escritos[BREAK]nuevamente en nuevas tablas de piedra,Bezaleel es llamado como artesano principal,los hijos de Israel son instruidos para[BREAK]dejar de traer ofrendas,Bezaleel construye el Arca del Pacto,la fuente de bronce es construida",
+    "actual_answer_sans_coord": "1. Moisés muele el becerro de oro hasta[BREAK]hacerlo polvo[BREAK][BREAK]2. Los adoradores rebeldes son asesinados[BREAK][BREAK]3. Moisés habla con Dios en el tabernáculo de[BREAK]reunión[BREAK][BREAK]4. Los Diez Mandamientos son escritos[BREAK]nuevamente en nuevas tablas de piedra[BREAK][BREAK]5. Bezaleel es llamado como artesano principal[BREAK][BREAK]6. Los hijos de Israel son instruidos para[BREAK]dejar de traer ofrendas[BREAK][BREAK]7. Bezaleel construye el Arca del Pacto[BREAK][BREAK]8. La fuente de bronce es construida[INCREASE_SQUARE_HEIGHT]"
   },
 {
     "question_type": "number",
     "question": "Ordena estos eventos correctamente.",
     "potential_answers": "",
-    "actual_answer": "Los espías fueron enviados a la tierra de Canaán,Se dio un informe negativo al regresar,Josué y Caleb intentaron animar al pueblo,Los israelitas fueron desterrados al desierto por 40 años,Un hombre fue condenado a muerte por trabajar en el día de reposo,Coré y sus hombres se rebelaron contra Moisés y Aarón,Coré y sus hombres fueron tragados por la tierra,4700 personas murieron debido a una plaga",
-    "actual_answer_sans_coord": "1. Los espías fueron enviados a la tierra de Canaán[BREAK][BREAK]2. Se dio un informe negativo al regresar[BREAK][BREAK]3. Josué y Caleb intentaron animar al pueblo[BREAK][BREAK]4. Los israelitas fueron desterrados al desierto por 40 años[BREAK][BREAK]5. Un hombre fue condenado a muerte por trabajar en el día de reposo[BREAK][BREAK]6. Coré y sus hombres se rebelaron contra Moisés y Aarón[BREAK][BREAK]7. Coré y sus hombres fueron tragados por la tierra[BREAK][BREAK]8. 4700 personas murieron debido a una plaga"
+    "actual_answer": "Los espías fueron enviados a la tierra de[BREAK]Canaán,Se dio un informe negativo al regresar,Josué y Caleb intentaron animar al pueblo,Los israelitas fueron desterrados al[BREAK]desierto por 40 años,Un hombre fue condenado a muerte por[BREAK]trabajar en el día de reposo,Coré y sus hombres se rebelaron contra[BREAK]Moisés y Aarón,Coré y sus hombres fueron tragados por la[BREAK]tierra,4700 personas murieron debido a una plaga",
+    "actual_answer_sans_coord": "1. Los espías fueron enviados a la tierra de[BREAK]Canaán[BREAK][BREAK]2. Se dio un informe negativo al regresar[BREAK][BREAK]3. Josué y Caleb intentaron animar al pueblo[BREAK][BREAK]4. Los israelitas fueron desterrados al[BREAK]desierto por 40 años[BREAK][BREAK]5. Un hombre fue condenado a muerte por[BREAK]trabajar en el día de reposo[BREAK][BREAK]6. Coré y sus hombres se rebelaron contra[BREAK]Moisés y Aarón[BREAK]7. Coré y sus hombres fueron tragados por la[BREAK]tierra[BREAK][BREAK]8. 4700 personas murieron debido a una plaga[INCREASE_SQUARE_HEIGHT]"
   },
   {
     "question_type": "number",
