@@ -158,15 +158,15 @@ async function loadQuestions() { // loads all questions; prevents delay
     "question_type": "number",
     "question": "Ordena estos eventos correctamente.",
     "potential_answers": "",
-    "actual_answer": "Séfora salva la vida de Moisés al circuncidar a su hijo,Moisés se reúne con Aarón,Moisés regresa a Egipto,Moisés y Aarón confrontan al faraón,El faraón aumenta la carga de trabajo de los israelitas,Dios promete la liberación,Dios envía las diez plagas,El faraón deja ir a los israelitas",
-    "actual_answer_sans_coord": "1. Séfora salva la vida de Moisés al circuncidar a su hijo[BREAK][BREAK]2. Moisés se reúne con Aarón[BREAK][BREAK]3. Moisés regresa a Egipto[BREAK][BREAK]4. Moisés y Aarón confrontan al faraón[BREAK][BREAK]5. El faraón aumenta la carga de trabajo de los israelitas[BREAK][BREAK]6. Dios promete la liberación[BREAK][BREAK]7. Dios envía las diez plagas[BREAK][BREAK]8. El faraón deja ir a los israelitas"
+    "actual_answer": "Séfora salva la vida de Moisés al[BREAK]circuncidar a su hijo,Moisés se reúne con Aarón,Moisés regresa a Egipto,Moisés y Aarón confrontan al faraón,El faraón aumenta la carga de trabajo de[BREAK]los israelitas,Dios promete la liberación,Dios envía las diez plagas,El faraón deja ir a los israelitas",
+    "actual_answer_sans_coord": "1. Séfora salva la vida de Moisés al[BREAK]circuncidar a su hijo[BREAK][BREAK]2. Moisés se reúne con Aarón[BREAK][BREAK]3. Moisés regresa a Egipto[BREAK][BREAK]4. Moisés y Aarón confrontan al faraón[BREAK][BREAK]5. El faraón aumenta la carga de trabajo de[BREAK]los israelitas[BREAK][BREAK]6. Dios promete la liberación[BREAK][BREAK]7. Dios envía las diez plagas[BREAK][BREAK]8. El faraón deja ir a los israelitas"
   },
   {
     "question_type": "number",
     "question": "Ordena estos eventos correctamente.",
     "potential_answers": "",
-    "actual_answer": "El arca del testimonio es construida,La mesa de los panes es construida,El candelabro de oro es construido,El altar de incienso es construido,El aceite de la unción y el incienso son preparados por el perfumista,El altar del holocausto es construido,Las vestiduras sacerdotales son tejidas,El tabernáculo es erigido",
-    "actual_answer_sans_coord": "1. El arca del testimonio es construida[BREAK][BREAK]2. La mesa de los panes es construida[BREAK][BREAK]3. El candelabro de oro es construido[BREAK][BREAK]4. El altar de incienso es construido[BREAK][BREAK]5. El aceite de la unción y el incienso son preparados por el perfumista[BREAK][BREAK]6. El altar del holocausto es construido[BREAK][BREAK]7. Las vestiduras sacerdotales son tejidas[BREAK][BREAK]8. El tabernáculo es erigido"
+    "actual_answer": "El arca del testimonio es construida,La mesa de los panes es construida,El candelabro de oro es construido,El altar de incienso es construido,El aceite de la unción y el incienso son[BREAK]preparados por el perfumista,El altar del holocausto es construido,Las vestiduras sacerdotales son tejidas,El tabernáculo es erigido",
+    "actual_answer_sans_coord": "1. El arca del testimonio es construida[BREAK][BREAK]2. La mesa de los panes es construida[BREAK][BREAK]3. El candelabro de oro es construido[BREAK][BREAK]4. El altar de incienso es construido[BREAK][BREAK]5. El aceite de la unción y el incienso son[BREAK]preparados por el perfumista[BREAK][BREAK]6. El altar del holocausto es construido[BREAK][BREAK]7. Las vestiduras sacerdotales son tejidas[BREAK][BREAK]8. El tabernáculo es erigido"
   },
 {
     "question_type": "number",
