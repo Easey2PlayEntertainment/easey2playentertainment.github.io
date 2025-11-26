@@ -172,15 +172,15 @@ async function loadQuestions() { // loads all questions; prevents delay
     "question_type": "number",
     "question": "Ordena estos eventos correctamente.",
     "potential_answers": "",
-    "actual_answer": "La multitud mixta se queja del maná,Dios dice que enviará codornices durante un mes entero,Setenta ancianos reciben el Espíritu Santo,Eldad y Medad comienzan a profetizar,Dios envía codornices por segunda vez,Las personas que codiciaron las codornices mueren por comer en exceso,Aarón y Miriam hablan contra Moisés,Dios castiga a Miriam con lepra",
-    "actual_answer_sans_coord": "1. La multitud mixta se queja del maná[BREAK][BREAK]2. Dios dice que enviará codornices durante un mes entero[BREAK][BREAK]3. Setenta ancianos reciben el Espíritu Santo[BREAK][BREAK]4. Eldad y Medad comienzan a profetizar[BREAK][BREAK]5. Dios envía codornices por segunda vez[BREAK][BREAK]6. Las personas que codiciaron las codornices mueren por comer en exceso[BREAK][BREAK]7. Aarón y Miriam hablan contra Moisés[BREAK][BREAK]8. Dios castiga a Miriam con lepra"
+    "actual_answer": "La multitud mixta se queja del maná,Dios dice que enviará codornices durante un[BREAK]mes entero,Setenta ancianos reciben el Espíritu Santo,Eldad y Medad comienzan a profetizar,Dios envía codornices por segunda vez,Las personas que codiciaron las codornices[BREAK]mueren por comer en exceso,Aarón y Miriam hablan contra Moisés,Dios castiga a Miriam con lepra",
+    "actual_answer_sans_coord": "1. La multitud mixta se queja del maná[BREAK][BREAK]2. Dios dice que enviará codornices durante un[BREAK]mes entero[BREAK][BREAK]3. Setenta ancianos reciben el Espíritu Santo[BREAK][BREAK]4. Eldad y Medad comienzan a profetizar[BREAK][BREAK]5. Dios envía codornices por segunda vez[BREAK][BREAK]6. Las personas que codiciaron las codornices[BREAK]mueren por comer en exceso[BREAK][BREAK]7. Aarón y Miriam hablan contra Moisés[BREAK][BREAK]8. Dios castiga a Miriam con lepra"
   },
   {
     "question_type": "number",
     "question": "Ordena estos eventos correctamente.",
     "potential_answers": "",
-    "actual_answer": "Los israelitas derrotan a los cananeos en Horma,Los israelitas se quejan contra Dios nuevamente,Dios provoca una plaga de serpientes dentro del campamento,Moisés construye una serpiente de bronce,Israel derrota al rey Sehón y su ejército,Israel derrota al rey Og y su ejército,Moisés envía espías a Jazer,Israel toma las aldeas de Jazer",
-    "actual_answer_sans_coord": "1. Los israelitas derrotan a los cananeos en Horma[BREAK][BREAK]2. Los israelitas se quejan contra Dios nuevamente[BREAK][BREAK]3. Dios provoca una plaga de serpientes dentro del campamento[BREAK][BREAK]4. Moisés construye una serpiente de bronce[BREAK][BREAK]5. Israel derrota al rey Sehón y su ejército[BREAK][BREAK]6. Israel derrota al rey Og y su ejército[BREAK][BREAK]7. Moisés envía espías a Jazer[BREAK][BREAK]8. Israel toma las aldeas de Jazer"
+    "actual_answer": "Los israelitas derrotan a los cananeos en[BREAK]Horma,Los israelitas se quejan contra Dios[BREAK]nuevamente,Dios provoca una plaga de serpientes dentro[BREAK]del campamento,Moisés construye una serpiente de bronce,Israel derrota al rey Sehón y su ejército,Israel derrota al rey Og y su ejército,Moisés envía espías a Jazer,Israel toma las aldeas de Jazer",
+    "actual_answer_sans_coord": "1. Los israelitas derrotan a los cananeos en[BREAK]Horma[BREAK][BREAK]2. Los israelitas se quejan contra Dios[BREAK]nuevamente[BREAK][BREAK]3. Dios provoca una plaga de serpientes dentro[BREAK]del campamento[BREAK][BREAK]4. Moisés construye una serpiente de bronce[BREAK][BREAK]5. Israel derrota al rey Sehón y su ejército[BREAK][BREAK]6. Israel derrota al rey Og y su ejército[BREAK][BREAK]7. Moisés envía espías a Jazer[BREAK][BREAK]8. Israel toma las aldeas de Jazer"
   },
   {
     "question_type": "number",
