@@ -186,8 +186,8 @@ async function loadQuestions() { // loads all questions; prevents delay
     "question_type": "number",
     "question": "Ordena estos eventos correctamente.",
     "potential_answers": "",
-    "actual_answer": "Balac envía a Balaam para maldecir a los hijos de Israel,El ángel del Señor obstruye el camino por el que va Balaam,Balaam obedece la orden del ángel,Balaam fracasa al intentar maldecir a Israel frente a Balac,Balaam da una profecía sobre el futuro de Moab,Israel cae en la idolatría,Un hombre y una mujer madianita son asesinados por su pecado,Dios ordena a Moisés que realice un segundo censo del pueblo",
-    "actual_answer_sans_coord": "1. Balac envía a Balaam para maldecir a los hijos de Israel[BREAK][BREAK]2. El ángel del Señor obstruye el camino por el que va Balaam[BREAK][BREAK]3. Balaam obedece la orden del ángel[BREAK][BREAK]4. Balaam fracasa al intentar maldecir a Israel frente a Balac[BREAK][BREAK]5. Balaam da una profecía sobre el futuro de Moab[BREAK][BREAK]6. Israel cae en la idolatría[BREAK][BREAK]7. Un hombre y una mujer madianita son asesinados por su pecado[BREAK][BREAK]8. Dios ordena a Moisés que realice un segundo censo del pueblo"
+    "actual_answer": "Balac envía a Balaam para maldecir a los[BREAK]hijos de Israel,El ángel del Señor obstruye el camino por[BREAK]el que va Balaam,Balaam obedece la orden del ángel,Balaam fracasa al intentar maldecir a[BREAK]Israel frente a Balac,Balaam da una profecía sobre el futuro de[BREAK]Moab,Israel cae en la idolatría,Un hombre y una mujer madianita son[BREAK]asesinados por su pecado,Dios ordena a Moisés que realice un segundo[BREAK]censo del pueblo",
+    "actual_answer_sans_coord": "1. Balac envía a Balaam para maldecir a los hijos de Israel[BREAK][BREAK]2. El ángel del Señor obstruye el camino por el que va Balaam[BREAK][BREAK]3. Balaam obedece la orden del ángel[BREAK][BREAK]4. Balaam fracasa al intentar maldecir a Israel frente a Balac[BREAK][BREAK]5. Balaam da una profecía sobre el futuro de Moab[BREAK][BREAK]6. Israel cae en la idolatría[BREAK][BREAK]7. Un hombre y una mujer madianita son asesinados por su pecado[BREAK][BREAK]8. Dios ordena a Moisés que realice un segundo censo del pueblo[INCREASE_SQUARE_HEIGHT]"
   },
 {
     "question_type": "number",
@@ -198,7 +198,7 @@ async function loadQuestions() { // loads all questions; prevents delay
   },
   {
     "question_type": "number",
-    "question": "Coloca estos extractos del cántico de Moisés en el orden correcto (Éxodo 15).",
+    "question": "Coloca estos extractos del cántico de Moisés en[BREAK]el orden correcto (Éxodo 15).",
     "potential_answers": "",
     "actual_answer": "Cantaré al Señor,El Señor es un guerrero,Enviaste tu ira,La tierra los tragó,Con tu misericordia guiaste,La gente escuchará y tendrá miedo,Temor y pavor caerán sobre ellos,Quedarán inmóviles como piedra",
     "actual_answer_sans_coord": "1. Cantaré al Señor[BREAK][BREAK]2. El Señor es un guerrero[BREAK][BREAK]3. Enviaste tu ira[BREAK][BREAK]4. La tierra los tragó[BREAK][BREAK]5. Con tu misericordia guiaste[BREAK][BREAK]6. La gente escuchará y tendrá miedo[BREAK][BREAK]7. Temor y pavor caerán sobre ellos[BREAK][BREAK]8. Quedarán inmóviles como piedra"
@@ -207,10 +207,10 @@ async function loadQuestions() { // loads all questions; prevents delay
 [
   {
     "question_type": "TF",
-    "question": "Moisés construyó un becerro de oro para que los[BREAK]israelitas lo adoraran.",
+    "question": "Moisés construyó un becerro de oro[BREAK]para que los israelitas lo adoraran.",
     "potential_answers": "",
     "actual_answer": "0",
-    "actual_answer_explanation": "Aarón fue quien construyó un[BREAK]becerro de oro para que los israelitas lo[BREAK]adoraran."
+    "actual_answer_explanation": "Aarón fue quien construyó un[BREAK]becerro de oro para que los[BREAK]israelitas lo adoraran."
   },
   {
     "question_type": "TF",

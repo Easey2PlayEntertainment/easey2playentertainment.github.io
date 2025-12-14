@@ -225,7 +225,9 @@ async function moveAll() {
                 mosesY -= googlePixelDevice ? 1.3 : 3;
             } else if(down && mosesY < 360) {
                 mosesY += googlePixelDevice ? 1.3 : 3;
-            }
+            } else if(!up && !down) {
+				keyDown({code: "Digit9"); // will hopefully force program to not slow down...
+			}
         }
 
         if(win && mosesX > 850 && seaYPosition !== seaHeight) {
