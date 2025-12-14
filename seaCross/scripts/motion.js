@@ -114,7 +114,7 @@ async function moveAll() {
                 if(currentPosition === canvas.width || mosesX < 610) {
                     break; // just quit the loop
                 }
-                shells[i].xPosition -= !lowerLives && !runOnce ? (/*googlePixelDevice ? 1.3 : */ 3) : 0;
+                shells[i].xPosition -= !lowerLives && !runOnce ? (googlePixelDevice && up ? 1.3 :  3) : 0; // remove && up after bug is fixed
 
                 if(shells[i].xPosition <= -30) {
                     if(!shells[i].caught) {
