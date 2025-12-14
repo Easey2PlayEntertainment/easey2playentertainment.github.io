@@ -178,14 +178,14 @@ async function moveAll() {
         } else {
             if(!runOnce) {
                 currentPosition -= !clearCharacters && !gameOver && !mosesCaught ? (/*googlePixelDevice ? 1.3 : */ 3) : 0;
-                fish1.xPosition -= /*googlePixelDevice ? 1.3 : */ 3;
-                fish2.xPosition -= /*googlePixelDevice ? 1.3 : */ 3;
-                fish3.xPosition -= /*googlePixelDevice ? 1.3 : */ 3;
-                fish4.xPosition -= /*googlePixelDevice ? 1.3 : */ 3;
-                fish5.xPosition -= /*googlePixelDevice ? 1.3 : */ 3;
-                fish6.xPosition -= /*googlePixelDevice ? 1.3 : */ 3;
-                fish7.xPosition -= /*googlePixelDevice ? 1.3 : */ 3;
-                fish8.xPosition -= /*googlePixelDevice ? 1.3 : */ 3;
+                fish1.xPosition -= googlePixelDevice && (up || down) ? 1.3 : 3;
+                fish2.xPosition -= googlePixelDevice && (up || down) ? 1.3 : 3;
+                fish3.xPosition -= googlePixelDevice && (up || down) ? 1.3 : 3;
+                fish4.xPosition -= googlePixelDevice && (up || down) ? 1.3 : 3;
+                fish5.xPosition -= googlePixelDevice && (up || down) ? 1.3 : 3;
+                fish6.xPosition -= googlePixelDevice && (up || down) ? 1.3 : 3;
+                fish7.xPosition -= googlePixelDevice && (up || down) ? 1.3 : 3;
+                fish8.xPosition -= googlePixelDevice && (up || down) ? 1.3 : 3;
 
                 for(var i=0;i<crabs.length;i++) {
                     crabs[i].xPosition -= /*googlePixelDevice ? 1.3 : */ 3;
@@ -222,15 +222,15 @@ async function moveAll() {
         var mosesMoveResults;
         if(!lowerLives && !runOnce) {
             if(up && mosesY > 220) {
-                mosesY -= googlePixelDevice ? 1.3 :  3;
+                mosesY -= googlePixelDevice && (up || down) ? 1.3 :  3;
             } else if(down && mosesY < 360) {
-                mosesY += googlePixelDevice ? 1.3 :  3;
+                mosesY += googlePixelDevice && (up || down) ? 1.3 :  3;
             }
         }
 
         if(win && mosesX > 850 && seaYPosition !== seaHeight) {
-            seaHeight += /*googlePixelDevice ? 1.3 : */ 3;
-            seaYPosition -= /*googlePixelDevice ? 1.3 : */ 3;
+            seaHeight += googlePixelDevice && (up || down) ? 1.3 : 3;
+            seaYPosition -= googlePixelDevice && (up || down) ? 1.3 : 3;
         }
 
         if(israelites.length > 0) {
@@ -253,7 +253,7 @@ async function moveAll() {
                         distance = egyptians[i].x - egyptians[i-1].x;
 
                         if(distance > -35) {
-                            egyptians[i].x -= /*googlePixelDevice ? 1.3 : */ 3; // needs to be fast
+                            egyptians[i].x -= googlePixelDevice && (up || down) ? 1.3 : 3; // needs to be fast
                             break;
                         } else {
                             egyptians[i].positionSettled = true;
@@ -274,7 +274,7 @@ async function moveAll() {
         }
 
         if(egyptiansMove) {
-            egyptianStepCount += stepCounting ? (/*googlePixelDevice ? 1.3 : */ 3) : 0;
+            egyptianStepCount += stepCounting ? (googlePixelDevice && (up || down) ? 1.3 : 3) : 0;
             egyptians[0].x += incorrectCount < 10 ? incorrectCount : 10;
             stepCounting = false;
 
@@ -373,7 +373,7 @@ async function moveAll() {
 
         if(powerupBeingUsed && !mosesCaught && !lowerLives) {
             var powerupMoveResults = moveCharacter(powerupY, powerupIncrement, 220, 360);
-            powerupX -= /*googlePixelDevice ? 1.3 : */ 3;
+            powerupX -= googlePixelDevice && (up || down) ? 1.3 : 3;
             powerupY = powerupMoveResults.y_position;
             powerupIncrement = powerupMoveResults.increment_value;
 
@@ -413,13 +413,13 @@ async function moveAll() {
         }
         
         if(up) {
-            testY -= /*googlePixelDevice ? 1.3 : */ 3;
+            testY -= googlePixelDevice && (up || down) ? 1.3 : 3;
         } else if(down) {
-            testY += /*googlePixelDevice ? 1.3 : */ 3;
+            testY += googlePixelDevice && (up || down) ? 1.3 : 3;
         } else if(left) {
-            testX -= /*googlePixelDevice ? 1.3 : */ 3;
+            testX -= googlePixelDevice && (up || down) ? 1.3 : 3;
         } else if(right) {
-            testX += /*googlePixelDevice ? 1.3 : */ 3;
+            testX += googlePixelDevice && (up || down) ? 1.3 : 3;
         }
 
         moveFlies();
