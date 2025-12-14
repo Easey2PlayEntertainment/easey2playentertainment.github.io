@@ -222,9 +222,9 @@ async function moveAll() {
         var mosesMoveResults;
         if(!lowerLives && !runOnce) {
             if(up && mosesY > 220) {
-                mosesY -= /*googlePixelDevice ? 1.3 : */ 3;
+                mosesY -= googlePixelDevice ? 1.3 :  3;
             } else if(down && mosesY < 360) {
-                mosesY += /*googlePixelDevice ? 1.3 : */ 3;
+                mosesY += googlePixelDevice ? 1.3 :  3;
             }
         }
 
