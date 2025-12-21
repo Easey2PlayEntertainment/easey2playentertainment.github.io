@@ -433,3 +433,236 @@ async function moveAll() {
         clearCharacters = true;
     }
 }
+
+function checkForNearbyNeighbors(yValue) {
+    var finalNeighborsAround = [];
+    var verticalDistance = 0;
+
+    for(var i=0;i<crabsYPositions.length;i++) {
+        verticalDistance = Math.abs(yValue - crabsYPositions[i]); // finds the distance
+
+        if(verticalDistance <= 100 || verticalDistance <= 40) {
+            finalNeighborsAround.push(crabsYPositions[i]);
+        }
+    }
+
+    return finalNeighborsAround;
+}
+
+function crabGroupReaction(character) { // algorithmic version of the other procedure
+    for(var i=0;i<crabs.length;i++) {
+        var characterX = character.x,
+            characterY = character.y,
+            crabX = crabs[i].xPosition,
+            crabY = crabs[i].yPosition;
+
+        var horizontalDistance = Math.abs(characterX - crabX),
+            verticalDistance = Math.abs(characterY - crabY);
+
+        var finalDistance = Math.sqrt((horizontalDistance ^ 2) + (verticalDistance ^ 2));
+
+        if(character.distanceFromCrab === undefined) {
+            character.distanceFromCrab = finalDistance;
+            continue;
+        } else if(character.distanceFromCrab > finalDistance && horizontalDistance <= 150 && !lowerLives && !runOnce) { // then the crabs have gotten closer!
+
+            if(crabs[i].onFloor && Math.floor(characterY) <= 360 && Math.floor(characterY) >= 330) {
+                character.increment = true; // may change later
+                if(character.y === 350) {
+                    continue;
+                }
+                character.y -= 4;
+                continue;
+            }
+            if(crabY <= 360 && crabY >= 340 && Math.floor(characterY) <= 360 && Math.floor(characterY) >= 330) {
+                character.increment = false;
+                character.y -= 4;
+                continue;
+            }
+            if(characterY > crabY) {
+                character.increment = false;
+                if(finalDistance <= 70) {
+                    character.y += 4; // give them a boost, brother!
+                }
+
+                if(character.y > 360) {
+                    character.y = 360; // no more overshooting, please
+                } 
+            } else if(characterY < crabY) {
+                if(crabY <= 360 && crabY >= 330 && characterY <= 360 && characterY >= 330 && finalDistance <= 70) {
+                    character.increment = false;
+                    character.y += 0.8; // may have to change
+                    if(character.y > 360) {
+                        character.y = 360;
+                    }
+                } else {
+                    character.increment = true;
+                    character.y -= 0.8; // may have to change
+                    if(character.y < 220) {
+                        character.y = 220;
+                    }
+                }
+            } else { // then the computer will choose
+                if(crabs[i].yPosition < 300) {
+                    character.increment = false;
+                } else {
+                    character.increment = true;
+                }
+            }
+        }
+    } 
+}
+
+function moveFlies() {
+    if(powerupName === 'flies' && powerupRun && powerupFired && !paused && previousLevel === level) { // it's gotta be all of them or nothing
+        for(var i=0;i<annoyingPowerupPosition.length;i++) {
+            var incrementValue = Math.random();
+            flyPosition1Increment = checkIfIncrement(annoyingPowerupPosition[i].y1);
+            flyPosition2Increment = checkIfIncrement(annoyingPowerupPosition[i].y2);
+            flyPosition3Increment = checkIfIncrement(annoyingPowerupPosition[i].y3);
+            flyPosition4Increment = checkIfIncrement(annoyingPowerupPosition[i].y4);
+
+            annoyingPowerupPosition[i].y1 += flyPosition1Increment ? incrementValue : -incrementValue;
+            annoyingPowerupPosition[i].y2 += flyPosition2Increment ? incrementValue : -incrementValue;
+            annoyingPowerupPosition[i].y3 += flyPosition3Increment ? incrementValue : -incrementValue;
+            annoyingPowerupPosition[i].y4 += flyPosition4Increment ? incrementValue : -incrementValue;
+
+            annoyingPowerupPosition[i].y1 = checkPositions(annoyingPowerupPosition[i].y1);
+            annoyingPowerupPosition[i].y2 = checkPositions(annoyingPowerupPosition[i].y2);
+            annoyingPowerupPosition[i].y3 = checkPositions(annoyingPowerupPosition[i].y3);
+            annoyingPowerupPosition[i].y4 = checkPositions(annoyingPowerupPosition[i].y4);
+        }
+    }
+}
+
+function checkIfIncrement(annoyingPowerupPositionY) {
+    var increment = Math.round(Math.random()) === 1 ? true : false;
+
+    if(annoyingPowerupPositionY > 360) {
+        increment = false;
+    } else if(annoyingPowerupPosition < 220) {
+        increment = true;
+    } // else, it is left as is
+
+    return increment;
+}
+
+function checkPositions(position) { // just for emergencies
+    if(position < 220) {
+        position = 220;
+    } else if(position > 360) {
+        position = 360;
+    }
+
+    return position;
+}
+
+function randomFlyPosition(position) {
+    var randomNumber = Math.floor(Math.random() * position);
+
+    if(randomNumber.toString().length === 2) {
+        randomNumber *= 10;
+    } else if(randomNumber.toString().length === 1) {
+        randomNumber *= 100;
+    }
+
+    if(randomNumber < 220 || randomNumber > 360) {
+        return position; // just go back to where you were
+    }
+    return randomNumber;
+}
+
+function decideIfCaught(x1, y1, x2, y2, characterType) { 
+    var horizontalDistance = Math.floor(Math.abs(x2 - x1));
+    var verticalDistance = Math.floor(Math.abs(y2 - y1));
+
+    if(characterType === 'moses') {
+        if(horizontalDistance <= 20 && horizontalDistance >= 0 && verticalDistance <= 20 && verticalDistance >= 0) {
+            return true;
+        }
+    }
+
+    if(characterType === 'israelite' && horizontalDistance <= 80) {
+        showNextPowerup = true;
+    }
+
+    if(powerupRun && !powerupBeingUsed && !powerupsNecessary && !powerupJustUsed && horizontalDistance <= 60 && !powerupFired && powerupName !== 'frogs' && powerupName !== 'flies' && characterType === 'israelite') { // only is true if the powerups are anything other than frogs and flies
+        powerupRun = false;
+        powerupsNecessary = true;
+        showPowerup = true;
+        timer -= 2; // gives more time just in case
+    }
+
+    if(horizontalDistance <= 60 && currentPosition !== lastPosition && characterType === 'israelite' && !powerupBeingUsed && missedOpportunity === false && !powerupRun) { // don't trigger unless scrolling occurs, then measure
+        powerupsNecessary = true;
+    }
+
+    if(characterType === "israelite" || characterType === 'moses' || characterType === null ) { // this should work for the powerups as well
+        if (horizontalDistance <= 20 && horizontalDistance >= 0 &&
+            verticalDistance <= 20 && verticalDistance >= 0) {
+                return true;
+        }
+    } else if(characterType === "mosesvscrab") {
+        if(crabCount === crabs.length) {
+            crabCount = 0;
+            showPosition = false;
+            measureNow = false; // must force it
+        }
+        if( horizontalDistance <= 10 && horizontalDistance >= 0 && // semi-normal conditions; trying to fine-tune algorithm
+            verticalDistance <= 60 && horizontalDistance >= 0 &&
+            horizontalDistance <= 10 && horizontalDistance >= 0 && // normal conditions 
+            verticalDistance <= 10 && verticalDistance >= 0 ||
+            horizontalDistance <= 25 && horizontalDistance >= 0 && // when moses is below crab
+            x1 >= x2 && y1 >= y2 && verticalDistance <= 30 && verticalDistance >= 0 ||
+            horizontalDistance <= 25 && horizontalDistance >= 0 && // when moses is above crab
+            x1 >= x2 && y1 <= y2 && verticalDistance <= 5 && verticalDistance >= 0) {
+                return true;
+        }
+    } else if(characterType === "moses&shell") {
+        if(horizontalDistance <= 25 && horizontalDistance >= 0 &&
+            verticalDistance <= 25 && verticalDistance >= 0) {
+                return true;
+        }
+    }
+    return false;
+}
+
+function findDistance(x1, y1, x2, y2) {
+    var distance = Math.sqrt((x2-x1)^2 + (y2-y1)^2);
+    return distance;
+}
+
+function moveCharacter(y, increment, min, max) { // algorithm that moves characters
+    var randomNumber = Math.random();
+    var incrementNumber = randomNumber * 2;
+    var moving = Math.floor(Math.random() * 10) % 3 === 0 ? false : true;
+
+    if(incrementNumber < 0.3) {
+        incrementNumber = 0;
+    }
+    if(y > max && started || y < min && started) {
+        increment = !increment;
+    } else if(!started) {
+        started = !started;
+        if(y === 330) {
+            y -= Math.random();
+        } else if(y === 250) {
+            y += Math.random();
+        }
+    }
+
+    if(moving) {
+        if(increment) {
+            y -= y < min ? -1.5 : incrementNumber;
+        } else {
+            y += y > max ? -1.5 : incrementNumber;
+        }
+    }
+
+    return {
+        y_position: y,
+        increment_value: increment
+    };
+
+}
+
