@@ -61,6 +61,10 @@ section {
     color: white;
 }
 
+.noAlignment {
+	text-align: initial;
+}
+
 nav {
     background-color: darkgreen;
     padding-top: 20px;

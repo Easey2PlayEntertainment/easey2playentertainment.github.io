@@ -207,10 +207,10 @@ async function loadQuestions() { // loads all questions; prevents delay
 [
   {
     "question_type": "TF",
-    "question": "Moisés construyó un becerro de oro[BREAK]para que los israelitas lo adoraran.",
+    "question": "Moisés construyó el becerro de oro[BREAK]para que los israelitas lo adoraran.",
     "potential_answers": "",
     "actual_answer": "0",
-    "actual_answer_explanation": "Aarón fue quien construyó un[BREAK]becerro de oro para que los[BREAK]israelitas lo adoraran."
+    "actual_answer_explanation": "Aarón fue quien construyó el[BREAK]becerro de oro para que los[BREAK]israelitas lo adoraran."
   },
   {
     "question_type": "TF",
