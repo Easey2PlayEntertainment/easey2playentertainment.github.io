@@ -1,0 +1,1796 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Bible Game">
+		<meta name="author" content="Azariah Easey, krdrabbits.com, easeystrings.com, americanfreedomtrain2026.us, bazinesdachurch.com">
+		<meta name="keywords" content="Bible-based video game, video game with Bible characters, red sea crossing">
+		<meta name="viewport" content="width=device-width">
+		<meta name="apple-mobile-app-capable" content="yes">
+<title>Sea Cross: Bible Game&trade; | Easey2Play Entertainment</title>		<!--
+		/**
+		* @license
+		* MyFonts Webfont Build ID 527688
+		*
+		* The fonts listed in this notice are subject to the End User License
+		* Agreement(s) entered into by the website owner. All other parties are
+		* explicitly restricted from using the Licensed Webfonts(s).
+		*
+		* You may obtain a valid license from one of MyFonts official sites.
+		* http://www.fonts.com
+		* http://www.myfonts.com
+		* http://www.linotype.com
+		*
+		*/
+		-->
+		<link rel="stylesheet" type="text/css" href="MyWebfontsKit.css">
+		<link rel="stylesheet" href="includes/gameplay_styles.css">
+
+		<!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XGR59XBC7"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-9XGR59XBC7');
+        </script>
+	</head>
+	<body>
+	<h1 style="display: none;">Sea Cross: Bible Game</h1>
+	<img src="images/logo.png" width="300" alt="The Sea Cross: Bible Game&trade; logo, which pictures Moses on one side with his legendary staff and an Egyptian on the other side with his aggressive snarl.">
+	<br>
+	<div class="center_item">
+		<canvas id="cnvs" width="800" height="600"></canvas>
+	</div>
+
+	<div class="alert_information">
+		<p>This game works best in landscape mode. Turn your device over for the best experience.</p>
+	</div>
+
+	<p class="no_padding"><a href="javascript:requestFullScreen(canvas);" id="fullScreenButton">Full Screen</a></p>
+	<button id="playButton" onclick="javascript:requestFullScreen(canvas);">Play</button>
+	<div class="checkboxDiv"><input type="checkbox" id="muteMusic">Mute music during questions<br><br>
+	<input type="checkbox" id="slowDown">Slow down video game<br><br>
+	<input type="range" id="speed" min="0" max="30"></div>
+	<br><br>
+	<div class="controlChoices perishable">
+		<input type="radio" id="leftControls" name="type_of_controls" value="Left Controls" checked="true">
+	<label for="leftControls">Left Controls</label>
+	<br>
+	<img src="images/left_controllers.png" class="controlImages" alt="Controls on the Left"><br><br>
+	<input type="radio" id="rightControls" name="type_of_controls" value="Right Controls">
+	<label for="rightControls">Right Controls</label>
+	<br>
+	<img src="images/right_controllers.png" class="controlImages" alt="Controls on the Right"><br>
+	</div>
+	<div class="instructions">
+		<h2 class="perishable centered_heading"><u>Controls for Desktop</u></h2>
+		<table class="perishable centered_table">
+			<thead>
+				<tr>
+				<th>Command</th>
+				<th>Button(s)</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+				<td>UP</td>
+				<td>UpArrow</td>
+				</tr>
+				<tr>
+					<td>DOWN</td>
+					<td>DownArrow</td>
+				</tr>
+				<tr>
+					<td>A, DELETE</td>
+					<td>A, Z</td>
+				</tr>
+				<tr>
+					<td>B, SELECT</td>
+					<td>B, X, S (only for SELECT)</td>
+				</tr>
+				<tr>
+					<td>C</td>
+					<td>C</td>
+				</tr>
+				<tr>
+					<td>D</td>
+					<td>D, V</td>
+				</tr>
+				<tr>
+					<td>PAUSE</td>
+					<td>P, PauseButton</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p><b><u>Note</u>:</b> If you are playing this game on a mobile device, the controls will appear on the screen. Make sure that your screen is horizontal for the best gameplay experience.</p>
+		<br><br>
+		<h2 class="perishable"><u>Instructions</u></h2>
+		<p>The Red Sea has just split, and it is time for Moses and the Israelites to cross. However, as they start to cross, the Egyptians start following them in mad pursuit. Their intentions? To 
+			bring the Israelites back to Egypt to be their slaves and to stamp out this Moses.
+		</p>
+		<p>If playing on a computer, use the arrows to move Moses up and down and help him collect <a href="#section3">shells</a> for points and dodge the <a href="#section4">Red Sea Crabs</a>.<sup>*</sup> Every ten seconds, a question about the Exodus will pop 
+		up on your screen. Press the buttons that help you answer the questions correctly. If you get the answer correct, you will receive <a href="#section2" >points</a> based on the question type. Otherwise, the Egyptians will inch their 
+		way closer to the Israelite caravan.</p>
+		<p>If the Egyptians get too close to the current rear Israelite, a powerup will be activated, and you will be given the chance to use it to prohibit the Egyptians from getting any closer.</p>
+		<p>If an Egyptian captures an Israelite, the Israelite is removed from the board, and you lose 20 points. If you get five questions correct in a streak, you will be able to release the Israelite that was captured and regain your 20 points.</p>
+		<p>If an Egyptian reaches Moses or Moses runs into a crab, he loses a chance (represented by one of the Moses figures), and you are taken back to the entrance of the Red Sea before you continue. Lose all of your chances, and the game is over.</p>
+		<p>If you get ten answers correct in a streak, you will get another chance.</p>
+		<p>There are ten levels in the whole game. If you finish all of them and have yet to answer some incorrect questions, you will be brought to our bonus level where you can finish things off. After there are no 
+			more incorrect questions remaining, you will successfully cross the Red Sea and the Egyptians will perish beneath its waves.</p> 
+
+		<p><sup>*</sup>If you are playing on a mobile device, put the game in full screen and hold your device horizontally. Digital buttons will appear on the screen, allowing you to control Moses using onscreen arrows. Buttons will be given as necessary based on whatever questions appear.</p>
+		<p>Also, if you cannot see the game, you are probably holding your phone vertically. Tilt it horizontally for the best experience!</p>
+
+		<br><br>
+		<h2 class="perishable" id="section2"><u>Question Type Score Value</u></h2>
+		<ol class="perishable">
+			<li>multiple-choice: 3 pts</li>
+			<li>true/false: 1 pt</li>
+			<li>match: 5 pts</li>
+			<li>ordering: 7 pts</li>
+		</ol>
+		<br><br>
+
+		<h2 class="perishable"><u>Powerup Types</u></h2>
+		<ol class="perishable">
+			<li>
+				<figure>
+					<img src="images/darkness_thumbnail.png" width="150" alt="Darkness Thumbnail">
+					<figcaption>Total Darkness</figcaption>
+				</figure>
+			</li>
+			<li>
+				<figure>
+					<img src="images/cloudPillar_thumbnail.png" width="150" alt="Cloud Pillar Thumbnail">
+					<figcaption>Cloud Pillar</figcaption>
+				</figure>
+			</li>
+			<li>
+				<figure>
+					<img src="images/firePillar_thumbnail.png" width="150" alt="Fire Pillar Thumbnail">
+					<figcaption>Fire Pillar</figcaption>
+				</figure>
+			</li>
+			<li>
+				<figure>
+					<img src="images/frogs_thumbnail.png" width="150" alt="Frogs Thumbnail">
+					<figcaption>Scattering Frogs</figcaption>
+				</figure>
+			</li>
+			<li>
+				<figure>
+					<img src="images/flies_thumbnail.png" width="150" alt="Flies Thumbnail">
+					<figcaption>Scattering Flies</figcaption>
+				</figure>
+			</li>
+		</ol>
+
+		<h2 class="perishable" id="section3"><u>Collectable Shells</u></h2>
+		<ol class="perishable">
+			<li><img src="images/blue_shell.png" width="100" alt="Blue Shell">&nbsp;&nbsp;+ 4 pts</li>
+			<li><img src="images/pink_shell.png" width="100" alt="Pink Shell">&nbsp;&nbsp;+ 2 pts</li>
+			<li><img src="images/pink_shell.png" id="bonusShellThumbnail" width="100" alt="Bonus Shell">&nbsp;&nbsp; loads incorrectly answered question</li>
+		</ol>
+
+		<h2 class="perishable" id="section4"><u>Red Sea Crab</u></h2>
+		<img src="images/crab_sitting.png" alt="Red Sea Crab" id="crabThumbnail">
+		<br><br>
+
+		<h2>Support Us!</h2>
+		<p>We have plans to create more digital experiences that help people become more interested in God's Word. If you would like to help us with our endeavors, feel free to share this video game with as many 
+			people as you know.
+		</p>
+		<p>This game can be a perfect educational tool amongst homeschool groups, Christian academies, youth groups, and Bible history buffs who just want to have some fun.</p>
+		<p>Finally, if you would like to support us financially, you can send donations using <a href="https://www.paypal.com/donate/?business=6V45YZS2F8GB4&no_recurring=0&item_name=With+your+donation%2C+Easey2Play+Entertainment+will+continue+to+create+digital+experiences+that+make+the+Bible+more+interesting.&currency_code=USD" target="_blank">this link</a>.</p>
+		<p>At either rate, thank you for promoting and supporting us to those you know!</p>
+
+		<h2><u>Credits</u></h2>
+		<ol>
+			<li><b>Project Initiator: </b>Alana H.</li>
+			<li><b>Lead Designer: </b>Malia W.</li>
+			<li><b>Programmer: </b>Azariah Easey</li>
+			<li><b>Music: </b>Jeremiah & Azariah Easey</li>
+			<li><b>Sound FX Designer: </b>Azariah Easey</li>
+			<li><b>Character Design: </b>Azariah Easey</li>
+			<li><b>Logo Design: </b>Azariah Easey</li>
+		</ol>
+		
+		<!-- <textarea></textarea> -->
+	</div>
+	<br><br>
+	<p style="font-family: sans-serif;">Scripture taken from the New King James Version &copy;. Copyright &copy; 1982 by Thomas Nelson. Used by permission. All rights reserved.</p>
+	<div class="logo_container">
+		<img src="https://easey2playentertainment.com/images/logo/logo.jpg" alt="Easey2Play Entertainment Logo">
+	</div>
+	<p style="font-family: sans-serif;">&copy; 2025 Azariah M Easey. All rights reserved.</p>
+
+	<script src="scripts/extraFunctions.js"></script>
+	<script src="scripts/drawingFunctions.js"></script>
+	<script src="scripts/fish.js"></script>
+	<script src="scripts/motion.js"></script>
+	<script src="scripts/scoring.js"></script>
+	<script src="scripts/questionHandling.js"></script>
+	<script src="scripts/variables.js"></script>
+
+	<script>
+	
+		var birthdayMode = false;
+				
+		var itemsToLoad = [];
+			itemsToLoad.push('orangeFishLoaded1'); // all for orangeFish listed below
+			itemsToLoad.push('orangeFishLoaded2');
+			itemsToLoad.push('purpleFishLoaded1'); // all for purpleFish listed below
+			itemsToLoad.push('purpleFishLoaded2');
+			itemsToLoad.push('greenFishLoaded1'); // all for greenFish listed below
+			itemsToLoad.push('greenFishLoaded2');
+			itemsToLoad.push('redFishLoaded1'); // all for redFish listed below
+			itemsToLoad.push('redFishLoaded2');
+			itemsToLoad.push('yellowFishLoaded1'); // all for yellowFish listed below
+			itemsToLoad.push('yellowFishLoaded2');
+			itemsToLoad.push('purpleFish2Loaded1'); // all for purpleFish2 listed below
+			itemsToLoad.push('purpleFish2Loaded2');
+			itemsToLoad.push('greenFish2Loaded1'); // all for greenFish2 listed below
+			itemsToLoad.push('greenFish2Loaded2');
+			itemsToLoad.push('redFish2Loaded1'); // all for redFish2 listed below
+			itemsToLoad.push('redFish2Loaded2');
+		
+		 
+		var israelite1Image1Loaded = false,
+			israelite1Image2Loaded = false,
+			israelite1Image3Loaded = false,
+			israelite1Image4Loaded = false; // all of this is for israelite1 		
+
+		itemsToLoad.push('israelite1Image1Loaded');
+		itemsToLoad.push('israelite1Image2Loaded');
+		itemsToLoad.push('israelite1Image3Loaded');
+		itemsToLoad.push('israelite1Image4Loaded');
+
+		 
+		var israelite2Image1Loaded = false,
+			israelite2Image2Loaded = false,
+			israelite2Image3Loaded = false,
+			israelite2Image4Loaded = false; // all of this is for israelite2 		
+
+		itemsToLoad.push('israelite2Image1Loaded');
+		itemsToLoad.push('israelite2Image2Loaded');
+		itemsToLoad.push('israelite2Image3Loaded');
+		itemsToLoad.push('israelite2Image4Loaded');
+
+		 
+		var israelite3Image1Loaded = false,
+			israelite3Image2Loaded = false,
+			israelite3Image3Loaded = false,
+			israelite3Image4Loaded = false; // all of this is for israelite3 		
+
+		itemsToLoad.push('israelite3Image1Loaded');
+		itemsToLoad.push('israelite3Image2Loaded');
+		itemsToLoad.push('israelite3Image3Loaded');
+		itemsToLoad.push('israelite3Image4Loaded');
+
+		 
+		var israelite4Image1Loaded = false,
+			israelite4Image2Loaded = false,
+			israelite4Image3Loaded = false,
+			israelite4Image4Loaded = false; // all of this is for israelite4 		
+
+		itemsToLoad.push('israelite4Image1Loaded');
+		itemsToLoad.push('israelite4Image2Loaded');
+		itemsToLoad.push('israelite4Image3Loaded');
+		itemsToLoad.push('israelite4Image4Loaded');
+
+		 
+		var israelite5Image1Loaded = false,
+			israelite5Image2Loaded = false,
+			israelite5Image3Loaded = false,
+			israelite5Image4Loaded = false; // all of this is for israelite5 		
+
+		itemsToLoad.push('israelite5Image1Loaded');
+		itemsToLoad.push('israelite5Image2Loaded');
+		itemsToLoad.push('israelite5Image3Loaded');
+		itemsToLoad.push('israelite5Image4Loaded');
+
+		 
+		var israelite6Image1Loaded = false,
+			israelite6Image2Loaded = false,
+			israelite6Image3Loaded = false,
+			israelite6Image4Loaded = false; // all of this is for israelite6 		
+
+		itemsToLoad.push('israelite6Image1Loaded');
+		itemsToLoad.push('israelite6Image2Loaded');
+		itemsToLoad.push('israelite6Image3Loaded');
+		itemsToLoad.push('israelite6Image4Loaded');
+
+		 
+		var israelite7Image1Loaded = false,
+			israelite7Image2Loaded = false,
+			israelite7Image3Loaded = false,
+			israelite7Image4Loaded = false; // all of this is for israelite7 		
+
+		itemsToLoad.push('israelite7Image1Loaded');
+		itemsToLoad.push('israelite7Image2Loaded');
+		itemsToLoad.push('israelite7Image3Loaded');
+		itemsToLoad.push('israelite7Image4Loaded');
+
+		 
+		var israelite8Image1Loaded = false,
+			israelite8Image2Loaded = false,
+			israelite8Image3Loaded = false,
+			israelite8Image4Loaded = false; // all of this is for israelite8 		
+
+		itemsToLoad.push('israelite8Image1Loaded');
+		itemsToLoad.push('israelite8Image2Loaded');
+		itemsToLoad.push('israelite8Image3Loaded');
+		itemsToLoad.push('israelite8Image4Loaded');
+
+		 
+		var israelite9Image1Loaded = false,
+			israelite9Image2Loaded = false,
+			israelite9Image3Loaded = false,
+			israelite9Image4Loaded = false; // all of this is for israelite9 		
+
+		itemsToLoad.push('israelite9Image1Loaded');
+		itemsToLoad.push('israelite9Image2Loaded');
+		itemsToLoad.push('israelite9Image3Loaded');
+		itemsToLoad.push('israelite9Image4Loaded');
+
+		 
+		var israelite10Image1Loaded = false,
+			israelite10Image2Loaded = false,
+			israelite10Image3Loaded = false,
+			israelite10Image4Loaded = false; // all of this is for israelite10 		
+
+		itemsToLoad.push('israelite10Image1Loaded');
+		itemsToLoad.push('israelite10Image2Loaded');
+		itemsToLoad.push('israelite10Image3Loaded');
+		itemsToLoad.push('israelite10Image4Loaded');
+
+		
+		 
+		var egyptian1Image1Loaded = false,
+			egyptian1Image2Loaded = false,
+			egyptian1Image3Loaded = false,
+			egyptian1Image4Loaded = false; // all of this is for egyptian1 		
+
+		itemsToLoad.push('egyptian1Image1Loaded');
+		itemsToLoad.push('egyptian1Image2Loaded');
+		itemsToLoad.push('egyptian1Image3Loaded');
+		itemsToLoad.push('egyptian1Image4Loaded');
+		 
+		var egyptian2Image1Loaded = false,
+			egyptian2Image2Loaded = false,
+			egyptian2Image3Loaded = false,
+			egyptian2Image4Loaded = false; // all of this is for egyptian2 		
+
+		itemsToLoad.push('egyptian2Image1Loaded');
+		itemsToLoad.push('egyptian2Image2Loaded');
+		itemsToLoad.push('egyptian2Image3Loaded');
+		itemsToLoad.push('egyptian2Image4Loaded');
+		 
+		var egyptian3Image1Loaded = false,
+			egyptian3Image2Loaded = false,
+			egyptian3Image3Loaded = false,
+			egyptian3Image4Loaded = false; // all of this is for egyptian3 		
+
+		itemsToLoad.push('egyptian3Image1Loaded');
+		itemsToLoad.push('egyptian3Image2Loaded');
+		itemsToLoad.push('egyptian3Image3Loaded');
+		itemsToLoad.push('egyptian3Image4Loaded');
+		 
+		var egyptian4Image1Loaded = false,
+			egyptian4Image2Loaded = false,
+			egyptian4Image3Loaded = false,
+			egyptian4Image4Loaded = false; // all of this is for egyptian4 		
+
+		itemsToLoad.push('egyptian4Image1Loaded');
+		itemsToLoad.push('egyptian4Image2Loaded');
+		itemsToLoad.push('egyptian4Image3Loaded');
+		itemsToLoad.push('egyptian4Image4Loaded');
+		 
+		var egyptian5Image1Loaded = false,
+			egyptian5Image2Loaded = false,
+			egyptian5Image3Loaded = false,
+			egyptian5Image4Loaded = false; // all of this is for egyptian5 		
+
+		itemsToLoad.push('egyptian5Image1Loaded');
+		itemsToLoad.push('egyptian5Image2Loaded');
+		itemsToLoad.push('egyptian5Image3Loaded');
+		itemsToLoad.push('egyptian5Image4Loaded');
+		 
+		var egyptian6Image1Loaded = false,
+			egyptian6Image2Loaded = false,
+			egyptian6Image3Loaded = false,
+			egyptian6Image4Loaded = false; // all of this is for egyptian6 		
+
+		itemsToLoad.push('egyptian6Image1Loaded');
+		itemsToLoad.push('egyptian6Image2Loaded');
+		itemsToLoad.push('egyptian6Image3Loaded');
+		itemsToLoad.push('egyptian6Image4Loaded');
+		 
+		var egyptian7Image1Loaded = false,
+			egyptian7Image2Loaded = false,
+			egyptian7Image3Loaded = false,
+			egyptian7Image4Loaded = false; // all of this is for egyptian7 		
+
+		itemsToLoad.push('egyptian7Image1Loaded');
+		itemsToLoad.push('egyptian7Image2Loaded');
+		itemsToLoad.push('egyptian7Image3Loaded');
+		itemsToLoad.push('egyptian7Image4Loaded');
+		 
+		var egyptian8Image1Loaded = false,
+			egyptian8Image2Loaded = false,
+			egyptian8Image3Loaded = false,
+			egyptian8Image4Loaded = false; // all of this is for egyptian8 		
+
+		itemsToLoad.push('egyptian8Image1Loaded');
+		itemsToLoad.push('egyptian8Image2Loaded');
+		itemsToLoad.push('egyptian8Image3Loaded');
+		itemsToLoad.push('egyptian8Image4Loaded');
+		 
+		var egyptian9Image1Loaded = false,
+			egyptian9Image2Loaded = false,
+			egyptian9Image3Loaded = false,
+			egyptian9Image4Loaded = false; // all of this is for egyptian9 		
+
+		itemsToLoad.push('egyptian9Image1Loaded');
+		itemsToLoad.push('egyptian9Image2Loaded');
+		itemsToLoad.push('egyptian9Image3Loaded');
+		itemsToLoad.push('egyptian9Image4Loaded');
+		 
+		var egyptian10Image1Loaded = false,
+			egyptian10Image2Loaded = false,
+			egyptian10Image3Loaded = false,
+			egyptian10Image4Loaded = false; // all of this is for egyptian10 		
+
+		itemsToLoad.push('egyptian10Image1Loaded');
+		itemsToLoad.push('egyptian10Image2Loaded');
+		itemsToLoad.push('egyptian10Image3Loaded');
+		itemsToLoad.push('egyptian10Image4Loaded');
+		 
+		var egyptian11Image1Loaded = false,
+			egyptian11Image2Loaded = false,
+			egyptian11Image3Loaded = false,
+			egyptian11Image4Loaded = false; // all of this is for egyptian11 		
+
+		itemsToLoad.push('egyptian11Image1Loaded');
+		itemsToLoad.push('egyptian11Image2Loaded');
+		itemsToLoad.push('egyptian11Image3Loaded');
+		itemsToLoad.push('egyptian11Image4Loaded');
+		 
+		var egyptian12Image1Loaded = false,
+			egyptian12Image2Loaded = false,
+			egyptian12Image3Loaded = false,
+			egyptian12Image4Loaded = false; // all of this is for egyptian12 		
+
+		itemsToLoad.push('egyptian12Image1Loaded');
+		itemsToLoad.push('egyptian12Image2Loaded');
+		itemsToLoad.push('egyptian12Image3Loaded');
+		itemsToLoad.push('egyptian12Image4Loaded');
+		 
+		var egyptian13Image1Loaded = false,
+			egyptian13Image2Loaded = false,
+			egyptian13Image3Loaded = false,
+			egyptian13Image4Loaded = false; // all of this is for egyptian13 		
+
+		itemsToLoad.push('egyptian13Image1Loaded');
+		itemsToLoad.push('egyptian13Image2Loaded');
+		itemsToLoad.push('egyptian13Image3Loaded');
+		itemsToLoad.push('egyptian13Image4Loaded');
+		
+				itemsToLoad.push('mosesImage1Loaded');
+		itemsToLoad.push('mosesImage2Loaded');
+		itemsToLoad.push('mosesImage3Loaded');
+		itemsToLoad.push('mosesImage4Loaded');
+
+				itemsToLoad.push('mosesImageDead1Loaded');
+		itemsToLoad.push('mosesImageDead2Loaded');
+		itemsToLoad.push('mosesImageDead3Loaded');
+		itemsToLoad.push('mosesImageDead4Loaded');
+
+				itemsToLoad.push('crabImage1Loaded');
+				itemsToLoad.push('crabImage2Loaded');
+				itemsToLoad.push('crabImage3Loaded');
+				itemsToLoad.push('pinkShellLoaded');
+				itemsToLoad.push('blueShellLoaded');
+				itemsToLoad.push('bonusShellFrame1Loaded');
+				itemsToLoad.push('bonusShellFrame2Loaded');
+				itemsToLoad.push('allQuestionsLoaded');
+				itemsToLoad.push('rebootsLoaded');
+		
+		if (windowHeight === 600) {
+			centeredCanvas.style.paddingTop = "0px";
+		}
+		console.log(itemsToLoad);
+
+
+		window.onload = function() {
+			canvas = $('cnvs');
+			canvasContext = canvas.getContext('2d');
+			
+			speedRate = $('speed');
+
+			muteMusicCheckbox = $('muteMusic');
+
+			context = new AudioContext();
+
+			checkDeviceType();
+
+			playButton = $('playButton');
+
+			url = new URLSearchParams(window.location.search);
+			arcadeMode = url.get('arcadeMode') === '1' || url.get('arcademode') === '1' ? true : false;
+			birthdayMode = url.get('birthdaymode') === '1' ? true : false; // temporary
+
+			perishableItems = document.getElementsByClassName('perishable');
+
+			lastHighScore = +localStorage.getItem('highScore'); // must have something to compare to
+
+			if(!lastHighScore) { // if there is none that can be written
+				lastHighScore = 0;
+				localStorage.setItem('highScore', 0); // just in case there are still problems
+			}
+
+			demoMosesPosition = canvas.width / 2 + 50;
+			demoIsraelite1Position = canvas.width / 2;
+			demoIsraelite2Position = canvas.width / 2 - 50;
+			demoIsraelite3Position = canvas.width / 2 - 100;
+
+			orangeFishImages[0].onload = function() {
+				orangeFishLoaded1 = true;
+			}
+			orangeFishImages[1].onload = function() {
+				orangeFishLoaded2 = true;
+			}
+			orangeFishImages[0].src = 'images/classic_fish_left.png';
+			orangeFishImages[1].src = 'images/classic_fish.png';
+
+			purpleFishImages[0].onload = function() {
+				purpleFishLoaded1 = true;
+			}
+			purpleFishImages[1].onload = function() {
+				purpleFishLoaded2 = true;
+			}
+			purpleFishImages[0].src = 'images/purple_fish_left.png';
+			purpleFishImages[1].src = 'images/purple_fish.png';
+
+			purpleFish2Images[0].onload = function() {
+				purpleFish2Loaded1 = true;
+			}
+			purpleFish2Images[1].onload = function() {
+				purpleFish2Loaded2 = true;
+			}
+			purpleFish2Images[0].src = 'images/purple_fish_left.png';
+			purpleFish2Images[1].src = 'images/purple_fish.png';
+
+			greenFishImages[0].onload = function() {
+				greenFishLoaded1 = true;
+			}
+			greenFishImages[1].onload = function() {
+				greenFishLoaded2 = true;
+			}
+			greenFishImages[0].src = 'images/green_fish_left.png';
+			greenFishImages[1].src = 'images/green_fish.png';
+
+			greenFish2Images[0].onload = function() {
+				greenFish2Loaded1 = true;
+			}
+			greenFish2Images[1].onload = function() {
+				greenFish2Loaded2 = true;
+			}
+			greenFish2Images[0].src = 'images/green_fish_left.png';
+			greenFish2Images[1].src = 'images/green_fish.png';
+
+			redFishImages[0].onload = function() {
+				redFishLoaded1 = true;
+			}
+			redFishImages[1].onload = function() {
+				redFishLoaded2 = true;
+			}
+			redFishImages[0].src = 'images/red_fish_left.png';
+			redFishImages[1].src = 'images/red_fish.png';
+
+			redFish2Images[0].onload = function() {
+				redFish2Loaded1 = true;
+			}
+			redFish2Images[1].onload = function() {
+				redFish2Loaded2 = true;
+			}
+			redFish2Images[0].src = 'images/red_fish_left.png';
+			redFish2Images[1].src = 'images/red_fish.png';
+
+			yellowFishImages[0].onload = function() {
+				yellowFishLoaded1 = true;
+			}
+			yellowFishImages[1].onload = function() {
+				yellowFishLoaded2 = true;
+			}
+			yellowFishImages[0].src = 'images/yellow_fish_left.png';
+			yellowFishImages[1].src = 'images/yellow_fish.png';
+
+			crabWalkPositions[0].onload = function() {
+				crabImage1Loaded = true;
+			}
+			crabWalkPositions[0].src = 'images/crab_sitting.png';
+
+			crabWalkPositions[1].onload = function() {
+				crabImage2Loaded = true;
+			}
+			crabWalkPositions[1].src = 'images/crab_start_walk.png';
+
+			crabWalkPositions[2].onload = function() {
+				crabImage3Loaded = true;
+			}
+			crabWalkPositions[2].src = 'images/crab_end_walk.png';
+
+			shellColors[0].onload = function() {
+				pinkShellLoaded = true;
+			}
+			shellColors[0].src = !birthdayMode ? 'images/pink_shell.png' : 'images/pink_balloon_shell.png';
+
+			shellColors[1].onload = function() {
+				blueShellLoaded = true;
+			}
+			shellColors[1].src = !birthdayMode ? 'images/blue_shell.png' : 'images/blue_balloon_shell.png';
+
+			bonusShellFrames[0].onload = function() {
+				bonusShellFrame1Loaded = true;
+			}
+			bonusShellFrames[1].onload = function() {
+				bonusShellFrame2Loaded = true;
+			}
+			bonusShellFrames[0].src = !birthdayMode ? 'images/blue_shell.png' : 'images/seacross_birthday_cake.png';
+			bonusShellFrames[1].src = !birthdayMode ? 'images/pink_shell.png' : 'images/seacross_birthday_cake.png';
+
+			mosesImages[0].onload = function() {
+				mosesImage1Loaded = true;
+			}
+			mosesImages[1].onload = function() {
+				mosesImage2Loaded = true;
+			}
+			mosesImages[2].onload = function() {
+				mosesImage3Loaded = true;
+			}
+			mosesImages[3].onload = function() {
+				mosesImage4Loaded = true;
+			}
+			mosesImages[0].src = mosesImages[2].src = 'images/moses.png';
+			mosesImages[1].src = 'images/moses_walk_1.png';
+			mosesImages[3].src = 'images/moses_walk_2.png'
+
+			mosesDeadImages[0].onload = function() {
+				mosesImageDead1Loaded = true;
+			}
+			mosesDeadImages[1].onload = function() {
+				mosesImageDead2Loaded = true;
+			}
+			mosesDeadImages[2].onload = function() {
+				mosesImageDead3Loaded = true;
+			}
+			mosesDeadImages[3].onload = function() {
+				mosesImageDead4Loaded = true;
+			}
+			mosesDeadImages[0].src = mosesDeadImages[2].src = 'images/moses_dead.png';
+			mosesDeadImages[1].src = 'images/moses_walk_1_dead.png';
+			mosesDeadImages[3].src = 'images/moses_walk_2_dead.png';
+
+			// download demonstration assets
+			currentCrabImage = crabWalkPositions[1];
+
+			demoEgyptianImages[0].onload = function() {
+				demoEgyptianImage1Loaded = true;
+			}
+			demoEgyptianImages[1].onload = function() {
+				demoEgyptianImage2Loaded = true;
+			}
+			demoEgyptianImages[2].onload = function() {
+				demoEgyptianImage3Loaded = true;
+			}
+			demoEgyptianImages[3].onload = function() {
+				demoEgyptianImage4Loaded = true;
+			}
+			demoEgyptianImages[0].src = demoEgyptianImages[2].src = "images/egyptian1-Copy.png";
+			demoEgyptianImages[1].src = "images/egyptian1_walk_1-Copy.png";
+			demoEgyptianImages[3].src = "images/egyptian1_walk_2-Copy.png";
+
+			demoIsraelite3Images[0].onload = function() {
+				demoIsraelite3Image1Loaded = true;
+			}
+			demoIsraelite3Images[1].onload = function() {
+				demoIsraelite3Image2Loaded = true;
+			}
+			demoIsraelite3Images[2].onload = function() {
+				demoIsraelite3Image3Loaded = true;
+			}
+			demoIsraelite3Images[3].onload = function() {
+				demoIsraelite3Image4Loaded = true;
+			}
+			demoIsraelite3Images[0].src = demoIsraelite3Images[2].src = "images/israelite1-Copy.png";
+			demoIsraelite3Images[1].src = "images/israelite1_walk_1-Copy.png";
+			demoIsraelite3Images[3].src = "images/israelite1_walk_2-Copy.png";
+
+			demoIsraelite2Images[0].onload = function() {
+				demoIsraelite2Image1Loaded = true;
+			}
+			demoIsraelite2Images[1].onload = function() {
+				demoIsraelite2Image2Loaded = true;
+			}
+			demoIsraelite2Images[2].onload = function() {
+				demoIsraelite2Image3Loaded = true;
+			}
+			demoIsraelite2Images[3].onload = function() {
+				demoIsraelite2Image4Loaded = true;
+			}
+			demoIsraelite2Images[0].src = demoIsraelite2Images[2].src = "images/israelite4-Copy.png";
+			demoIsraelite2Images[1].src = "images/israelite4_walk_1-Copy.png";
+			demoIsraelite2Images[3].src = "images/israelite4_walk_2-Copy.png";
+
+			mosesEyeBlinkImage.onload = function() {
+				mosesEyeBlinkImageLoaded = true;
+			}
+			mosesEyeBlinkImage.src = "images/moses_blink.png";
+
+			israeliteBlinks[0].image.onload = function() {
+				israeliteBlinks[0].loaded = true;
+			}
+			israeliteBlinks[1].image.onload = function() {
+				israeliteBlinks[1].loaded = true;
+			}
+			israeliteBlinks[2].image.onload = function() {
+				israeliteBlinks[2].loaded = true;
+			}
+			israeliteBlinks[3].image.onload = function() {
+				israeliteBlinks[3].loaded = true;
+			}
+			israeliteBlinks[4].image.onload = function() {
+				israeliteBlinks[4].loaded = true;
+			}
+			israeliteBlinks[5].image.onload = function() {
+				israeliteBlinks[5].loaded = true;
+			}
+			israeliteBlinks[6].image.onload = function() {
+				israeliteBlinks[6].loaded = true;
+			}
+			israeliteBlinks[7].image.onload = function() {
+				israeliteBlinks[7].loaded = true;
+			}
+			israeliteBlinks[8].image.onload = function() {
+				israeliteBlinks[8].loaded = true;
+			}
+			israeliteBlinks[9].image.onload = function() {
+				israeliteBlinks[9].loaded = true;
+			}
+			israeliteBlinks[0].image.src = israeliteBlinks[1].image.src = "images/israelite1_blink.png";
+			israeliteBlinks[2].image.src = "images/israelite3_blink.png";
+			israeliteBlinks[3].image.src = "images/israelite4_blink.png";
+			israeliteBlinks[4].image.src = "images/israelite5_blink.png";
+			israeliteBlinks[5].image.src = "images/israelite6_blink.png";
+			israeliteBlinks[6].image.src = "images/israelite7_blink.png";
+			israeliteBlinks[7].image.src = "images/israelite8_blink.png";
+			israeliteBlinks[8].image.src = "images/israelite9_blink.png";
+			israeliteBlinks[9].image.src = "images/israelite10_blink.png";
+
+			egyptianBlinkImage.onload = function() {
+				egyptianBlinkImageLoaded = true;
+			}
+			egyptianBlinkImage.src = "images/egyptian1_blink.png";
+
+			egyptianBlinkImageLeft.onload = function() {
+				egyptianBlinkImageLeftLoaded = true;
+			}
+			egyptianBlinkImageLeft.src = "images/egyptian1_blink_left.png";
+
+			wigImage.onload = function() {
+				wigImageLoaded = true;
+			}
+			wigImage.src = 'images/wig.png'; // for israelite with black hair to wear
+
+			loadQuestions(); // do that first
+
+			loadIsraelitesAndEgyptians();
+			checkIfCharactersLoaded();
+
+			manageFrequency();
+
+			prepPowerupImages();
+
+			allPowerupsLoaded = checkPowerupImageStatus(); // the moment of truth lies here
+
+			currentPosition = fishPosition1 = fishPosition2 = fishPosition3 = fishPosition4 = fishPosition5 = fishPosition6 = fishPosition7 = fishPosition8 = fishPosition9 = canvas.width / 2;
+			lastPosition = currentPosition;
+				
+			colorRect(0, 0, canvas.width, canvas.height, 'black');
+
+
+			seaWidth = canvas.width / 2 * 90;
+			seaHeight = canvas.height / 3;
+			seaYPosition = canvas.height - 200;
+
+			shuffle(fishPositions);
+
+			fish1 = new Fish(orangeFishImages, 0, 2);
+			fish2 = new Fish(purpleFishImages, 50, 4);
+			fish3 = new Fish(greenFishImages, 100, 6);
+			fish4 = new Fish(redFishImages, 150, 4);
+			fish5 = new Fish(yellowFishImages, seaYPosition, 3);
+			fish6 = new Fish(redFish2Images, seaYPosition + 50, 5);
+			fish7 = new Fish(greenFish2Images, seaYPosition + 100, 4);
+			fish8 = new Fish(purpleFish2Images, seaYPosition + 150, 2);
+
+			flipTimeChoices = [fish1.flipTime, fish2.flipTime, fish3.flipTime, fish4.flipTime, fish5.flipTime, fish6.flipTime, fish7.flipTime, fish8.flipTime];
+
+			setInterval(trackTime, 1000);
+			setInterval(moveFrogs, 175); // do it at a half speed
+			setInterval(dealWithCrabs, 500);
+			setInterval(frameChange, 100);
+			setInterval(generateNewShells, 500);
+			setInterval(characterPostureChange, 100);
+			setInterval(moveFlies, 1); // gotta do it somehow
+			setInterval(textCursor, 500);
+			setInterval(chameleonFlashControl, 1100);
+			setInterval(blinkEyes, 300);
+
+			window.addEventListener('keydown', keyDown);
+			window.addEventListener('keyup', keyUp);
+			canvas.addEventListener('touchstart', touchStart);
+			canvas.addEventListener('touchend', touchEnd);
+			canvas.addEventListener('mousemove', mouseMove);
+
+			// backgroundScore = new sound('audio/SeaCrossShortened.ogg');
+			// backgroundScoreBackup = new sound('audio/SeaCrossShortened.ogg');
+			// backgroundScoreBackupForBackup = new sound('audio/SeaCrossShortened.ogg');
+			backgroundScores = [new sound('audio/SeaCrossHalf1.ogg'), new sound('audio/SeaCrossHalf2.ogg')];
+			startupTheme = new sound('audio/BeginningTheme.ogg');
+			justDied = new sound('audio/justdied.ogg');
+			gameOverMusic = new sound('audio/SeaCrossGameOver.ogg');
+
+			loadVideoGameSound('audio/SeaCrossTheme.ogg', 'backgroundScoreBuffer');
+			loadVideoGameSound('audio/SeaCrossHalf1.ogg', 'backgroundScoreHalf1Buffer');
+			loadVideoGameSound('audio/SeaCrossHalf2.ogg', 'backgroundScoreHalf2Buffer');
+			loadVideoGameSound('audio/BeginningTheme.ogg', 'startupThemeBuffer');
+			loadVideoGameSound('audio/justdied.ogg', 'justDiedBuffer');
+			loadVideoGameSound('audio/SeaCrossGameOver.ogg', 'gameOverMusicBuffer');
+			loadVideoGameSound('audio/CatchShell.ogg', 'catchShellBuffer');
+			loadVideoGameSound('audio/AnswerCorrect.ogg', 'answerCorrectBuffer');
+			loadVideoGameSound('audio/AnswerIncorrect.ogg', 'answerIncorrectBuffer');
+			loadVideoGameSound('audio/PowerupArrives.ogg', 'powerupArriveBuffer');
+			loadVideoGameSound('audio/DarknessOnEgyptians.ogg', 'darknessBuffer');
+			loadVideoGameSound('audio/CloudPillar.ogg', 'cloudPillarBuffer');
+			loadVideoGameSound('audio/FirePillar.ogg', 'firePillarBuffer');
+			loadVideoGameSound('audio/FrogsJumping.ogg', 'frogsJumpingBuffer');
+			loadVideoGameSound('audio/FliesBuzzing.ogg', 'fliesBuzzingBuffer');
+			loadVideoGameSound('audio/BonusShellCaught.ogg', 'bonusShellCaughtBuffer');
+			loadVideoGameSound('audio/PowerInTheBlood.ogg', 'bonusLevelBuffer');
+			loadVideoGameSound('audio/JustWon.ogg', 'justWonBuffer');
+			loadVideoGameSound('audio/newLevelReached.ogg', 'newLevelReachedBuffer');
+			loadVideoGameSound('audio/NewLifeGained.ogg', 'newLifeGainedBuffer');
+
+			volumeController = context.createGain();
+			volumeController.connect(context.destination);
+
+			updateAll();
+			
+			highScore = +localStorage.getItem('highScore');
+
+			submitNewHighScore();
+
+			if(highScore === null) {
+				highScore = 0;
+			}
+
+			loading = false;
+
+			checkIfMosesLoaded();
+			
+			if(birthdayMode) {
+				for(var i=0;i<9;i++) {
+					allQuestions.pop(); // leaves only level one questions
+				}
+			}
+		}
+
+		function loadVideoGameSound(url, bufferCollector) {
+			var request = new XMLHttpRequest();
+			request.open('GET', url, true);
+			request.responseType = 'arraybuffer';
+
+			console.warn('moving on here');
+
+			// Decode asynchronously
+			request.onload = function() {
+				context.decodeAudioData(request.response, function(buffer) {
+					if(bufferCollector === 'backgroundScoreHalf1Buffer') {
+						backgroundScoreHalf1Buffer = buffer;
+					} else if(bufferCollector === 'backgroundScoreHalf2Buffer') {
+						backgroundScoreHalf2Buffer = buffer;
+					} else if(bufferCollector === 'startupThemeBuffer') {
+						startupThemeBuffer = buffer;
+					} else if(bufferCollector === 'justDiedBuffer') {
+						justDiedBuffer = buffer;
+					} else if(bufferCollector === 'gameOverMusicBuffer') {
+						gameOverMusicBuffer = buffer;
+					} else if(bufferCollector === 'backgroundScoreBuffer') {
+						backgroundScoreBuffer = buffer;
+					} else if(bufferCollector === 'catchShellBuffer') {
+						catchShellBuffer = buffer;
+					} else if(bufferCollector === 'answerCorrectBuffer') {
+						answerCorrectBuffer = buffer;
+					} else if(bufferCollector === 'answerIncorrectBuffer') {
+						answerIncorrectBuffer = buffer;
+					} else if(bufferCollector === 'powerupArriveBuffer') {
+						powerupArriveBuffer = buffer;
+					} else if(bufferCollector === 'darknessBuffer') {
+						darknessBuffer = buffer;
+					} else if(bufferCollector === 'cloudPillarBuffer') {
+						cloudPillarBuffer = buffer;
+					} else if(bufferCollector === 'firePillarBuffer') {
+						firePillarBuffer = buffer;
+					} else if(bufferCollector === 'frogsJumpingBuffer') {
+						frogsJumpingBuffer = buffer;
+					} else if(bufferCollector === 'fliesBuzzingBuffer') {
+						fliesBuzzingBuffer = buffer;
+					} else if(bufferCollector === 'bonusShellCaughtBuffer') {
+						bonusShellCaughtBuffer = buffer;
+					} else if(bufferCollector === 'bonusLevelBuffer') {
+						bonusLevelBuffer = buffer;
+					} else if(bufferCollector === 'newLevelReachedBuffer') {
+						newLevelReachedBuffer = buffer;
+					} else if(bufferCollector === 'newLifeGainedBuffer') {
+						newLifeGainedBuffer = buffer;
+					} else {
+						justWonBuffer = buffer;
+					}
+					console.warn(buffer);
+					//bufferCollector = buffer;
+					frequency++;
+				}, function() {
+					alert('failed');
+				});
+			}
+			request.send();
+			console.warn('sent the request');
+		}
+
+		function checkIfCharactersLoaded() {
+			if(israelite1Image1Loaded && israelite1Image2Loaded && israelite1Image3Loaded && israelite1Image4Loaded && 
+israelite2Image1Loaded && israelite2Image2Loaded && israelite2Image3Loaded && israelite2Image4Loaded && 
+israelite3Image1Loaded && israelite3Image2Loaded && israelite3Image3Loaded && israelite3Image4Loaded && 
+israelite4Image1Loaded && israelite4Image2Loaded && israelite4Image3Loaded && israelite4Image4Loaded && 
+israelite5Image1Loaded && israelite5Image2Loaded && israelite5Image3Loaded && israelite5Image4Loaded && 
+israelite6Image1Loaded && israelite6Image2Loaded && israelite6Image3Loaded && israelite6Image4Loaded && 
+israelite7Image1Loaded && israelite7Image2Loaded && israelite7Image3Loaded && israelite7Image4Loaded && 
+israelite8Image1Loaded && israelite8Image2Loaded && israelite8Image3Loaded && israelite8Image4Loaded && 
+israelite9Image1Loaded && israelite9Image2Loaded && israelite9Image3Loaded && israelite9Image4Loaded && 
+israelite10Image1Loaded && israelite10Image2Loaded && israelite10Image3Loaded && israelite10Image4Loaded ) {
+				allIsraeliteImagesLoaded = true;
+				israelitesReboot = makeCopy(israelites);
+			}
+
+			if(egyptian1Image1Loaded && egyptian1Image2Loaded && egyptian1Image3Loaded && egyptian1Image4Loaded && 
+egyptian2Image1Loaded && egyptian2Image2Loaded && egyptian2Image3Loaded && egyptian2Image4Loaded && 
+egyptian3Image1Loaded && egyptian3Image2Loaded && egyptian3Image3Loaded && egyptian3Image4Loaded && 
+egyptian4Image1Loaded && egyptian4Image2Loaded && egyptian4Image3Loaded && egyptian4Image4Loaded && 
+egyptian5Image1Loaded && egyptian5Image2Loaded && egyptian5Image3Loaded && egyptian5Image4Loaded && 
+egyptian6Image1Loaded && egyptian6Image2Loaded && egyptian6Image3Loaded && egyptian6Image4Loaded && 
+egyptian7Image1Loaded && egyptian7Image2Loaded && egyptian7Image3Loaded && egyptian7Image4Loaded && 
+egyptian8Image1Loaded && egyptian8Image2Loaded && egyptian8Image3Loaded && egyptian8Image4Loaded && 
+egyptian9Image1Loaded && egyptian9Image2Loaded && egyptian9Image3Loaded && egyptian9Image4Loaded && 
+egyptian10Image1Loaded && egyptian10Image2Loaded && egyptian10Image3Loaded && egyptian10Image4Loaded && 
+egyptian11Image1Loaded && egyptian11Image2Loaded && egyptian11Image3Loaded && egyptian11Image4Loaded && 
+egyptian12Image1Loaded && egyptian12Image2Loaded && egyptian12Image3Loaded && egyptian12Image4Loaded && 
+egyptian13Image1Loaded && egyptian13Image2Loaded && egyptian13Image3Loaded && egyptian13Image4Loaded ) {
+				allEgyptianImagesLoaded = true;
+				egyptiansReboot = makeCopy(egyptians);
+			}
+
+			if(allIsraeliteImagesLoaded && allEgyptianImagesLoaded) {
+				rebootsLoaded = true;
+			}
+		}
+
+		function loadIsraelitesAndEgyptians() {
+			
+			// israelite1 images being set up here
+			israelites[0].images[0].onload = function() {
+				israelite1Image1Loaded = true;
+			}
+			israelites[0].images[1].onload = function() {
+				israelite1Image2Loaded = true;
+			}
+			israelites[0].images[2].onload = function() {
+				israelite1Image3Loaded = true;
+			}
+			israelites[0].images[3].onload = function() {
+				israelite1Image4Loaded = true;
+			}
+			israelites[0].images[0].src = israelites[0].images[2].src = 'images/israelite1.png';
+			israelites[0].images[1].src = 'images/israelite1_walk_1.png';
+			israelites[0].images[3].src = 'images/israelite1_walk_2.png';
+			
+			// israelite2 images being set up here
+			israelites[1].images[0].onload = function() {
+				israelite2Image1Loaded = true;
+			}
+			israelites[1].images[1].onload = function() {
+				israelite2Image2Loaded = true;
+			}
+			israelites[1].images[2].onload = function() {
+				israelite2Image3Loaded = true;
+			}
+			israelites[1].images[3].onload = function() {
+				israelite2Image4Loaded = true;
+			}
+			israelites[1].images[0].src = israelites[1].images[2].src = 'images/israelite2.png';
+			israelites[1].images[1].src = 'images/israelite2_walk_1.png';
+			israelites[1].images[3].src = 'images/israelite2_walk_2.png';
+			
+			// israelite3 images being set up here
+			israelites[2].images[0].onload = function() {
+				israelite3Image1Loaded = true;
+			}
+			israelites[2].images[1].onload = function() {
+				israelite3Image2Loaded = true;
+			}
+			israelites[2].images[2].onload = function() {
+				israelite3Image3Loaded = true;
+			}
+			israelites[2].images[3].onload = function() {
+				israelite3Image4Loaded = true;
+			}
+			israelites[2].images[0].src = israelites[2].images[2].src = 'images/israelite3.png';
+			israelites[2].images[1].src = 'images/israelite3_walk_1.png';
+			israelites[2].images[3].src = 'images/israelite3_walk_2.png';
+			
+			// israelite4 images being set up here
+			israelites[3].images[0].onload = function() {
+				israelite4Image1Loaded = true;
+			}
+			israelites[3].images[1].onload = function() {
+				israelite4Image2Loaded = true;
+			}
+			israelites[3].images[2].onload = function() {
+				israelite4Image3Loaded = true;
+			}
+			israelites[3].images[3].onload = function() {
+				israelite4Image4Loaded = true;
+			}
+			israelites[3].images[0].src = israelites[3].images[2].src = 'images/israelite4.png';
+			israelites[3].images[1].src = 'images/israelite4_walk_1.png';
+			israelites[3].images[3].src = 'images/israelite4_walk_2.png';
+			
+			// israelite5 images being set up here
+			israelites[4].images[0].onload = function() {
+				israelite5Image1Loaded = true;
+			}
+			israelites[4].images[1].onload = function() {
+				israelite5Image2Loaded = true;
+			}
+			israelites[4].images[2].onload = function() {
+				israelite5Image3Loaded = true;
+			}
+			israelites[4].images[3].onload = function() {
+				israelite5Image4Loaded = true;
+			}
+			israelites[4].images[0].src = israelites[4].images[2].src = 'images/israelite5.png';
+			israelites[4].images[1].src = 'images/israelite5_walk_1.png';
+			israelites[4].images[3].src = 'images/israelite5_walk_2.png';
+			
+			// israelite6 images being set up here
+			israelites[5].images[0].onload = function() {
+				israelite6Image1Loaded = true;
+			}
+			israelites[5].images[1].onload = function() {
+				israelite6Image2Loaded = true;
+			}
+			israelites[5].images[2].onload = function() {
+				israelite6Image3Loaded = true;
+			}
+			israelites[5].images[3].onload = function() {
+				israelite6Image4Loaded = true;
+			}
+			israelites[5].images[0].src = israelites[5].images[2].src = 'images/israelite6.png';
+			israelites[5].images[1].src = 'images/israelite6_walk_1.png';
+			israelites[5].images[3].src = 'images/israelite6_walk_2.png';
+			
+			// israelite7 images being set up here
+			israelites[6].images[0].onload = function() {
+				israelite7Image1Loaded = true;
+			}
+			israelites[6].images[1].onload = function() {
+				israelite7Image2Loaded = true;
+			}
+			israelites[6].images[2].onload = function() {
+				israelite7Image3Loaded = true;
+			}
+			israelites[6].images[3].onload = function() {
+				israelite7Image4Loaded = true;
+			}
+			israelites[6].images[0].src = israelites[6].images[2].src = 'images/israelite7.png';
+			israelites[6].images[1].src = 'images/israelite7_walk_1.png';
+			israelites[6].images[3].src = 'images/israelite7_walk_2.png';
+			
+			// israelite8 images being set up here
+			israelites[7].images[0].onload = function() {
+				israelite8Image1Loaded = true;
+			}
+			israelites[7].images[1].onload = function() {
+				israelite8Image2Loaded = true;
+			}
+			israelites[7].images[2].onload = function() {
+				israelite8Image3Loaded = true;
+			}
+			israelites[7].images[3].onload = function() {
+				israelite8Image4Loaded = true;
+			}
+			israelites[7].images[0].src = israelites[7].images[2].src = 'images/israelite8.png';
+			israelites[7].images[1].src = 'images/israelite8_walk_1.png';
+			israelites[7].images[3].src = 'images/israelite8_walk_2.png';
+			
+			// israelite9 images being set up here
+			israelites[8].images[0].onload = function() {
+				israelite9Image1Loaded = true;
+			}
+			israelites[8].images[1].onload = function() {
+				israelite9Image2Loaded = true;
+			}
+			israelites[8].images[2].onload = function() {
+				israelite9Image3Loaded = true;
+			}
+			israelites[8].images[3].onload = function() {
+				israelite9Image4Loaded = true;
+			}
+			israelites[8].images[0].src = israelites[8].images[2].src = 'images/israelite9.png';
+			israelites[8].images[1].src = 'images/israelite9_walk_1.png';
+			israelites[8].images[3].src = 'images/israelite9_walk_2.png';
+			
+			// israelite10 images being set up here
+			israelites[9].images[0].onload = function() {
+				israelite10Image1Loaded = true;
+			}
+			israelites[9].images[1].onload = function() {
+				israelite10Image2Loaded = true;
+			}
+			israelites[9].images[2].onload = function() {
+				israelite10Image3Loaded = true;
+			}
+			israelites[9].images[3].onload = function() {
+				israelite10Image4Loaded = true;
+			}
+			israelites[9].images[0].src = israelites[9].images[2].src = 'images/israelite10.png';
+			israelites[9].images[1].src = 'images/israelite10_walk_1.png';
+			israelites[9].images[3].src = 'images/israelite10_walk_2.png';
+			 /*something similar will be used for the egyptians later on*/
+
+			
+			// egyptian1 images being set up here
+			egyptians[0].images[0].onload = function() {
+				egyptian1Image1Loaded = true;
+			}
+			egyptians[0].images[1].onload = function() {
+				egyptian1Image2Loaded = true;
+			}
+			egyptians[0].images[2].onload = function() {
+				egyptian1Image3Loaded = true;
+			}
+			egyptians[0].images[3].onload = function() {
+				egyptian1Image4Loaded = true;
+			}
+			egyptians[0].images[0].src = egyptians[0].images[2].src = 'images/egyptian1.png';
+			egyptians[0].images[1].src = 'images/egyptian1_walk_1.png';
+			egyptians[0].images[3].src = 'images/egyptian1_walk_2.png';
+			
+			// egyptian2 images being set up here
+			egyptians[1].images[0].onload = function() {
+				egyptian2Image1Loaded = true;
+			}
+			egyptians[1].images[1].onload = function() {
+				egyptian2Image2Loaded = true;
+			}
+			egyptians[1].images[2].onload = function() {
+				egyptian2Image3Loaded = true;
+			}
+			egyptians[1].images[3].onload = function() {
+				egyptian2Image4Loaded = true;
+			}
+			egyptians[1].images[0].src = egyptians[1].images[2].src = 'images/egyptian2.png';
+			egyptians[1].images[1].src = 'images/egyptian2_walk_1.png';
+			egyptians[1].images[3].src = 'images/egyptian2_walk_2.png';
+			
+			// egyptian3 images being set up here
+			egyptians[2].images[0].onload = function() {
+				egyptian3Image1Loaded = true;
+			}
+			egyptians[2].images[1].onload = function() {
+				egyptian3Image2Loaded = true;
+			}
+			egyptians[2].images[2].onload = function() {
+				egyptian3Image3Loaded = true;
+			}
+			egyptians[2].images[3].onload = function() {
+				egyptian3Image4Loaded = true;
+			}
+			egyptians[2].images[0].src = egyptians[2].images[2].src = 'images/egyptian3.png';
+			egyptians[2].images[1].src = 'images/egyptian3_walk_1.png';
+			egyptians[2].images[3].src = 'images/egyptian3_walk_2.png';
+			
+			// egyptian4 images being set up here
+			egyptians[3].images[0].onload = function() {
+				egyptian4Image1Loaded = true;
+			}
+			egyptians[3].images[1].onload = function() {
+				egyptian4Image2Loaded = true;
+			}
+			egyptians[3].images[2].onload = function() {
+				egyptian4Image3Loaded = true;
+			}
+			egyptians[3].images[3].onload = function() {
+				egyptian4Image4Loaded = true;
+			}
+			egyptians[3].images[0].src = egyptians[3].images[2].src = 'images/egyptian4.png';
+			egyptians[3].images[1].src = 'images/egyptian4_walk_1.png';
+			egyptians[3].images[3].src = 'images/egyptian4_walk_2.png';
+			
+			// egyptian5 images being set up here
+			egyptians[4].images[0].onload = function() {
+				egyptian5Image1Loaded = true;
+			}
+			egyptians[4].images[1].onload = function() {
+				egyptian5Image2Loaded = true;
+			}
+			egyptians[4].images[2].onload = function() {
+				egyptian5Image3Loaded = true;
+			}
+			egyptians[4].images[3].onload = function() {
+				egyptian5Image4Loaded = true;
+			}
+			egyptians[4].images[0].src = egyptians[4].images[2].src = 'images/egyptian5.png';
+			egyptians[4].images[1].src = 'images/egyptian5_walk_1.png';
+			egyptians[4].images[3].src = 'images/egyptian5_walk_2.png';
+			
+			// egyptian6 images being set up here
+			egyptians[5].images[0].onload = function() {
+				egyptian6Image1Loaded = true;
+			}
+			egyptians[5].images[1].onload = function() {
+				egyptian6Image2Loaded = true;
+			}
+			egyptians[5].images[2].onload = function() {
+				egyptian6Image3Loaded = true;
+			}
+			egyptians[5].images[3].onload = function() {
+				egyptian6Image4Loaded = true;
+			}
+			egyptians[5].images[0].src = egyptians[5].images[2].src = 'images/egyptian6.png';
+			egyptians[5].images[1].src = 'images/egyptian6_walk_1.png';
+			egyptians[5].images[3].src = 'images/egyptian6_walk_2.png';
+			
+			// egyptian7 images being set up here
+			egyptians[6].images[0].onload = function() {
+				egyptian7Image1Loaded = true;
+			}
+			egyptians[6].images[1].onload = function() {
+				egyptian7Image2Loaded = true;
+			}
+			egyptians[6].images[2].onload = function() {
+				egyptian7Image3Loaded = true;
+			}
+			egyptians[6].images[3].onload = function() {
+				egyptian7Image4Loaded = true;
+			}
+			egyptians[6].images[0].src = egyptians[6].images[2].src = 'images/egyptian7.png';
+			egyptians[6].images[1].src = 'images/egyptian7_walk_1.png';
+			egyptians[6].images[3].src = 'images/egyptian7_walk_2.png';
+			
+			// egyptian8 images being set up here
+			egyptians[7].images[0].onload = function() {
+				egyptian8Image1Loaded = true;
+			}
+			egyptians[7].images[1].onload = function() {
+				egyptian8Image2Loaded = true;
+			}
+			egyptians[7].images[2].onload = function() {
+				egyptian8Image3Loaded = true;
+			}
+			egyptians[7].images[3].onload = function() {
+				egyptian8Image4Loaded = true;
+			}
+			egyptians[7].images[0].src = egyptians[7].images[2].src = 'images/egyptian8.png';
+			egyptians[7].images[1].src = 'images/egyptian8_walk_1.png';
+			egyptians[7].images[3].src = 'images/egyptian8_walk_2.png';
+			
+			// egyptian9 images being set up here
+			egyptians[8].images[0].onload = function() {
+				egyptian9Image1Loaded = true;
+			}
+			egyptians[8].images[1].onload = function() {
+				egyptian9Image2Loaded = true;
+			}
+			egyptians[8].images[2].onload = function() {
+				egyptian9Image3Loaded = true;
+			}
+			egyptians[8].images[3].onload = function() {
+				egyptian9Image4Loaded = true;
+			}
+			egyptians[8].images[0].src = egyptians[8].images[2].src = 'images/egyptian9.png';
+			egyptians[8].images[1].src = 'images/egyptian9_walk_1.png';
+			egyptians[8].images[3].src = 'images/egyptian9_walk_2.png';
+			
+			// egyptian10 images being set up here
+			egyptians[9].images[0].onload = function() {
+				egyptian10Image1Loaded = true;
+			}
+			egyptians[9].images[1].onload = function() {
+				egyptian10Image2Loaded = true;
+			}
+			egyptians[9].images[2].onload = function() {
+				egyptian10Image3Loaded = true;
+			}
+			egyptians[9].images[3].onload = function() {
+				egyptian10Image4Loaded = true;
+			}
+			egyptians[9].images[0].src = egyptians[9].images[2].src = 'images/egyptian10.png';
+			egyptians[9].images[1].src = 'images/egyptian10_walk_1.png';
+			egyptians[9].images[3].src = 'images/egyptian10_walk_2.png';
+			
+			// egyptian11 images being set up here
+			egyptians[10].images[0].onload = function() {
+				egyptian11Image1Loaded = true;
+			}
+			egyptians[10].images[1].onload = function() {
+				egyptian11Image2Loaded = true;
+			}
+			egyptians[10].images[2].onload = function() {
+				egyptian11Image3Loaded = true;
+			}
+			egyptians[10].images[3].onload = function() {
+				egyptian11Image4Loaded = true;
+			}
+			egyptians[10].images[0].src = egyptians[10].images[2].src = 'images/egyptian11.png';
+			egyptians[10].images[1].src = 'images/egyptian11_walk_1.png';
+			egyptians[10].images[3].src = 'images/egyptian11_walk_2.png';
+			
+			// egyptian12 images being set up here
+			egyptians[11].images[0].onload = function() {
+				egyptian12Image1Loaded = true;
+			}
+			egyptians[11].images[1].onload = function() {
+				egyptian12Image2Loaded = true;
+			}
+			egyptians[11].images[2].onload = function() {
+				egyptian12Image3Loaded = true;
+			}
+			egyptians[11].images[3].onload = function() {
+				egyptian12Image4Loaded = true;
+			}
+			egyptians[11].images[0].src = egyptians[11].images[2].src = 'images/egyptian12.png';
+			egyptians[11].images[1].src = 'images/egyptian12_walk_1.png';
+			egyptians[11].images[3].src = 'images/egyptian12_walk_2.png';
+			
+			// egyptian13 images being set up here
+			egyptians[12].images[0].onload = function() {
+				egyptian13Image1Loaded = true;
+			}
+			egyptians[12].images[1].onload = function() {
+				egyptian13Image2Loaded = true;
+			}
+			egyptians[12].images[2].onload = function() {
+				egyptian13Image3Loaded = true;
+			}
+			egyptians[12].images[3].onload = function() {
+				egyptian13Image4Loaded = true;
+			}
+			egyptians[12].images[0].src = egyptians[12].images[2].src = 'images/egyptian13.png';
+			egyptians[12].images[1].src = 'images/egyptian13_walk_1.png';
+			egyptians[12].images[3].src = 'images/egyptian13_walk_2.png';
+					}
+
+		function checkIfMosesLoaded() {
+			if(mosesImage1Loaded && mosesImage2Loaded && mosesImage3Loaded && mosesImage4Loaded && !mosesImagesLoaded) {
+				mosesImagesLoaded = true;
+			}
+		}
+
+		function manageFrequency() {
+			console.log('trying to manage frequency');
+			if (orangeFishLoaded1 && itemsToLoad.indexOf(Object.keys({orangeFishLoaded1})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({orangeFishLoaded1})[0]), 1);
+			//itemsToLoad.shift();
+		} else if (orangeFishLoaded2 && itemsToLoad.indexOf(Object.keys({orangeFishLoaded2})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({orangeFishLoaded2})[0]), 1);
+			//itemsToLoad.shift();
+		} else if (purpleFishLoaded1 && itemsToLoad.indexOf(Object.keys({purpleFishLoaded1})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({purpleFishLoaded1})[0]), 1);
+			//itemsToLoad.shift();
+		} else if (purpleFishLoaded2 && itemsToLoad.indexOf(Object.keys({purpleFishLoaded2})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({purpleFishLoaded2})[0]), 1);
+			//itemsToLoad.shift();
+		} else if (greenFishLoaded1 && itemsToLoad.indexOf(Object.keys({greenFishLoaded1})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({greenFishLoaded1})[0]), 1);
+			//itemsToLoad.shift();
+		} else if (greenFishLoaded2 && itemsToLoad.indexOf(Object.keys({greenFishLoaded2})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({greenFishLoaded2})[0]), 1);
+			//itemsToLoad.shift();
+		} else if (redFishLoaded1 && itemsToLoad.indexOf(Object.keys({redFishLoaded1})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({redFishLoaded1})[0]), 1);
+			//itemsToLoad.shift();
+		} else if (redFishLoaded2 && itemsToLoad.indexOf(Object.keys({redFishLoaded2})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({redFishLoaded2})[0]), 1);
+			//itemsToLoad.shift();
+		} else if (yellowFishLoaded1 && itemsToLoad.indexOf(Object.keys({yellowFishLoaded1})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({yellowFishLoaded1})[0]), 1);
+			//itemsToLoad.shift();
+		} else if (yellowFishLoaded2 && itemsToLoad.indexOf(Object.keys({yellowFishLoaded2})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({yellowFishLoaded2})[0]), 1);
+			//itemsToLoad.shift();
+		} else if (purpleFish2Loaded1 && itemsToLoad.indexOf(Object.keys({purpleFish2Loaded1})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({purpleFish2Loaded1})[0]), 1);
+			//itemsToLoad.shift();
+		} else if (purpleFish2Loaded2 && itemsToLoad.indexOf(Object.keys({purpleFish2Loaded2})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({purpleFish2Loaded2})[0]), 1);
+			//itemsToLoad.shift();
+		} else if (greenFish2Loaded1 && itemsToLoad.indexOf(Object.keys({greenFish2Loaded1})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({greenFish2Loaded1})[0]), 1);
+			//itemsToLoad.shift();
+		} else if (greenFish2Loaded2 && itemsToLoad.indexOf(Object.keys({greenFish2Loaded2})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({greenFish2Loaded2})[0]), 1);
+			//itemsToLoad.shift();
+		} else if (redFish2Loaded1 && itemsToLoad.indexOf(Object.keys({redFish2Loaded1})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({redFish2Loaded1})[0]), 1);
+			//itemsToLoad.shift();
+		} else if (redFish2Loaded2 && itemsToLoad.indexOf(Object.keys({redFish2Loaded2})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({redFish2Loaded2})[0]), 1);
+			//itemsToLoad.shift();
+		} else if(israelite1Image1Loaded && itemsToLoad.indexOf(Object.keys({israelite1Image1Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite1Image1Loaded})[0]), 1);
+		} else if(israelite1Image2Loaded && itemsToLoad.indexOf(Object.keys({israelite1Image2Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite1Image2Loaded})[0]), 1);
+		} else if(israelite1Image3Loaded && itemsToLoad.indexOf(Object.keys({israelite1Image3Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite1Image3Loaded})[0]), 1);
+		} else if(israelite1Image4Loaded && itemsToLoad.indexOf(Object.keys({israelite1Image4Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite1Image4Loaded})[0]), 1);
+		} else if(israelite2Image1Loaded && itemsToLoad.indexOf(Object.keys({israelite2Image1Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite2Image1Loaded})[0]), 1);
+		} else if(israelite2Image2Loaded && itemsToLoad.indexOf(Object.keys({israelite2Image2Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite2Image2Loaded})[0]), 1);
+		} else if(israelite2Image3Loaded && itemsToLoad.indexOf(Object.keys({israelite2Image3Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite2Image3Loaded})[0]), 1);
+		} else if(israelite2Image4Loaded && itemsToLoad.indexOf(Object.keys({israelite2Image4Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite2Image4Loaded})[0]), 1);
+		} else if(israelite3Image1Loaded && itemsToLoad.indexOf(Object.keys({israelite3Image1Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite3Image1Loaded})[0]), 1);
+		} else if(israelite3Image2Loaded && itemsToLoad.indexOf(Object.keys({israelite3Image2Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite3Image2Loaded})[0]), 1);
+		} else if(israelite3Image3Loaded && itemsToLoad.indexOf(Object.keys({israelite3Image3Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite3Image3Loaded})[0]), 1);
+		} else if(israelite3Image4Loaded && itemsToLoad.indexOf(Object.keys({israelite3Image4Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite3Image4Loaded})[0]), 1);
+		} else if(israelite4Image1Loaded && itemsToLoad.indexOf(Object.keys({israelite4Image1Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite4Image1Loaded})[0]), 1);
+		} else if(israelite4Image2Loaded && itemsToLoad.indexOf(Object.keys({israelite4Image2Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite4Image2Loaded})[0]), 1);
+		} else if(israelite4Image3Loaded && itemsToLoad.indexOf(Object.keys({israelite4Image3Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite4Image3Loaded})[0]), 1);
+		} else if(israelite4Image4Loaded && itemsToLoad.indexOf(Object.keys({israelite4Image4Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite4Image4Loaded})[0]), 1);
+		} else if(israelite5Image1Loaded && itemsToLoad.indexOf(Object.keys({israelite5Image1Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite5Image1Loaded})[0]), 1);
+		} else if(israelite5Image2Loaded && itemsToLoad.indexOf(Object.keys({israelite5Image2Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite5Image2Loaded})[0]), 1);
+		} else if(israelite5Image3Loaded && itemsToLoad.indexOf(Object.keys({israelite5Image3Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite5Image3Loaded})[0]), 1);
+		} else if(israelite5Image4Loaded && itemsToLoad.indexOf(Object.keys({israelite5Image4Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite5Image4Loaded})[0]), 1);
+		} else if(israelite6Image1Loaded && itemsToLoad.indexOf(Object.keys({israelite6Image1Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite6Image1Loaded})[0]), 1);
+		} else if(israelite6Image2Loaded && itemsToLoad.indexOf(Object.keys({israelite6Image2Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite6Image2Loaded})[0]), 1);
+		} else if(israelite6Image3Loaded && itemsToLoad.indexOf(Object.keys({israelite6Image3Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite6Image3Loaded})[0]), 1);
+		} else if(israelite6Image4Loaded && itemsToLoad.indexOf(Object.keys({israelite6Image4Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite6Image4Loaded})[0]), 1);
+		} else if(israelite7Image1Loaded && itemsToLoad.indexOf(Object.keys({israelite7Image1Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite7Image1Loaded})[0]), 1);
+		} else if(israelite7Image2Loaded && itemsToLoad.indexOf(Object.keys({israelite7Image2Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite7Image2Loaded})[0]), 1);
+		} else if(israelite7Image3Loaded && itemsToLoad.indexOf(Object.keys({israelite7Image3Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite7Image3Loaded})[0]), 1);
+		} else if(israelite7Image4Loaded && itemsToLoad.indexOf(Object.keys({israelite7Image4Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite7Image4Loaded})[0]), 1);
+		} else if(israelite8Image1Loaded && itemsToLoad.indexOf(Object.keys({israelite8Image1Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite8Image1Loaded})[0]), 1);
+		} else if(israelite8Image2Loaded && itemsToLoad.indexOf(Object.keys({israelite8Image2Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite8Image2Loaded})[0]), 1);
+		} else if(israelite8Image3Loaded && itemsToLoad.indexOf(Object.keys({israelite8Image3Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite8Image3Loaded})[0]), 1);
+		} else if(israelite8Image4Loaded && itemsToLoad.indexOf(Object.keys({israelite8Image4Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite8Image4Loaded})[0]), 1);
+		} else if(israelite9Image1Loaded && itemsToLoad.indexOf(Object.keys({israelite9Image1Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite9Image1Loaded})[0]), 1);
+		} else if(israelite9Image2Loaded && itemsToLoad.indexOf(Object.keys({israelite9Image2Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite9Image2Loaded})[0]), 1);
+		} else if(israelite9Image3Loaded && itemsToLoad.indexOf(Object.keys({israelite9Image3Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite9Image3Loaded})[0]), 1);
+		} else if(israelite9Image4Loaded && itemsToLoad.indexOf(Object.keys({israelite9Image4Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite9Image4Loaded})[0]), 1);
+		} else if(israelite10Image1Loaded && itemsToLoad.indexOf(Object.keys({israelite10Image1Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite10Image1Loaded})[0]), 1);
+		} else if(israelite10Image2Loaded && itemsToLoad.indexOf(Object.keys({israelite10Image2Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite10Image2Loaded})[0]), 1);
+		} else if(israelite10Image3Loaded && itemsToLoad.indexOf(Object.keys({israelite10Image3Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite10Image3Loaded})[0]), 1);
+		} else if(israelite10Image4Loaded && itemsToLoad.indexOf(Object.keys({israelite10Image4Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({israelite10Image4Loaded})[0]), 1);
+		} else if(egyptian1Image1Loaded && itemsToLoad.indexOf(Object.keys({egyptian1Image1Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian1Image1Loaded})[0]), 1);
+		} else if(egyptian1Image2Loaded && itemsToLoad.indexOf(Object.keys({egyptian1Image2Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian1Image2Loaded})[0]), 1);
+		} else if(egyptian1Image3Loaded && itemsToLoad.indexOf(Object.keys({egyptian1Image3Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian1Image3Loaded})[0]), 1);
+		} else if(egyptian1Image4Loaded && itemsToLoad.indexOf(Object.keys({egyptian1Image4Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian1Image4Loaded})[0]), 1);
+		} else if(egyptian2Image1Loaded && itemsToLoad.indexOf(Object.keys({egyptian2Image1Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian2Image1Loaded})[0]), 1);
+		} else if(egyptian2Image2Loaded && itemsToLoad.indexOf(Object.keys({egyptian2Image2Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian2Image2Loaded})[0]), 1);
+		} else if(egyptian2Image3Loaded && itemsToLoad.indexOf(Object.keys({egyptian2Image3Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian2Image3Loaded})[0]), 1);
+		} else if(egyptian2Image4Loaded && itemsToLoad.indexOf(Object.keys({egyptian2Image4Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian2Image4Loaded})[0]), 1);
+		} else if(egyptian3Image1Loaded && itemsToLoad.indexOf(Object.keys({egyptian3Image1Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian3Image1Loaded})[0]), 1);
+		} else if(egyptian3Image2Loaded && itemsToLoad.indexOf(Object.keys({egyptian3Image2Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian3Image2Loaded})[0]), 1);
+		} else if(egyptian3Image3Loaded && itemsToLoad.indexOf(Object.keys({egyptian3Image3Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian3Image3Loaded})[0]), 1);
+		} else if(egyptian3Image4Loaded && itemsToLoad.indexOf(Object.keys({egyptian3Image4Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian3Image4Loaded})[0]), 1);
+		} else if(egyptian4Image1Loaded && itemsToLoad.indexOf(Object.keys({egyptian4Image1Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian4Image1Loaded})[0]), 1);
+		} else if(egyptian4Image2Loaded && itemsToLoad.indexOf(Object.keys({egyptian4Image2Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian4Image2Loaded})[0]), 1);
+		} else if(egyptian4Image3Loaded && itemsToLoad.indexOf(Object.keys({egyptian4Image3Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian4Image3Loaded})[0]), 1);
+		} else if(egyptian4Image4Loaded && itemsToLoad.indexOf(Object.keys({egyptian4Image4Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian4Image4Loaded})[0]), 1);
+		} else if(egyptian5Image1Loaded && itemsToLoad.indexOf(Object.keys({egyptian5Image1Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian5Image1Loaded})[0]), 1);
+		} else if(egyptian5Image2Loaded && itemsToLoad.indexOf(Object.keys({egyptian5Image2Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian5Image2Loaded})[0]), 1);
+		} else if(egyptian5Image3Loaded && itemsToLoad.indexOf(Object.keys({egyptian5Image3Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian5Image3Loaded})[0]), 1);
+		} else if(egyptian5Image4Loaded && itemsToLoad.indexOf(Object.keys({egyptian5Image4Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian5Image4Loaded})[0]), 1);
+		} else if(egyptian6Image1Loaded && itemsToLoad.indexOf(Object.keys({egyptian6Image1Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian6Image1Loaded})[0]), 1);
+		} else if(egyptian6Image2Loaded && itemsToLoad.indexOf(Object.keys({egyptian6Image2Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian6Image2Loaded})[0]), 1);
+		} else if(egyptian6Image3Loaded && itemsToLoad.indexOf(Object.keys({egyptian6Image3Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian6Image3Loaded})[0]), 1);
+		} else if(egyptian6Image4Loaded && itemsToLoad.indexOf(Object.keys({egyptian6Image4Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian6Image4Loaded})[0]), 1);
+		} else if(egyptian7Image1Loaded && itemsToLoad.indexOf(Object.keys({egyptian7Image1Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian7Image1Loaded})[0]), 1);
+		} else if(egyptian7Image2Loaded && itemsToLoad.indexOf(Object.keys({egyptian7Image2Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian7Image2Loaded})[0]), 1);
+		} else if(egyptian7Image3Loaded && itemsToLoad.indexOf(Object.keys({egyptian7Image3Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian7Image3Loaded})[0]), 1);
+		} else if(egyptian7Image4Loaded && itemsToLoad.indexOf(Object.keys({egyptian7Image4Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian7Image4Loaded})[0]), 1);
+		} else if(egyptian8Image1Loaded && itemsToLoad.indexOf(Object.keys({egyptian8Image1Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian8Image1Loaded})[0]), 1);
+		} else if(egyptian8Image2Loaded && itemsToLoad.indexOf(Object.keys({egyptian8Image2Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian8Image2Loaded})[0]), 1);
+		} else if(egyptian8Image3Loaded && itemsToLoad.indexOf(Object.keys({egyptian8Image3Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian8Image3Loaded})[0]), 1);
+		} else if(egyptian8Image4Loaded && itemsToLoad.indexOf(Object.keys({egyptian8Image4Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian8Image4Loaded})[0]), 1);
+		} else if(egyptian9Image1Loaded && itemsToLoad.indexOf(Object.keys({egyptian9Image1Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian9Image1Loaded})[0]), 1);
+		} else if(egyptian9Image2Loaded && itemsToLoad.indexOf(Object.keys({egyptian9Image2Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian9Image2Loaded})[0]), 1);
+		} else if(egyptian9Image3Loaded && itemsToLoad.indexOf(Object.keys({egyptian9Image3Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian9Image3Loaded})[0]), 1);
+		} else if(egyptian9Image4Loaded && itemsToLoad.indexOf(Object.keys({egyptian9Image4Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian9Image4Loaded})[0]), 1);
+		} else if(egyptian10Image1Loaded && itemsToLoad.indexOf(Object.keys({egyptian10Image1Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian10Image1Loaded})[0]), 1);
+		} else if(egyptian10Image2Loaded && itemsToLoad.indexOf(Object.keys({egyptian10Image2Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian10Image2Loaded})[0]), 1);
+		} else if(egyptian10Image3Loaded && itemsToLoad.indexOf(Object.keys({egyptian10Image3Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian10Image3Loaded})[0]), 1);
+		} else if(egyptian10Image4Loaded && itemsToLoad.indexOf(Object.keys({egyptian10Image4Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian10Image4Loaded})[0]), 1);
+		} else if(egyptian11Image1Loaded && itemsToLoad.indexOf(Object.keys({egyptian11Image1Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian11Image1Loaded})[0]), 1);
+		} else if(egyptian11Image2Loaded && itemsToLoad.indexOf(Object.keys({egyptian11Image2Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian11Image2Loaded})[0]), 1);
+		} else if(egyptian11Image3Loaded && itemsToLoad.indexOf(Object.keys({egyptian11Image3Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian11Image3Loaded})[0]), 1);
+		} else if(egyptian11Image4Loaded && itemsToLoad.indexOf(Object.keys({egyptian11Image4Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian11Image4Loaded})[0]), 1);
+		} else if(egyptian12Image1Loaded && itemsToLoad.indexOf(Object.keys({egyptian12Image1Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian12Image1Loaded})[0]), 1);
+		} else if(egyptian12Image2Loaded && itemsToLoad.indexOf(Object.keys({egyptian12Image2Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian12Image2Loaded})[0]), 1);
+		} else if(egyptian12Image3Loaded && itemsToLoad.indexOf(Object.keys({egyptian12Image3Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian12Image3Loaded})[0]), 1);
+		} else if(egyptian12Image4Loaded && itemsToLoad.indexOf(Object.keys({egyptian12Image4Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian12Image4Loaded})[0]), 1);
+		} else if(egyptian13Image1Loaded && itemsToLoad.indexOf(Object.keys({egyptian13Image1Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian13Image1Loaded})[0]), 1);
+		} else if(egyptian13Image2Loaded && itemsToLoad.indexOf(Object.keys({egyptian13Image2Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian13Image2Loaded})[0]), 1);
+		} else if(egyptian13Image3Loaded && itemsToLoad.indexOf(Object.keys({egyptian13Image3Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian13Image3Loaded})[0]), 1);
+		} else if(egyptian13Image4Loaded && itemsToLoad.indexOf(Object.keys({egyptian13Image4Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({egyptian13Image4Loaded})[0]), 1);
+		} else if(mosesImage1Loaded && itemsToLoad.indexOf(Object.keys({mosesImage1Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({mosesImage1Loaded})[0]), 1);
+		} else if(mosesImage2Loaded && itemsToLoad.indexOf(Object.keys({mosesImage2Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({mosesImage2Loaded})[0]), 1);
+		} else if(mosesImage3Loaded && itemsToLoad.indexOf(Object.keys({mosesImage3Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({mosesImage3Loaded})[0]), 1);
+		} else if(mosesImage4Loaded && itemsToLoad.indexOf(Object.keys({mosesImage4Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({mosesImage4Loaded})[0]), 1);
+		} else if(mosesImageDead1Loaded && itemsToLoad.indexOf(Object.keys({mosesImageDead1Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({mosesImageDead1Loaded})[0]), 1);
+		} else if(mosesImageDead2Loaded && itemsToLoad.indexOf(Object.keys({mosesImageDead2Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({mosesImageDead2Loaded})[0]), 1);
+		} else if(mosesImageDead3Loaded && itemsToLoad.indexOf(Object.keys({mosesImageDead3Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({mosesImageDead3Loaded})[0]), 1);
+		} else if(mosesImageDead4Loaded && itemsToLoad.indexOf(Object.keys({mosesImageDead4Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({mosesImageDead4Loaded})[0]), 1);
+		} else if (crabImage1Loaded && itemsToLoad.indexOf(Object.keys({crabImage1Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({crabImage1Loaded})[0]), 1);
+		} else if (crabImage2Loaded && itemsToLoad.indexOf(Object.keys({crabImage2Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({crabImage2Loaded})[0]), 1);
+		} else if (crabImage3Loaded && itemsToLoad.indexOf(Object.keys({crabImage3Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({crabImage3Loaded})[0]), 1);
+		} else if (pinkShellLoaded && itemsToLoad.indexOf(Object.keys({pinkShellLoaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({pinkShellLoaded})[0]), 1);
+		} else if (blueShellLoaded && itemsToLoad.indexOf(Object.keys({blueShellLoaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({blueShellLoaded})[0]), 1);
+		} else if (bonusShellFrame1Loaded && itemsToLoad.indexOf(Object.keys({bonusShellFrame1Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({bonusShellFrame1Loaded})[0]), 1);
+		} else if (bonusShellFrame2Loaded && itemsToLoad.indexOf(Object.keys({bonusShellFrame2Loaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({bonusShellFrame2Loaded})[0]), 1);
+		} else if (allQuestionsLoaded && itemsToLoad.indexOf(Object.keys({allQuestionsLoaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({allQuestionsLoaded})[0]), 1);
+		} else if (rebootsLoaded && itemsToLoad.indexOf(Object.keys({rebootsLoaded})[0]) !== -1) {
+			frequency++;
+			itemsToLoad.splice(itemsToLoad.indexOf(Object.keys({rebootsLoaded})[0]), 1);
+		} else {
+				cancelAnimationFrame(manageFrequency);
+			}
+
+			requestAnimationFrame(manageFrequency);
+		}
+	</script>	
+
+	</body>
+</html>
