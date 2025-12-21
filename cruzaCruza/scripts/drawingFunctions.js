@@ -318,8 +318,8 @@ async function drawAll() {
         testCounter++; // just making sure this is happening once
         backgroundScoreSource.stop();
         bonusLevelSource === undefined ? false : bonusLevelSource.stop();
-        if(crossedOver) {                                  '              ¡Ganaste!             '
-            printText(110, canvas.height / 2, 28, 'black', 'you made it across! congratulations!');
+        if(crossedOver) {                            
+            printText(110, canvas.height / 2, 28, 'black', '              ¡Ganaste!             ');
         } else if(gameOver) {
             printText(canvas.width / 2.54, canvas.height / 2, 28, 'black', '¡perdiste!');
         }
