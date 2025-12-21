@@ -198,6 +198,10 @@ footer {
     padding-bottom: 201px;
 }
 
+.evenLessSpace {
+	padding-bottom: 100px;
+}
+
 .videoGameList {
     align-self: center;
     align-content: center;
