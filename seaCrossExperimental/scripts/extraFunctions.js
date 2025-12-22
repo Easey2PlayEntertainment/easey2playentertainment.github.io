@@ -252,6 +252,7 @@ function setToScale(BUTTON_POSITION, scaledDimension, canvasDimension) {
 }
 
 function touchStart(e) {
+	if(up || down) {return}; // bypass the finger sensing procedure
     lastKey = undefined;
     if(e.touches.length === 1) {
         if(!mobileVersion) {
@@ -329,9 +330,11 @@ function touchStart(e) {
             } else if(checkTouchPosition(pauseButtonScaledPosition, offsetX, pauseButtonWidth) && offsetY >= pauseResumeYLowerPosition && offsetY <= pauseResumeYHigherPosition && !questionBrought) {// WORK HERE NEXT...PAUSE BUTTON DOES NOT WORK QUITE YET
                 keyDown({key: 'p', code: 'KeyP', mobileClick: true}); // should activate pause button??????
             } else if(e.touches[0].clientY < 210 || checkTouchPosition(upArrowScaledPosition - 25, offsetX, arrowWidth) && offsetY >= upArrowYLowerPosition && offsetY <= upArrowYHigherPosition) {
-                keyDown({key: 'ArrowUp', code: 'ArrowUp', mobileClick: true}); // triggering buttons
+                //keyDown({key: 'ArrowUp', code: 'ArrowUp', mobileClick: true}); // triggering buttons
+				up = true;
             } else if(e.touches[0].clientY > 210 || checkTouchPosition(downArrowScaledPosition - 25, offsetX, arrowWidth) && offsetY >= downArrowYLowerPosition && offsetY <= downArrowYHigherPosition) {
-                keyDown({key: 'ArrowDown', code: 'ArrowDown', mobileClick: true});
+                //keyDown({key: 'ArrowDown', code: 'ArrowDown', mobileClick: true});
+				down = true;
 			}
         }
     }
