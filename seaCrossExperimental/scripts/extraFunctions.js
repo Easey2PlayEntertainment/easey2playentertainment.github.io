@@ -891,7 +891,7 @@ async function updateAll() {
         }
     } // else, we will show the main menu
 	
-	await sleep(1);
+	//await sleep(1);
 
     requestAnimationFrame(updateAll);
 }

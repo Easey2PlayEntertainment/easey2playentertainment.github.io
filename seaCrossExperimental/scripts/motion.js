@@ -5,6 +5,7 @@ function testMove() {
 }
 
 async function moveAll() {
+	await sleep(1); // is this the culprit????????
     var fish1Position = fish1.xPosition,
         fish2Position = fish2.xPosition,
         fish3Position = fish3.xPosition,
