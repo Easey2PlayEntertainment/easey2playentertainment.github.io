@@ -42,11 +42,11 @@ function checkDeviceType() {
 
         if('userAgentData' in navigator) {
             navigator.userAgentData.getHighEntropyValues(["model", "platform"]).then(ua => {
-                if(ua.model === "Pixel 9 Pro" || ua.model.match(/Pixel/i)) {
-                    googlePixelDevice = true;
-                } else {
-                    googlePixelDevice = false;
-                }
+                //if(ua.model === "Pixel 9 Pro" || ua.model.match(/Pixel/i)) {
+                //    googlePixelDevice = true;
+                //} else {
+                //    googlePixelDevice = false;
+                //}
             });
         }
     }
