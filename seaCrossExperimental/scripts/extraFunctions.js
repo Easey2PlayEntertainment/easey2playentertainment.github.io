@@ -807,7 +807,7 @@ async function updateAll() {
     if(gameOver) {
         questionBrought = false; 
     }
-    drawAll();
+    
     if(runOnce && testCounter < 1) {
             canvasContext.drawImage(mosesDeadImages[mosesImageId], mosesX, mosesY, 35, 35);
     }
