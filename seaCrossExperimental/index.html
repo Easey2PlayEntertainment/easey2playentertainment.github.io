@@ -869,7 +869,7 @@
 			volumeController = context.createGain();
 			volumeController.connect(context.destination);
 
-			setInterval(drawAll, 16.67);
+			setInterval(drawAll, 1);
 			setInterval(updateAll, 16.67); // intervals???????
 			
 			highScore = +localStorage.getItem('highScore');
