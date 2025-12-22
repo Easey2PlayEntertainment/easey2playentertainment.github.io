@@ -896,7 +896,7 @@ async function updateAll() {
 	
 	//await sleep(1);
 
-    requestAnimationFrame(updateAll);
+    //requestAnimationFrame(updateAll);
 }
 
 function manageBackgroundMusic() {
