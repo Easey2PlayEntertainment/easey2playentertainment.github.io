@@ -89,6 +89,12 @@ function playSound(buffer, source) {
         volumeController.gain.value = 0.5; // make sure that's soft too
         gameOverMusicSource.start();
         return;
+	} else if(source === 'israeliteCaughtSource') {
+		israeliteCaughtSource = context.createBufferSource();
+		israeliteCaughtSource.buffer = buffer;
+		israeliteCaughtSource.connect(context.destination);
+		israeliteCaughtSource.start();
+		return;
     } else if(source === 'powerupArriveSource') {
         powerupArriveSource = context.createBufferSource();
         powerupArriveSource.buffer = buffer;

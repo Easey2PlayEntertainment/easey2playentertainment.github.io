@@ -743,6 +743,7 @@ async function moveAll() {
                     break;
                 }
                 if(rearIsraeliteCaught) {
+					playSound(israeliteCaughtBuffer, 'israeliteCaughtSource');
                     caughtIsraelites.push(israelites.pop()); // removes it in an instant
                     score -= 20;
                     break; // the israelites got caught; why bother
