@@ -133,7 +133,7 @@ function checkAnswersAndScore() {
     volumeController.gain.value = 0;
 
     if(answerCorrect) {
-        playSound(answerCorrectBuffer); // played only once
+        numberOfQuestionsBeforeRelease === 0 && caughtIsraelites.length > 0 ? playSound(israeliteRestoredBuffer, "israeliteRestoredSource") : playSound(answerCorrectBuffer); // played only once
     } else {
         playSound(answerIncorrectBuffer);
     }

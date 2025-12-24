@@ -843,7 +843,7 @@ function updateAll() {
                 egyptians[i].x -= 45;
             }
         }
-		playSound(israeliteRestoredBuffer, "israeliteRestoredSource");
+		//playSound(israeliteRestoredBuffer, "israeliteRestoredSource");
         israelites.push(caughtIsraelites.pop());
         score += 20;
         numberOfQuestionsBeforeRelease = NUMBER_OF_QUESTIONS_BEFORE_RELEASE;
