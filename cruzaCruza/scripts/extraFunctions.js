@@ -838,6 +838,7 @@ function updateAll() {
     }
 
     if(numberOfQuestionsBeforeRelease === 0 && caughtIsraelites.length > 0) { // only works if there are caught israelites
+		israeliteReleased = true;
         if(egyptians[0].x !== -20) {
             for(var i=0;i<egyptians.length;i++) {
                 egyptians[i].x -= 45;

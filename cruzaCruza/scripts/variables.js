@@ -658,6 +658,8 @@ var rebootsLoaded = false;
 
 var caughtIsraelites = []; // this is their prison cell
 
+var israeliteReleased = false;
+
 var numberOfQuestionsBeforeRelease = 5;
 
 const NUMBER_OF_QUESTIONS_BEFORE_RELEASE = 5;
