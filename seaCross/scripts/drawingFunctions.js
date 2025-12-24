@@ -707,7 +707,6 @@ async function drawAll() {
 
     if(questionGraded) {
         showPowerup = false;
-		var israeliteReleased = numberOfQuestionsBeforeRelease === 0 && caughtIsraelites.length > 0;
         var statement = answerCorrect ? "correct!" : "incorrect! the correct answer is [BREAK]" + correctAnswerValue; // assuming the answer is still intact
         var timeToPause = answerCorrect ? (israeliteReleased ? 2000 : 1000) : (lastQuestionTypeUsed === "match" || lastQuestionTypeUsed === "number" ? 10000 : 5000); // the difference in time is to help the player learn from his/her mistakes
         var squareHeightIncrement = 0;
@@ -754,6 +753,7 @@ async function drawAll() {
             questionGraded = false;
             finishLevelQuestionType = null;
         }
+		israeliteReleased = false; // israelite has been released...no need for more work
     }
 
     if(paused) {
