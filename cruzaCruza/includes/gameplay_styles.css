@@ -29,6 +29,10 @@ body {
     display: none;
 }
 
+#speed {
+	display: none;
+}
+
 #playButton:hover {
     background-color: red;
     color: blue;

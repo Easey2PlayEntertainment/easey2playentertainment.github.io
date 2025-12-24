@@ -64,6 +64,7 @@
 	<button id="playButton" onclick="javascript:requestFullScreen(canvas);">Juega</button>
 	<div class="checkboxDiv"><input type="checkbox" id="muteMusic">Apague la música durante las preguntas<br><br>
 	<input type="checkbox" id="slowDown">ralentizar el videojuego</div>
+	<input type="range" id="speed" min="0" max="30"></div>
 	<br><br>
 	<div class="controlChoices perishable">
 		<input type="radio" id="leftControls" name="type_of_controls" value="Left Controls" checked="true">
@@ -512,6 +513,8 @@
 		window.onload = function() {
 			canvas = $('cnvs');
 			canvasContext = canvas.getContext('2d');
+			
+			speedRate = $('speed');
 
 			muteMusicCheckbox = $('muteMusic');
 
