@@ -4,7 +4,7 @@ function testMove() {
     }
 }
 
-async function moveAll() {
+/*async function moveAll() {
     var fish1Position = fish1.xPosition,
         fish2Position = fish2.xPosition,
         fish3Position = fish3.xPosition,
@@ -432,9 +432,9 @@ async function moveAll() {
         powerupBeingUsed = false;
         clearCharacters = true;
     }
-}
+}*/
 
-/*async function moveAll() {
+async function moveAll() {
 	var slowDown = $('slowDown').checked ? true : false;
 	var speedRateValue = +speedRate.value / 10; // as a floating point
 	var speedIncrementFloat = 0.2;
@@ -743,6 +743,7 @@ async function moveAll() {
                     break;
                 }
                 if(rearIsraeliteCaught) {
+					playSound(israeliteCaughtBuffer, 'israeliteCaughtSource');
                     caughtIsraelites.push(israelites.pop()); // removes it in an instant
                     score -= 20;
                     break; // the israelites got caught; why bother
@@ -865,7 +866,7 @@ async function moveAll() {
         powerupBeingUsed = false;
         clearCharacters = true;
     }
-}*/
+}
 
 
 function checkForNearbyNeighbors(yValue) {
