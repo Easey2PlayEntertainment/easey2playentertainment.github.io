@@ -887,6 +887,7 @@
 			loadVideoGameSound('audio/JustWon.ogg', 'justWonBuffer');
 			loadVideoGameSound('audio/newLevelReached.ogg', 'newLevelReachedBuffer');
 			loadVideoGameSound('audio/NewLifeGained.ogg', 'newLifeGainedBuffer');
+			loadVideoGameSound('audio/israelite_restored.ogg', 'israeliteRestoredBuffer');
 
 			volumeController = context.createGain();
 			volumeController.connect(context.destination);
@@ -960,6 +961,10 @@
 						newLevelReachedBuffer = buffer;
 					} else if(bufferCollector === 'newLifeGainedBuffer') {
 						newLifeGainedBuffer = buffer;
+					} else if(bufferCollector === 'israeliteCaughtBuffer') {
+						israeliteCaughtBuffer = buffer;
+					} else if(bufferCollector === 'israeliteRestoredBuffer') {
+						israeliteRestoredBuffer = buffer;
 					} else {
 						justWonBuffer = buffer;
 					}

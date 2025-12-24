@@ -907,11 +907,12 @@ var backgroundScoreBuffer = null,
     justWonBuffer = null,
     newLevelReachedBuffer = null,
     newLifeGainedBuffer = null,
-	israeliteCaughtBuffer = null;
+	israeliteCaughtBuffer = null,
+	israeliteRestoredBuffer = null;
 
 
 var backgroundScoreSource, startupThemeSource, justDiedSource, gameOverMusicSource, catchShellSource, powerupArriveSource, darknessSource, cloudPillarSource, firePillarSource, frogsJumpingSource, fliesBuzzingSource,bonusShellCaughtSource,bonusLevelSource;
-var israeliteCaughtSource;
+var israeliteCaughtSource, israeliteRestoredSource;
 
 var catchShellFXPausedStart = false;
 

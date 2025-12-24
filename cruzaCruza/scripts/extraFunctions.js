@@ -95,6 +95,12 @@ function playSound(buffer, source) {
 		israeliteCaughtSource.connect(context.destination);
 		israeliteCaughtSource.start();
 		return;
+	} else if(source === "israeliteRestoredSource") {
+		israeliteRestoredSource = context.createBufferSource();
+		israeliteRestoredSource.buffer = buffer;
+		israeliteRestoredSource.connect(context.destination);
+		israeliteRestoredSource.start();
+		return;
     } else if(source === 'powerupArriveSource') {
         powerupArriveSource = context.createBufferSource();
         powerupArriveSource.buffer = buffer;
@@ -837,7 +843,7 @@ function updateAll() {
                 egyptians[i].x -= 45;
             }
         }
-
+		playSound(israeliteRestoredBuffer, "israeliteRestoredSource");
         israelites.push(caughtIsraelites.pop());
         score += 20;
         numberOfQuestionsBeforeRelease = NUMBER_OF_QUESTIONS_BEFORE_RELEASE;
