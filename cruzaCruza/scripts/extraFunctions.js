@@ -57,6 +57,7 @@ function checkDeviceType() {
         //<p>Sincerely,</p>
         //<p>The Sea Cross Team</p>`;
     }
+	deviceTypeChecked = true;
 }
 
 function playSound(buffer, source) {
@@ -88,6 +89,12 @@ function playSound(buffer, source) {
         volumeController.gain.value = 0.5; // make sure that's soft too
         gameOverMusicSource.start();
         return;
+	} else if(source === 'israeliteCaughtSource') {
+		israeliteCaughtSource = context.createBufferSource();
+		israeliteCaughtSource.buffer = buffer;
+		israeliteCaughtSource.connect(context.destination);
+		israeliteCaughtSource.start();
+		return;
     } else if(source === 'powerupArriveSource') {
         powerupArriveSource = context.createBufferSource();
         powerupArriveSource.buffer = buffer;
@@ -262,6 +269,11 @@ function touchStart(e) {
         var buttonWidth;
         var pauseButtonWidth;
         var arrowWidth;
+		
+		/*if((e.touches[0].clientX > 220 || e.touches[0].clientY > 390) && !questionBrought && start) {
+			console.log('skip');
+			return;
+		}*/
 
         if(!fullScreen) {
             scaledHeight = canvas.height;
@@ -322,14 +334,14 @@ function touchStart(e) {
                 }
             } else if(checkTouchPosition(pauseButtonScaledPosition, offsetX, pauseButtonWidth) && offsetY >= pauseResumeYLowerPosition && offsetY <= pauseResumeYHigherPosition && !questionBrought) {// WORK HERE NEXT...PAUSE BUTTON DOES NOT WORK QUITE YET
                 keyDown({key: 'p', code: 'KeyP', mobileClick: true}); // should activate pause button??????
-            } else if(checkTouchPosition(upArrowScaledPosition - 25, offsetX, arrowWidth) && offsetY >= upArrowYLowerPosition && offsetY <= upArrowYHigherPosition) {
+            } else if(e.touches[0].clientY < 210 || checkTouchPosition(upArrowScaledPosition - 25, offsetX, arrowWidth) && offsetY >= upArrowYLowerPosition && offsetY <= upArrowYHigherPosition) {
                 keyDown({key: 'ArrowUp', code: 'ArrowUp', mobileClick: true}); // triggering buttons
-            } else if(checkTouchPosition(downArrowScaledPosition - 25, offsetX, arrowWidth) && offsetY >= downArrowYLowerPosition && offsetY <= downArrowYHigherPosition) {
+            } else if(e.touches[0].clientY > 210 || checkTouchPosition(downArrowScaledPosition - 25, offsetX, arrowWidth) && offsetY >= downArrowYLowerPosition && offsetY <= downArrowYHigherPosition) {
                 keyDown({key: 'ArrowDown', code: 'ArrowDown', mobileClick: true});
-            }
+			}
         }
     }
-    return false;
+    //return false;
 }
 
 function checkTouchPosition(BUTTON_POSITION, x, buttonWidth) {
@@ -763,11 +775,11 @@ function checkBlinkImagesStatus() {
 }
 
 function updateAll() {
-    if($('slowDown').checked) {
-        googlePixelDevice = true; // slow the video game down
-    } else {
+    if(!$('slowDown').checked && !deviceTypeChecked) {
         checkDeviceType();
-    }
+    } else if($('slowDown').checked) {
+		speedRate.style.display = 'initial';
+	}
     checkBlinkImagesStatus();
     if(!start && (arcadeMode || birthdayMode)) {
         moveDemoAssets();
