@@ -712,7 +712,7 @@ async function drawAll() {
         var squareHeightIncrement = 0;
 		
 		if(israeliteReleased) {
-			statement += " ¡israelita liberado!";
+			statement += win ? " ¡israelitas liberados!" : " ¡israelita liberado!";
 		}
 
         if(lastQuestionTypeUsed === "multiple") {
@@ -753,7 +753,7 @@ async function drawAll() {
             questionGraded = false;
             finishLevelQuestionType = null;
         }
-		israeliteReleased = false;
+		israeliteReleased = false; // israelite has been released...no need for more work
     }
 
     if(paused) {

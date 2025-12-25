@@ -204,7 +204,7 @@ function checkAnswersAndScore() {
     } else if(questionNumber === questions.length) {
         questionNumber = -1;
         level++;newLevelStarted = true;
-        newLevelMute = true;
+        newLevelMute = !bonusLevel ? true : false;
         finishLevelQuestionType = questionType;
         nextQuestionNumber = 0;
         questions = [];

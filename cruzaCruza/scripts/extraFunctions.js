@@ -101,6 +101,12 @@ function playSound(buffer, source) {
 		israeliteRestoredSource.connect(context.destination);
 		israeliteRestoredSource.start();
 		return;
+	} else if(source === "allIsraelitesRestoredSource") {
+		allIsraelitesRestoredSource = context.createBufferSource();
+		allIsraelitesRestoredSource.buffer = buffer;
+		allIsraelitesRestoredSource.connect(context.destination);
+		allIsraelitesRestoredSource.start();
+		return;
     } else if(source === 'powerupArriveSource') {
         powerupArriveSource = context.createBufferSource();
         powerupArriveSource.buffer = buffer;
@@ -838,12 +844,23 @@ function updateAll() {
     }
 
     if(numberOfQuestionsBeforeRelease === 0 && caughtIsraelites.length > 0) { // only works if there are caught israelites
+    if((numberOfQuestionsBeforeRelease === 0 || win) && caughtIsraelites.length > 0) { // only works if there are caught israelites
 		israeliteReleased = true;
         if(egyptians[0].x !== -20) {
             for(var i=0;i<egyptians.length;i++) {
-                egyptians[i].x -= 45;
+                egyptians[i].x -= win ? 100 : 45;
             }
         }
+		while(egyptians[0].x < -20) {
+			for(var i=0;i<egyptians.length;i++) {
+				egyptians[i].x += 1;
+			}
+		}
+		if(win && !allIsraelitesRestored) {
+			allIsraelitesRestored = true;
+			try {israeliteRestoredSource.stop();}catch(e) {console.error('israeliteRestoredSource never had to be stopped');}
+			playSound(allIsraelitesRestoredBuffer, 'allIsraelitesRestoredSource');
+		}
 		//playSound(israeliteRestoredBuffer, "israeliteRestoredSource");
         israelites.push(caughtIsraelites.pop());
         score += 20;
@@ -910,7 +927,14 @@ function updateAll() {
 function manageBackgroundMusic() {
     if(gameOver || win || powerupRun) { // should work...
         // stop code in here
-        console.warn('abandoning process')
+        console.warn('abandoning process');
+		if(win) {
+			try { powerupArriveSource.stop(); } catch (e) {console.error('powerupArriveSource not used');}
+			powerupArriveCalled = false;
+			powerupBeingUsed = false;
+			showPowerup = false;
+		}
+		//win ? powerupArriveSource.stop() : false; // CONTINUE HERE NEXT TO MAKE SURE CODE WORKS
         return;
     }
 
@@ -922,11 +946,13 @@ function manageBackgroundMusic() {
         }
     }
 
-    if(!powerupArriveCalled && powerupBeingUsed && !powerupArriveInterrupted && !win && !newLevelReachedPlayed && (backgroundScoreEstablished || bonusLevelBackgroundEstablished)) {
+    if(!newLevelMute && !powerupArriveCalled && powerupBeingUsed && !powerupArriveInterrupted && !win && !newLevelReachedPlayed && (!bonusLevel && !bonusLevelAnnounced || bonusLevel && bonusLevelAnnounced) /*&& (backgroundScoreEstablished || bonusLevelBackgroundEstablished)*/) {
         playSound(powerupArriveBuffer, 'powerupArriveSource');
         powerupArriveCalled = true;
         volumeController.gain.value = 0;
-    }
+    } else if(newLevelMute || bonusLevel && !bonusLevelAnnounced || win) {
+		try { powerupArriveSource.stop(); } catch (e) {console.error('powerupArriveSource not used');}
+	}
 
     if(powerupRun && powerupName !== 'darkness' || newLevelReachedPlayed) {
         volumeController.gain.value = 0; // make sure everything is muted
@@ -1535,6 +1561,7 @@ function keyDown(e) {
         if(!fullScreen) {
             requestFullScreen(canvas);
         }
+		allIsraelitesRestored = newLevelMute = false; // reset upon startup
         timesPlayed++;
         loading = true;
         questionNumber = 0;
