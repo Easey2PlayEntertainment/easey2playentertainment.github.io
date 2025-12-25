@@ -937,7 +937,7 @@ function manageBackgroundMusic() {
         playSound(powerupArriveBuffer, 'powerupArriveSource');
         powerupArriveCalled = true;
         volumeController.gain.value = 0;
-    } else if(bonusLevel && !bonusLevelAnnounced) {
+    } else if(bonusLevel && !bonusLevelAnnounced || win) {
 		powerupArriveSource.stop();
 	}
 
