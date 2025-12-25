@@ -933,7 +933,7 @@ function manageBackgroundMusic() {
         }
     }
 
-    if(!powerupArriveCalled && powerupBeingUsed && !powerupArriveInterrupted && !win && !newLevelReachedPlayed && !bonusLevel && !bonusLevelAnnounced (backgroundScoreEstablished || bonusLevelBackgroundEstablished)) {
+    if(!powerupArriveCalled && powerupBeingUsed && !powerupArriveInterrupted && !win && !newLevelReachedPlayed && !bonusLevel && !bonusLevelAnnounced && (backgroundScoreEstablished || bonusLevelBackgroundEstablished)) {
         playSound(powerupArriveBuffer, 'powerupArriveSource');
         powerupArriveCalled = true;
         volumeController.gain.value = 0;
