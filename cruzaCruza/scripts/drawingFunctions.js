@@ -518,6 +518,7 @@ async function drawAll() {
         var xPosition, yPosition;
         if(bonusLevel) {
             announcementMessage = "Bonus Level Reached!";
+			//try { powerupArriveSource.stop(); powerupArriveCalled = false;} catch (e) {console.warn('never had to be paused to begin with');}
             waitTime = 5000;
             xPosition = canvas.width / 3.4;
             backgroundScoreSource.stop();

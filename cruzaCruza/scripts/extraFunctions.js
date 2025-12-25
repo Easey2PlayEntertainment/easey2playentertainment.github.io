@@ -843,7 +843,6 @@ function updateAll() {
         backgroundScoreLoaded = true;
     }
 
-    if(numberOfQuestionsBeforeRelease === 0 && caughtIsraelites.length > 0) { // only works if there are caught israelites
     if((numberOfQuestionsBeforeRelease === 0 || win) && caughtIsraelites.length > 0) { // only works if there are caught israelites
 		israeliteReleased = true;
         if(egyptians[0].x !== -20) {
