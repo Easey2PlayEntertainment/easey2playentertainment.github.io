@@ -748,7 +748,7 @@ async function drawAll() {
             if(powerupX > 800) {
                 powerupX = 799;
             }
-            volumeController.gain.value = !powerupBeingUsed && !newLevelMute || win ? 0.5 : 0;
+            volumeController.gain.value = !powerupBeingUsed && !newLevelMute || win && newLevelMute ? 0.5 : 0;
             console.warn('volumeController.gain.value =', volumeController.gain.value,';\npowerupBeingUsed =', powerupBeingUsed);
             questionGraded = false;
             finishLevelQuestionType = null;
