@@ -922,7 +922,13 @@ function manageBackgroundMusic() {
     if(gameOver || win || powerupRun) { // should work...
         // stop code in here
         console.warn('abandoning process');
-		win ? powerupArriveSource.stop() : false;
+		if(win) {
+			powerupArriveSource.stop();
+			powerupArriveCalled = false;
+			powerupBeingUsed = false;
+			showPowerup = false;
+		}
+		//win ? powerupArriveSource.stop() : false; // CONTINUE HERE NEXT TO MAKE SURE CODE WORKS
         return;
     }
 
