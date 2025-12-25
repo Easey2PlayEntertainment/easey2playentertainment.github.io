@@ -852,7 +852,7 @@ function updateAll() {
         }
 		if(win && !allIsraelitesRestored) {
 			allIsraelitesRestored = true;
-			israeliteRestoredSource.stop();
+			try {israeliteRestoredSource.stop();}catch(e) {console.error('israeliteRestoredSource never had to be stopped');}
 			playSound(allIsraelitesRestoredBuffer, 'allIsraelitesRestoredSource');
 		}
 		//playSound(israeliteRestoredBuffer, "israeliteRestoredSource");
