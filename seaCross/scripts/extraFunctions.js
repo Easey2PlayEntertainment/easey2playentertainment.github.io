@@ -1546,7 +1546,7 @@ function keyDown(e) {
         if(!fullScreen) {
             requestFullScreen(canvas);
         }
-		allIsraelitesRestored = false; // reset upon startup
+		allIsraelitesRestored = newLevelMute = false; // reset upon startup
         timesPlayed++;
         loading = true;
         questionNumber = 0;
