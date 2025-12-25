@@ -933,11 +933,13 @@ function manageBackgroundMusic() {
         }
     }
 
-    if(!powerupArriveCalled && powerupBeingUsed && !powerupArriveInterrupted && !win && !newLevelReachedPlayed && (backgroundScoreEstablished || bonusLevelBackgroundEstablished)) {
+    if(!powerupArriveCalled && powerupBeingUsed && !powerupArriveInterrupted && !win && !newLevelReachedPlayed && !bonusLevel && !bonusLevelAnnounced (backgroundScoreEstablished || bonusLevelBackgroundEstablished)) {
         playSound(powerupArriveBuffer, 'powerupArriveSource');
         powerupArriveCalled = true;
         volumeController.gain.value = 0;
-    }
+    } else if(bonusLevel && !bonusLevelAnnounced) {
+		powerupArriveSource.stop();
+	}
 
     if(powerupRun && powerupName !== 'darkness' || newLevelReachedPlayed) {
         volumeController.gain.value = 0; // make sure everything is muted
