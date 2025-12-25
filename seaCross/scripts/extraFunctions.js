@@ -847,7 +847,7 @@ function updateAll() {
 		israeliteReleased = true;
         if(egyptians[0].x !== -20) {
             for(var i=0;i<egyptians.length;i++) {
-                egyptians[i].x -= 45;
+                egyptians[i].x -= win ? 100 : 45;
             }
         }
 		if(win && !allIsraelitesRestored) {
