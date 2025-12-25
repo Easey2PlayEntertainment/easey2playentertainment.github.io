@@ -101,6 +101,12 @@ function playSound(buffer, source) {
 		israeliteRestoredSource.connect(context.destination);
 		israeliteRestoredSource.start();
 		return;
+	} else if(source === "allIsraelitesRestoredSource") {
+		allIsraelitesRestoredSource = context.createBufferSource();
+		allIsraelitesRestoredSource.buffer = buffer;
+		allIsraelitesRestoredSource.connect(context.destination);
+		allIsraelitesRestoredSource.start();
+		return;
     } else if(source === 'powerupArriveSource') {
         powerupArriveSource = context.createBufferSource();
         powerupArriveSource.buffer = buffer;
@@ -837,13 +843,18 @@ function updateAll() {
         backgroundScoreLoaded = true;
     }
 
-    if(numberOfQuestionsBeforeRelease === 0 && caughtIsraelites.length > 0) { // only works if there are caught israelites
+    if((numberOfQuestionsBeforeRelease === 0 || win) && caughtIsraelites.length > 0) { // only works if there are caught israelites
 		israeliteReleased = true;
         if(egyptians[0].x !== -20) {
             for(var i=0;i<egyptians.length;i++) {
                 egyptians[i].x -= 45;
             }
         }
+		if(win && !allIsraelitesRestored) {
+			allIsraelitesRestored = true;
+			israeliteRestoredSource.stop();
+			playSound(allIsraelitesRestoredBuffer, 'allIsraelitesRestoredSource');
+		}
 		//playSound(israeliteRestoredBuffer, "israeliteRestoredSource");
         israelites.push(caughtIsraelites.pop());
         score += 20;
@@ -1535,6 +1546,7 @@ function keyDown(e) {
         if(!fullScreen) {
             requestFullScreen(canvas);
         }
+		allIsraelitesRestored = false; // reset upon startup
         timesPlayed++;
         loading = true;
         questionNumber = 0;
