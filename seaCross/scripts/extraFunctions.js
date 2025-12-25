@@ -850,6 +850,11 @@ function updateAll() {
                 egyptians[i].x -= win ? 100 : 45;
             }
         }
+		while(egyptians[0].x < -20) {
+			for(var i=0;i<egyptians.length;i++) {
+				egyptians[i].x += 1;
+			}
+		}
 		if(win && !allIsraelitesRestored) {
 			allIsraelitesRestored = true;
 			try {israeliteRestoredSource.stop();}catch(e) {console.error('israeliteRestoredSource never had to be stopped');}
