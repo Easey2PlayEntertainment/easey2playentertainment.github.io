@@ -928,7 +928,7 @@ function manageBackgroundMusic() {
         // stop code in here
         console.warn('abandoning process');
 		if(win) {
-			powerupArriveSource.stop();
+			try { powerupArriveSource.stop(); } catch (e) {console.error('powerupArriveSource not used');}
 			powerupArriveCalled = false;
 			powerupBeingUsed = false;
 			showPowerup = false;
@@ -950,7 +950,7 @@ function manageBackgroundMusic() {
         powerupArriveCalled = true;
         volumeController.gain.value = 0;
     } else if(newLevelMute || bonusLevel && !bonusLevelAnnounced || win) {
-		powerupArriveSource.stop();
+		try { powerupArriveSource.stop(); } catch (e) {console.error('powerupArriveSource not used');}
 	}
 
     if(powerupRun && powerupName !== 'darkness' || newLevelReachedPlayed) {
