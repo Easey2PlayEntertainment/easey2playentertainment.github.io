@@ -921,7 +921,8 @@ function updateAll() {
 function manageBackgroundMusic() {
     if(gameOver || win || powerupRun) { // should work...
         // stop code in here
-        console.warn('abandoning process')
+        console.warn('abandoning process');
+		win ? powerupArriveSource.stop() : false;
         return;
     }
 
