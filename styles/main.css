@@ -54,6 +54,7 @@ main {
 section {
     padding-left: 30px;
     padding-right: 30px;
+	padding-bottom: 17px;
 }
 
 .name2Hide {
@@ -90,7 +91,7 @@ nav {
     text-align: center;
 }
 
-.logos {
+.logos, .staticLogos {
     width: 500px;
 }
 
@@ -424,7 +425,7 @@ figure figcaption {
 }
 
 @media only screen and (max-width: 678px) {
-    .logos {
+    .logos, .staticLogos {
         width: 300px;
     }
 
@@ -438,7 +439,7 @@ figure figcaption {
     }
 
     .logos:hover {
-        width: 500px;
+        width: 400px;
         animation-name: growBig;
 animation-duration: 0.5s;
 animation-direction: normal;
@@ -496,7 +497,7 @@ animation-direction: normal;
 }
 
 @media only screen and (max-width: 417px) {
-    .logos {
+    .logos, .staticLogos {
         width: 200px;
     }
 
@@ -510,7 +511,7 @@ animation-direction: normal;
     }
 
     .logos:hover {
-        width: 400px;
+        width: 300px;
         animation-name: growBig;
 animation-duration: 0.5s;
 animation-direction: normal;
@@ -540,7 +541,7 @@ animation-direction: normal;
 }
 
 @media only screen and (max-width: 343px) {
-    .logos {
+    .logos, .staticLogos {
         width: 150px;
     }
 
@@ -554,7 +555,7 @@ animation-direction: normal;
     }
 
     .logos:hover {
-        width: 350px;
+        width: 250px;
         animation-name: growBig;
 animation-duration: 0.5s;
 animation-direction: normal;

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta property="og:locale" content="en_US">
+		<meta property="og:site_name" content="Easey2Play Entertainment&reg;">
+		<meta property="og:url" content="https://easey2playentertainment.com/seaCross2.html">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="COMING SOON! Sea Cross 2&trade;.">
+		<meta property="og:description" content="Learn about the next video game in the water travel series.">
+		<meta property="og:image" content="https://easey2playentertainment.com/images/seacross2.png">
+		<meta property="og:image:type" content="image/png">
+		<meta property="og:image:alt" content="Sea Cross 2&trade; logo">
+		<meta property="og:image:width" content="500">
+		<meta property="og:image:height" content="auto">
+        <meta charset="utf-8">
+        <meta name="description" content="Want to learn more about the upcoming Sea Cross 2&trade; video game? You have come to the right place!">
+        <meta name="author" content="Azariah Easey, krdrabbits.com, easeystrings.com, americanfreedomtrain2026.us, www.bazinesdachurch.com">
+        <meta name="viewport" content="width=device-width">
+        <title>Sea Cross 2&trade;| Easey2Play Entertainment</title>        
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="icon" type="image/x-icon" href="https://easey2playentertainment.com/moses.ico">
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XGR59XBC7"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-9XGR59XBC7');
+        </script>
+    </head>
+    <body>
+    <header>
+        <nav>
+                <div class="dropdown">
+                    <button class="dropdownButton" id="controlHidingScheme1">
+                        =
+                    </button>
+                    <div class="dropdown-content">
+                        <div id="navigationCenter">
+                            <a href="index.html">Home</a>
+                            <a href="about.html">About Us</a>
+							<a href="faqs.html">FAQs</a>
+                            <a href="contact-us.html">Contact Us</a>
+                            <a href="games.html">Games</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>        <h1><b style="color: red;">COMING SOON!</b> <span class="hiddenTags">Sea Cross 2&trade;</span></h1>
+						<div class="centeredItems"><img src="images/seacross2.png" class="staticLogos" alt="Sea Cross 2&trade; logo, portraying several fishermen shooting at an aggressive red fish. Meanwhile, an orange fish jumps out of the water, laughing out loud."></div>
+    </header>
+
+    <main>
+		<section>
+			<h2 class="hiddenTags">Information about Sea Cross 2&trade;</h2>
+			<p>The classic fish and crabs from <i>Sea Cross: Bible Game&trade;</i> are returning in a new Bible-based video game that is under development: <i>Sea Cross 2&trade;</i>!</p>
+			<div class="centeredItems"><canvas id="cnvs"></canvas></div>
+			<p>The primary difference between this game and its predecessor is that instead of helping Israelites walk across a parted sea, you are helping lone fishermen on the Sea of Galilee 
+			catch fish and collect treasure. Not familiar with this story? Here's a question that might ring some bells: do you recall Jesus Christ calling a few fishermen to follow Him? These fishermen 
+			aren't any ordinary fishermen. These are fishermen who, after having several wild years out at sea, will set down their nets and enter an unforgettable journey that would ultimately kickstart the 
+			largest religious movements ever known to mankind: the Christian church.</p>
+			<p>Staying true to the 8-bit style of the retro games of the past, <i>Sea Cross 2&trade;</i> breathes new life into the genre of classic action arcade games. Players will maneuver around whales and 
+			boats, catch coins that are floating on the surface, and capture fish using their ship's net gun. And, of course, staying true to the <i>Sea Cross</i> series, there will be Bible questions that must 
+			be answered correctly in order to progress.</p>
+			<p>We expect <i>Sea Cross 2&trade;</i> to be completed by the end of 2026, but, due to college classes and multiple projects, the release might be pushed to a later date.</p>
+			<p>Stay tuned for more information about this release.</p>
+		</section>
+        <div class="evenLessSpace"></div>
+    </main>
+    <footer>
+			<a href="https://www.facebook.com/profile.php?id=61579036868521&__cft__[0]=AZUFPFBo57z9fP20FWmGlRRlMvvGhq2gjLZP6368GMCOIO9u3Ul3A_L5VZHjKCpl0wGcq2QNp9-791WYE1fnUZaMdEaEJBtD9VM1H1puphO0qumLrOzV0vRNXPdFbFIika2XifjjlJd1Ss-lGIN-5WSgPz3RiQOcdRPfzCFqNh7-A9xcdkVSNAoxLe23pVZFNanAsMsG0EL0M-JcBX_0R8yR&__tn__=-UC%2CP-R" target="_blank"><img src="images/facebook_logo.png" width="30"></a>
+    <p>&copy; 2025 Azariah M Easey. All rights reserved.</p>
+</footer>
+    <script>
+		var canvas, canvasContext;
+		
+		var orangeFishImage = document.createElement('img'),
+			redFishImage = document.createElement('img'),
+			purpleFishImage = document.createElement('img'),
+			greenFishImage = document.createElement('img'),
+			yellowFishImage = document.createElement('img');
+			
+		var crabImages = [{image: document.createElement('img'), loaded: false}, {image: document.createElement('img'), loaded: false}];
+		var crabImagesLoaded = false;
+		
+		var crabPositions = [
+			-100, 0, 100, 200, 300, 400, 500,, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400
+		];
+			
+		var fishPositions = [
+		{image: orangeFishImage, x: -100},
+		{image: redFishImage, x: 0}, 
+		{image: purpleFishImage, x: 100}, 
+		{image: greenFishImage, x: 200},
+		{image: yellowFishImage, x: 300}, 
+		{image: orangeFishImage, x: 400},
+		{image: redFishImage, x: 500}, 
+		{image: purpleFishImage, x: 600},
+		{image: greenFishImage, x: 700},
+		{image: yellowFishImage, x: 800}, 
+		{image: orangeFishImage, x: 900},
+		{image: redFishImage, x: 1000}, 
+		{image: purpleFishImage, x: 1100},
+		{image: greenFishImage, x: 1200},
+		{image: yellowFishImage, x: 1300},
+		{image: orangeFishImage, x: 1400}];
+			
+		var orangeFishImageLoaded = redFishImageLoaded = purpleFishImageLoaded = greenFishImageLoaded = yellowFishLoaded = false;
+		
+		var allLoaded = false;
+		
+		var crabImageId = 0;
+		
+		function $(id) {
+			return document.getElementById(id);
+		}
+		
+		function colorRect(p,a,i,n,t) {
+			canvasContext.fillStyle = t;
+			canvasContext.fillRect(p,a,i,n);
+		}
+		
+		window.onload = function() {
+			canvas = $('cnvs');
+			canvasContext = canvas.getContext('2d');
+			
+			orangeFishImage.onload = function() {
+				orangeFishImageLoaded = true;
+			}
+			orangeFishImage.src = "images/classic_fish.png";
+			fishPositions[0].image = orangeFishImage;
+			
+			redFishImage.onload = function() {
+				redFishImageLoaded = true;
+			}
+			redFishImage.src = "images/red_fish.png";
+			fishPositions[1].image = redFishImage;
+			
+			purpleFishImage.onload = function() {
+				purpleFishImageLoaded = true;
+			}
+			purpleFishImage.src = "images/purple_fish.png";
+			fishPositions[2].image = purpleFishImage;
+			
+			greenFishImage.onload = function() {
+				greenFishImageLoaded = true;
+			}
+			greenFishImage.src = "images/green_fish.png";
+			fishPositions[3].image = greenFishImage;
+			
+			yellowFishImage.onload = function() {
+				yellowFishImageLoaded = true;
+			}
+			yellowFishImage.src = "images/yellow_fish.png";
+			fishPositions[4].image = yellowFishImage;
+			
+			crabImages[0].image.onload = function() {
+				crabImages[0].loaded = true;
+			}
+			crabImages[0].image.src = "images/crab_end_walk.png";
+			
+			crabImages[1].image.onload = function() {
+				crabImages[1].loaded = true;
+			}
+			crabImages[1].image.src = "images/crab_start_walk.png";
+			
+			setInterval(animateCrabs, 200);
+			
+			updateAll();
+		}
+		
+		function animateCrabs() {
+			crabImageId = crabImageId === 1 ? 0 : 1;
+		}
+		
+		function checkIfImagesLoaded() {
+			if(orangeFishImageLoaded && redFishImageLoaded && greenFishImageLoaded && purpleFishImageLoaded && yellowFishImageLoaded && crabImages[0].loaded && crabImages[1].loaded) allLoaded = true;
+		}
+		
+		function updateAll() {
+			checkIfImagesLoaded();
+			moveAll();
+			drawAll();
+			
+			requestAnimationFrame(updateAll);
+		}
+		
+		function moveAll() {
+			if(allLoaded) {
+				moveFish();
+				moveCrabs();
+			}
+		}
+		
+		function moveCrabs() {
+			for(var i=0;i<crabPositions.length;i++) {
+				crabPositions[i] -= 1;
+				if(crabPositions[i] <= -100) crabPositions[i] = 1499;
+			}
+		}
+		
+		function moveFish() {
+			for(var i=0;i<fishPositions.length;i++) {
+				fishPositions[i].x += 1;
+				if(fishPositions[i].x >= 1500) {
+					fishPositions[i].x = -99;
+				}
+			}
+		}
+		
+		function drawAll() {
+			canvas.width = window.innerWidth - 100;
+			canvas.height = 200;
+			
+			colorRect(0,0,canvas.width,canvas.height,'white');
+			
+			if(allLoaded) {
+				drawFish();
+				drawCrabs();
+			}
+		}
+		
+		function drawFish() {
+			for(var i=0;i<fishPositions.length;i++) {
+				canvasContext.drawImage(fishPositions[i].image, fishPositions[i].x, 20, 100, 100);
+			}
+		}
+		
+		function drawCrabs() {
+			for(var i=0;i<crabPositions.length;i++) {
+				canvasContext.drawImage(crabImages[crabImageId].image, crabPositions[i], 100, 100, 100);
+			}
+		}
+    </script>        
+    </body>
+</html>
