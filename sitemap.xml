@@ -6,27 +6,32 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 <!--https://easey2playentertainment.com/index.html--> <!--This is more for the computer to know.--> 
 <url>
 <loc>https://easey2playentertainment.com/index.html</loc> 
-<lastmod>2026-01-27</lastmod>
+<lastmod>2026-02-21</lastmod>
 </url> 
 <!--https://easey2playentertainment.com/contact-us.html--> <!--Helps program know where to write code.--> 
 <url>
 <loc>https://easey2playentertainment.com/contact-us.html</loc>
-<lastmod>2026-01-06</lastmod> 
+<lastmod>2026-02-21</lastmod> 
 </url> 
 <!--https://easey2playentertainment.com/about.html--> 
 <url>		 
 <loc>https://easey2playentertainment.com/about.html</loc> 
-<lastmod>2026-01-06</lastmod> 
+<lastmod>2026-02-21</lastmod> 
 </url> 
 <!--https://easey2playentertainment.com/faqs.html-->
 <url>
 <loc>https://easey2playentertainment.com/faqs.html</loc>
-<lastmod>2026-01-27</lastmod>
+<lastmod>2026-02-21</lastmod>
+</url>
+<!--https://easey2playentertainment.com/announcements.html-->
+<url>
+<loc>https://easey2playentertainment.com/announcements.html</loc>
+<lastmod>2026-02-21</lastmod>
 </url>
 <!--https://easey2playentertainment.com/games.html--> 
 <url>		 
 <loc>https://easey2playentertainment.com/games.html</loc> 
-<lastmod>2026-01-27</lastmod> 
+<lastmod>2026-02-21</lastmod> 
 </url> 
 <!--https://easey2playentertainment.com/seaCross/index.html--> 
 <url>
@@ -41,6 +46,6 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 <!--https://easey2playentertainment.com/seaCross2.html-->
 <url>
 <loc>https://easey2playentertainment.com/seaCross2.html</loc>
-<lastmod>2026-01-27</lastmod>
+<lastmod>2026-02-21</lastmod>
 </url>
 </urlset>
