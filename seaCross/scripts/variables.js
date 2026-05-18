@@ -1,5 +1,8 @@
 var canvas, canvasContext, centeredCanvas = document.getElementsByClassName('center_item')[0];
 
+// variable to remove after testing is over
+var retroPos = 250;
+
 var fullScreenButton = $('fullScreenButton'); // not really a button; more like an anchor tag
 var fullScreen = false;
 
