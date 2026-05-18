@@ -767,7 +767,7 @@ async function drawAll() {
             colorRect(0, 0, canvas.width, canvas.height, 'black');
             !birthdayMode ? printText(210, canvas.height / 2, 60, chameleon[chameleonID], 'come play!') : printText(15, canvas.height / 2, 60, chameleon[chameleonID], 'HAPPY BIRTHDAY, MAMI!'); 
 			//printText(225, 400, 20, 'white', 'easey2playentertainment.com');
-			canvasContext.drawImage(retroLogoImage, 250, 345, 200, 250 * (736 / 1411)); 
+			canvasContext.drawImage(retroLogoImage, 250, 345, 250, 250 * (736 / 1411)); 
 			canvasContext.drawImage(qrCodeImage, 610, 260, 140, 140); // website
 			canvasContext.drawImage(financeQrCodeImage, 45, 260, 140, 140); // paypal
 	canvasContext.drawImage(mosesImages[mosesImageId], demoMosesPosition, canvas.height / 2 + 150 , 35, 35);
