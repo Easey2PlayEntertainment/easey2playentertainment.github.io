@@ -766,53 +766,53 @@ async function drawAll() {
         if(arcadeMode || birthdayMode) {
             colorRect(0, 0, canvas.width, canvas.height, 'black');
             !birthdayMode ? printText(210, canvas.height / 2, 60, chameleon[chameleonID], 'come play!') : printText(15, canvas.height / 2, 60, chameleon[chameleonID], 'HAPPY BIRTHDAY, MAMI!'); 
-    canvasContext.drawImage(mosesImages[mosesImageId], demoMosesPosition, canvas.height / 2 + 50 , 35, 35);
-    canvasContext.drawImage(israelites[2].images[israelites[2].imageId], demoIsraelite1Position, canvas.height / 2 + 50 , 35, 35); // CONTINUE HERE
-    canvasContext.drawImage(demoIsraelite2Images[demoIsraelite2FrameId], demoIsraelite2Position, canvas.height / 2 + 50 , 35, 35);
-    canvasContext.drawImage(demoIsraelite3Images[demoIsraelite3FrameId], demoIsraelite3Position, canvas.height / 2 + 50 , 35, 35);
-    canvasContext.drawImage(currentCrabImage, demoCrab1Position, 450, 50, 50);
-    canvasContext.drawImage(currentCrabImage, demoCrab2Position, 450, 50, 50);
-    canvasContext.drawImage(currentCrabImage, demoCrab3Position, 450, 50, 50); // keep working on it
-    canvasContext.drawImage(currentCrabImage, demoCrab4Position, 450, 50, 50);
-    canvasContext.drawImage(demoEgyptianImages[demoEgyptianFrameId], demoEgyptian1Position, 170, 35, 35);
-    canvasContext.drawImage(demoEgyptianImages[demoEgyptianFrameId], demoEgyptian2Position, 170, 35, 35);
-    canvasContext.drawImage(demoEgyptianImages[demoEgyptianFrameId], demoEgyptian3Position, 170, 35, 35);
-    canvasContext.drawImage(demoEgyptianImages[demoEgyptianFrameId], demoEgyptian4Position, 170, 35, 35);
-    canvasContext.drawImage(orangeFishImages[1], demoFish1Position, 70, 50, 50);
-    canvasContext.drawImage(purpleFishImages[1], demoFish2Position, 70, 50, 50);
-    canvasContext.drawImage(greenFishImages[1], demoFish3Position, 70, 50, 50);
-    canvasContext.drawImage(redFishImages[1], demoFish4Position, 70, 50, 50);
+			printText(225, 400, 20, 'white', 'easey2playentertainment.com');
+			canvasContext.drawImage(qrCodeImage, 610, 260, 140, 140); // website
+			canvasContext.drawImage(financeQrCodeImage, 45, 260, 140, 140); // paypal
+	canvasContext.drawImage(mosesImages[mosesImageId], demoMosesPosition, canvas.height / 2 + 150 , 35, 35);
+    canvasContext.drawImage(israelites[2].images[israelites[2].imageId], demoIsraelite1Position, canvas.height / 2 + 150 , 35, 35); // CONTINUE HERE
+    canvasContext.drawImage(demoIsraelite2Images[demoIsraelite2FrameId], demoIsraelite2Position, canvas.height / 2 + 150 , 35, 35);
+    canvasContext.drawImage(demoIsraelite3Images[demoIsraelite3FrameId], demoIsraelite3Position, canvas.height / 2 + 150 , 35, 35);
+
+    canvasContext.drawImage(demoEgyptianImages[demoEgyptianFrameId], demoEgyptian1Position, 100, 35, 35);
+    canvasContext.drawImage(demoEgyptianImages[demoEgyptianFrameId], demoEgyptian2Position, 100, 35, 35);
+    canvasContext.drawImage(demoEgyptianImages[demoEgyptianFrameId], demoEgyptian3Position, 100, 35, 35);
+    canvasContext.drawImage(demoEgyptianImages[demoEgyptianFrameId], demoEgyptian4Position, 100, 35, 35);
+    canvasContext.drawImage(orangeFishImages[1], demoFish1Position, 160, 50, 50);
+    canvasContext.drawImage(purpleFishImages[1], demoFish2Position, 160, 50, 50);
+    canvasContext.drawImage(greenFishImages[1], demoFish3Position, 160, 50, 50);
+    canvasContext.drawImage(redFishImages[1], demoFish4Position, 160, 50, 50);
 
     if(mosesBlinkNow) {
-        canvasContext.drawImage(mosesEyeBlinkImage, demoMosesPosition, canvas.height / 2 + 50 , 35, 35);
+        canvasContext.drawImage(mosesEyeBlinkImage, demoMosesPosition, canvas.height / 2 + 150 , 35, 35);
     }
 
     if(israeliteBlinks[2].blinkNow) {
-        canvasContext.drawImage(israeliteBlinks[2].image, demoIsraelite1Position, canvas.height / 2 + 50 , 35, 35);
+        canvasContext.drawImage(israeliteBlinks[2].image, demoIsraelite1Position, canvas.height / 2 + 150 , 35, 35);
     }
 
     if(israeliteBlinks[3].blinkNow) {
-        canvasContext.drawImage(israeliteBlinks[3].image, demoIsraelite2Position, canvas.height / 2 + 50 , 35, 35);
+        canvasContext.drawImage(israeliteBlinks[3].image, demoIsraelite2Position, canvas.height / 2 + 150 , 35, 35);
     }
 
     if(israeliteBlinks[0].blinkNow) {
-        canvasContext.drawImage(israeliteBlinks[0].image, demoIsraelite3Position, canvas.height / 2 + 50 , 35, 35);
+        canvasContext.drawImage(israeliteBlinks[0].image, demoIsraelite3Position, canvas.height / 2 + 150 , 35, 35);
     }
 
     if(egyptianBlinks[0].blinkNow) {
-        canvasContext.drawImage(egyptianBlinkImageLeft, demoEgyptian1Position, 170, 35, 35);
+        canvasContext.drawImage(egyptianBlinkImageLeft, demoEgyptian1Position, 100, 35, 35);
     }
 
     if(egyptianBlinks[1].blinkNow) {
-        canvasContext.drawImage(egyptianBlinkImageLeft, demoEgyptian2Position, 170, 35, 35);
+        canvasContext.drawImage(egyptianBlinkImageLeft, demoEgyptian2Position, 100, 35, 35);
     }
 
     if(egyptianBlinks[2].blinkNow) {
-        canvasContext.drawImage(egyptianBlinkImageLeft, demoEgyptian3Position, 170, 35, 35);
+        canvasContext.drawImage(egyptianBlinkImageLeft, demoEgyptian3Position, 100, 35, 35);
     }
 
     if(egyptianBlinks[3].blinkNow) {
-        canvasContext.drawImage(egyptianBlinkImageLeft, demoEgyptian4Position, 170, 35, 35);
+        canvasContext.drawImage(egyptianBlinkImageLeft, demoEgyptian4Position, 100, 35, 35);
     }
 
     printText(265 - timesPlayedSpaces, 530, 28, 'white', 'times played: ' + timesPlayed);

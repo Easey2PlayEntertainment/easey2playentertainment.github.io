@@ -88,6 +88,19 @@ var demoMosesPosition,
     var demoIsraelite3FrameId = 0;
     var demoIsraelite3Image1Loaded = demoIsraelite3Image2Loaded = demoIsraelite3Image3Loaded = demoIsraelite3Image4Loaded = false;
 
+// Promotional Images for visiting website and donations page
+var qrCodeImage = document.createElement('img');
+var financeQrCodeImage = document.createElement('img');
+
+// retro logo
+var retroLogoImage = document.createElement('img');
+
+// promotional images and retro logo image load flags
+var qrCodeImageLoaded = false,
+	financeQrCodeImageLoaded = false;
+	
+var retroLogoImageLoaded = false;
+
 var demoCrab1Position = 20,
     demoCrab2Position = 80,
     demoCrab3Position = 140,

@@ -797,6 +797,23 @@
 				wigImageLoaded = true;
 			}
 			wigImage.src = 'images/wig.png'; // for israelite with black hair to wear
+			
+			// qr code images and retro logo
+			
+			qrCodeImage.onload = function() {
+				qrCodeImageLoaded = true;
+			}
+			qrCodeImage.src = "images/promotional_qr_code.png";
+			
+			financeQrCodeImage.onload = function() {
+				financeQrCodeImageLoaded = true;
+			} 
+			financeQrCodeImage.src = "images/qrcode_www.paypal.com.png";
+			
+			retroLogoImage.onload = function() {
+				retroLogoImageLoaded = true;
+			}
+			retroLogoImage.src = "https://easey2playentertainment.com/images/logo/pixelated_logo.png";
 
 			loadQuestions(); // do that first
 
