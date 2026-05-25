@@ -1,5 +1,5 @@
 async function loadQuestions() { // loads all questions; prevents delay
-	allQuestions = languagePicked === "English" ? [...englishQuestions] : [...spanishQuestions];
+	allQuestions = languagePicked === "english" ? [...englishQuestions] : [...spanishQuestions];
     shuffleQuestions();
     allQuestionsLoaded = true;
 }

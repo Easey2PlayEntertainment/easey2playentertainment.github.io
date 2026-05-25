@@ -527,7 +527,7 @@ async function drawAll() {
                 bonusLevelReachedPlayed = true;
             }
         } else {
-            announcementMessage = 'level ' + level;
+            announcementMessage = 'nivel ' + level;
             xPosition = canvas.width / 2.3;
             if(!newLevelReachedPlayed) {
                 playSound(newLevelReachedBuffer); // just play the sound
@@ -574,9 +574,9 @@ async function drawAll() {
 
         if(question === '') {
             if(questionType === "match") {
-                question = "Match each item correctly.";
+                question = "Empareja cada elemento correctamente.";
             } else {
-                question = "Number the events in the correct order.";
+                question = "Pon los eventos en el orden correcto.";
             }
         }
         if(questionType === "multiple") {

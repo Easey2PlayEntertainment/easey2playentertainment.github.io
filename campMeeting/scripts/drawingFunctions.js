@@ -319,9 +319,9 @@ async function drawAll() {
         backgroundScoreSource.stop();
         bonusLevelSource === undefined ? false : bonusLevelSource.stop();
         if(crossedOver) {
-            printText(110, canvas.height / 2, 28, 'black', 'you made it across! congratulations!');
+            printText(110, canvas.height / 2, 28, 'black', (languagePicked === "english" ? 'you made it across! congratulations!' : '              ¡Ganaste!             '));
         } else if(gameOver) {
-            printText(canvas.width / 2.54, canvas.height / 2, 28, 'black', 'game over!');
+            printText(canvas.width / 2.54, canvas.height / 2, 28, 'black', (languagePicked === "english" ? 'game over!' : '¡perdiste!'));
         }
         if(testCounter > 1) {
             return;
@@ -466,7 +466,7 @@ async function drawAll() {
             playSound(startupThemeBuffer, "startupThemeSource");
             startupThemePlayed = true;
         }
-        printText((!birthdayMode ? canvas.width / 2.285 : 200), canvas.height / 2, 28, 'black', (!birthdayMode ? 'ready!' : 'let\'s go, birthday mom!'));
+        printText((!birthdayMode ? canvas.width / 2.285 : 200), canvas.height / 2, 28, 'black', (languagePicked === "english" ? "ready!" : "¡listo!"));
         questionNumber = 0;
         readyCounter++;
         await sleep(200);
@@ -488,7 +488,7 @@ async function drawAll() {
             readyCounter = 0; // ready to start over
         }
     } else if(readyShow) {
-		printText((!birthdayMode ? canvas.width / 2.285 : 240), canvas.height / 2, 28, 'black', (!birthdayMode ? 'ready!' : 'you can do it, mama!'));
+		printText((!birthdayMode ? canvas.width / 2.285 : 240), canvas.height / 2, 28, 'black', (languagePicked === "english" ? "ready!" : "¡listo!"));
         await sleep(2000);
         readyShow = false; // should play the music then...
     }
@@ -527,7 +527,7 @@ async function drawAll() {
                 bonusLevelReachedPlayed = true;
             }
         } else {
-            announcementMessage = 'level ' + level;
+            announcementMessage = (languagePicked === "english" ? 'level ' : 'nivel ') + level;
             xPosition = canvas.width / 2.3;
             if(!newLevelReachedPlayed) {
                 playSound(newLevelReachedBuffer); // just play the sound
@@ -574,9 +574,9 @@ async function drawAll() {
 
         if(question === '') {
             if(questionType === "match") {
-                question = "Match each item correctly.";
+                question = languagePicked === "english" ? "Match each item correctly." : "Empareja cada elemento correctamente.";
             } else {
-                question = "Number the events in the correct order.";
+                question = languagePicked === "english" ? "Number the events in the correct order." : "Pon los eventos en el orden correcto.";
             }
         }
         if(questionType === "multiple") {
@@ -708,12 +708,12 @@ async function drawAll() {
 
     if(questionGraded) {
         showPowerup = false;
-        var statement = answerCorrect ? "correct!" : "incorrect! the correct answer is [BREAK]" + correctAnswerValue; // assuming the answer is still intact
+        var statement = answerCorrect ? (languagePicked === "english" ? "correct!" : "¡excelente!") : (languagePicked === "english" ? "incorrect! the correct answer is [BREAK]" : "¡Incorrecto! La respuesta correcta: [BREAK]") + correctAnswerValue; // assuming the answer is still intact
         var timeToPause = answerCorrect ? (israeliteReleased ? 3000 : 1000) : (lastQuestionTypeUsed === "match" || lastQuestionTypeUsed === "number" ? 10000 : 5000); // the difference in time is to help the player learn from his/her mistakes
         var squareHeightIncrement = 0;
 		
 		if(israeliteReleased) {
-			statement += win ? " israelites released!" : " israelite released!";
+			statement += win ? (languagePicked === "english" ? " israelites released!" : " ¡israelitas liberados!") : (languagePicked === "english" ? " israelite released!" : " ¡israelita liberado!");
 		}
 
         if(lastQuestionTypeUsed === "multiple") {
