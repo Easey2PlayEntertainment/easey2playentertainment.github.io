@@ -817,8 +817,8 @@ async function drawAll() {
     }
 
     printText(265 - timesPlayedSpaces, 60, 28, 'white', 'times played: ' + timesPlayed);
-		printText(295 - timesPlayedSpaces, 530, 28, 'white', "a. english");
-		printText(295 - timesPlayedSpaces, 570, 28, 'white', "b. español");
+		printText(300 - timesPlayedSpaces, 530, 28, 'white', "a. english");
+		printText(300 - timesPlayedSpaces, 570, 28, 'white', "b. español");
         printText(20, 30, 28, 'white', 'score');
         printText(20, 60, 28, 'white', zeroedScore(score));
         printText(canvas.width - 193, 30, 28, 'white', 'high score');
