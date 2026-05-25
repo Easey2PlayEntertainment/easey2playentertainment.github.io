@@ -816,7 +816,7 @@ async function drawAll() {
         canvasContext.drawImage(egyptianBlinkImageLeft, demoEgyptian4Position, 100, 35, 35);
     }
 
-    printText(265 - timesPlayedSpaces, 70, 28, 'white', 'times played: ' + timesPlayed);
+    printText(265 - timesPlayedSpaces, 60, 28, 'white', 'times played: ' + timesPlayed);
 		printText(265 - timesPlayedSpaces, 530, 28, 'white', "a. english");
 		printText(265 - timesPlayedSpaces, 570, 28, 'white', "b. español");
         printText(20, 30, 28, 'white', 'score');
