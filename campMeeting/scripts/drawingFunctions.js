@@ -767,6 +767,11 @@ async function drawAll() {
         screenBlacked = false; 
         if(arcadeMode || birthdayMode) {
             colorRect(0, 0, canvas.width, canvas.height, 'black');
+				// Show languages if the play button is pressed.
+			if(showLanguages) {
+				printText(310 - timesPlayedSpaces, 530, 28, 'white', "a. english");
+				printText(310 - timesPlayedSpaces, 570, 28, 'white', "b. español");
+			} else {
             !birthdayMode ? printText(210, canvas.height / 2, 60, chameleon[chameleonID], 'come play!') : printText(15, canvas.height / 2, 60, chameleon[chameleonID], 'HAPPY BIRTHDAY, MAMI!'); 
 			//printText(225, 400, 20, 'white', 'easey2playentertainment.com');
 			canvasContext.drawImage(retroLogoImage, 260, 320, 250, 250 * (736 / 1411)); 
@@ -819,11 +824,8 @@ async function drawAll() {
     }
 
     printText(265 - timesPlayedSpaces, 60, 28, 'white', 'times played: ' + timesPlayed);
-	// Show languages if the play button is pressed.
-		if(showLanguages) {
-			printText(310 - timesPlayedSpaces, 530, 28, 'white', "a. english");
-			printText(310 - timesPlayedSpaces, 570, 28, 'white', "b. español");
-		}
+	
+	}
         printText(20, 30, 28, 'white', 'score');
         printText(20, 60, 28, 'white', zeroedScore(score));
         printText(canvas.width - 193, 30, 28, 'white', 'high score');
