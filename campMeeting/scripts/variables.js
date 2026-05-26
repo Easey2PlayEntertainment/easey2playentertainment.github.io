@@ -1974,3 +1974,4 @@ var deviceTypeChecked = false;
 var speedRate;
 
 var languagePicked;
+var showLanguages = false;

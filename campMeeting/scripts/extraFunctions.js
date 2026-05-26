@@ -1581,8 +1581,9 @@ function keyDown(e) {
         lastHighScore = +localStorage.getItem('highScore');
         highScore = +localStorage.getItem('highScore'); // ensures that the score does not empty out again
         bringLevelQuestions();
-     } else if(e.code === "Space" && start) {
-         //testMove();
+     } else if(e.code === "Space" && !start) {
+         showLanguages = true; // show the different language choices
+		 playSound(catchShellBuffer, "catchShellSource");
     } else if(questionBrought && questionType === "multiple" || questionBrought && questionType === "TF") {
         if (e.key === "a" || e.key === "z") {
             a = true;
