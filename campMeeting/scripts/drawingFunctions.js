@@ -769,8 +769,8 @@ async function drawAll() {
             colorRect(0, 0, canvas.width, canvas.height, 'black');
 				// Show languages if the play button is pressed.
 			if(showLanguages) {
-				printText(310 - timesPlayedSpaces, 330, 28, 'white', "a. english");
-				printText(310 - timesPlayedSpaces, 370, 28, 'white', "b. español");
+				printText(310 - timesPlayedSpaces, 230, 28, 'white', "a. english");
+				printText(310 - timesPlayedSpaces, 270, 28, 'white', "b. español");
 			} else {
             !birthdayMode ? printText(210, canvas.height / 2, 60, chameleon[chameleonID], 'come play!') : printText(15, canvas.height / 2, 60, chameleon[chameleonID], 'HAPPY BIRTHDAY, MAMI!'); 
 			//printText(225, 400, 20, 'white', 'easey2playentertainment.com');
