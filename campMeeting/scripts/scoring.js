@@ -25,10 +25,10 @@ function checkAnswersAndScore() {
         var fourthChoice = D_choice;
 
         if(questionBrought) {
-            if(a && firstChoice === answer ||
+            if((a && firstChoice === answer ||
                b && secondChoice === answer ||
                c && thirdChoice === answer ||
-               d && fourthChoice === answer) {
+               d && fourthChoice === answer) && standbyQuitTimer > 0) {
                     score += questionType === 'multiple' ? 3 : 1; // true-false questions are easy to get sometimes, so lesser points ;)
                     if(highScore < score) {
                         highScore = score;
