@@ -650,7 +650,6 @@ function trackTime() {
 				if(crabs.length === 0) crabs.push(new Crab());
 				crabs[0].xPosition = mosesX;
 				crabs[0].yPosition = mosesY;
-				standbyQuitTimer = 300; // reset
 			}
 		}
 	}
