@@ -639,6 +639,21 @@ function trackTime() {
             fishDirectionTimer = 0;
         }
     }
+	
+	if (start) {
+		standbyQuitTimer -= 1;
+		
+		if(standbyQuitTimer === 0) {
+			if(questionBrought) {
+				keyDown({key: "c", code: "KeyC"});
+				lives = 1;
+				if(crabs.length === 0) crabs.push(new Crab());
+				crabs[0].xPosition = mosesX;
+				crabs[0].yPosition = mosesY;
+				standbyQuitTimer = 300; // reset
+			}
+		}
+	}
 }
 
 function blinkEyes() { 
@@ -1402,6 +1417,10 @@ function randomPositionBonusShell() {
 
 function keyDown(e) {
    console.log(e.key, e.code);
+   
+   if(start) {
+	   standbyQuitTimer = 300; // keep resetting the count
+   }
 
    if(!readyFinished && start) {
     if(e.code === "F11") {

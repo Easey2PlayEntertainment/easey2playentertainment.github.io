@@ -1975,3 +1975,6 @@ var speedRate;
 
 var languagePicked;
 var showLanguages = false;
+
+// countdown timer for a game put on standby
+var standbyQuitTimer = 300;
