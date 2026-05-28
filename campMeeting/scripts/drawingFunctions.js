@@ -412,6 +412,9 @@ async function drawAll() {
 		showLanguages = false;
 
         usedPowerups = [];
+
+		// Reset the standby quit timer
+		standbyQuitTimer = 300;
         
         lastValue = lastValue === -1 ? 0 : -1;
         questionNumber = lastValue;
@@ -713,6 +716,11 @@ async function drawAll() {
         var statement = answerCorrect ? (languagePicked === "english" ? "correct!" : "¡excelente!") : (languagePicked === "english" ? "incorrect! the correct answer is [BREAK]" : "¡Incorrecto! La respuesta correcta: [BREAK]") + correctAnswerValue; // assuming the answer is still intact
         var timeToPause = answerCorrect ? (israeliteReleased ? 3000 : 1000) : (lastQuestionTypeUsed === "match" || lastQuestionTypeUsed === "number" ? 10000 : 5000); // the difference in time is to help the player learn from his/her mistakes
         var squareHeightIncrement = 0;
+
+		// If timer run out, don't even show anything
+		if(standbyQuitTimer <= 0) {
+			timeToPause = 0;
+		}
 		
 		if(israeliteReleased) {
 			statement += win ? (languagePicked === "english" ? " israelites released!" : " ¡israelitas liberados!") : (languagePicked === "english" ? " israelite released!" : " ¡israelita liberado!");
