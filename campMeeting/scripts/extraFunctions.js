@@ -646,11 +646,14 @@ function trackTime() {
 		if(standbyQuitTimer === 0) {
 			if(questionBrought) {
 				keyDown({key: "c", code: "KeyC"});
-				lives = 1;
+			} else if (paused) {
+paused = false;
+
+}
+lives = 1;
 				if(crabs.length === 0) crabs.push(new Crab());
 				crabs[0].xPosition = mosesX;
 				crabs[0].yPosition = mosesY;
-			}
 		}
 	}
 }
