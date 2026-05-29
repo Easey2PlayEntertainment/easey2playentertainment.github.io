@@ -642,6 +642,16 @@ function trackTime() {
 	
 	if (start) {
 		standbyQuitTimer -= 1;
+
+		// Pause Button Holding Logic
+		if(pauseButtonBeingHeld) {
+			pauseButtonHoldCount += 1;
+		} else pauseButtonHoldCount = 0;
+
+		// Check pauseButtonHoldCount
+		if(pauseButtonHoldCount >= 4) {
+			standbyQuitTimer = pauseButtonHoldCount = 0;
+		}
 		
 		if(standbyQuitTimer === 0) {
 			if(questionBrought) {
@@ -1619,6 +1629,7 @@ function keyDown(e) {
         requestFullScreen(canvas);
     } else if((e.key === "p" || e.key === "Pause" || e.key === "MediaPlayPause") && start) { // so that people can just use media buttons to pause
         paused = !paused;
+		pauseButtonBeingHeld = true;
     } else if(e.key === "ArrowUp") {
         up = true;
     } else if(e.key === "ArrowDown") {
@@ -1641,7 +1652,9 @@ function keyUp(e) {
         left = false;
     } else if(e.key === "ArrowRight") {
         right = false;
-    }
+    } else if(e.key === "p" || e.key === "Pause" || e.key === "MediaPlayPause") {
+		pauseButtonBeingHeld = false;
+	}
 }
 
 function textCursor() {
