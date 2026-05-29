@@ -1978,3 +1978,7 @@ var showLanguages = false;
 
 // countdown timer for a game put on standby
 var standbyQuitTimer = 300;
+
+// countup timer for checking pause button hold
+var pauseButtonHoldCount = 0;
+var pauseButtonBeingHeld = false;
