@@ -415,6 +415,10 @@ async function drawAll() {
 
 		// Reset the standby quit timer
 		standbyQuitTimer = 300;
+
+		// pause button hold variables reset
+		pauseButtonHoldCount = 0;
+		pauseButtonBeingHeld = false;
         
         lastValue = lastValue === -1 ? 0 : -1;
         questionNumber = lastValue;
