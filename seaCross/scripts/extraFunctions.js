@@ -1312,17 +1312,25 @@ function moveFrogs() {
                 counter += 100;
             }
 
-            if(loopedPowerupSoundPlayed) { // for redundancy...
-                try {
-                    cloudPillarSource.stop();
-                    firePillarSource.stop();
-                    frogsJumpingSource.stop();
-                    fliesBuzzingSource.stop();
-                } catch(e) {
-                    console.warn('did not need to stop all sounds');
-                }
-                loopedPowerupSoundPlayed = false;
-            }
+            if(loopedPowerupSoundPlayed) {
+			switch(previousPowerup) {
+				case "cloudPillar":
+					cloudPillarSource.stop();
+					break;
+				case "firePillar":
+					firePillarSource.stop();
+					break;
+				case "frogs":
+					frogsJumpingSource.stop();
+					break;
+				case "flies":
+					fliesBuzzingSource.stop();
+					break;
+				default:
+					console.error("Nothing to pause, so moving on.");
+			}
+            loopedPowerupSoundPlayed = false;
+        }
 
 
             if(powerupNumber === powerups.length) {
