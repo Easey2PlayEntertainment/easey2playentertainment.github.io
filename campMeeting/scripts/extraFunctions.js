@@ -1167,14 +1167,22 @@ function runPowerup() { // work on this function
         }
 
         if(loopedPowerupSoundPlayed) {
-            try {
-                cloudPillarSource.stop();
-                firePillarSource.stop();
-                frogsJumpingSource.stop();
-                fliesBuzzingSource.stop();
-            } catch(e) {
-                console.warn('did not need to stop all sounds');
-            }
+			switch(previousPowerup) {
+				case "cloudPillar":
+					cloudPillarSource.stop();
+					break;
+				case "firePillar":
+					firePillarSource.stop();
+					break;
+				case "frogs":
+					frogsJumpingSource.stop();
+					break;
+				case "flies":
+					fliesBuzzingSource.stop();
+					break;
+				default:
+					console.error("Nothing to pause, so moving on.");
+			}
             loopedPowerupSoundPlayed = false;
         }
 
