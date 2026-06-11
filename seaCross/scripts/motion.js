@@ -610,7 +610,7 @@ async function moveAll() {
             }
         } else {
             if(!runOnce) {
-                currentPosition -= !clearCharacters && !gameOver && !mosesCaught ? (googlePixelDevice && (up || down) ? 1.3 + speedIncrementFloat : (slowDown ? 1.3 + speedRateValue : 3)) : 0;
+                currentPosition -= !clearCharacters && !gameOver && !mosesCaught && (currentPosition >= 0 || currentPosition < 0 && win)  ? (googlePixelDevice && (up || down) ? 1.3 + speedIncrementFloat : (slowDown ? 1.3 + speedRateValue : 3)) : 0;
                 fish1.xPosition -= googlePixelDevice && (up || down) ? 1.3 + speedIncrementFloat : (slowDown ? 1.3 + speedRateValue : 3);
                 fish2.xPosition -= googlePixelDevice && (up || down) ? 1.3 + speedIncrementFloat : (slowDown ? 1.3 + speedRateValue : 3);
                 fish3.xPosition -= googlePixelDevice && (up || down) ? 1.3 + speedIncrementFloat : (slowDown ? 1.3 + speedRateValue : 3);
