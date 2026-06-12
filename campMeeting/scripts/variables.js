@@ -95,11 +95,16 @@ var financeQrCodeImage = document.createElement('img');
 // retro logo
 var retroLogoImage = document.createElement('img');
 
+// retro broken arrow ranch logo
+var retroBARLogoImage = document.createElement('img');
+
 // promotional images and retro logo image load flags
 var qrCodeImageLoaded = false,
 	financeQrCodeImageLoaded = false;
 	
 var retroLogoImageLoaded = false;
+
+var retroBARLogoImageLoaded = false;
 
 var demoCrab1Position = 20,
     demoCrab2Position = 80,
