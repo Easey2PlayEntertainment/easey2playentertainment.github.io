@@ -57,7 +57,7 @@
 		<section>
 			<h2 class="hiddenTags">Information about Sea Cross: The Galilean Adventure&trade;</h2>
 			<p>The classic fish and crabs from <i>Sea Cross: Bible Game&trade;</i> are returning in a new Bible-based video game that is under development: <i>Sea Cross: The Galilean Adventure&trade;</i>!</p>
-			<div class="centeredItems"><canvas id="cnvs"></canvas></div>
+			<div class="centeredItems"><canvas id="cnvs" width="1300" height="200"></canvas></div>
 			<p>The primary difference between this game and its predecessor is that instead of helping Israelites walk across a parted sea, you are helping lone fishermen on the Sea of Galilee 
 			catch fish and collect treasure. Not familiar with this story? Here's a question that might ring some bells: do you recall Jesus Christ calling a few fishermen to follow Him? These fishermen 
 			aren't any ordinary fishermen. These are fishermen who, after having several wild years out at sea, will set down their nets and enter an unforgettable journey that would ultimately kickstart the 
@@ -75,7 +75,6 @@
     <p>&copy; 2026 Azariah M Easey. All rights reserved.</p>
 </footer>
     <script>
-		var canvas, canvasContext;
 		
 		var orangeFishImage = document.createElement('img'),
 			redFishImage = document.createElement('img'),
@@ -211,10 +210,7 @@
 			}
 		}
 		
-		function drawAll() {
-			canvas.width = window.innerWidth - 100;
-			canvas.height = 200;
-			
+		function drawAll() {			
 			colorRect(0,0,canvas.width,canvas.height,'white');
 			
 			if(allLoaded) {
