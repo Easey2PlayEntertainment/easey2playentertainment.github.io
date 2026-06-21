@@ -107,7 +107,7 @@
 		{image: yellowFishImage, x: 1300},
 		{image: orangeFishImage, x: 1400}];
 			
-		var orangeFishImageLoaded = redFishImageLoaded = purpleFishImageLoaded = greenFishImageLoaded = yellowFishLoaded = false;
+		var orangeFishImageLoaded = redFishImageLoaded = purpleFishImageLoaded = greenFishImageLoaded = yellowFishImageLoaded = false;
 		
 		var allLoaded = false;
 		
@@ -179,10 +179,10 @@
 			if(orangeFishImageLoaded && redFishImageLoaded && greenFishImageLoaded && purpleFishImageLoaded && yellowFishImageLoaded && crabImages[0].loaded && crabImages[1].loaded) allLoaded = true;
 		}
 		
-		function managemCanvas() {
+		function manageCanvas() {
 			// For updating width of canvas
 			if(window.innerWidth < 1300) {
-				canvas.width = window.innerWidth - 20;
+				canvas.width = window.innerWidth - 70;
 			} else canvas.width = 1300;
 		}
 		
