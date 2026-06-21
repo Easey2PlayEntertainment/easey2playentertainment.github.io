@@ -57,7 +57,7 @@
 		<section>
 			<h2 class="hiddenTags">Information about Sea Cross: The Galilean Adventure&trade;</h2>
 			<p>The classic fish and crabs from <i>Sea Cross: Bible Game&trade;</i> are returning in a new Bible-based video game that is under development: <i>Sea Cross: The Galilean Adventure&trade;</i>!</p>
-			<div class="centeredItems"><canvas id="cnvs" width="1300" height="200"></canvas></div>
+			<div class="centeredItems"><canvas id="cnvs" height="200"></canvas></div>
 			<p>The primary difference between this game and its predecessor is that instead of helping Israelites walk across a parted sea, you are helping lone fishermen on the Sea of Galilee 
 			catch fish and collect treasure. Not familiar with this story? Here's a question that might ring some bells: do you recall Jesus Christ calling a few fishermen to follow Him? These fishermen 
 			aren't any ordinary fishermen. These are fishermen who, after having several wild years out at sea, will set down their nets and enter an unforgettable journey that would ultimately kickstart the 
@@ -126,18 +126,12 @@
 			canvas = $('cnvs');
 			canvasContext = canvas.getContext('2d');
 			
-			// For updating width of canvas
-			if(window.innerWidth < 1300) {
-				canvas.width = window.innerWidth - 20;
-			}
-			
 			orangeFishImage.onload = function() {
 				orangeFishImageLoaded = true;
 			}
 			orangeFishImage.src = "images/classic_fish.png";
 			fishPositions[0].image = orangeFishImage;
 			
-			redFishImage.onload = function() {
 			redFishImage.onload = function() {
 				redFishImageLoaded = true;
 			}
@@ -185,7 +179,15 @@
 			if(orangeFishImageLoaded && redFishImageLoaded && greenFishImageLoaded && purpleFishImageLoaded && yellowFishImageLoaded && crabImages[0].loaded && crabImages[1].loaded) allLoaded = true;
 		}
 		
+		function managemCanvas() {
+			// For updating width of canvas
+			if(window.innerWidth < 1300) {
+				canvas.width = window.innerWidth - 20;
+			} else canvas.width = 1300;
+		}
+		
 		function updateAll() {
+			manageCanvas();
 			checkIfImagesLoaded();
 			moveAll();
 			drawAll();
