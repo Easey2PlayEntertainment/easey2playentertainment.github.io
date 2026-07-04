@@ -1602,7 +1602,7 @@ function keyDown(e) {
                 }
             }
         }
-	} else if((e.key === "a" || e.key === "z" || e.key === "b" || e.key == "x") && !start) {
+	} else if((e.key === "a" || e.key === "z" || e.key === "b" || e.key == "x") && !start && showLanguages) {
 		if(e.key === "a" || e.key === "z") {
 			languagePicked = "english";
 		} else {
