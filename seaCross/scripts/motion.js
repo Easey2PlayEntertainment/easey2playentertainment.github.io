@@ -621,7 +621,7 @@ async function moveAll() {
                 fish8.xPosition -= googlePixelDevice && (up || down) ? 1.3 + speedIncrementFloat : (slowDown ? 1.3 + speedRateValue : 3);
 
                 for(var i=0;i<crabs.length;i++) {
-                    crabs[i].xPosition -= googlePixelDevice && (up || down) ? 1.3 + speedIncrementFloat : (slowDown ? 1.3 + speedRateValue : 3);
+                    crabs[i].xPosition -= googlePixelDevice && (up || down) ? 1.3 + speedIncrementFloat : (slowDown ? 1.3 + speedRateValue : 3.2);
                 }
             }
         }
