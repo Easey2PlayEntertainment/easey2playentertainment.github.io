@@ -3,6 +3,7 @@ User-agent: *
 Disallow: /seaCross/images/
 Disallow: /seaCross/audio/
 Disallow: /images/logo/
+Disallow: /images/moses_walking.gif
 Disallow: /styles/
 Disallow: /seaCrossStemShowcase/
 Disallow: /images/nonya/
