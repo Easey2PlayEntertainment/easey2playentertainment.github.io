@@ -513,12 +513,12 @@ async function moveAll() {
             for(var i=0;i<crabs.length;i++) {
                 if(crabs[i].walking && !runOnce && currentPosition < canvas.width / 2 && !powerupRun) {
                     if(i > 0) {
-                        if(Math.abs(crabs[i].xPosition - crabs[i-1].xPosition) < 60 || crabs[i].xPosition === crabs[i-1].xPosition || Math.abs(crabs[i].xPosition - crabs[i - 1].xPosition) < 30) {
-							crabs[i - 1].xPosition -= 0.7; // pushes the one in front ahead
+                        if(Math.abs(crabs[i].xPosition - crabs[i-1].xPosition) < 60 || crabs[i].xPosition === crabs[i-1].xPosition || Math.abs(crabs[i].xPPosition - crabs[i - 1].xPPosition) < 30) {
+                            crabs[i - 1].xPosition -= 0.7; // pushes the one in front ahead
                             continue;
                         }
                     }
-                    //crabs[i].xPosition -= 0.5;
+                    crabs[i].xPosition -= 0.5;
                 } else if(powerupRun) {
                     if(crabs[i].xPosition >= 0) {
                         crabs[i].xPosition += canvas.width; // just hide the crab
@@ -621,7 +621,7 @@ async function moveAll() {
                 fish8.xPosition -= googlePixelDevice && (up || down) ? 1.3 + speedIncrementFloat : (slowDown ? 1.3 + speedRateValue : 3);
 
                 for(var i=0;i<crabs.length;i++) {
-                    crabs[i].xPosition -= googlePixelDevice && (up || down) ? 1.3 + speedIncrementFloat : (slowDown ? 1.3 + speedRateValue : 3.5);
+                    crabs[i].xPosition -= googlePixelDevice && (up || down) ? 1.3 + speedIncrementFloat : (slowDown ? 1.3 + speedRateValue : 3);
                 }
             }
         }

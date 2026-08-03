@@ -78,8 +78,7 @@ function Fish(fishImages, initialYPosition, flipTime) {
 }
 
 function Crab() {
-    //this.walking = Math.round(Math.random()) === 1 ? true : false;
-	this.walking = true; // ?????
+    this.walking = Math.round(Math.random()) === 1 ? true : false;
     this.xPosition = canvas.width; // starts off screen
     this.yPosition = canvas.height / 2; // will randomize later
     this.frame = crabWalkPositions[0];
