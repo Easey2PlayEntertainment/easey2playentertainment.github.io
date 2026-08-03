@@ -518,7 +518,7 @@ async function moveAll() {
                             continue;
                         }
                     }
-                    crabs[i].xPosition -= 0.5;
+                    else crabs[i].xPosition -= 0.7;
                 } else if(powerupRun) {
                     if(crabs[i].xPosition >= 0) {
                         crabs[i].xPosition += canvas.width; // just hide the crab
