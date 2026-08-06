@@ -901,7 +901,8 @@
 			volumeController = context.createGain();
 			volumeController.connect(context.destination);
 
-			updateAll();
+			//updateAll();
+			requestAnimationFrame(animationLoop);
 			
 			highScore = +localStorage.getItem('highScore');
 
