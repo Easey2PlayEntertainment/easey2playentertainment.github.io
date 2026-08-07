@@ -601,7 +601,7 @@ async function moveAll() {
                 if(i < israelites.length) { // only runs if there are items in the array
                     israelites[i].x += /*googlePixelDevice && (up || down) ? 1.3 + speedIncrementFloat : (slowDown ? 1.3 + speedRateValue : */3/*);*/;
                 }
-                egyptians[i].x += win ? 0 :(/*googlePixelDevice && (up || down) ? 1.3 + speedIncrementFloat : (slowDown ? 1.3 + speedRateValue : */3/*))*/;; // if the game has been won, they stay put
+                egyptians[i].x += win ? 0 :/*(googlePixelDevice && (up || down) ? 1.3 + speedIncrementFloat : (slowDown ? 1.3 + speedRateValue : */3/*))*/;; // if the game has been won, they stay put
                 if(win && egyptians[i].x > (canvas.width / 2) - 100) {
                     for(var j=0;j<egyptians.length;j++) {
                         egyptians[j].x -= 1;
@@ -610,7 +610,7 @@ async function moveAll() {
             }
         } else {
             if(!runOnce) {
-                currentPosition -= !clearCharacters && !gameOver && !mosesCaught && (currentPosition >= -1000 || currentPosition < 0 && win)  ? (/*googlePixelDevice && (up || down) ? 1.3 + speedIncrementFloat : (slowDown ? 1.3 + speedRateValue : */3/*))*/; : 0;
+                currentPosition -= !clearCharacters && !gameOver && !mosesCaught && (currentPosition >= -1000 || currentPosition < 0 && win)  ? /*(googlePixelDevice && (up || down) ? 1.3 + speedIncrementFloat : (slowDown ? 1.3 + speedRateValue : */3/*))*/ : 0;
                 fish1.xPosition -= /*googlePixelDevice && (up || down) ? 1.3 + speedIncrementFloat : (slowDown ? 1.3 + speedRateValue : */3/*);*/;
                 fish2.xPosition -= /*googlePixelDevice && (up || down) ? 1.3 + speedIncrementFloat : (slowDown ? 1.3 + speedRateValue : */3/*);*/;
                 fish3.xPosition -= /*googlePixelDevice && (up || down) ? 1.3 + speedIncrementFloat : (slowDown ? 1.3 + speedRateValue : */3/*);*/;
