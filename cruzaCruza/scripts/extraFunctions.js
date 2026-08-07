@@ -786,6 +786,19 @@ function checkBlinkImagesStatus() {
     }
 }
 
+function animationLoop(timestamp) {
+	currentTime = timestamp;
+	deltaTime = currentTime - previousTime;
+	
+	if(deltaTime > interval) {
+		previousTime = currentTime - (deltaTime % interval);
+		
+		updateAll();
+	}
+	
+	requestAnimationFrame(animationLoop);
+}
+
 function updateAll() {
     if(!$('slowDown').checked && !deviceTypeChecked) {
         checkDeviceType();
@@ -920,7 +933,7 @@ function updateAll() {
         }
     } // else, we will show the main menu
 
-    requestAnimationFrame(updateAll);
+    //requestAnimationFrame(updateAll);
 }
 
 function manageBackgroundMusic() {

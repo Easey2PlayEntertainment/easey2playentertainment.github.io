@@ -976,3 +976,13 @@ var incorrectAnswersDataCollector = [];
 var deviceTypeChecked = false;
 
 var speedRate;
+
+// ANIMATION REGULATION CODE HERE; SHOULD REGULATE UPDATE SPEED
+var frames_per_second = 62;
+
+var interval = Math.floor(1000 / frames_per_second);
+var startTime = performance.now();
+var previousTime = startTime;
+
+var currentTime = 0;
+var deltaTime = 0;

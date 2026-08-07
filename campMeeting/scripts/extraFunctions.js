@@ -813,6 +813,20 @@ function checkBlinkImagesStatus() {
     }
 }
 
+// Animation loop code algorithm
+function animationLoop(timestamp) {
+	currentTime = timestamp;
+	deltaTime = currentTime - previousTime;
+	
+	if(deltaTime > interval) {
+		previousTime = currentTime - (deltaTime % interval);
+		
+		updateAll();
+	}
+	
+	requestAnimationFrame(animationLoop);
+}
+
 function updateAll() {
     if(!$('slowDown').checked && !deviceTypeChecked) {
         checkDeviceType();
@@ -947,7 +961,7 @@ function updateAll() {
         }
     } // else, we will show the main menu
 
-    requestAnimationFrame(updateAll);
+    //requestAnimationFrame(updateAll);
 }
 
 function manageBackgroundMusic() {
@@ -1338,7 +1352,8 @@ function moveFrogs() {
                 crabs[i].xPosition = canvas.width + counter;
                 counter += 100;
             }
-			if(loopedPowerupSoundPlayed) {
+
+            if(loopedPowerupSoundPlayed) {
 			switch(previousPowerup) {
 				case "cloudPillar":
 					cloudPillarSource.stop();
