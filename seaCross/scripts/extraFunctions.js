@@ -786,6 +786,7 @@ function checkBlinkImagesStatus() {
     }
 }
 
+// Animation loop code algorithm
 function animationLoop(timestamp) {
 	currentTime = timestamp;
 	deltaTime = currentTime - previousTime;
