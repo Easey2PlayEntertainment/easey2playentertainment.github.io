@@ -758,7 +758,7 @@ async function drawAll() {
     }
 
     if(paused) {
-        printText((canvas.width / 2.2) - 50, canvas.height / 2, 28, 'black', 'pausado');
+        printText((canvas.width / 2.2) - 30, canvas.height / 2, 28, 'black', 'pausado');
     }
 
     if(!start && confirmed && mosesImagesLoaded && allIsraeliteImagesLoaded && allEgyptianImagesLoaded && !loading) {
