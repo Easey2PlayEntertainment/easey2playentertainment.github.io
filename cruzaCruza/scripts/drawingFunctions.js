@@ -144,12 +144,12 @@ async function drawAll() {
         confirmed = true;
     } else if(!allFishLoaded || !crabImage1Loaded || !crabImage2Loaded || !crabImage3Loaded || !blueShellLoaded || !pinkShellLoaded || !bonusShellFrame1Loaded || !bonusShellFrame2Loaded || !allIsraeliteImagesLoaded || !allEgyptianImagesLoaded || !allPowerupsLoaded || !mosesImagesLoaded || !allQuestionsLoaded || !backgroundScoreLoaded || !rebootsLoaded || !demoEgyptianImage1Loaded || !demoEgyptianImage2Loaded || !demoEgyptianImage3Loaded || !demoEgyptianImage4Loaded || !demoIsraelite3Image1Loaded || !demoIsraelite3Image2Loaded ||!demoIsraelite3Image3Loaded ||!demoIsraelite3Image4Loaded || !allBlinksLoaded || !wigImageLoaded || (frequency < numberOfCases && numberOfCases > 100)) {
         colorRect(0, 0, canvas.width, canvas.height, 'black');
-        printText(canvas.width / 2.35, canvas.height / 2.5, 28, 'white', "loading"); // it will be hardwired in there
+        printText(canvas.width / 2.35, canvas.height / 2.5, 28, 'white', "cargando"); // it will be hardwired in there
         colorRect(canvas.width / 4, 400, progressFinalWidth, 30, '#141414');
         colorRect(canvas.width / 4, 400, (frequency / numberOfCases) * progressFinalWidth, 30, 'white');
-        printText(20, 30, 28, 'white', 'score');
+        printText(20, 30, 28, 'white', 'puntaje');
         printText(20, 60, 28, 'white', zeroedScore(score));
-        printText(canvas.width - 193, 30, 28, 'white', 'high score');
+        printText(canvas.width - 122, 30, 28, 'white', 'récord');
         printText(canvas.width - 106 - spaces, 60, 28, 'white', zeroedScore(highScore));
         return; // in other words, return after everything is loaded and we have confirmed it, and return if we have not loaded yet
     }
@@ -202,9 +202,9 @@ async function drawAll() {
         fish7.drawFish();
         fish8.drawFish();
     }
-    printText(20, 30, 28, 'black', 'score');
+    printText(20, 30, 28, 'black', 'puntaje');
     printText(20, 60, 28, 'black', zeroedScore(score));
-    printText(canvas.width - 193, 30, 28, 'black', 'high score');
+    printText(canvas.width - 122, 30, 28, 'black', 'récord');
     printText(canvas.width - 106 - spaces, 60, 28, 'black', zeroedScore(highScore));
     displayLives();
     if(showNextPowerup && !powerupRun && (!powerupBeingUsed || powerupBeingUsed && cursor)) {
@@ -495,10 +495,10 @@ async function drawAll() {
     if(loading || start && !screenBlacked) {
         var waitTime;
         colorRect(0, 0, canvas.width, canvas.height, 'black');
-        loading ? printText(canvas.width / 2.35, canvas.height / 2.5, 28, 'white', "loading") : false; // making more changes here
-        printText(20, 30, 28, 'white', 'score');
+        loading ? printText(canvas.width / 2.35, canvas.height / 2.5, 28, 'white', "cargando") : false; // making more changes here
+        printText(20, 30, 28, 'white', 'puntaje');
         printText(20, 60, 28, 'white', zeroedScore(score));
-        printText(canvas.width - 193, 30, 28, 'white', 'high score');
+        printText(canvas.width - 122, 30, 28, 'white', 'récord');
         printText(canvas.width - 106 - spaces, 60, 28, 'white', zeroedScore(highScore));
         if(!loading) {
             waitTime = 30;
@@ -758,7 +758,7 @@ async function drawAll() {
     }
 
     if(paused) {
-        printText(canvas.width / 2.2, canvas.height / 2, 28, 'black', 'paused');
+        printText((canvas.width / 2.2) - 50, canvas.height / 2, 28, 'black', 'pausado');
     }
 
     if(!start && confirmed && mosesImagesLoaded && allIsraeliteImagesLoaded && allEgyptianImagesLoaded && !loading) {
@@ -816,9 +816,9 @@ async function drawAll() {
     }
 
     printText(265 - timesPlayedSpaces, 530, 28, 'white', 'times played: ' + timesPlayed);
-        printText(20, 30, 28, 'white', 'score');
+        printText(20, 30, 28, 'white', 'puntaje');
         printText(20, 60, 28, 'white', zeroedScore(score));
-        printText(canvas.width - 193, 30, 28, 'white', 'high score');
+        printText(canvas.width - 122, 30, 28, 'white', 'récord');
         printText(canvas.width - 106 - spaces, 60, 28, 'white', zeroedScore(highScore));
         } else {
         colorRect(0, 0, canvas.width, canvas.height, '#141414');                                          
@@ -847,9 +847,9 @@ async function drawAll() {
         }
 
         arcadeMode ? printText(265 - timesPlayedSpaces, 500, 28, 'white', 'times played: ' + timesPlayed) : false;
-        printText(20, 30, 28, 'white', 'score');
+        printText(20, 30, 28, 'white', 'puntaje');
         printText(20, 60, 28, 'white', zeroedScore(score));
-        printText(canvas.width - 193, 30, 28, 'white', 'high score');
+        printText(canvas.width - 122, 30, 28, 'white', 'récord');
         printText(canvas.width - 106 - spaces, 60, 28, 'white', zeroedScore(highScore));
         }
     }
