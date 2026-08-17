@@ -346,9 +346,9 @@ function touchStart(e) {
                 }
             } else if(checkTouchPosition(pauseButtonScaledPosition, offsetX, pauseButtonWidth) && offsetY >= pauseResumeYLowerPosition && offsetY <= pauseResumeYHigherPosition && !questionBrought) {// WORK HERE NEXT...PAUSE BUTTON DOES NOT WORK QUITE YET
                 keyDown({key: 'p', code: 'KeyP', mobileClick: true}); // should activate pause button??????
-            } else if(e.touches[0].clientY < window.outerHeight * (210/620) || checkTouchPosition(upArrowScaledPosition - 25, offsetX, arrowWidth) && offsetY >= upArrowYLowerPosition && offsetY <= upArrowYHigherPosition) {
+            } else if(e.touches[0].clientY < window.outerHeight * (210/620)/* || checkTouchPosition(upArrowScaledPosition - 25, offsetX, arrowWidth) && offsetY >= upArrowYLowerPosition && offsetY <= upArrowYHigherPosition*/) {
                 keyDown({key: 'ArrowUp', code: 'ArrowUp', mobileClick: true}); // triggering buttons
-            } else if(e.touches[0].clientY > window.outerHeight * (210/620) || checkTouchPosition(downArrowScaledPosition - 25, offsetX, arrowWidth) && offsetY >= downArrowYLowerPosition && offsetY <= downArrowYHigherPosition) {
+            } else if(e.touches[0].clientY > window.outerHeight * (210/620) /*|| checkTouchPosition(downArrowScaledPosition - 25, offsetX, arrowWidth) && offsetY >= downArrowYLowerPosition && offsetY <= downArrowYHigherPosition*/) {
                 keyDown({key: 'ArrowDown', code: 'ArrowDown', mobileClick: true});
 			}
         }
