@@ -350,13 +350,13 @@ function touchStart(e) {
                 keyDown({key: 'ArrowUp', code: 'ArrowUp', mobileClick: true}); // triggering buttons
 				console.error(e.touches[0].clientY, window.outerHeight * (210/620));
 				colorRect(e.touches[0].clientX, e.touches[0].clientY, 50, 50, 'yellow');
-				colorRect(e.touches[0].clientX, window.outerHeight * (210/620), 50, 50, 'yellow');
+				colorRect(e.touches[0].clientX, window.outerHeight * (210/620), 50, 50, 'red');
 				debugger;
             } else if(e.touches[0].clientY > window.outerHeight * (210/620) /*|| checkTouchPosition(downArrowScaledPosition - 25, offsetX, arrowWidth) && offsetY >= downArrowYLowerPosition && offsetY <= downArrowYHigherPosition*/) {
                 keyDown({key: 'ArrowDown', code: 'ArrowDown', mobileClick: true});
 				console.error(e.touches[0].clientY, window.outerHeight * (210/620));
 				colorRect(e.touches[0].clientX, e.touches[0].clientY, 50, 50, 'yellow');
-				colorRect(e.touches[0].clientX, window.outerHeight * (210/620), 50, 50, 'yellow');
+				colorRect(e.touches[0].clientX, window.outerHeight * (210/620), 50, 50, 'red');
 				debugger;
 			}
         }
