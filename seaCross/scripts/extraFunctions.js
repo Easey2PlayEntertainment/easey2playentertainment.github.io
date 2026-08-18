@@ -348,8 +348,16 @@ function touchStart(e) {
                 keyDown({key: 'p', code: 'KeyP', mobileClick: true}); // should activate pause button??????
             } else if(e.touches[0].clientY < window.outerHeight * (210/620)/* || checkTouchPosition(upArrowScaledPosition - 25, offsetX, arrowWidth) && offsetY >= upArrowYLowerPosition && offsetY <= upArrowYHigherPosition*/) {
                 keyDown({key: 'ArrowUp', code: 'ArrowUp', mobileClick: true}); // triggering buttons
+				console.error(e.touches[0].clientY, window.outerHeight * (210/620));
+				colorRect(e.touches[0].clientX, e.touches[0].clientY, 50, 50, 'yellow');
+				colorRect(e.touches[0].clientX, window.outerHeight * (210/620), 50, 50, 'yellow');
+				debugger;
             } else if(e.touches[0].clientY > window.outerHeight * (210/620) /*|| checkTouchPosition(downArrowScaledPosition - 25, offsetX, arrowWidth) && offsetY >= downArrowYLowerPosition && offsetY <= downArrowYHigherPosition*/) {
                 keyDown({key: 'ArrowDown', code: 'ArrowDown', mobileClick: true});
+				console.error(e.touches[0].clientY, window.outerHeight * (210/620));
+				colorRect(e.touches[0].clientX, e.touches[0].clientY, 50, 50, 'yellow');
+				colorRect(e.touches[0].clientX, window.outerHeight * (210/620), 50, 50, 'yellow');
+				debugger;
 			}
         }
     }
