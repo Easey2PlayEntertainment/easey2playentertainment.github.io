@@ -989,7 +989,7 @@
 					//bufferCollector = buffer;
 					frequency++;
 				}, function() {
-					alert('failed');
+					window.location.reload() || location.reload();
 				});
 			}
 			request.send();
