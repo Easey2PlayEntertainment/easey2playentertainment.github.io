@@ -765,7 +765,7 @@ async function drawAll() {
         screenBlacked = false; 
         if(arcadeMode || birthdayMode) {
             colorRect(0, 0, canvas.width, canvas.height, 'black');
-            !birthdayMode ? printText(210, canvas.height / 2, 60, chameleon[chameleonID], 'come play!') : printText(15, canvas.height / 2, 60, chameleon[chameleonID], 'HAPPY BIRTHDAY, MAMI!'); 
+            !birthdayMode ? printText(210, canvas.height / 2, 60, chameleon[chameleonID], 'juega hoy!') : printText(15, canvas.height / 2, 60, chameleon[chameleonID], 'HAPPY BIRTHDAY, MAMI!'); 
     canvasContext.drawImage(mosesImages[mosesImageId], demoMosesPosition, canvas.height / 2 + 50 , 35, 35);
     canvasContext.drawImage(israelites[2].images[israelites[2].imageId], demoIsraelite1Position, canvas.height / 2 + 50 , 35, 35); // CONTINUE HERE
     canvasContext.drawImage(demoIsraelite2Images[demoIsraelite2FrameId], demoIsraelite2Position, canvas.height / 2 + 50 , 35, 35);
@@ -815,7 +815,7 @@ async function drawAll() {
         canvasContext.drawImage(egyptianBlinkImageLeft, demoEgyptian4Position, 170, 35, 35);
     }
 
-    printText(265 - timesPlayedSpaces, 530, 28, 'white', 'times played: ' + timesPlayed);
+    printText(265 - timesPlayedSpaces, 530, 28, 'white', 'sesiones    : ' + timesPlayed);
         printText(20, 30, 28, 'white', 'puntaje');
         printText(20, 60, 28, 'white', zeroedScore(score));
         printText(canvas.width - 122, 30, 28, 'white', 'récord');
