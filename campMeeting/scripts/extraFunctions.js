@@ -526,7 +526,7 @@ async function resetLevel() {
 
 function dealWithCrabs() {
     if(start && !loading) {
-        if(questionNumber % 4 === 0 && crabs.length !== crabOutput && crabs.length < 4 && questionNumber > 0 && !crabOutputIncrement && !powerupRun && crabs.length !== 10) {
+        if(questionNumber % 4 === 0 && !preventBonusShellCrabPush && crabs.length !== crabOutput && crabs.length < 4 && questionNumber > 0 && !crabOutputIncrement && !powerupRun && crabs.length !== 10) {
             if(crabs.length !== 4) {
                 crabs.push(new Crab());    
             }    

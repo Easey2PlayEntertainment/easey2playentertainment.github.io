@@ -128,6 +128,7 @@ var bonusShellY = randomPositionBonusShell(); // randomize it from the start!
 var bonusShellNeeded = false;
 var bonusShellCountdown = 5;
 var bonusShellCaught = false;
+var preventBonusShellCrabPush = false;
 
 var bonusShellFrame1Loaded = false,
     bonusShellFrame2Loaded = false;
