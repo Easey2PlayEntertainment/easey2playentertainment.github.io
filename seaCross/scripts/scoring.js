@@ -1,4 +1,5 @@
 function checkAnswersAndScore() {
+	preventBonusShellCrabPush = false;
     bonusShellCaught ? null : nextQuestionNumber++;
     powerupJustUsed = false; // just to remove any other issues already
     
@@ -182,6 +183,7 @@ function checkAnswersAndScore() {
 
     if(bonusShellCaught) {
         bonusShellCaught = false;
+		preventBonusShellCrabPush = true;
     }
     if(incorrectAnswers.length > 0 && answerCorrect) {
         bonusShellCountdown--;
