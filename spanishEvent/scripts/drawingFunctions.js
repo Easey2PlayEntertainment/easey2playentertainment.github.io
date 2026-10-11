@@ -700,19 +700,19 @@ async function drawAll() {
         }
         lastQuestion = question;
 
-        //if(mobileVersion) {
+        if(mobileVersion) {
             if(questionType === "match" || questionType === "number") {
-                colorRect(A_BUTTON_POSITION, 520, 100, 360, 'green');
+                // colorRect(A_BUTTON_POSITION, 520, 360, 50, 'green');
                 // colorRect(B_BUTTON_POSITION, 520, 100, 50, 'green'); // touch buttons
                 // colorRect(C_BUTTON_POSITION, 520, 100, 50, 'green');
                 // colorRect(D_BUTTON_POSITION, 520, 100, 50, 'green');
     
-                printText(173, 554, 26, 'white', 'press select to select    press r to delete');
+                printText(100, 554, 26, 'white', 'press select to select    press r to delete');
                 // printText(293, 554, 26, 'white', 'delete');
                 // printText(443, 554, 26, 'white', 'up');
                 // printText(546, 554, 26, 'white', 'down');
             }
-        //}
+        }
     }
 
     if(questionGraded) {
