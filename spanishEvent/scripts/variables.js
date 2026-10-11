@@ -1832,7 +1832,7 @@ var validButtons = [65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,
 
 var middle = 0;
 
-var arcadeMode = false;
+var arcadeMode = true; // set to true all the time
 
 var alphabet = ['_', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '-'];
 var alphabetId = -1; // always starts there
@@ -2000,4 +2000,4 @@ var currentTime = 0;
 var deltaTime = 0;
 
 // Used for testing values
-var logoXPosition = logoYPosition = logoWidth = 0;
+//var logoXPosition = logoYPosition = logoWidth = 0;
