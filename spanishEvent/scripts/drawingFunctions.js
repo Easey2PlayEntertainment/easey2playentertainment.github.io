@@ -707,7 +707,7 @@ async function drawAll() {
                 // colorRect(C_BUTTON_POSITION, 520, 100, 50, 'green');
                 // colorRect(D_BUTTON_POSITION, 520, 100, 50, 'green');
     
-                printText(100, 554, 26, 'white', 'press select to select    press r to delete');
+                printText(50, 554, 26, 'white', 'press select to select    press r to delete');
                 // printText(293, 554, 26, 'white', 'delete');
                 // printText(443, 554, 26, 'white', 'up');
                 // printText(546, 554, 26, 'white', 'down');
