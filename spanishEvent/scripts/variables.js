@@ -1998,3 +1998,6 @@ var previousTime = startTime;
 
 var currentTime = 0;
 var deltaTime = 0;
+
+// Used for testing values
+var logoXPosition = logoYPosition = logoWidth = 0;
