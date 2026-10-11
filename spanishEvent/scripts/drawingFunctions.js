@@ -700,7 +700,7 @@ async function drawAll() {
         }
         lastQuestion = question;
 
-        if(mobileVersion) {
+        //if(mobileVersion) {
             if(questionType === "match" || questionType === "number") {
                 // colorRect(A_BUTTON_POSITION, 520, 360, 50, 'green');
                 // colorRect(B_BUTTON_POSITION, 520, 100, 50, 'green'); // touch buttons
@@ -712,7 +712,7 @@ async function drawAll() {
                 // printText(443, 554, 26, 'white', 'up');
                 // printText(546, 554, 26, 'white', 'down');
             }
-        }
+        //}
     }
 
     if(questionGraded) {
