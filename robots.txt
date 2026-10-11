@@ -8,5 +8,6 @@ Disallow: /styles/
 Disallow: /seaCrossStemShowcase/
 Disallow: /images/nonya/
 Disallow: /campMeeting/
+Disallow: /spanishEvent/
 
 Sitemap: https://easey2playentertainment.github.io/sitemap.xml
