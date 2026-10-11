@@ -784,7 +784,7 @@ async function drawAll() {
 				printText(310 - timesPlayedSpaces, 230, 28, 'white', "a. english");
 				printText(310 - timesPlayedSpaces, 270, 28, 'white', "b. español");
 			} else {
-            !birthdayMode ? printText(210 - 60, canvas.height / 2, 60, chameleon[chameleonID], 'press start') : printText(15, canvas.height / 2, 60, chameleon[chameleonID], 'HAPPY BIRTHDAY, MAMI!'); 
+            !birthdayMode ? printText(210 - 30, canvas.height / 2, 60, chameleon[chameleonID], 'press start') : printText(15, canvas.height / 2, 60, chameleon[chameleonID], 'HAPPY BIRTHDAY, MAMI!'); 
 			//printText(225, 400, 20, 'white', 'easey2playentertainment.com');
 			canvasContext.drawImage(retroLogoImage, 260, 320, 250, 250 * (736 / 1411)); 
 			canvasContext.drawImage(retroBARLogoImage, 250, 20, 300, 300 * (1024 / 1536));
