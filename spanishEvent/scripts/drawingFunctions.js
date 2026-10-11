@@ -786,10 +786,10 @@ async function drawAll() {
 			} else {
             !birthdayMode ? printText(210, canvas.height / 2, 60, chameleon[chameleonID], 'come play!') : printText(15, canvas.height / 2, 60, chameleon[chameleonID], 'HAPPY BIRTHDAY, MAMI!'); 
 			//printText(225, 400, 20, 'white', 'easey2playentertainment.com');
-			canvasContext.drawImage(retroLogoImage, 260, 320, 250, 250 * (736 / 1411)); 
-			canvasContext.drawImage(retroBARLogoImage, 320, 20, 150, 150 * (784 / 1331));
-			canvasContext.drawImage(qrCodeImage, 610, 260, 140, 140); // website
-			canvasContext.drawImage(financeQrCodeImage, 45, 260, 140, 140); // paypal
+			canvasContext.drawImage(retroLogoImage, 260, 320, 250, 166); 
+			//canvasContext.drawImage(retroBARLogoImage, 320, 20, 150, 150 * (784 / 1331));
+			//canvasContext.drawImage(qrCodeImage, 610, 260, 140, 140); // website
+			//canvasContext.drawImage(financeQrCodeImage, 45, 260, 140, 140); // paypal
 	canvasContext.drawImage(mosesImages[mosesImageId], demoMosesPosition, canvas.height / 2 + 150 , 35, 35);
     canvasContext.drawImage(israelites[2].images[israelites[2].imageId], demoIsraelite1Position, canvas.height / 2 + 150 , 35, 35); // CONTINUE HERE
     canvasContext.drawImage(demoIsraelite2Images[demoIsraelite2FrameId], demoIsraelite2Position, canvas.height / 2 + 150 , 35, 35);
