@@ -1,6 +1,6 @@
 body {
     font-family: Calibri, sans-serif;
-    background-color: green;
+    background-color: rgb(0, 0, 114);
 }
 
 /* body {
@@ -47,7 +47,7 @@ body {
 }
 
 a {
-    color: blue;
+    color: red;
 }
 
 a:hover {

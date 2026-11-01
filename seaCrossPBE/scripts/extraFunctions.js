@@ -701,7 +701,7 @@ function manageFullscreenFX() {
         playButton.innerHTML = "rotate screen";
     } else { // set everything back to default
         fullScreenButton.style.display = "initial";
-        body.style.backgroundColor = 'green';
+        body.style.backgroundColor = 'rgb(0, 0, 114)';
         for(var i=0;i<perishableItems.length;i++) {
             perishableItems[i].style.visibility = 'visible';
         }
